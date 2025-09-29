@@ -1,0 +1,9 @@
+types = {
+	type[leader_tier] = {
+		path = "game/common/leader_tiers"
+	}
+}
+
+leader_tier = {
+	tier = int
+}
