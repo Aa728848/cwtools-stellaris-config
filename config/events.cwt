@@ -316,6 +316,9 @@ event = {
 		diplomatic = bool
 
 		## cardinality = 0..1
+		major = bool
+
+		## cardinality = 0..1
 		event_window_type = enum[event_window_type]
 
 		## cardinality = 0..0
