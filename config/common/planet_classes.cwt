@@ -24,8 +24,6 @@ types = {
 			Description = "$_desc"
 			subtype[habitable_planet] = {
 				## required
-				Adjective = "$_adj"
-				## required
 				Habitability = "mod_$_habitability"
 				## required
 				"Preference trait" = "trait_$_preference"
@@ -117,7 +115,7 @@ planet_class = {
 	## cardinality = 0..1
 	entity_face_object = bool
 	## cardinality = 0..1
-	can_be_moon = bool #this should be checked against solar system initializers - only planets defined as can_be_mmon can be spawned as moons there!
+	can_be_moon = bool #this should be checked against solar system initializers - only planets defined as can_be_moon can be spawned as moons there!
 	## cardinality = 0..1
 	space_monster_target = bool
 	## cardinality = 0..1
