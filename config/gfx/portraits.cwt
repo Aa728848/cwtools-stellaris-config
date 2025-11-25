@@ -21,6 +21,7 @@ portrait = {
 	## cardinality = 0..1
 	custom_attachment_label = localisation
 	## cardinality = 0..1
+	textureFile = filepath
 	custom_close_up_position_offset = {
 		x = int
 		y = int

@@ -1650,6 +1650,10 @@ alias[effect:create_leader] = {
 		int = random_common
 	}
 	## cardinality = 0..1
+	ruler_title = localisation
+	## cardinality = 0..1
+	ruler_title_female = localisation
+	## cardinality = 0..1
 	use_regnal_name = bool
 	## cardinality = 0..1
 	## push_scope = leader
@@ -4749,13 +4753,13 @@ alias[effect:integrate_species] = bool
 alias[effect:repair_shield_percentage] = float
 
 ###Restores a certain amount of hull points to the scoped ship or fleet
-alias[effect:repair_amount] = float
+alias[effect:repair_amount] = value_field
 
 ###Restores a certain amount of armor points to the scoped ship or fleet
-alias[effect:repair_armor_amount] = float
+alias[effect:repair_armor_amount] = value_field
 
 ###Restores a certain amount of shield points to the scoped ship or fleet
-alias[effect:repair_shield_amount] = float
+alias[effect:repair_shield_amount] = value_field
 
 ###Sets if a country needs a colony (or a colony ship) to be considered alive
 alias[effect:set_faction_needs_colony] = bool
