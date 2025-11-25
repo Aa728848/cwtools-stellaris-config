@@ -1,0 +1,33 @@
+types = {
+	type[overclock_type] = {
+		path = "game/common/megastructure_overclock_types"
+		localisation = {
+			## required
+			Name = "$"
+			## required
+			Description = "$_desc"
+		}
+	}
+}
+
+overclock_type = {
+	icon = <sprite>
+
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+    ## cardinality = 0..1
+	resources = {
+		category = <economic_category>
+		alias_name[economic_template] = alias_match_left[economic_template]
+	}
+    
+	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet }
+    modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
