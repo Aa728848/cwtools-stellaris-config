@@ -1282,6 +1282,9 @@ alias[trigger:is_terraformed] = bool
 ### Checks if the planet is currently being terraformed
 alias[trigger:is_terraforming] = bool
 
+### Checks if the planet is currently being terraformed manually by script
+alias[trigger:is_scripted_terraforming] = bool
+
 ### Checks the country's tutorial level (0 off, 1 limited, 2 full)
 alias[trigger:is_tutorial_level] == int_value_field
 
@@ -3042,6 +3045,9 @@ alias[trigger:attunement] == value_field
 
 ###Checks if the current country in the the domain of the given patron
 alias[trigger:is_in_domain] = <patrons>
+
+###Checks if a system has the can_be_crisis_terraformed flag or not.
+alias[trigger:can_be_crisis_terraformed] = bool
 
 ###Checks if the uplifted version of the species has the specified archetype
 alias[trigger:uplift_is_archetype] = <species_archetype>

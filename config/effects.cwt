@@ -3866,6 +3866,8 @@ alias[effect:start_situation] = {
 alias[effect:destroy_situation] = scope[situation]
 ###Adds a sum of progress scoped situation
 alias[effect:add_situation_progress] = value_field
+###Sets the progress of scoped situation
+alias[effect:set_situation_progress] = value_field
 ###Sets the approach to the Situation. Respects allow and potential triggers.
 alias[effect:set_situation_approach] = enum[situation_approaches]
 ###Sets the planet's ascension tier to the specified value.
@@ -4321,9 +4323,6 @@ alias[effect:activate_fog_machine] = <cloud_type>
 
 ###Deactivates country fog machine
 alias[effect:deactivate_fog_machine] = bool
-
-###Switches on/off galactic object ownership auto tracking for country fog machine
-alias[effect:fog_machine_auto_tracking] = bool
 
 ###Sets the scope faction as extorted and removes extortion from any other ones
 alias[effect:set_faction_extorted] = bool
@@ -5242,3 +5241,15 @@ alias[effect:set_leader_tier] = <leader_tiers>
 
 ###Destroy Psionic Aura in scoped system.
 alias[effect:destroy_psionic_aura] = bool
+
+###Starts terraforming progress of scoped planet
+alias[effect:start_terraform_progress] = {
+	class = <planet_class>
+	inherit_entity = bool
+}
+
+### Adds terraforming progress to scoped planet, finishes the terraformation, if enough progress is reached
+alias[effect:add_terraform_progress] = value_field
+
+### Sets terraforming progress of scoped planet, finishes the terraformation, if enough progress is reached
+alias[effect:set_terraform_progress] = value_field
