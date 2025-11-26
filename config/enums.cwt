@@ -161,6 +161,7 @@ enums = {
 		none
 	}
 	enum[fleet_orders] = {
+		terraform_fleet_order
 		move_to_system_point_order
 		orbit_planet_order
 		build_orbital_station_order

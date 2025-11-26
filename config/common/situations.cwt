@@ -226,6 +226,11 @@ situation_type = {
 				alias_name[effect] = alias_match_left[effect]
 			}
 			## cardinality = 0..1
+			###Effect for the first time this stage fires (hidden in the UI)
+			on_enter = {
+				alias_name[effect] = alias_match_left[effect]
+			}
+			## cardinality = 0..1
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}

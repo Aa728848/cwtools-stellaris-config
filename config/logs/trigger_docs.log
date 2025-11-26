@@ -7724,7 +7724,11 @@ pop_group_event = {
 Supported Scopes: pop_group
 
 enable_special_project - Enables a specific special research project for target country at a specific location (should be same as the current scope where possible)
-enable_special_project = { name = <project key> owner = <target, default = root> location = <target, ideally THIS (that is default)> }
+enable_special_project = { 
+	name = <project key> 
+	owner = <target, default = root> 
+	location = <target, ideally THIS (that is default)> 
+}
 Supported Scopes: all
 
 add_resource - Adds specific resource to the stockpile for the country scope:
