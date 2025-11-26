@@ -145,6 +145,13 @@ zone_slots = {
 		enum[zone_set_additional]
 	}
 
+	excluded_zone_sets = {
+		## cardinality = 0..inf
+		enum[zone_set]
+		## cardinality = 0..inf
+		enum[zone_set_additional]
+	}
+
 	## cardinality = 0..1
 	include = {
 		## cardinality = 0..inf
