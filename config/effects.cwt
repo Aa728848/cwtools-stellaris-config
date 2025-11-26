@@ -5249,7 +5249,10 @@ alias[effect:destroy_psionic_aura] = bool
 ###Starts terraforming progress of scoped planet
 alias[effect:start_terraform_progress] = {
 	class = <planet_class>
+	## cardinality = 0..1
 	inherit_entity = bool
+	## cardinality = 0..1
+	required_progress = float
 }
 
 ### Adds terraforming progress to scoped planet, finishes the terraformation, if enough progress is reached
