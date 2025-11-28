@@ -22,6 +22,7 @@ colony_automation = {
 	# this is a scalar rather than an enum, because the category strings themselves are defined in 00_defines.txt
 	category = scalar
 
+	## replace_scope = { this = planet root = planet }
 	available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -40,6 +41,8 @@ colony_automation = {
 		enum[zone_type]
 	}
 
+	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet }
 	buildings = {
 		## cardinality = 1..inf
 		scalar = {
@@ -58,12 +61,16 @@ colony_automation_exception = {
 	# this is a scalar rather than an enum, because the category strings themselves are defined in 00_defines.txt
 	category = scalar
 
+	## replace_scope = { this = planet root = planet }
 	available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	## cardinality = 0..1
 	emergency = bool
+
+	## cardinality = 0..1
+	empire_wide_emergency = bool
 
 	## cardinality = 0..1
 	prio_districts = {
@@ -79,6 +86,8 @@ colony_automation_exception = {
 		enum[zone_type]
 	}
 
+	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet }
 	buildings = {
 		## cardinality = 1..inf
 		scalar = {
