@@ -4503,7 +4503,7 @@ alias[effect:storm_apply_aftermath_modifier] = {
 
 ###Sets a storm on a system
 alias[effect:set_cosmic_storm] = { 
-	cosmic_storm = scope[system]
+	cosmic_storm = scope[cosmic_storm]
 }
 
 ###Unsets a storm on a system
