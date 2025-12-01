@@ -69,20 +69,6 @@ enums = {
 		behemoth_spike_activity_key
 		behemoth_turbo_activity_key
 	}
-	enum[component_bio_prereq] = {
-		""
-		"tech_thrusters_2 tech_thrusters_bio_integration"
-		"tech_thrusters_3 tech_thrusters_bio_integration"
-		"tech_thrusters_4 tech_thrusters_bio_integration"
-		"tech_dark_matter_propulsion tech_thrusters_bio_integration"
-	}
-	enum[component_bio_potential] = {
-		"ship_uses_space_fauna_titan_thrusters = yes"
-		"ship_uses_space_fauna_cruiser_thrusters = yes"
-		"ship_uses_space_fauna_destroyer_thrusters = yes"
-		"ship_uses_space_fauna_corvette_thrusters = yes"
-		"ship_uses_space_fauna_battleship_thrusters = yes"
-	}
 	enum[component_bio_stack_info_id] = {
 		bio_anti_evasion
 		bio_anti_fire_rate
@@ -134,15 +120,11 @@ component_template = {
 	prerequisites = {
 		## cardinality = 0..inf
 		<technology>
-		## cardinality = 0..inf
-		enum[component_bio_prereq]
 	}
 	## cardinality = 0..1
 	potential = {
 		## cardinality = 0..1
 		alias_name[trigger] = alias_match_left[trigger]
-		## cardinality = 0..1
-		enum[component_bio_potential]
 	}
 	## cardinality = 0..1
 	custom_tooltip = {
@@ -249,6 +231,8 @@ component_template = {
 			}
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		## cardinality = 0..1
+		build_time = int
 		## cardinality = 0..1
 		ftl = bool
 		## cardinality = 0..1
@@ -429,6 +413,7 @@ component_template = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			## replace_scope = { this = ship from = ship }
 			hidden_effect = {
 				alias_name[effect] = alias_match_left[effect]
 			}
@@ -455,7 +440,7 @@ component_template = {
 			}
 			## cardinality = 0..1	
 			stack_info = {
-				id =enum[component_bio_stack_info_id]
+				id = scalar
 				priority = int
 			}
 		}
@@ -465,6 +450,8 @@ component_template = {
 		show_tech_unlock_if = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..1
+		build_time = int
 		## cardinality = 0..1
 		ai_tag_weight = int
 		## cardinality = 0..1
@@ -593,6 +580,8 @@ component_template = {
 		ship_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		## cardinality = 0..1
+		build_time = int	
 	}
 	subtype[scripted_action] = {
 		scripted_action_name = <on_action>
@@ -714,6 +703,8 @@ enums = {
 		spread
 	}
 	enum[bio_finish_anim_state] = {
+		attack
+		idle
 		rage
 		superweapon
 	}
