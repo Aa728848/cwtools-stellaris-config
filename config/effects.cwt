@@ -2870,11 +2870,11 @@ alias[effect:prevent_anomaly] = bool
 ### Randomizes a country's flag symbol within the selected category
 alias[effect:randomize_flag_symbol] = scalar #TODO pirate
 ### Removes all armies on scoped planet
-alias[effect:remove_all_armies] = yes
+alias[effect:remove_all_armies] = bool
 ### Removes the scoped army
-alias[effect:remove_army] = yes
+alias[effect:remove_army] = bool
 ### Makes a fleet or ship stop auto-moving
-alias[effect:remove_auto_move_target] = yes
+alias[effect:remove_auto_move_target] = bool
 ### Removes existing hyperlane between two systems
 alias[effect:remove_hyperlane] = {
 	from = scope[galactic_object]
