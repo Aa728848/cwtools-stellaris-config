@@ -619,6 +619,7 @@ alias[effect:remove_pop_group_flag] = value_set[pop_group_flag]
 ## severity = warning
 ###Removes a flag from the scoped country
 alias[effect:remove_country_flag] = value[country_flag]
+alias[effect:remove_country_flag] = enum[inline_script_flags]
 ## severity = warning
 ###Removes a flag from the scoped planet
 alias[effect:remove_planet_flag] = value[planet_flag]
@@ -960,20 +961,29 @@ alias[effect:set_location] = {
 ###Sets or creates an arbitrarily-named variable with a specific value in the current scope
 alias[effect:set_variable] = {
 	which = value_set[variable]
+	## cardinality = 0..1
 	value = value_field
+	## cardinality = 0..1
+	value = enum[exe_set_variable]
 }
 
 #presumably need to check the variable exists first for these, somehow
 ###Increments a previously-set variable by a specific amount
 alias[effect:change_variable] = {
 	which = value_set[variable] #do not change to `value[variable]`, it does not need to be set for this
+	## cardinality = 0..1
 	value = value_field
+	## cardinality = 0..1
+	value = enum[exe_set_variable]
 }
 
 ###Decrements a previously-set variable by a specific amount
 alias[effect:subtract_variable] = {
 	which = value_set[variable]
+	## cardinality = 0..1
 	value = value_field
+	## cardinality = 0..1
+	value = enum[exe_set_variable]
 }
 
 ###Multiplies a previously-set variable by a specific amount
@@ -982,7 +992,10 @@ alias[effect:multiply_variable] = {
 	which = value[variable]
 	## cardinality = 0..1
 	which = enum[exe_set_variable]
+	## cardinality = 0..1
 	value = value_field
+	## cardinality = 0..1
+	value = enum[exe_set_variable]
 }
 
 ###Divides a previously-set variable by a specific amount
@@ -995,6 +1008,8 @@ alias[effect:divide_variable] = {
 	value = value_field
 	## cardinality = 0..1
 	value = enum[order_by]
+	## cardinality = 0..1
+	value = enum[exe_set_variable]
 }
 
 ###Modulos a previously-set variable by a specific amount i.e. X % Y
@@ -1026,6 +1041,7 @@ alias[effect:set_variable_to_random_value] = {
 ## severity = warning
 ###Removes a previously-set variable from the scope
 alias[effect:clear_variable] = value[variable]
+alias[effect:clear_variable] = enum[exe_set_variable]
 
 #max should not be less than min...
 ###Adds a lump sum of a resource to the scoped country, defined as a multiple of the country's monthly income of that resource (clamped to max and min allowed values)
@@ -1346,6 +1362,8 @@ alias[effect:create_species] = {
 	class = random_non_machine
 	class = random
 	class = scope_group[target_species]
+	## cardinality = 0..1
+	set_pre_ftl = bool
 	## cardinality = 0..1
 	portrait = scope_group[target_species]
 	## cardinality = 0..1
@@ -1752,7 +1770,7 @@ alias[effect:create_leader] = {
 	## cardinality = 0..1
 	###Default = no
 	hide_age = bool
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	background_ethic = <ethos>
 	## cardinality = 0..1
 	background_ethic = random
@@ -2550,6 +2568,7 @@ alias[effect:create_point_of_interest] = {
 	#The last comment does not apply here.
 	## cardinality = 0..1
 	desc = localisation
+	## cardinality = 0..1
 	event_chain = <event_chain>
 	## severity = warning
 	location = scope_group[spatial_object]
@@ -2727,6 +2746,8 @@ alias[effect:create_ship] = {
 	rarity = enum[rarity]
 	## cardinality = 0..1
 	growth_stage = int
+	## cardinality = 0..1
+	fleet_cache_recalc = bool
 	## cardinality = 0..1
 	## push_scope = ship
 	effect = {
@@ -3266,6 +3287,8 @@ alias[effect:add_resource] = {
 	<resource> = value_field
 	## cardinality = 0..1
 	mult = value_field
+	## cardinality = 0..1
+	mult = enum[exe_set_variable]
 	## cardinality = 0..1
 	multiplier = value_field
 }
@@ -4013,6 +4036,8 @@ alias[effect:start_situation] = {
 	type = <situation_type>
 	## cardinality = 0..1
 	target = scope[any]
+	## cardinality = 0..1
+	target = root.capital
 	## cardinality = 0..1
 	## push_scope = situation
 	effect = { alias_name[effect] = alias_match_left[effect] }
@@ -4872,6 +4897,8 @@ alias[effect:kill_pop_group] = {
 	## cardinality = 0..1
 	amount =  local_spent_<resource>
 	## cardinality = 0..1
+	amount =  local_pop_amount
+	## cardinality = 0..1
 	percentage = value_field
 	## cardinality = 0..1
 	random = int
@@ -4993,6 +5020,8 @@ alias[effect:transfer_pop_amount] = {
 	target = scope[pop_group]
 	## cardinality = 0..inf
 	amount = value_field
+	## cardinality = 0..inf
+	amount = enum[exe_set_variable]
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 	## cardinality = 0..inf
@@ -5398,17 +5427,26 @@ alias[effect:set_leader_tier] = <leader_tiers>
 ###Destroy Psionic Aura in scoped system.
 alias[effect:destroy_psionic_aura] = bool
 
+###Sets the progress of scoped situation
+alias[effect:set_situation_progress] = value_field
+
 ###Starts terraforming progress of scoped planet
-alias[effect:start_terraform_progress] = {
+alias[effect:start_terraform_progress] = <planet_class>
+alias[effect:start_terraform_progress] = <planet_class_random_list>
+alias[effect:start_terraform_progress] = { 
+	## cardinality = 0..1
 	class = <planet_class>
 	## cardinality = 0..1
-	inherit_entity = bool
+	class = <planet_class_random_list>
 	## cardinality = 0..1
-	required_progress = float
+	required_progress = int
+	## cardinality = 0..1
+	inherit_entity = bool
 }
 
-### Adds terraforming progress to scoped planet, finishes the terraformation, if enough progress is reached
+###Adds terraforming progress to scoped planet, finishes the terraformation, if enough progress is reached
 alias[effect:add_terraform_progress] = value_field
+alias[effect:add_terraform_progress] = value_set[variable]
 
-### Sets terraforming progress of scoped planet, finishes the terraformation, if enough progress is reached
+###Sets terraforming progress of scoped planet, finishes the terraformation, if enough progress is reached
 alias[effect:set_terraform_progress] = value_field

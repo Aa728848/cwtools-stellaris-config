@@ -135,6 +135,8 @@ model_entity = {
 		## cardinality = 0..1
 		animation_blend_time = float
 		## cardinality = 0..1
+		time_offset = float
+		## cardinality = 0..1
 		time_offset = {
 			## cardinality = 2..2
 			float

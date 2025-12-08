@@ -31,10 +31,6 @@ star_class = {
 		class = scalar
     }
 	## cardinality = 0..1
-	can_be_crisis_terraformed = bool
-	## cardinality = 0..1
-	crisis_star_class = <star_class>
-	## cardinality = 0..1
     spawn_odds = float
 	## cardinality = 0..1
     num_planets = { min = int max = int }
@@ -43,6 +39,10 @@ star_class = {
 	<planet_class.planet> = { spawn_odds = float }
 	## cardinality = 0..1
 	is_environmental_hazard = bool
+	## cardinality = 0..1
+	can_be_crisis_terraformed = bool
+	## cardinality = 0..1
+	crisis_star_class = <star_class>
 	## cardinality = 0..1
 	## replace_scope = { this = ship root = ship }
 	modifier = {
