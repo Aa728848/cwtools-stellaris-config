@@ -135,6 +135,8 @@ component_template = {
 	}
 	
 	## cardinality = 0..1
+	upgrade_path = value_set[upgrade_path_type]
+	## cardinality = 0..1
 	upgrade_path = enum[component_upgrade_path]
 	## cardinality = 0..1
 	target_type = enum[component_target_type]
@@ -615,31 +617,12 @@ component_template = {
 }
 
 enums = {
-	enum[weapon_type] = {
-		weapon_type_energy
-		weapon_type_kinetic
-		weapon_type_explosive
-		weapon_type_strike_craft
-		weapon_type_point_defense
-		weapon_type_kuat_superlazer_scale
-		weapon_type_kuat_drftweapon_scale
-		weapon_type_kuat_artellarys_scale
-		weapon_type_kuat_missile_ki_scale
-		weapon_type_kuat_strikcrafe_scale
-		weapon_type_gravity 
-		weapon_type_psionic 
-		weapon_type_anti_psionic 
-		weapon_type_SRA_SRA 
-		weapon_type_SRA_RE_Core 
-		weapon_type_H.D.energy 
-		weapon_type_HD.M.kinetic 
-		weapon_type_PrimaMateria 
-		weapon_type_sr_uf 
-		weapon_type_lingli 
-		weapon_type_KZ_VOY_magic 
-		weapon_type_KZ_VOY_temporal 
-		weapon_type_ge_void_energy 
-		weapon_type_nano 
+	complex_enum[weapon_type] = {
+		path = "game/common/component_tags"
+		name = {
+			enum_name
+		}
+		start_from_root = yes
 	}
 	enum[weapon_type2] = {
 		instant
