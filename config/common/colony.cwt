@@ -73,6 +73,9 @@ colony_automation_exception = {
 	empire_wide_emergency = bool
 
 	## cardinality = 0..1
+	crisis = bool
+
+	## cardinality = 0..1
 	prio_districts = {
 		## cardinality = 0..inf
 		<district>

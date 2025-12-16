@@ -447,6 +447,102 @@ component_template = {
 			}
 		}
 		## cardinality = 0..1
+		friendly_aura = {
+			name = scalar
+			## cardinality = 0..1
+			## push_scope = ship
+			limit = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			system_wide = bool
+			## cardinality = 0..1
+			radius = int
+			## cardinality = 0..1
+			system_wide = bool
+			## cardinality = 0..1
+			apply_on = enum[aura_types]
+			stack_info = {
+				id = scalar
+				## cardinality = 0..1
+				priority = int
+			}
+			## cardinality = 0..1
+			## replace_scope = { this = ship root = ship }
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+
+			## cardinality = 0..1
+			graphics = {
+				## cardinality = 0..inf
+				area_effect = {
+					entity = <model_entity>
+					dynamic_scale = bool
+				}
+				## cardinality = 0..inf
+				ship_effect = {
+					entity = <model_entity>
+					dynamic_scale = bool
+				}
+			}
+		}
+		## cardinality = 0..1
+		hostile_aura = {
+			name = scalar
+			## cardinality = 0..1
+			## push_scope = ship
+			limit = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			system_wide = bool
+			## cardinality = 0..1
+			radius = int
+			## cardinality = 0..1
+			system_wide = bool
+			## cardinality = 0..1
+			apply_on = enum[aura_types]
+			stack_info = {
+				id = scalar
+				priority = int
+			}
+			## cardinality = 0..1
+			## replace_scope = { this = ship root = ship }
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+
+			## cardinality = 0..1
+			graphics = {
+				## cardinality = 0..inf
+				area_effect = {
+					entity = <model_entity>
+					dynamic_scale = bool
+				}
+				## cardinality = 0..inf
+				ship_effect = {
+					entity = <model_entity>
+					dynamic_scale = bool
+				}
+			}
+			## cardinality = 0..1
+			damage_per_day = {
+				## cardinality = 0..1
+				accuracy = float
+				## cardinality = 0..1
+				damage = { min = int max = int }
+				## cardinality = 0..1
+				shield_damage = float
+				## cardinality = 0..1
+				shield_penetration = float
+				## cardinality = 0..1
+				armor_penetration = float
+				## cardinality = 0..1
+				size_damage_factor = float
+			}
+		}
+		## cardinality = 0..1
 		hide_damage_values_from_tooltip = bool
 		## cardinality = 0..1
 		show_tech_unlock_if = {
