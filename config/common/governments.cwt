@@ -232,6 +232,7 @@ government = {
 	weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..1
 	ruler_title = localisation
 	## cardinality = 0..1
 	ruler_title_female = localisation
