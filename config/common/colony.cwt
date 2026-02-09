@@ -6,6 +6,8 @@ types = {
 			Name = "$"
 			## required
 			Description = "$_desc"
+			## required
+			Tooltip = "$_tt"
 		}
 	}
 	type[colony_automation] = {
