@@ -1059,6 +1059,9 @@ alias[effect:add_monthly_resource_mult] = {
 }
 
 ###Adds a specific trait to the scoped leader or a random common/negative trait
+alias[effect:add_trait] = <trait.leader_trait>
+alias[effect:add_trait] = random_common
+alias[effect:add_trait] = random_negative
 alias[effect:add_trait] = {
 	## cardinality = 0..1
 	trait = <trait.leader_trait>
@@ -1805,17 +1808,16 @@ alias[effect:create_leader] = {
 	## cardinality = 0..1
 	traits = {
 		## cardinality = 0..inf
-		add_trait = <trait.leader_trait>
-		## cardinality = 0..inf
-		add_trait = random_trait
-		## cardinality = 0..inf
 		trait = <trait.leader_trait>
 		## cardinality = 0..inf
-		trait = random_trait
+		trait = random_common
 		## cardinality = 0..inf
+		trait = random_negative
 		int = <trait.leader_trait>
 		## cardinality = 0..inf
 		int = random_common
+		## cardinality = 0..inf
+		int = random_negative
 	}
 	## cardinality = 0..1
 	ruler_title = localisation
