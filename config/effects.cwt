@@ -1813,6 +1813,7 @@ alias[effect:create_leader] = {
 		trait = random_common
 		## cardinality = 0..inf
 		trait = random_negative
+		## cardinality = 0..inf
 		int = <trait.leader_trait>
 		## cardinality = 0..inf
 		int = random_common
