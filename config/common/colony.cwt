@@ -69,9 +69,6 @@ colony_automation_exception = {
 	}
 
 	## cardinality = 0..1
-	should_ai_use_job_micro = bool
-
-	## cardinality = 0..1
 	emergency = bool
 
 	## cardinality = 0..1
@@ -97,7 +94,28 @@ colony_automation_exception = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			## cardinality = 0..1
+			upgrade_trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
 			planet_limit = int
+		}
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet }
+	should_ai_use_job_micro = bool
+
+	job_changes = {
+		## cardinality = 1..inf
+		scalar = {
+			job = <job>
+			## cardinality = 0..1
+			available = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			amount = int
 		}
 	}
 }
