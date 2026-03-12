@@ -1,4 +1,4 @@
-[22:55:16][game_application.cpp:1407]: 
+[22:06:02][game_application.cpp:1389]: 
 == TRIGGER DOCUMENTATION ==
 text - For 'desc={trigger={' use. Shows custom text
 text = <text>
@@ -65,11 +65,9 @@ else_if = { limit = { <display_triggers> } <triggers> }
 Supported Scopes: all
 
 is_orbiting_star - Checks if a ship is orbiting a star
-is_orbiting_star = yes
 Supported Scopes: ship fleet
 
 cosmic_storm_influence_value - Returns the amount of influence on a system
-cosmic_storm_influence_value > 0.75
 Supported Scopes: galactic_object
 
 happiness - Checks the pop group's happiness percentage
@@ -683,7 +681,7 @@ is_in_domain = the_eater_of_worlds
 Supported Scopes: country
 
 can_be_crisis_terraformed - Checks if a system has the can_be_crisis_terraformed flag or not.
-can_be_crisis_terraformed = <yes/no>
+ can_be_crisis_terraformed = <yes/no>
 Supported Scopes: galactic_object
 
 hidden_trigger - Hides the tooltip for the triggers within
@@ -1075,7 +1073,7 @@ is_archetype = PRESAPIENT
 Supported Scopes: species
 
 uplift_is_archetype - Checks if the uplifted version of the species has the specified archetype:
-uplift_is_archetype = LITHOID
+	uplift_is_archetype = LITHOID
 Supported Scopes: species
 
 is_inside_nebula - checks if the planet/ship/fleet/system is inside a nebula
@@ -3482,7 +3480,7 @@ is_last_increased_tech_rare = yes
 Supported Scopes: country
 
 is_last_increased_tech_category - Checks if the last increased tech is of the specified category:
-is_last_increased_tech_category = psionics
+	is_last_increased_tech_category = psionics
 Supported Scopes: country
 
 get_attunement_points_for - Checks the amount of attunement points earned for a specified patron.
@@ -3531,7 +3529,7 @@ pop_group_crime >= 50
 Supported Scopes: planet pop_group
 
 has_patron_counter - Checks if the scoped country can increment towards given counter
-has_patron_counter = po_grow_pop
+	has_patron_counter = po_grow_pop
 Supported Scopes: country
 
 count_ship_size_in_system - Checks the sum of the ship_size's size_multiplier of every ship present in the scoped system.
@@ -4460,7 +4458,7 @@ count_trait_of_species = {
 }
 Supported Scopes: pop pop_group leader species
 
-any_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait 
+any_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
 any_traits_available_for_species = { trait_has_all_tags = { organic positive } } - checks whether the enclosed triggers return true for any of them
 any_trait_available_for_species = { <triggers> }
 Supported Scopes: pop pop_group leader species
@@ -4607,8 +4605,8 @@ Supported Scopes: country
 
 =================
 
-
-[22:55:16][game_application.cpp:1410]: 
+=================
+[22:06:02][game_application.cpp:1392]: 
 == EFFECT DOCUMENTATION ==
 tooltip - Just a tooltip
 Supported Scopes: all
@@ -4719,11 +4717,11 @@ or
 Supported Scopes: planet
 
 ruin_building - Ruins a single instance of a specific building on the scoped planet
-ruin_building = <building_type_key>/random_no_capital
+	ruin_building = <building_type_key>/random_no_capital
 Supported Scopes: planet
 
 disable_building - Disables a single instance of a specific building on the scoped planet
-disable_building = <building_type_key>
+	disable_building = <building_type_key>
 Supported Scopes: planet
 
 change_background_ethic - Changes the background ethic of a leader
@@ -4891,6 +4889,16 @@ create_fleet - Creates a new fleet
 create_fleet = { name = <string> effect = { <create_ship, set_owner, set_location etc effects go here> } } 
 Supported Scopes: all
 
+create_random_fleet - Creates a new random fleet
+create_random_fleet = {
+	name = <string>
+	size = <int>
+	can_overflow = yes/no # default yes
+	ship_designs = { NAME_a NAME_b } # Optional, only allow ships among these designs
+	effect = { <set_location etc effects go here> } 
+}
+Supported Scopes: country
+
 create_army - Creates a new army
 create_army = {
 	name = <string>
@@ -4925,7 +4933,7 @@ create_ship = {
 	design = <ship design key/target/last_created_design, or use random_existing_design>
 	random_existing_design = <ship size key>
 	graphical_culture = <graphical culture key> graphical_culture_fallback = <graphical culture key>
-	prefix = <Y(default)/N, determines if ship name should use owner country prefix>
+prefix = <Y(default)/N, determines if ship name should use owner country prefix>
 	suffix = <Y/N(default), determines if ship name should use numericals. If so, name will be added to the owner country's namelist>
 	colonizer_species = <species, default: fleet owner founder species> age = <int> (optional)
 	rarity = <common/rare/epic/exceptional, used only if ship is space fauna> (optional, fallbacks to highest owned genetic material if applicable but not set)
@@ -5391,7 +5399,7 @@ destroy_ambient_object - Destroys target ambient object
 destroy_ambient_object = <target>
 Supported Scopes: all
 
-add_trait - Adds a specific trait to the scoped leader or a random common/negative trait 
+add_trait - Adds a specific trait to the scoped leader or a random common/negative trait
 add_trait = <trait>/random_common/random_negative
 or
 add_trait = {
@@ -5474,12 +5482,12 @@ remove_building - Removes a single instance of a specific building from the scop
 Supported Scopes: planet
 
 add_zone - Adds zone to the district of the planet
-add_zone = {
-	district = <district_type_key/district_slot_index>
-	zone = <zone_type_key>
-	zone_slot = <zone_slot_index>
-	replace = <yes/no>
-}
+	add_zone = {
+		district = <district_type_key/district_slot_index>
+		zone = <zone_type_key>
+		zone_slot = <zone_slot_index>
+		replace = <yes/no>
+	}
 Supported Scopes: planet
 
 change_planet_size - Increases or reduces the size of the scoped planet by a specified amount
@@ -5962,7 +5970,7 @@ Supported Scopes: all
 
 create_fleet_from_naval_cap - Creates a new fleet from empire designs up to specified fraction of naval cap
 create_fleet_from_naval_cap = 0.5
-create_fleet_from_naval_cap = { fraction = 0.5 ship_owner_type = <country/federation/galactic_community>
+create_fleet_from_naval_cap = { fraction = 0.5 can_overflow = yes/no (default yes) ship_owner_type = <country/federation/galactic_community>
 Supported Scopes: country
 
 remove_opinion_modifier - Removes a specific opinion modifier towards target country or any country from the scoped country
@@ -7137,7 +7145,7 @@ date_distortion = yes
 Supported Scopes: all
 
 refresh_portraits - Signals to portrait objects that they need to refresh some of their properties
-refresh_portraits = planet/room/character/all
+	refresh_portraits = planet/room/character/all
 Supported Scopes: country
 
 start_astral_action_cooldown - Starts the cooldown of an astral action defined with uses_custom_cooldown = yes
@@ -7232,7 +7240,7 @@ Supported Scopes: all
 
 set_cosmic_storm - Sets a storm on a system
 set_cosmic_storm = {
-	cosmic_storm = <target>
+ 	cosmic_storm = <target>
 }
 Supported Scopes: galactic_object
 
@@ -7896,7 +7904,7 @@ set_council_position_title_female = { position_tag = COUNCIL_POSITION_TAG title 
 Supported Scopes: country
 
 repair_building - Repairs a single instance of a specific building on the scoped planet
-repair_building = <building_type_key>
+	repair_building = <building_type_key>
 Supported Scopes: planet
 
 abort_special_project - Aborts a specific special project for the country, removing it from the situation log
@@ -8156,7 +8164,7 @@ unlock_exhibit = <category>
 Supported Scopes: country
 
 enable_mission - Enables a mission for target country
-enable_mission = { name = <mission key> }
+ enable_mission = { name = <mission key> }
 Supported Scopes: all
 
 set_leader_tier - Sets the leader's tier.

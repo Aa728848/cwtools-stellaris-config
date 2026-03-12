@@ -908,6 +908,8 @@ alias[effect:create_fleet_from_naval_cap] = {
 	ship_owner_type = country
 	ship_owner_type = federation
 	ship_owner_type = galactic_community
+	##cardinality = 0..inf
+	can_overflow = bool
 }
 
 ###Reduces the hull points of the scoped ship by a specific amount
@@ -2473,6 +2475,32 @@ alias[effect:create_fleet] = {
 		ai_ignore_strength = bool
 		## cardinality = 0..1
 		is_ultra_boss = bool
+	}
+	## push_scope = fleet
+	## cardinality = 0..1
+	###Must include set_owner, set_location and create_ship (here or in last_created_country). Todo: Check this somehow
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
+
+#create_random_fleet = { name = <string> size = <int> can_overflow = yes/no # default yes ship_designs = { NAME_a NAME_b } # Optional, only allow ships among these designs effect = { set_location etc effects go here> } }
+### Creates a new random fleet
+alias[effect:create_random_fleet] = {
+	alias_name[name] = alias_match_left[name]
+	## cardinality = 0..1
+	name = random
+	## cardinality = 0..1
+	name = scope[fleet]
+	## cardinality = 0..1
+	size = int
+	## cardinality = 0..1
+	size = int_value_field
+	## cardinality = 0..1
+	can_overflow = bool
+	## cardinality = 0..1
+	ship_designs = {
+		<global_ship_design>
 	}
 	## push_scope = fleet
 	## cardinality = 0..1
