@@ -103,9 +103,10 @@ colony_automation_exception = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
 	should_ai_use_job_micro = bool
-
+	
+	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet }	
 	job_changes = {
 		## cardinality = 1..inf
 		scalar = {
