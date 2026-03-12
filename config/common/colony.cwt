@@ -69,6 +69,9 @@ colony_automation_exception = {
 	}
 
 	## cardinality = 0..1
+	should_ai_use_job_micro = bool
+
+	## cardinality = 0..1
 	emergency = bool
 
 	## cardinality = 0..1
@@ -81,14 +84,6 @@ colony_automation_exception = {
 	prio_districts = {
 		## cardinality = 0..inf
 		<district>
-	}
-	
-	## cardinality = 0..1
-	prio_zones = {
-		## cardinality = 0..inf
-		<zones>
-		## cardinality = 0..inf
-		enum[zone_type]
 	}
 
 	## cardinality = 0..1
