@@ -157,7 +157,7 @@ trait = {
 			<species_class>
 		}
 		## cardinality = 0..1
-		## replace_scope = { this = country from = country }
+		## replace_scope = { this = species from = country }
 		archetype_override = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
