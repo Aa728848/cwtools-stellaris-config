@@ -65,6 +65,8 @@ ship_size = {
 	## cardinality = 0..1
 	is_listed = bool
 	## cardinality = 0..1
+	map_counter_icon = enum[map_counter_icon]
+	## cardinality = 0..1
 	components_add_to_cost = bool
 	## cardinality = 0..1
 	is_entropy_conduit = bool
@@ -150,7 +152,7 @@ ship_size = {
 	## cardinality = 0..1
 	is_bio_ship = bool
 	## cardinality = 0..1
-	bioship_growth_progress_required =value_field
+	bioship_growth_progress_required = value_field
 	## cardinality = 0..1
 	upgrades_to = <ship_size>
 
@@ -383,6 +385,14 @@ enums = {
 				}
 			}
 		}
+	}
+	enum[map_counter_icon] = {
+		ship_counter_4
+		ship_counter_8
+		ship_counter_16
+		ship_counter_32
+		ship_counter_64
+		ship_counter_128
 	}
 	enum[ship_size_ship_roles] = {
 		artillery
