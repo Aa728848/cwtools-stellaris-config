@@ -17,6 +17,7 @@ types = {
 			"job_$_add" = Planets
 			"job_$_per_pop" = Planets
 			"job_$_per_crime" = Planets
+			"pop_$_bonus_workforce_mult" = Planets
 		}
 		localisation = {
 			## required
@@ -32,6 +33,8 @@ types = {
 				"Per Pop Modifier" = "mod_job_$_per_pop"
 				## optional
 				"Per Pop Modifier (short)" = "mod_job_$_per_pop_short"
+				## optional
+				"Pop Workforce Modifier" = "mod_pop_$_bonus_workforce_mult"
 			}
 			subtype[possible] = {
 				## required
