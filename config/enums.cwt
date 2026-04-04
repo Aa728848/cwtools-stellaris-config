@@ -523,7 +523,7 @@ enums = {
 		trigger:sapient_pop_amount
 		trigger:pop_group_size
 	 }
-	 enum[inline_script_flags] = {
+	enum[inline_script_flags] = {
 		"received_collection_stage_1_reward_aesthetic_wonder"
 		"received_collection_stage_1_reward_historical_item"
 		"received_collection_stage_1_reward_xeno_geology"
@@ -623,4 +623,6 @@ enums = {
 		unplugged_prevent_pre_ftl_devastation
 		use_default_ships
 	}
+	enum[script_value_params] = scalar
+	enum[script_value_params_dollar] = scalar
 }

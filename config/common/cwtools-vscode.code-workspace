@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../cwtools-vscode"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"debug.javascript.defaultRuntimeExecutable": {
+			"pwa-node": "c:\\users\\thomas\\appdata\\local\\mise\\shims\\node"
+		}
+	}
+}
