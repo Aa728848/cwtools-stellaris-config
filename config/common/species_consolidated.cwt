@@ -70,6 +70,13 @@ types = {
 	}
 	type[species_archetype] = {
 		path = "game/common/species_archetypes"
+		modifiers = {
+			"$_species_trait_picks_add" = Countries
+		}
+		localisation = {
+			## optional
+			TRAIT_PICK = "mod_$_species_trait_picks_add"
+		}
 	}
 	type[citizenship_type] = {
 		path = "game/common/species_rights/citizenship_types"
