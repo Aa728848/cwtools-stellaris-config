@@ -71,6 +71,12 @@ textcolors = {
 
 bitmapfont = {
 	name = scalar
+	# cardinality = 0..1
+	ttf_font = <font>
+	## cardinality = 0..1
+	ttf_size = int
+	## cardinality = 0..1
+	vertical_offset = int
 	#TODO: This should be filepath + extension
 	## cardinality = 0..1
 	path = scalar
