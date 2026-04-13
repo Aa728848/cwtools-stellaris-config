@@ -373,6 +373,7 @@ enums = {
 		mia_fleet_eaten
 	}
 	enum[pre_ftl_relationship_types] = {
+		commercial_pact
 		defensive_pact
 		migration_access
 		is_under_societal_enlightenment
@@ -492,13 +493,14 @@ enums = {
 		aianom_society_dep4
 		historical_item_specimen_count
 		local_kill_pop_amount
+		local_num_attackers
 		local_pop_amount
 		local_size_option
 		local_spent_biomass
 		number_fleets_spawned
-		root.local_pop_amount
+		local_country_biomass
+		local_devastation
 		subjects_minus_one
-		trigger:pop_amount
 		trophy_hunter_gained_energy
 		trophy_hunter_gained_exotic_gases
 		trophy_hunter_gained_food
@@ -506,6 +508,27 @@ enums = {
 		trophy_hunter_gained_rare_crystals
 		trophy_hunter_gained_unity
 		xeno_geology_specimen_count
+	}
+	enum[global_flags] = {
+		authoritarian_leader_1
+		authoritarian_leader_2
+		egalitarian_leader_1
+		egalitarian_leader_2
+		first_league_system_discovered
+		ghost_signal_1_flag
+		irassian_system_discovered
+		materialist_leader_1
+		materialist_leader_2
+		militarist_leader_1
+		militarist_leader_2
+		pacifist_leader_1
+		pacifist_leader_2
+		spiritualist_leader_1
+		spiritualist_leader_2
+		xenophile_leader_1
+		xenophile_leader_2
+		xenophobe_leader_1
+		xenophobe_leader_2
 	}
 	enum[growth_category] = {
 		"GROWTH_CAT_PROMOTION"
@@ -625,4 +648,227 @@ enums = {
 	}
 	enum[script_value_params] = scalar
 	enum[script_value_params_dollar] = scalar
+	enum[varname_enum] = {
+		ascensions_added
+		destroyed_colony_pop
+		experimental_progress
+		research_after
+		spawned_shroudstone
+	}
+	enum[country_flag_enum] = {
+		affected_by_celestial_storm
+		affected_by_electric_storm
+		affected_by_gravity_storm
+		affected_by_magnetic_storm
+		affected_by_particle_storm
+		affected_by_solar_storm
+		affluence_center_can_build
+		affluence_emporium_can_build
+		apex_aquatic
+		apex_arthropoid
+		apex_avian
+		apex_fungoid
+		apex_humanoid
+		apex_lithoid
+		apex_machine
+		apex_mammalian
+		apex_molluscoid
+		apex_necroid
+		apex_plantoid
+		apex_reptilian
+		apex_toxoid
+		army_recruited
+		army_recruited_patron
+		awakening_not_allowed
+		beholder_psi_pops_timer
+		breached_shroud
+		buildings_good_energy
+		buildings_good_food
+		buildings_good_minerals
+		chinorr_combine
+		class_3_singularity_can_build
+		class_4_singularity_can_build
+		commander_given
+		commander_given_patron
+		devour_war_active
+		dimensional_fabricator_can_build
+		dimensional_replicator_can_build
+		dportal_trade_crisis
+		dportal_trade_high
+		dportal_trade_low
+		dportal_trade_normal
+		end_of_the_cycle_reckoning
+		end_of_cycle_lost_planets
+		enigmatic_fortress_disabled
+		exploration_focus_230_completed
+		eotc_destruction_mitigated
+		fe_administration_1_can_build
+		fe_administration_hive_1_can_build
+		fe_administration_machine_1_can_build
+		fe_assembly_1_can_build
+		fe_clinic_1_can_build
+		fe_entertainment_1_can_build
+		fe_fortress_can_build
+		fe_lab_1_can_build
+		fe_market_1_can_build
+		fe_mine_1_can_build
+		fe_security_1_can_build
+		fe_silo_1_can_build
+		fe_sky_dome_can_build
+		grand_archive_8410_end_dialog
+		has_uplifted_species
+		has_private_clinics
+		increase_leader_upkeep
+		lootboxed_recently
+		human_plantoid
+		logistics_assistance
+		logistics_assistance_patron
+		mercenary_enclave_planet
+		micro_forge_can_build
+		mindwarden_logistics_cooldown
+		necrophage_start_empire
+		nano_forge_can_build
+		necrophage_elevation_timer
+		nourishment_center_can_build
+		nourishment_complex_can_build
+		ongoing_preftl_chain
+		only_unbidden_this_time
+		paragon_origin_finished_story
+		planet_storm_to_signal_found
+		police_recruited
+		police_recruited_patron
+		raid_target_asked
+		raid_target_asked_patron
+		thesis_insufficient
+		triggered_storm_in_a_box
+		received_collection_stage_2_reward_aesthetic_wonder
+		received_collection_stage_2_reward_historical_item
+		received_collection_stage_2_reward_xeno_geology
+		recently_got_affluence_emporium
+		recently_got_affluence_emporium
+		recently_got_class_3_singularity
+		recently_got_class_3_singularity
+		recently_got_dimensional_replicator
+		recently_got_dimensional_replicator
+		recently_got_fe_administration_1
+		recently_got_fe_administration_hive_1
+		recently_got_fe_administration_machine_1
+		recently_got_fe_assembly_1
+		recently_got_fe_clinic_1
+		recently_got_fe_entertainment_1
+		recently_got_fe_fortress
+		recently_got_fe_lab_1
+		recently_got_fe_market_1
+		recently_got_fe_mine_1
+		recently_got_fe_security_1
+		recently_got_fe_silo_1
+		recently_got_fe_sky_dome
+		recently_got_micro_forge
+		recently_got_nourishment_complex
+		recently_got_nourishment_complex
+		works_with_formless
+		reckoning_intel_given
+		reckoning_intel_given_patron
+		reemployment_center_timer
+		shroudwalker_attune_patron_cooldown
+		shroudwalker_contact_patron_cooldown
+		shroudwalker_delving_ritual_cooldown
+		skydome_can_build
+		started_zroni_storyline
+		tech_1_researched
+		tech_2_researched
+		tech_fe_market_1
+		tech_fe_security_1
+		tech_fe_security_1_can_build
+		shroud_song_10_selected
+		shroud_song_11_selected
+		shroud_song_12_selected
+		shroud_song_13_selected
+		shroud_song_1_selected
+		shroud_song_2_selected
+		shroud_song_3_selected
+		shroud_song_4_selected
+		shroud_song_5_selected
+		shroud_song_6_selected
+		shroud_song_7_selected
+		shroud_song_8_selected
+		shroud_song_9_selected
+		the_composer_of_strands_betrayal
+		the_cradle_of_souls_betrayal
+		the_eater_of_worlds_betrayal
+		the_instrument_of_desire_betrayal
+		the_voor
+		uncapped_generator_districts
+		unplugged_pre_ftl_empire_flag
+		zro_bought
+		zro_bought_patron
+		zroni_storyline_completed
+	}
+	enum[leader_flag_enum] = {
+		block_homeworld_traits
+		renowned_materialist1
+		legendary_leader_coma
+		defeated_humanoid_evopred
+		defeated_mammalian_evopred
+		defeated_reptilian_evopred
+		defeated_avian_evopred
+		defeated_arthropoid_evopred
+		defeated_molluscoid_evopred
+		defeated_fungoid_evopred
+		defeated_plantoid_evopred
+		defeated_lithoid_evopred
+		defeated_necroid_evopred
+		defeated_aquatic_evopred
+		defeated_toxoid_evopred
+		defeated_infernal_evopred
+		defeated_machine_evopred
+		renowned_leader
+		paragon_origin_genetic_ascension
+		paragon_origin_psionic_ascension
+	}
+	enum[has_astral_rift_flag_enum] = {
+		split_opened_rift
+	}
+	enum[fleet_flag_enum] = {
+		formless_defense_fleet
+	}
+	enum[pop_group_flag_enum] = {
+		non_purge_pop_group
+		upl_ethic_colind
+		upl_ethic_pacmil
+		upl_ethic_spimat
+		upl_ethic_xenoph
+	}
+	enum[relation_flag_enum] = {
+		AbandonedRefugees
+		pirate_relation
+	}
+	enum[ship_flag_enum] = {
+		behemoth_hatchling
+	}
+	enum[situation_flag_enum] = {
+		celebration_void_spawn
+		cybernetic_creed_cyberization_no_funding
+		shroud_forged_500_negative
+		shroud_forged_500_positive
+		shroud_forged_510_negative_1
+		shroud_forged_510_negative_2
+		shroud_forged_510_positive_1
+		shroud_forged_510_positive_2
+		shroud_forged_520_negative_1
+		shroud_forged_520_negative_2
+		shroud_forged_520_positive_1
+		shroud_forged_530_negative_2
+		shroud_forged_540_positive_2
+		shroud_forged_550_negative_1
+		shroud_forged_550_positive_1
+		shroud_forged_560_negative_2
+		shroud_forged_560_positive_2
+		shroud_forged_570_negative_1
+		shroud_forged_570_positive_1
+		shroud_forged_580_positive_1
+		shroud_forged_590_negative_1
+		shroud_forged_590_positive_1
+		took_pops
+	}
 }

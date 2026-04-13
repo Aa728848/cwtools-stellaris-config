@@ -66,22 +66,24 @@ alias[trigger:has_opinion_modifier] = {
 ## severity = warning
 ###Checks if the pop group has a specific flag
 alias[trigger:has_pop_group_flag] = value[pop_group_flag]
+alias[trigger:has_pop_group_flag] = enum[pop_group_flag_enum]
 ## severity = warning
 ###Checks if the empire has a specific, arbitrarily-named, flag
 alias[trigger:has_country_flag] = value[country_flag]
 alias[trigger:has_country_flag] = enum[pop_faction_inline_flag_enum]
-alias[trigger:has_country_flag] = enum[building_upgrade_flags]
+alias[trigger:has_country_flag] = enum[country_flag_enum]
 alias[trigger:has_country_flag] = enum[inline_script_flags]
 ## severity = warning
 ###Checks if the planet has a specific, arbitrarily-named, flag
 alias[trigger:has_planet_flag] = value[planet_flag]
-alias[trigger:has_planet_flag] = enum[building_upgrade_flags]
+alias[trigger:has_planet_flag] = enum[country_flag_enum]
 ## severity = warning
 ###Checks if the pop faction has a specific, arbitrarily-named, flag
 alias[trigger:has_pop_faction_flag] = value[pop_faction_flag]
 ## severity = warning
 ###Checks if the solar system has a specific, arbitrarily-named, flag
 alias[trigger:has_star_flag] = value[star_flag]
+alias[trigger:has_star_flag] = enum[country_flag_enum]
 ## severity = warning
 ###Checks if the solar system has a specific, arbitrarily-named, flag
 alias[trigger:has_star_flag] = <precursors>
@@ -94,31 +96,36 @@ alias[trigger:has_pop_flag] = value[pop_flag]
 ## severity = warning
 ###Checks if the fleet has a specific, arbitrarily-named, flag
 alias[trigger:has_fleet_flag] = value[fleet_flag]
+alias[trigger:has_fleet_flag] = enum[fleet_flag_enum]
 ## severity = warning
 ###Checks if the ship has a specific, arbitrarily-named, flag
 alias[trigger:has_ship_flag] = value[ship_flag]
+alias[trigger:has_ship_flag] = enum[ship_flag_enum]
 ## severity = warning
 ###Checks if a Global Flag has been set
 alias[trigger:has_global_flag] = value[global_flag]
 ## severity = warning
 ###Checks if the specified variable is set on the current scope. Use to avoid unset variables errors
 alias[trigger:is_variable_set] = value[variable]
-alias[trigger:is_variable_set] = local_size_option
+alias[trigger:is_variable_set] = enum[exe_set_variable]
 alias[trigger:is_variable_set] = enum[fe_building_upgrade_variables] 
 alias[trigger:is_variable_set] = local_spent_<resource>
 alias[trigger:is_variable_set] = trophy_hunter_gained_<resource>
 ## severity = warning
 ###Checks if the leader has a specific, arbitrarily-named, flag
 alias[trigger:has_leader_flag] = value[leader_flag]
+alias[trigger:has_leader_flag] = enum[leader_flag_enum]
 ## severity = warning
 ###Checks if the ambient object has a specific, arbitrarily-named, flag
 alias[trigger:has_ambient_object_flag] = value[ambient_object_flag]
+alias[trigger:has_ambient_object_flag] = enum[ambient_object_flag_enum]
 ## severity = warning
 ###Checks if the mega structure has a specific, arbitrarily-named, flag
 alias[trigger:has_megastructure_flag] = value[megastructure_flag]
 ## severity = warning
 ###Checks if the deposit has a specific, arbitrarily-named, flag
 alias[trigger:has_deposit_flag] = value[deposit_flag]
+alias[trigger:has_deposit_flag] = enum[country_flag_enum] 
 ## severity = warning
 ###Checks if the sector has a specific, arbitrarily-named, flag
 alias[trigger:has_sector_flag] = value[sector_flag]
@@ -143,6 +150,7 @@ alias[trigger:has_army_flag] = value[army_flag]
 ## severity = warning
 ###Checks if the situation has a specific, arbitrarily-named, flag
 alias[trigger:has_situation_flag] = value[situation_flag]
+alias[trigger:has_situation_flag] = enum[situation_flag_enum]
 ## severity = warning
 ###Checks if the agreement has a specific, arbitrarily-named, flag
 alias[trigger:has_agreement_flag] = value[agreement_flag]
@@ -159,6 +167,7 @@ alias[trigger:has_relation_flag] = {
 	who = scope_group[target_country]
 	## severity = warning
 	flag = value[relation_flag]
+	flag = enum[relation_flag_enum]
 }
 
 ###Checks if the target country has a specific relation flag towards the country
@@ -166,6 +175,7 @@ alias[trigger:reverse_has_relation_flag] = {
 	who = scope_group[target_country]
 	## severity = warning
 	flag = value[relation_flag]
+	flag = enum[relation_flag_enum]
 }
 
 ## severity = warning
@@ -515,6 +525,7 @@ alias[trigger:def_war_exhaustion_sum] == value_field
 
 ###Checks the scope's total fleet power
 alias[trigger:fleet_power] == value_field
+alias[trigger:fleet_power] = enum[exe_set_variable]
 
 ###is_megastructure_type = <name of type>. Compares the type of scope's mega structure to a type from the database
 alias[trigger:is_megastructure_type] = <megastructure>
@@ -2733,6 +2744,7 @@ alias[trigger:council_legitimacy] == value_field
 ## severity = warning
 ###Checks if the astral rift has a specific flag
 alias[trigger:has_astral_rift_flag] = value[astral_rift_flag]
+alias[trigger:has_astral_rift_flag] = enum[has_astral_rift_flag_enum]
 
 ## severity = warning
 ###Checks if the country has completed a specific event chain

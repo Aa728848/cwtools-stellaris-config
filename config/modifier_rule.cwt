@@ -40,10 +40,19 @@ script_value = {
 	subtract = trigger:<trigger>
 	## cardinality = 0..inf
 	subtract = enum[order_by]
+	## cardinality = 0..inf	
+	mult = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	divide = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	add = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	subtract = enum[exe_set_variable]
 }
 
 alias[modifier_rule:base] = float
 alias[modifier_rule:enum[complex_maths_enum]] = value_field
+alias[modifier_rule:enum[complex_maths_enum]] = enum[exe_set_variable]
 alias[modifier_rule:enum[simple_maths_enum]] = yes
 
 alias[modifier_rule:modifier] = {
@@ -71,6 +80,14 @@ alias[modifier_rule:scaled_modifier] = {
 	div = float
 	## cardinality = 0..1
 	mul = float
+	## cardinality = 0..inf	
+	mul = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	div = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	add = enum[exe_set_variable]
+	## cardinality = 0..inf	
+	factor = enum[exe_set_variable]	
 }
 
 alias[modifier_rule:complex_trigger_modifier] = {
@@ -167,6 +184,8 @@ alias[modifier_rule:complex_trigger_modifier] = {
 	mult = enum[order_by]
 	## cardinality = 0..1
 	divide = int
+	## cardinality = 0..1
+	divide = enum[exe_set_variable]
 	## cardinality = 0..1
 	divide = trigger:<trigger>
 	## cardinality = 0..1

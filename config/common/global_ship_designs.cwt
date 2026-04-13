@@ -5,11 +5,11 @@ types = {
 	}
 }
 
-#TODO Confirm
-#TODO Document
 global_ship_design = {
 	## cardinality = 0..1
 	name = localisation
+	## cardinality = 0..1
+	roles = enum[ship_size_ship_roles]
 	## cardinality = 0..1
 	ship_size = <ship_size>
 	## cardinality = 0..1
@@ -23,6 +23,10 @@ global_ship_design = {
 		## cardinality = 0..inf
 		localisation
 	}
+	## cardinality = 0..1
+	fleet_specialization_tag = enum[component_tags]
+	## cardinality = 0..1
+	graphical_culture = <graphical_culture>
 	## cardinality = 0..1
 	creature_designer_template = bool
 	## cardinality = 0..1
@@ -49,6 +53,8 @@ global_ship_design = {
 
 	## cardinality = 0..inf
 	section = {
+		## cardinality = 0..1
+		custom_military_power = float
 		## cardinality = 0..1
 		template = <section_template>
 		## cardinality = 0..1
