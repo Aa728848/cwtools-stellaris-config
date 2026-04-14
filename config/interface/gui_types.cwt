@@ -114,9 +114,32 @@ alias[gui:positionType] = {
 	dynamic_extra_height = float
 	## cardinality = 0..1
 	if_scaled_resolution = {
-			min_height = int
-			position = { x = int y = int }
-		}
+		## cardinality = 0..1
+		max_height = int
+		## cardinality = 0..1
+		min_height = int
+		## cardinality = 0..1
+		max_width = int
+		## cardinality = 0..1
+		min_width = int
+		## cardinality = 0..1
+		show_position = { x = int y = int }
+		## cardinality = 0..1
+		hide_position = { x = int y = int }
+		## cardinality = 0..1
+		animation_time = int
+		## cardinality = 0..1
+		animation_type = enum[gui_fade_types]
+		## cardinality = 0..1
+		show_sound = "select_click"
+		## cardinality = 0..1
+		moveable = bool
+		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
+		alias_name[gui_background] = alias_match_left[gui_background]
+		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+	}
 }
 
 ### Used to show in tooltip sections
@@ -142,6 +165,35 @@ alias[gui:instantTextboxType] = {
 	fixedSize = bool
 	## cardinality = 0..1
 	appendtext = scalar
+	
+	## cardinality = 0..1
+	if_scaled_resolution = {
+		## cardinality = 0..1
+		max_height = int
+		## cardinality = 0..1
+		min_height = int
+		## cardinality = 0..1
+		max_width = int
+		## cardinality = 0..1
+		min_width = int
+		## cardinality = 0..1
+		show_position = { x = int y = int }
+		## cardinality = 0..1
+		hide_position = { x = int y = int }
+		## cardinality = 0..1
+		animation_time = int
+		## cardinality = 0..1
+		animation_type = enum[gui_fade_types]
+		## cardinality = 0..1
+		show_sound = "select_click"
+		## cardinality = 0..1
+		moveable = bool
+		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
+		alias_name[gui_background] = alias_match_left[gui_background]
+		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+	}
 
 	## cardinality = 0..1
 	scrollbarType = enum[scrollbar_types]
@@ -195,10 +247,7 @@ alias[gui:smoothListboxType] = {
 	## cardinality = 0..1
 	background = scalar
 	## cardinality = 0..1
-	offset = {
-		x = int
-		y = int
-	}
+	offset = { x = float y = float }
 	
 	## cardinality = 0..1
 	dynamic_extra_height = float
@@ -245,6 +294,8 @@ alias[gui:smoothListboxType] = {
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
 	}
 
 	## cardinality = 0..1
@@ -324,6 +375,8 @@ alias[gui:containerWindowType] = {
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
 	}
 	## cardinality = 0..1
 	dynamic_extra_height = float
@@ -442,6 +495,8 @@ alias[gui:iconType] = {
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
 	}
 	
 	alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
@@ -504,6 +559,8 @@ alias[gui_button:buttonType] = {
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
 	}
 	
 	## cardinality = 0..1
@@ -708,6 +765,36 @@ alias[gui:listBoxType] = {
 	alwaystransparent = bool
 	## cardinality = 0..1
 	scrollbartype = enum[scrollbar_types]
+	## cardinality = 0..1
+	offset = { x = float y = float }
+	## cardinality = 0..1
+	if_scaled_resolution = {
+		## cardinality = 0..1
+		max_height = int
+		## cardinality = 0..1
+		min_height = int
+		## cardinality = 0..1
+		max_width = int
+		## cardinality = 0..1
+		min_width = int
+		## cardinality = 0..1
+		show_position = { x = int y = int }
+		## cardinality = 0..1
+		hide_position = { x = int y = int }
+		## cardinality = 0..1
+		animation_time = int
+		## cardinality = 0..1
+		animation_type = enum[gui_fade_types]
+		## cardinality = 0..1
+		show_sound = "select_click"
+		## cardinality = 0..1
+		moveable = bool
+		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
+		alias_name[gui_background] = alias_match_left[gui_background]
+		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+	}
 
 	alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 	alias_name[gui_background] = alias_match_left[gui_background]
