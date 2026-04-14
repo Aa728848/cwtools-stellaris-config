@@ -115,6 +115,8 @@ alias[gui:positionType] = {
 	## cardinality = 0..1
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -134,6 +136,8 @@ alias[gui:positionType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -165,9 +169,11 @@ alias[gui:instantTextboxType] = {
 	fixedSize = bool
 	## cardinality = 0..1
 	appendtext = scalar
-	
+
 	## cardinality = 0..1
 	if_scaled_resolution = {
+		## cardinality = 0..1
+		font = <bitmapfont>
 		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
@@ -188,6 +194,8 @@ alias[gui:instantTextboxType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -272,6 +280,8 @@ alias[gui:smoothListboxType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -291,6 +301,8 @@ alias[gui:smoothListboxType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -353,6 +365,8 @@ alias[gui:containerWindowType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -372,6 +386,8 @@ alias[gui:containerWindowType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -473,6 +489,8 @@ alias[gui:iconType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -492,6 +510,8 @@ alias[gui:iconType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -537,6 +557,8 @@ alias[gui_button:buttonType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -556,6 +578,8 @@ alias[gui_button:buttonType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -619,8 +643,8 @@ alias[gui:browserType] = {
 		y = int
 	}
 	size = {
-		x = int
-		y = int
+		x = float
+		y = float
 	}
 }
 
@@ -770,6 +794,8 @@ alias[gui:listBoxType] = {
 	## cardinality = 0..1
 	if_scaled_resolution = {
 		## cardinality = 0..1
+		font = <bitmapfont>
+		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -789,6 +815,8 @@ alias[gui:listBoxType] = {
 		show_sound = "select_click"
 		## cardinality = 0..1
 		moveable = bool
+		## cardinality = 0..1
+		offset = { x = float y = float }
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
@@ -948,8 +976,8 @@ alias[overlay:overlay] = {
 	}
 	## cardinality = 0..1
 	size = {
-		x = int
-		y = int
+		x = float
+		y = float
 	}
 }
 alias[gui_standard_element:size] = {
@@ -984,8 +1012,8 @@ alias[gui_standard_element:vertical_alignment] = enum[vertical_alignment]
 alias[gui_standard_element:id] = scalar
 alias[gui_standard_element:horizontal] = int[0..1]
 alias[gui_standard_element:horizontal] = bool
-alias[gui_standard_element:maxWidth] = int
-alias[gui_standard_element:maxHeight] = int
+alias[gui_standard_element:maxWidth] = float
+alias[gui_standard_element:maxHeight] = float
 alias[gui_standard_element:defaultSelection] = bool
 alias[gui_standard_element:scale] = float
 alias[gui_standard_element:alwaysTransparent] = bool
@@ -997,6 +1025,7 @@ alias[gui_sprite:quadTextureSprite] = <sprite>
 alias[gui_sprite:quadTextureSprite] = <progressbartype>
 alias[gui_sprite:quadTextureSprite] = GFX_checkbox
 alias[gui_sprite:quadTextureSprite] = GFX_peekpassword
+alias[gui_sprite:quadTextureSprite] = ""
 
 alias[gui_sound:clicksound] = <sound_effect>
 alias[gui_sound:oversound] = <sound_effect>
