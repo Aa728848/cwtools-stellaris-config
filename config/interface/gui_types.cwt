@@ -115,8 +115,6 @@ alias[gui:positionType] = {
 	## cardinality = 0..1
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -143,6 +141,8 @@ alias[gui:positionType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 }
 
@@ -173,8 +173,6 @@ alias[gui:instantTextboxType] = {
 	## cardinality = 0..1
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -199,6 +197,8 @@ alias[gui:instantTextboxType] = {
 		alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
 		alias_name[gui_background] = alias_match_left[gui_background]
 		alias_name[gui] = alias_match_left[gui]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
 	}
@@ -280,8 +280,6 @@ alias[gui:smoothListboxType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -308,6 +306,8 @@ alias[gui:smoothListboxType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 
 	## cardinality = 0..1
@@ -365,8 +365,6 @@ alias[gui:containerWindowType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -393,6 +391,8 @@ alias[gui:containerWindowType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 	## cardinality = 0..1
 	dynamic_extra_height = float
@@ -489,8 +489,6 @@ alias[gui:iconType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -517,6 +515,8 @@ alias[gui:iconType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 	
 	alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
@@ -557,8 +557,6 @@ alias[gui_button:buttonType] = {
 	## cardinality = 0..inf
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -585,6 +583,8 @@ alias[gui_button:buttonType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 	
 	## cardinality = 0..1
@@ -794,8 +794,6 @@ alias[gui:listBoxType] = {
 	## cardinality = 0..1
 	if_scaled_resolution = {
 		## cardinality = 0..1
-		font = <bitmapfont>
-		## cardinality = 0..1
 		max_height = int
 		## cardinality = 0..1
 		min_height = int
@@ -822,6 +820,8 @@ alias[gui:listBoxType] = {
 		alias_name[gui] = alias_match_left[gui]
 		## cardinality = 0..1
 		alias_name[gui_sprite] = alias_match_left[gui_sprite]
+		## cardinality = 0..1
+		alias_name[gui_localisation] = alias_match_left[gui_localisation]
 	}
 
 	alias_name[gui_standard_element] = alias_match_left[gui_standard_element]
@@ -981,20 +981,24 @@ alias[overlay:overlay] = {
 	}
 }
 alias[gui_standard_element:size] = {
-x = int
-x = percentage_field
-y = int
-y = percentage_field
+	## cardinality = 0..1
+	x = float
+	## cardinality = 0..1
+	x = percentage_field
+	## cardinality = 0..1
+	y = float
+	## cardinality = 0..1
+	y = percentage_field
 }
 alias[gui_standard_element:size] = {
-## cardinality = 0..1
-width = int
-## cardinality = 0..1
-width = percentage_field
-## cardinality = 0..1
-height = int
-## cardinality = 0..1
-height = percentage_field
+	## cardinality = 0..1
+	width = float
+	## cardinality = 0..1
+	width = percentage_field
+	## cardinality = 0..1
+	height = float
+	## cardinality = 0..1
+	height = percentage_field
 }
 
 alias[gui_standard_element:position] = {
@@ -1002,8 +1006,8 @@ alias[gui_standard_element:position] = {
 	y = float
 }
 alias[gui_standard_element:borderSize] = {
-	x = int
-	y = int
+	x = float
+	y = float
 }
 alias[gui_standard_element:orientation] = enum[direction]
 alias[gui_standard_element:format] = enum[direction]
@@ -1044,8 +1048,8 @@ alias[gui_localisation:pdx_tooltip] = scalar #since many are not defined anyway 
 alias[gui_localisation:pdx_tooltip_delayed] = localisation
 alias[gui_localisation:pdx_tooltip_anchor_orientation] = enum[direction]
 alias[gui_localisation:pdx_tooltip_anchor_offset]= {
-	x = int
-	y = int
+	x = float
+	y = float
 }
 alias[gui_button_element:shortcut] = scalar
 alias[gui_button_element:frame] = int
