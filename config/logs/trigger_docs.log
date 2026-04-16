@@ -1,4 +1,4 @@
-[22:06:02][game_application.cpp:1389]: 
+[20:22:44][game_application.cpp:1399]: 
 == TRIGGER DOCUMENTATION ==
 text - For 'desc={trigger={' use. Shows custom text
 text = <text>
@@ -875,7 +875,7 @@ Supported Scopes: planet
 
 is_pop_category - Checks if the pop group has the chosen pop category
 is_pop_category = <key>
-Supported Scopes: pop pop_group
+Supported Scopes: pop_group
 
 won_the_game - Checks if scoped country won the game
 won_the_game = yes
@@ -4604,9 +4604,7 @@ count_war = {
 Supported Scopes: country
 
 =================
-
-=================
-[22:06:02][game_application.cpp:1392]: 
+[20:22:44][game_application.cpp:1402]: 
 == EFFECT DOCUMENTATION ==
 tooltip - Just a tooltip
 Supported Scopes: all
@@ -8195,7 +8193,8 @@ add_timeline_event = {
   override_id = my_defined_unique_id
   override_text = { "button:MY_OTHER_LOC_STRING" "button2:ANOTHER_LOC_OVERRIDE" }  
   override_texture = { "button:GFX_short_button button2:GFX_otherbutton" }  
-  override_tooltip, "loc_tooltip"  override_tooltip_delayed, "loc_delayed_tooltip"
+  override_tooltip, "loc_tooltip"  
+  override_tooltip_delayed, "loc_delayed_tooltip"
 }
 Supported Scopes: country
 
