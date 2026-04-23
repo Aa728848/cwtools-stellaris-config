@@ -77,6 +77,7 @@ localisation_commands = {
     GetControllerName = planet
     GetPlanetMoon = planet
     GetPlanetMoonCap = planet
+    GetAttitudeColor = country   
     GetClassName = { planet galactic_object system }
     GetClassAdj = planet
     GetLastLostRelic = country
