@@ -537,15 +537,13 @@ enums = {
 		"GROWTH_CAT_OTHER"
 	}
 	enum[order_by] = {
-		capital_scope.trigger:pop_amount
 		local_pop_amount
 		local_spent_biomass
 		owner.trigger:disciple_of_the_cradle_councilors_count
 		trigger:pop_amount
 		trigger:psionic_pop_amount
 		trigger:sapient_pop_amount
-		trigger:pop_group_size
-	 }
+	}
 	enum[inline_script_flags] = {
 		"received_collection_stage_1_reward_aesthetic_wonder"
 		"received_collection_stage_1_reward_historical_item"
