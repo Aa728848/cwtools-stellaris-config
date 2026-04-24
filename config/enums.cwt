@@ -539,7 +539,6 @@ enums = {
 	enum[order_by] = {
 		local_pop_amount
 		local_spent_biomass
-		owner.trigger:disciple_of_the_cradle_councilors_count
 		trigger:pop_amount
 		trigger:psionic_pop_amount
 		trigger:sapient_pop_amount
