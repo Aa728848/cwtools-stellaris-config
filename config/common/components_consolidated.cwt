@@ -70,6 +70,8 @@ enums = {
 		behemoth_turbo_activity_key
 	}
 	enum[component_bio_stack_info_id] = {
+		anti_evasion
+		anti_fire_rate
 		bio_anti_evasion
 		bio_anti_fire_rate
 		bio_evasion
@@ -80,6 +82,7 @@ enums = {
 		evasion
 		fire_rate
 		healing
+		disruptor_regen
 	}
 }
 
