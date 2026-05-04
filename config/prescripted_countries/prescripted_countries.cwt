@@ -188,8 +188,11 @@ prescripted_country = {
 }
 
 prescripted_country_flags = {
+	## cardinality = 0..1
 	flags = {
 		## cardinality = 0..inf
 		scalar
 	}
+	## cardinality = 0..inf
+	scalar
 }
