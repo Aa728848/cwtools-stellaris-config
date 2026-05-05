@@ -194,5 +194,5 @@ prescripted_country_flags = {
 		scalar
 	}
 	## cardinality = 0..inf
-	scalar
+	scalar 
 }
