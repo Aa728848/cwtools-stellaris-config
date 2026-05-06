@@ -111,6 +111,7 @@ situation_type = {
 	}
 	###Effects when Situation's progress has reached its completion
 	###You should always call destroy_situation = this from here or from an event fired by here
+	## replace_scope = { root = situation this = situation }
 	## cardinality = 0..1
 	on_progress_complete = {
 		alias_name[effect] = alias_match_left[effect]
@@ -222,10 +223,12 @@ situation_type = {
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			###Effect for the first time this stage fires (hidden in the UI)
+			## replace_scope = { root = situation this = situation }
 			on_first_enter = {
 				alias_name[effect] = alias_match_left[effect]
 			}
 			## cardinality = 0..1
+			## replace_scope = { root = situation this = situation }
 			on_enter  = {
 				alias_name[effect] = alias_match_left[effect]
 			}
