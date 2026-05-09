@@ -186,8 +186,10 @@ component_template = {
 		## cardinality = 0..1
 		null
 	}
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	custom_tooltip = localisation
+	## cardinality = 0..1
+	show_only_custom_tooltip = bool
 	## replace_scope = { root = ship this = ship }
 	alias_name[triggered_ship_modifier] = alias_match_left[triggered_ship_modifier]
 	## cardinality = 0..1
