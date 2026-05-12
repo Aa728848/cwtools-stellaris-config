@@ -15,6 +15,7 @@ enums = {
 		"Galactic Paragons"
 		"Grand Archive"
 		"Humanoids Species Pack"
+		"Mammalian Species Pack"
 		"Infernals Species Pack"
 		"Leviathans Story Pack"
 		"Lithoids Species Pack"
@@ -30,5 +31,6 @@ enums = {
 		"The Machine Age"
 		"Toxoids Species Pack"
 		"Utopia"
+		"Vipra the Vapor Species Portrait"
 	}
 }
