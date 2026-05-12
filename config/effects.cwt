@@ -2083,6 +2083,7 @@ alias[effect:add_seen_bypass_type] = <bypass>
 ###Spawns a new natural wormhole in the scoped system.
 alias[effect:spawn_natural_wormhole] = {
 	bypass_type = <bypass>
+	## cardinality = 0..1
 	relative_to = scope[system]
 	## cardinality = 0..1
 	in_place_of = scope[system]
