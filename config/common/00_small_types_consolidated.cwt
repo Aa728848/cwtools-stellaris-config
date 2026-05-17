@@ -1080,7 +1080,7 @@ portrait_categories = {
 	name = localisation
 	sets = {
 		## cardinality = 0..inf
-		<portrait_set>
+		<portrait_sets>
 	}
 }
 
@@ -1096,6 +1096,10 @@ portrait_sets = {
 		## cardinality = 0..1
 		randomizable = bool
 		## cardinality = 0..1
+		randomizable = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
 		playable = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
@@ -1105,22 +1109,30 @@ portrait_sets = {
 		portraits = {
 			## cardinality = 0..inf
 			<portrait>
+			## cardinality = 0..inf
+			<portrait_group>
 		}
 	}
 	## cardinality = 0..1
 	non_randomized_portraits = {
 		## cardinality = 0..inf
 		<portrait>
+		## cardinality = 0..inf
+		<portrait_group>
 	}
 	## cardinality = 0..1
 	non_pre_ftl_portraits = {
 		## cardinality = 0..inf
 		<portrait>
+		## cardinality = 0..inf
+		<portrait_group>
 	}
 	## cardinality = 0..1
 	uplifted_portraits = {
 		## cardinality = 0..inf
 		<portrait>
+		## cardinality = 0..inf
+		<portrait_group>
 	}
 }
 

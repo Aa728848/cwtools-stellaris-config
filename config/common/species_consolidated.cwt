@@ -296,20 +296,6 @@ species_class = {
 		}
 	}
 	## cardinality = 0..1
-	non_randomized_portraits = {
-		## cardinality = 0..inf
-		<portrait>
-		## cardinality = 0..inf
-		<portrait_group>
-	}
-	## cardinality = 0..inf
-	non_pre_ftl_portraits = {
-		## cardinality = 0..inf
-		<portrait>
-		## cardinality = 0..inf
-		<portrait_group>
-	}
-	## cardinality = 0..1
 	gender = bool
 	## cardinality = 0..1
 	graphical_culture = <graphical_culture>
