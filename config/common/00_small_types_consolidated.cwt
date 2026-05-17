@@ -1090,6 +1090,8 @@ portrait_sets = {
 	portraits = {
 		## cardinality = 0..inf
 		<portrait>
+		## cardinality = 0..inf
+		<portrait_group>
 	}
 	## cardinality = 0..inf
 	conditional_portraits = {
