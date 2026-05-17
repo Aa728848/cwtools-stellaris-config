@@ -5073,12 +5073,12 @@ alias[trigger:count_system_added_to_storm] = {
 
 ## push_scope = system
 ###Iterate through all systems removed from storm - checks whether the enclosed triggers return true for any of them
-alias[trigger:any_system_removed_from_storm ] = {
+alias[trigger:any_system_removed_from_storm] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ###Iterate through all systems removed from storm - checks whether the enclosed triggers return true for X/all of them
-alias[trigger:count_system_removed_from_storm ]= {
+alias[trigger:count_system_removed_from_storm]= {
 	count = int_value_field
 	count = value[variable]
 	count = all

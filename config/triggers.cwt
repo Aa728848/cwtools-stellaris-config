@@ -678,6 +678,9 @@ alias[trigger:is_species_class] = <species_class>
 ###Checks if a pop group/leader/species/country's dominant species has a certain trait
 alias[trigger:has_trait] = <trait>
 
+### Checks if a leader has a certain ruler trait, even if they are not currently ruler
+alias[trigger:has_ruler_trait] = <trait>
+
 ###Checks if the pop group has a specific trait
 alias[trigger:pop_group_has_trait] = <trait.species_trait>
 
@@ -2355,6 +2358,8 @@ alias[trigger:has_climate] = localisation
 ###Check if the country has an embassy with the target country
 alias[trigger:has_embassy] = scope_group[target_country]
 
+### Checks if the scoped megastructure is built on a planet
+alias[trigger:built_on_planet] = bool
 #3.2
 
 ###Checks if the planet is ideal (as set in planet_classes)
@@ -2706,6 +2711,9 @@ alias[trigger:num_candidate_supported] == int_value_field
 
 ###Compares the progress (0-1) of the current Agenda.
 alias[trigger:council_agenda_progress_percent] == float[0..1]
+
+###Compares the progress (0-1) of the current Agenda.
+alias[trigger:council_agenda_progress] == int_value_field
 
 ###Checks if the country has a specific Council Agenda selected, or any at all
 alias[trigger:has_agenda_selected] = bool
@@ -3087,7 +3095,10 @@ alias[trigger:has_passed_resolution] = {
 alias[trigger:fleet_integrity] == value_field
 
 ###Checks if country owns the galactic market:
-alias[trigger:is_market_leader =bool
+alias[trigger:is_market_leader] = bool
+
+### Compares spy network max level of the scoped object
+alias[trigger:is_spynetwork_max_level] == int_value_field
 
 ###Checks scoped country's called in favors used to pass the last resolution
 alias[trigger:used_favors_on_last_resolution] == int_value_field

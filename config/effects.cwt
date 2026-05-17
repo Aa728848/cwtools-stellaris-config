@@ -4560,6 +4560,9 @@ alias[effect:reduce_shield] = int_value_field
 ###Damages ship by a specific amount
 alias[effect:damage_ship] = int_value_field
 
+### Finish the current operation phase
+alias[effect:finish_current_operation_stage] = bool
+
 ###Creates a cosmic storm
 alias[effect:create_cosmic_storm] = {
 	type = <storm_type>
@@ -5276,6 +5279,15 @@ alias[effect:clear_planet_purge_type] = bool
 
 ###Destroys up to navel_cap worth of ships in the target fleet (with death graphics)
 alias[effect:destroy_fleet_naval_cap] = {
+	## cardinality = 0..1
+	target = scope[fleet]
+	naval_cap= int
+	## cardinality = 0..1
+	kill_leader=bool
+}
+
+###Destroys up to navel_cap worth of ships in the target fleet (with death graphics)
+alias[effect:delete_fleet_naval_cap] = {
 	## cardinality = 0..1
 	target = scope[fleet]
 	naval_cap= int
