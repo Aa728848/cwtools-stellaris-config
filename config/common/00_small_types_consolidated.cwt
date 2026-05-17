@@ -49,7 +49,7 @@ types = {
 		path = "game/common/start_screen_messages"
 	}
 	type[precursors] = {
-		path = "common/precursor_civilizations"
+		path = "game/common/precursor_civilizations"
 	}
 	## replace_scope = { root = system this = system }
 	type[sector_type] = {
@@ -152,6 +152,62 @@ types = {
 	}
 	type[leader_tiers] = {
 		path = "game/common/leader_tiers"
+	}
+	
+	# Added from rules-sync update report
+	type[ai_espionage_operations] = {
+		path = "game/common/ai_espionage/operations"
+	}
+	type[ai_espionage_spynetworks] = {
+		path = "game/common/ai_espionage/spynetworks"
+	}
+	type[astral_rifts] = {
+		path = "game/common/astral_rifts"
+	}
+	type[cloaking_strength_levels] = {
+		path = "game/common/cloaking_strength_levels"
+	}
+	type[colony_automation_categories] = {
+		path = "game/common/colony_automation_categories"
+	}
+	type[colors] = {
+		path = "game/common/colors"
+	}
+	type[country_container] = {
+		path = "game/common/country_container"
+	}
+	type[dynamic_text] = {
+		path = "game/common/dynamic_text"
+	}
+	type[galactic_community_actions] = {
+		path = "game/common/galactic_community_actions"
+	}
+	type[gamesetup_settings] = {
+		path = "game/common/gamesetup_settings"
+	}
+	type[greeting_overlay_sounds] = {
+		path = "game/common/greeting_overlay_sounds"
+	}
+	type[lawsuits] = {
+		path = "game/common/lawsuits"
+	}
+	type[portrait_categories] = {
+		path = "game/common/portrait_categories"
+	}
+	type[portrait_sets] = {
+		path = "game/common/portrait_sets"
+	}
+	type[random_names_base] = {
+		path = "game/common/random_names/base"
+	}
+	type[resolution_groups] = {
+		path = "game/common/resolution_groups"
+	}
+	type[ship_sets] = {
+		path = "game/common/ship_sets"
+	}
+	type[system_tooltips] = {
+		path = "game/common/system_tooltips"
 	}
 }
 
@@ -879,4 +935,217 @@ leader_tiers = {
 	tier = int
 	## cardinality = 0..1
 	texture_postfix = scalar
+}
+
+
+# ====== Auto-added generic schemas for missing types ====== 
+ai_espionage_operations = {
+	weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+ai_espionage_spynetworks = {
+	strategy_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	network_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+astral_rifts = {
+	name = localisation
+	## cardinality = 0..1
+	randomized = bool
+	## cardinality = 0..1
+	flags = {
+		## cardinality = 0..inf
+		value_set[astral_rift_flag]
+	}
+	## cardinality = 0..1
+	event_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	event = <event>
+	## cardinality = 0..1
+	on_roll_failed = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
+
+cloaking_strength_levels = {
+	icon = <sprite>
+	cloaking_strength = int
+	can_cloak = bool
+	## cardinality = 0..1
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
+
+colony_automation_categories = {
+	## cardinality = 0..1
+	available = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+colors = {
+	rgb = {
+		## cardinality = 3..4
+		int
+	}
+}
+
+country_container = {
+	## cardinality = 1..inf
+	scalar = {
+		resources = {
+			category = <economic_category>
+			## cardinality = 0..1
+			alias_name[economic_template] = alias_match_left[economic_template]
+		}
+	}
+}
+
+dynamic_text = {
+	## cardinality = 0..1
+	mandatory = {
+		## cardinality = 0..inf
+		scalar
+	}
+	## cardinality = 0..1
+	relevant = {
+		## cardinality = 0..inf
+		scalar
+	}
+	## cardinality = 0..1
+	add = {
+		## cardinality = 0..inf
+		scalar
+	}
+}
+
+galactic_community_actions = {
+	## cardinality = 0..1
+	resources = {
+		category = <economic_category>
+		alias_name[economic_template] = alias_match_left[economic_template]
+	}
+}
+
+gamesetup_settings = {
+	## cardinality = 0..inf
+	categories = {
+		## cardinality = 0..inf
+		scalar = {
+			name = localisation
+			## cardinality = 0..inf
+			settings = {
+				## cardinality = 0..inf
+				scalar = scalar
+				## cardinality = 0..inf
+				scalar = {
+					## cardinality = 0..inf
+					scalar = scalar
+				}
+			}
+		}
+	}
+}
+
+greeting_overlay_sounds = {
+	soundeffect = <sound_effect>
+	possible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+lawsuits = {
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	cost = {
+		## cardinality = 0..inf
+		<resource> = int
+	}
+	duration = int
+}
+
+portrait_categories = {
+	name = localisation
+	sets = {
+		## cardinality = 0..inf
+		<portrait_set>
+	}
+}
+
+portrait_sets = {
+	species_class = <species_class>
+	## cardinality = 0..1
+	portraits = {
+		## cardinality = 0..inf
+		<portrait>
+	}
+	## cardinality = 0..inf
+	conditional_portraits = {
+		## cardinality = 0..1
+		randomizable = bool
+		## cardinality = 0..1
+		playable = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		playable = bool
+		## cardinality = 0..1
+		portraits = {
+			## cardinality = 0..inf
+			<portrait>
+		}
+	}
+	## cardinality = 0..1
+	non_randomized_portraits = {
+		## cardinality = 0..inf
+		<portrait>
+	}
+	## cardinality = 0..1
+	non_pre_ftl_portraits = {
+		## cardinality = 0..inf
+		<portrait>
+	}
+	## cardinality = 0..1
+	uplifted_portraits = {
+		## cardinality = 0..inf
+		<portrait>
+	}
+}
+
+random_names_base = {
+	## cardinality = 0..inf
+	scalar
+}
+
+resolution_groups = {
+	color_index = int
+	text_color_code = scalar
+}
+
+ship_sets = {
+	name = localisation
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+system_tooltips = {
+	## cardinality = 0..inf
+	custom_tooltip = {
+		## cardinality = 0..1
+		success_text = localisation
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
