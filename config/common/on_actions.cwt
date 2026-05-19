@@ -10,174 +10,345 @@ types = {
 		subtype[on_game_start] = { }
 		## type_key_filter = on_game_start_country
 		subtype[on_game_start_country] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_single_player_save_game_load
 		subtype[on_single_player_save_game_load] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_monthly_pulse
 		subtype[on_monthly_pulse] = { }
 		## type_key_filter = on_monthly_pulse_pre_ftl_observation
 		subtype[on_monthly_pulse_pre_ftl_observation] = { }
 		## type_key_filter = on_monthly_pulse_pre_ftl_observation_broken_shackles
 		subtype[on_monthly_pulse_pre_ftl_observation_broken_shackles] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_yearly_pulse
 		subtype[on_yearly_pulse] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_bi_yearly_pulse
 		subtype[on_bi_yearly_pulse] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_five_year_pulse
 		subtype[on_five_year_pulse] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_decade_pulse
 		subtype[on_decade_pulse] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_mid_game_pulse
 		subtype[on_mid_game_pulse] = { }
+		### Vanilla No scope, like on_game_start
 		## type_key_filter = on_late_game_pulse
 		subtype[on_late_game_pulse] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_monthly_pulse_country
 		subtype[on_monthly_pulse_country] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_yearly_pulse_country
 		subtype[on_yearly_pulse_country] = { }
+		### Vanilla this = country, fired via action.2001 from on_yearly_pulse_country
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_yearly_random_pulse_country_caravaneers_list
 		subtype[on_yearly_random_pulse_country_caravaneers_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_bi_yearly_pulse_country
 		subtype[on_bi_yearly_pulse_country] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_pulse_country
 		subtype[on_five_year_pulse_country] = { }
+		### Vanilla this = country, fired via action.220 from on_five_year_pulse_country
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_random_pulse_country
 		subtype[on_five_year_random_pulse_country] = { }
+		### Vanilla this = country, fired via action.220 from on_five_year_pulse_country
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_years_communication_spread_country
 		subtype[on_five_years_communication_spread_country] = { }
+		### Vanilla this = country, fired via action.420
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_random_pulse_overlord
 		subtype[on_five_year_random_pulse_overlord] = { }
+		### Vanilla this = country, fired via action.620
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_random_pulse_pre_ftl
 		subtype[on_five_year_random_pulse_pre_ftl] = { }
+		### Vanilla this = country, fired via action.630
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_random_pulse_pre_ftl_tech_events
 		subtype[on_five_year_random_pulse_pre_ftl_tech_events] = { }
+		### Vanilla this = country, fired via action.2211 from on_five_year_random_pulse_country
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_five_year_random_pulse_country_negative_list
 		subtype[on_five_year_random_pulse_country_negative_list] = { }
 		## type_key_filter = on_five_year_random_pulse_country_fe_list
 		subtype[on_five_year_random_pulse_country_fe_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_decade_pulse_country
 		subtype[on_decade_pulse_country] = { }
 		## type_key_filter = on_decade_pulse_skrand_country
 		subtype[on_decade_pulse_skrand_country] = { }
 		## type_key_filter = on_decade_random_pulse_country_payback_broken_shackles
 		subtype[on_decade_random_pulse_country_payback_broken_shackles] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_mid_game_pulse_country
 		subtype[on_mid_game_pulse_country] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_late_game_pulse_country
 		subtype[on_late_game_pulse_country] = { }
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_initialize_advanced_colony
 		subtype[on_initialize_advanced_colony] = { }
 		## type_key_filter = on_become_advanced_empire
 		subtype[on_become_advanced_empire] = { }
+		### Vanilla This = country to press begin
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_press_begin
 		subtype[on_press_begin] = { }
+		### Vanilla This = target country (player)
+		### Vanilla From = source country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_custom_diplomacy
 		subtype[on_custom_diplomacy] = { }
+		### Vanilla This = Empire 1
+		### Vanilla From = Empire 2
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_first_contact
 		subtype[on_first_contact] = { }
+		### Vanilla From = other country
+		## replace_scope = { this = first_contact root = first_contact from = country }
 		## type_key_filter = on_first_contact_finished
 		subtype[on_first_contact_finished] = { }
+		### Vanilla This = receiver
+		### Vanilla From = sender
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_enforce_borders
 		subtype[on_enforce_borders] = { }
+		### Vanilla From = country attacking
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_ground_combat_started
 		subtype[on_ground_combat_started] = { }
+		### Vanilla This = country, lead attacker
+		### Vanilla From = country, planet owner
+		## replace_scope = { this = country root = country from = country fromfrom = planet }
 		## type_key_filter = on_planet_attackers_win
 		subtype[on_planet_attackers_win] = { }
+		### Vanilla This = country, attack leader
+		### Vanilla From = country, planet owner
+		## replace_scope = { this = country root = country from = country fromfrom = planet }
 		## type_key_filter = on_planet_attackers_lose
 		subtype[on_planet_attackers_lose] = { }
+		### Vanilla Root = country, planet owner
+		### Vanilla From = country, attack leader
+		## replace_scope = { this = country root = country from = country fromfrom = planet }
 		## type_key_filter = on_planet_defenders_win
 		subtype[on_planet_defenders_win] = { }
+		### Vanilla This = country, planet owner
+		### Vanilla From = country, attack leader
+		## replace_scope = { this = country root = country from = country fromfrom = planet }
 		## type_key_filter = on_planet_defenders_lose
 		subtype[on_planet_defenders_lose] = { }
+		## replace_scope = { this = country root = country from = system }
 		## type_key_filter = on_system_first_visited
 		subtype[on_system_first_visited] = { }
+		## replace_scope = { this = ship root = ship from = system fromfrom = country }
 		## type_key_filter = on_entering_system_first_time
 		subtype[on_entering_system_first_time] = { }
+		## replace_scope = { this = ship root = ship from = system fromfrom = country }
 		## type_key_filter = on_entering_system
 		subtype[on_entering_system] = { }
+		## replace_scope = { this = fleet root = fleet from = system }
 		## type_key_filter = on_entering_system_fleet
 		subtype[on_entering_system_fleet] = { }
+		### Vanilla From = Origin System
+		### Vanilla FromFrom = Destination System
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_crossing_border
 		subtype[on_crossing_border] = { }
+		## replace_scope = { this = ship root = ship from = planet }
 		## type_key_filter = on_survey_planet
 		subtype[on_survey_planet] = { }
+		## replace_scope = { this = ship root = ship from = astral_rift }
 		## type_key_filter = on_survey_astral_rift
 		subtype[on_survey_astral_rift] = { }
+		### Vanilla FromFrom = Fleet of the science ship that surveyed it, if any
+		## replace_scope = { this = planet root = planet from = country fromfrom = ship }
 		## type_key_filter = on_planet_surveyed
 		subtype[on_planet_surveyed] = { }
+		### Vanilla FromFrom = Fleet of the science ship that surveyed it, if any
+		## replace_scope = { this = astral_rift root = astral_rift from = country fromfrom = ship }
 		## type_key_filter = on_astral_rift_surveyed
 		subtype[on_astral_rift_surveyed] = { }
+		### Vanilla FromFrom = Fleet of the science ship that surveyed it, if any
+		## replace_scope = { this = country root = country from = system fromfrom = ship }
 		## type_key_filter = on_system_survey
 		subtype[on_system_survey] = { }
+		## replace_scope = { this = ship root = ship from = system }
 		## type_key_filter = on_system_survey_ship
 		subtype[on_system_survey_ship] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_colonization_started
 		subtype[on_colonization_started] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_colonized
 		subtype[on_colonized] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_colony_destroyed
 		subtype[on_colony_destroyed] = { }
+		### Vanilla From = Bombarder
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_colony_destroyed_by_bombardment
 		subtype[on_colony_destroyed_by_bombardment] = { }
+		### Vanilla This = owner of fleet 1
+		### Vanilla From = owner of fleet 2
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_entering_battle
 		subtype[on_entering_battle] = { }
+		### Vanilla This = owner of ship 1 (destroyed)
+		### Vanilla From = owner of ship 2 (combatant)
+		### Vanilla FromFrom = ship 1
+		## replace_scope = { this = country root = country from = country fromfrom = ship }
 		## type_key_filter = on_ship_destroyed_victim
 		subtype[on_ship_destroyed_victim] = { }
+		### Vanilla This = owner of ship 1 (combatant)
+		### Vanilla From = owner of ship 2 (destroyed)
+		### Vanilla FromFrom = ship 1
+		## replace_scope = { this = country root = country from = country fromfrom = ship }
 		## type_key_filter = on_ship_destroyed_perp
 		subtype[on_ship_destroyed_perp] = { }
+		### Vanilla This = damaged ship
+		### Vanilla From = attacker ship
+		## replace_scope = { this = ship root = ship from = ship }
 		## type_key_filter = on_damage_taken
 		subtype[on_damage_taken] = { }
+		### Vanilla This = starbase being destroyed (not ship!)
+		### Vanilla From = fleet that destroyed the starbase
+		## replace_scope = { this = ship root = ship from = starbase }
 		## type_key_filter = on_starbase_destroyed
 		subtype[on_starbase_destroyed] = { }
+		### Vanilla This = starbase being disabled (not ship!)
+		### Vanilla From = fleet that disabled the starbase
+		## replace_scope = { this = ship root = ship from = starbase }
 		## type_key_filter = on_starbase_disabled
 		subtype[on_starbase_disabled] = { }
+		### Vanilla This = owner of ship 1 (destroyed)
+		### Vanilla From = owner of ship 2 (combatant)
+		### Vanilla FromFrom = ship 1
+		## replace_scope = { this = country root = country from = country fromfrom = ship }
 		## type_key_filter = on_ship_disengaged_victim
 		subtype[on_ship_disengaged_victim] = { }
+		### Vanilla This = owner of ship 1 (combatant)
+		### Vanilla From = owner of ship 2 (destroyed)
+		### Vanilla FromFrom = ship 1
+		## replace_scope = { this = country root = country from = country fromfrom = ship }
 		## type_key_filter = on_ship_disengaged_perp
 		subtype[on_ship_disengaged_perp] = { }
+		### Vanilla This = owner of fleet 1 (destroyed)
+		### Vanilla From = owner of fleet 2 (combatant)
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_fleet_destroyed_victim
 		subtype[on_fleet_destroyed_victim] = { }
+		### Vanilla This = owner of fleet 1 (combatant)
+		### Vanilla From = owner of fleet 2 (destroyed)
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_fleet_destroyed_perp
 		subtype[on_fleet_destroyed_perp] = { }
+		### Vanilla This = owner of fleet 1 (winner)
+		### Vanilla From = owner of fleet 2 (loser)
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_space_battle_won
 		subtype[on_space_battle_won] = { }
+		### Vanilla This = owner of fleet 1 (loser)
+		### Vanilla From = owner of fleet 2 (winner)
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_space_battle_lost
 		subtype[on_space_battle_lost] = { }
+		### Vanilla This = owner of fleet 1 (winner)
+		### Vanilla From = owner of fleet 2 (loser)
+		### Vanilla FromFrom = fleet 1
+		## replace_scope = { this = country root = country from = country fromfrom = fleet }
 		## type_key_filter = on_space_battle_over
 		subtype[on_space_battle_over] = { }
+		## replace_scope = { this = fleet root = fleet }
 		## type_key_filter = on_fleet_exit_battle
 		subtype[on_fleet_exit_battle] = { }
+		### Vanilla This = owner of fleet
+		### Vanilla From = disbanded fleet
+		## replace_scope = { this = country root = country from = fleet }
 		## type_key_filter = on_fleet_disbanded
 		subtype[on_fleet_disbanded] = { }
+		### Vanilla This = owner of ship
+		### Vanilla From = disbanded ship
+		## replace_scope = { this = country root = country from = ship }
 		## type_key_filter = on_ship_disbanded
 		subtype[on_ship_disbanded] = { }
+		### Vanilla This = owner of army
+		### Vanilla From = disbanded army
+		## replace_scope = { this = country root = country from = army }
 		## type_key_filter = on_army_disbanded
 		subtype[on_army_disbanded] = { }
+		### Vanilla This = owner of fleet
+		### Vanilla FromFrom = planet (if any)
+		## replace_scope = { this = country root = country from = fleet fromfrom = planet }
 		## type_key_filter = on_fleet_auto_move_arrival
 		subtype[on_fleet_auto_move_arrival] = { }
+		### Vanilla From = country that borrowed the fleet
+		### Vanilla FromFrom = country that owns the fleet
+		## replace_scope = { this = fleet root = fleet from = country fromfrom = country }
 		## type_key_filter = on_fleet_contract_started
 		subtype[on_fleet_contract_started] = { }
+		### Vanilla From = country that borrowed the fleet
+		### Vanilla FromFrom = country that owns the fleet
+		## replace_scope = { this = fleet root = fleet from = country fromfrom = country }
 		## type_key_filter = on_fleet_contract_expired
 		subtype[on_fleet_contract_expired] = { }
+		### Vanilla From = country that borrowed the fleet
+		### Vanilla FromFrom = country that owns the fleet
+		## replace_scope = { this = fleet root = fleet from = country fromfrom = country }
 		## type_key_filter = on_fleet_contract_cancelled
 		subtype[on_fleet_contract_cancelled] = { }
+		### Vanilla From = country that borrowed the fleet
+		### Vanilla FromFrom = country that owns the fleet
+		## replace_scope = { this = fleet root = fleet from = country fromfrom = country }
 		## type_key_filter = on_fleet_contract_broken
 		subtype[on_fleet_contract_broken] = { }
+		### Vanilla This = construction ship
+		### Vanilla From = planet OR Astral Rift it is built on
+		## replace_scope = { this = ship root = ship from = astral_rift }
 		## type_key_filter = on_building_mining_station
 		subtype[on_building_mining_station] = { }
+		### Vanilla This = construction ship
+		### Vanilla From = planet OR Astral Rift it is built on
+		## replace_scope = { this = ship root = ship from = astral_rift }
 		## type_key_filter = on_building_research_station
 		subtype[on_building_research_station] = { }
+		### Vanilla This = construction ship
+		### Vanilla From = planet it is built on
+		## replace_scope = { this = ship root = ship from = planet }
 		## type_key_filter = on_building_outpost_station
 		subtype[on_building_outpost_station] = { }
+		### Vanilla This = construction ship
+		## replace_scope = { this = ship root = ship }
 		## type_key_filter = on_building_wormhole_station
 		subtype[on_building_wormhole_station] = { }
+		### Vanilla This = ship (starbase)
+		### Vanilla From = owner country
+		## replace_scope = { this = starbase root = starbase from = country }
 		## type_key_filter = on_building_starbase_outpost
 		subtype[on_building_starbase_outpost] = { }
 		## type_key_filter = on_building_starbase_fe_outpost
 		subtype[on_building_starbase_fe_outpost] = { }
+		### Vanilla This = construction ship
+		### Vanilla From = planet it is built on
+		## replace_scope = { this = ship root = ship from = planet }
 		## type_key_filter = on_building_observation_station
 		subtype[on_building_observation_station] = { }
 		## type_key_filter = on_building_starbase_ai
 		subtype[on_building_starbase_ai] = { }
+		### Vanilla This = construction ship
+		## replace_scope = { this = ship root = ship }
 		## type_key_filter = on_building_starbase_exd_0
 		subtype[on_building_starbase_exd_0] = { }
 		## type_key_filter = on_building_starbase_exd
@@ -186,236 +357,455 @@ types = {
 		subtype[on_building_starbase_swarm] = { }
 		## type_key_filter = on_building_starbase_marauder
 		subtype[on_building_starbase_marauder] = { }
+		### Vanilla From = planet/astral_rift it was built on
+		## replace_scope = { this = station root = station from = astral_rift }
 		## type_key_filter = on_destroying_station
 		subtype[on_destroying_station] = { }
+		### Vanilla From = planet it was built on
+		## replace_scope = { this = station root = station from = planet }
 		## type_key_filter = on_losing_station_control
 		subtype[on_losing_station_control] = { }
+		### Vanilla From = planet it was built on
+		## replace_scope = { this = station root = station from = planet }
 		## type_key_filter = on_gaining_station_control
 		subtype[on_gaining_station_control] = { }
+		### Vanilla From = opponent war leader
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_entering_war
 		subtype[on_entering_war] = { }
+		## replace_scope = { this = country root = country from = fleet }
 		## type_key_filter = on_fleet_detected
 		subtype[on_fleet_detected] = { }
+		### Vanilla From = Disabler Ship
+		## replace_scope = { this = ship root = ship from = ship }
 		## type_key_filter = on_ship_disabled
 		subtype[on_ship_disabled] = { }
+		## replace_scope = { this = ship root = ship }
 		## type_key_filter = on_ship_enabled
 		subtype[on_ship_enabled] = { }
+		### Vanilla From = uplifted species (pre-modification)
+		## replace_scope = { this = planet root = planet from = species }
 		## type_key_filter = on_uplift_completion
 		subtype[on_uplift_completion] = { }
+		### Vanilla From = Terraforming country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_terraforming_begun
 		subtype[on_terraforming_begun] = { }
+		### Vanilla From = Terraforming country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_terraforming_progress_25
 		subtype[on_terraforming_progress_25] = { }
+		### Vanilla From = Terraforming country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_terraforming_complete
 		subtype[on_terraforming_complete] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_planet_class_changed
 		subtype[on_planet_class_changed] = { }
+		### Vanilla From = Bombarder (country)
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_planet_bombarded
 		subtype[on_planet_bombarded] = { }
+		### Vanilla From = Bombarder
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_planet_zero_pops
 		subtype[on_planet_zero_pops] = { }
+		### Vanilla From = damaging country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_ground_combat_devastation
 		subtype[on_ground_combat_devastation] = { }
+		### Vanilla From = Army owner
+		## replace_scope = { this = planet root = planet from = army }
 		## type_key_filter = on_planet_zero_pops_ground_combat
 		subtype[on_planet_zero_pops_ground_combat] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_planet_ascension_tier_increased
 		subtype[on_planet_ascension_tier_increased] = { }
+		### Vanilla From = planet abducted from
+		## replace_scope = { this = pop_group root = pop_group from = planet }
 		## type_key_filter = on_pop_group_abducted
 		subtype[on_pop_group_abducted] = { }
 		## type_key_filter = on_pop_group_resettled
 		subtype[on_pop_group_resettled] = { }
+		### Vanilla This = Country which established the communications
+		### Vanilla From = Country which communications were established with
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_pre_communications_established
 		subtype[on_pre_communications_established] = { }
+		### Vanilla This = Country which established the communications
+		### Vanilla From = Country which communications were established with
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_post_communications_established
 		subtype[on_post_communications_established] = { }
+		### Vanilla This = Country which established the communications
+		### Vanilla From = Country which communications were established with
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_post_communications_established_always_fire
 		subtype[on_post_communications_established_always_fire] = { }
+		### Vanilla This = Country which is revealing its presence
+		### Vanilla From = Pre-ftl country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_presence_revealed
 		subtype[on_presence_revealed] = { }
+		### Vanilla This = Planet where the pop was bombed to death
+		### Vanilla From = Country which is raining down fire and brimstone
+		### Vanilla FromFrom = Biggest fleet bombarding the planet (the one we used the bombardment stance from)
+		## replace_scope = { this = planet root = planet from = country fromfrom = fleet }
 		## type_key_filter = on_pop_bombed_to_death
 		subtype[on_pop_bombed_to_death] = { }
+		### Vanilla This = Planet where the pop died
+		### Vanilla From = Attacker country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_pop_collateral_casualty
 		subtype[on_pop_collateral_casualty] = { }
+		### Vanilla This = Pop killed
+		### Vanilla From = Planet where the pop was killed
+		### Vanilla FromFrom = Country intentionally killing the pop
+		## replace_scope = { this = pop root = pop from = planet fromfrom = country }
 		## type_key_filter = on_pop_sacrificed
 		subtype[on_pop_sacrificed] = { }
+		## replace_scope = { this = heir root = heir }
 		## type_key_filter = on_new_heir
 		subtype[on_new_heir] = { }
+		## replace_scope = { this = heir root = heir }
 		## type_key_filter = on_heir_promoted_to_ruler
 		subtype[on_heir_promoted_to_ruler] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_ruler_created
 		subtype[on_ruler_created] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_leader_death_notify
 		subtype[on_leader_death_notify] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_leader_death_no_notify
 		subtype[on_leader_death_no_notify] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_leader_death
 		subtype[on_leader_death] = { }
+		## replace_scope = { this = leader root = leader }
 		## type_key_filter = on_leader_hired
 		subtype[on_leader_hired] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_leader_fired
 		subtype[on_leader_fired] = { }
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_leader_level_up
 		subtype[on_leader_level_up] = { }
+		### Vanilla Scope: Leader (after assignment)
+		## replace_scope = { this = leader root = leader }
 		## type_key_filter = on_leader_assigned
 		subtype[on_leader_assigned] = { }
+		### Vanilla Scope: Leader (just before unassignment)
+		## replace_scope = { this = leader root = leader }
 		## type_key_filter = on_leader_unassigned
 		subtype[on_leader_unassigned] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_ruler_set
 		subtype[on_ruler_set] = { }
+		### Vanilla From = Previous Ruler
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_ruler_removed
 		subtype[on_ruler_removed] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_blocker_cleared
 		subtype[on_blocker_cleared] = { }
+		## replace_scope = { this = ship root = ship from = country }
 		## type_key_filter = on_ship_order
 		subtype[on_ship_order] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_policy_changed
 		subtype[on_policy_changed] = { }
+		### Vanilla Scope: Ship Event
+		## replace_scope = { this = ship root = ship from = planet }
 		## type_key_filter = on_ship_built
 		subtype[on_ship_built] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_ship_designed
 		subtype[on_ship_designed] = { }
+		## replace_scope = { this = ship root = ship }
 		## type_key_filter = on_ship_upgraded
 		subtype[on_ship_upgraded] = { }
+		## replace_scope = { this = country root = country from = war }
 		## type_key_filter = on_war_beginning
 		subtype[on_war_beginning] = { }
+		### Vanilla Root = Loser
+		### Vanilla From = Main Winner
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_war_ended
 		subtype[on_war_ended] = { }
+		### Vanilla Root = new country
+		### Vanilla From = country forcing the release
+		### Vanilla FromFrom = country they are released from
+		## replace_scope = { this = country root = country from = country fromfrom = country }
 		## type_key_filter = on_country_released_in_war
 		subtype[on_country_released_in_war] = { }
+		### Vanilla Root = instigator
+		### Vanilla From = victim
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_proxy_war_started
 		subtype[on_proxy_war_started] = { }
+		### Vanilla From = Country owning the system
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_claim_system
 		subtype[on_claim_system] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_tech_increased
 		subtype[on_tech_increased] = { }
+		### Vanilla From = Species ( Post Modification )
+		### Vanilla FromFrom = Species ( Original )
+		## replace_scope = { this = country root = country from = species fromfrom = species }
 		## type_key_filter = on_modification_complete
 		subtype[on_modification_complete] = { }
+		### Vanilla From = Species ( Post Modification )
+		## replace_scope = { this = country root = country from = species }
 		## type_key_filter = on_modification_completion
 		subtype[on_modification_completion] = { }
+		### Vanilla From = Species ( Post Modification )
+		### Vanilla FromFrom = Species ( Original )
+		## replace_scope = { this = country root = country from = species fromfrom = species }
 		## type_key_filter = on_subspecies_integration_step
 		subtype[on_subspecies_integration_step] = { }
+		### Vanilla From = Species ( Post Modification )
+		### Vanilla FromFrom = Species ( Original )
+		## replace_scope = { this = country root = country from = species fromfrom = species }
 		## type_key_filter = on_subspecies_integration_complete
 		subtype[on_subspecies_integration_complete] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_research_option_added
 		subtype[on_research_option_added] = { }
+		### Vanilla This = Country that receives a favor
+		### Vanilla From = Country a favor is from
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_favor_gained
 		subtype[on_favor_gained] = { }
+		### Vanilla From = Planet Owner
+		### Vanilla FromFrom = Planet Controller (the one occupying)
+		## replace_scope = { this = planet root = planet from = country fromfrom = country }
 		## type_key_filter = on_planet_occupied
 		subtype[on_planet_occupied] = { }
+		### Vanilla From = Planet Owner
+		### Vanilla FromFrom = Previous Planet Controller (the one who was occupying)
+		## replace_scope = { this = planet root = planet from = country fromfrom = country }
 		## type_key_filter = on_planet_returned
 		subtype[on_planet_returned] = { }
+		### Vanilla From = Planet Owner
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_decision_enacted
 		subtype[on_decision_enacted] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_edict_activated
 		subtype[on_edict_activated] = { }
+		### Vanilla This = escaping fleet
+		### Vanilla From = system escaped from
+		### Vanilla FromFrom = system escaping to
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_emergency_ftl
 		subtype[on_emergency_ftl] = { }
+		## replace_scope = { this = planet root = planet from = army }
 		## type_key_filter = on_army_recruited
 		subtype[on_army_recruited] = { }
+		### Vanilla This = owner
+		### Vanilla FromFrom = opponent
+		## replace_scope = { this = country root = country from = army fromfrom = country }
 		## type_key_filter = on_army_killed_in_combat
 		subtype[on_army_killed_in_combat] = { }
+		## replace_scope = { this = country root = country from = army }
 		## type_key_filter = on_army_killed_no_combat
 		subtype[on_army_killed_no_combat] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_complete
 		subtype[on_building_complete] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_queued
 		subtype[on_building_queued] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_unqueued
 		subtype[on_building_unqueued] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_upgraded
 		subtype[on_building_upgraded] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_demolished
 		subtype[on_building_demolished] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_repaired
 		subtype[on_building_repaired] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_district_complete
 		subtype[on_district_complete] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_zone_complete
 		subtype[on_zone_complete] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_replaced
 		subtype[on_building_replaced] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_building_downgraded
 		subtype[on_building_downgraded] = { }
+		### Vanilla From = Enemy country
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_building_ruined
 		subtype[on_building_ruined] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_district_queued
 		subtype[on_district_queued] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_district_unqueued
 		subtype[on_district_unqueued] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_district_demolished
 		subtype[on_district_demolished] = { }
+		## replace_scope = { this = planet root = planet }
 		## type_key_filter = on_auto_colony_type_changed
 		subtype[on_auto_colony_type_changed] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_tutorial_level_changed
 		subtype[on_tutorial_level_changed] = { }
+		### Vanilla Root = Winner Warleader
+		### Vanilla From = Loser Warleader
+		## replace_scope = { this = country root = country from = country fromfrom = war }
 		## type_key_filter = on_war_won
 		subtype[on_war_won] = { }
+		### Vanilla Root = Loser Warleader
+		### Vanilla From = Winner Warleader
+		## replace_scope = { this = country root = country from = country fromfrom = war }
 		## type_key_filter = on_war_lost
 		subtype[on_war_lost] = { }
+		### Vanilla Root = Actor
+		### Vanilla From = Recipient
+		### Vanilla FromFrom = Main Attacker
+		## replace_scope = { this = country root = country from = country fromfrom = country }
 		## type_key_filter = on_status_quo
 		subtype[on_status_quo] = { }
+		### Vanilla Root = Recipient
+		### Vanilla From = Actor
+		### Vanilla FromFrom = Main Attacker
+		## replace_scope = { this = country root = country from = country fromfrom = country }
 		## type_key_filter = on_status_quo_forced
 		subtype[on_status_quo_forced] = { }
+		### Vanilla From = Newly added species
+		## replace_scope = { this = country root = country from = species }
 		## type_key_filter = on_host_new_species
 		subtype[on_host_new_species] = { }
+		## replace_scope = { this = pop root = pop from = planet }
 		## type_key_filter = on_pop_group_added
 		subtype[on_pop_group_added] = { }
+		## replace_scope = { this = pop_group root = pop_group }
 		## type_key_filter = on_pop_group_rights_change
 		subtype[on_pop_group_rights_change] = { }
+		## replace_scope = { this = planet root = planet from = country fromfrom = pop_group }
 		## type_key_filter = on_pop_growth
 		subtype[on_pop_growth] = { }
+		## replace_scope = { this = planet root = planet from = country fromfrom = pop_group }
 		## type_key_filter = on_pop_assembly
 		subtype[on_pop_assembly] = { }
+		## replace_scope = { this = planet root = planet from = country fromfrom = pop_group }
 		## type_key_filter = on_pop_purged
 		subtype[on_pop_purged] = { }
+		## replace_scope = { this = planet root = planet from = country fromfrom = pop_group }
 		## type_key_filter = on_pop_displaced
 		subtype[on_pop_displaced] = { }
+		### Vanilla This = Rebel Country
+		## replace_scope = { this = country root = country from = planet fromfrom = war }
 		## type_key_filter = on_rebels_take_planet
 		subtype[on_rebels_take_planet] = { }
+		### Vanilla This = Rebel Country
+		## replace_scope = { this = country root = country from = planet fromfrom = war }
 		## type_key_filter = on_rebels_take_planet_owner_switched
 		subtype[on_rebels_take_planet_owner_switched] = { }
+		### Vanilla FromFrom = Former Owner
+		### Vanilla From = Country scope (new owner, so invalid)
+		## replace_scope = { this = planet root = planet from = country fromfrom = country }
 		## type_key_filter = on_planet_ownerless
 		subtype[on_planet_ownerless] = { }
+		### Vanilla From = Country scope (new owner)
+		### Vanilla FromFrom = Country scope (previous owner, if any)
+		## replace_scope = { this = planet root = planet from = country fromfrom = country }
 		## type_key_filter = on_planet_transfer
 		subtype[on_planet_transfer] = { }
+		### Vanilla From = Country scope (new owner)
+		### Vanilla FromFrom = Former Owner
+		## replace_scope = { this = planet root = planet from = country fromfrom = country }
 		## type_key_filter = on_planet_conquer
 		subtype[on_planet_conquer] = { }
+		### Vanilla this/root = new capital
+		### Vanilla from = old capital
+		## replace_scope = { this = planet root = planet from = planet }
 		## type_key_filter = on_capital_changed
 		subtype[on_capital_changed] = { }
+		### Vanilla From = Planet/Starbase/Megastructure/Astral Rift scope
+		## replace_scope = { this = fleet root = fleet from = astral_rift }
 		## type_key_filter = on_fleet_enter_orbit
 		subtype[on_fleet_enter_orbit] = { }
+		### Vanilla From = Planet/Starbase/Megastructure/Astral Rift scope
+		## replace_scope = { this = fleet root = fleet from = astral_rift }
 		## type_key_filter = on_fleet_leave_orbit
 		subtype[on_fleet_leave_orbit] = { }
+		## replace_scope = { this = fleet root = fleet from = ship }
 		## type_key_filter = on_ship_enter_fleet
 		subtype[on_ship_enter_fleet] = { }
+		## replace_scope = { this = fleet root = fleet from = ship }
 		## type_key_filter = on_ship_leave_fleet
 		subtype[on_ship_leave_fleet] = { }
+		### Vanilla This = Federation leader
+		### Vanilla From = Joining member
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_join_federation
 		subtype[on_join_federation] = { }
+		### Vanilla This = Federation leader
+		### Vanilla From = Leaving member
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_leave_federation
 		subtype[on_leave_federation] = { }
+		### Vanilla This = Country scope, federation leader
+		### Vanilla From = Country to initiate the vote
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_federation_law_vote_succeed
 		subtype[on_federation_law_vote_succeed] = { }
+		### Vanilla This = Country scope, federation leader
+		### Vanilla From = Country to initiate the vote
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_federation_law_vote_failed
 		subtype[on_federation_law_vote_failed] = { }
+		### Vanilla This = Country scope, federation leader
+		### Vanilla From = Country to exclude from the federation elections
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_federation_leader_elections
 		subtype[on_federation_leader_elections] = { }
+		### Vanilla This = Country scope, new federation leader
+		### Vanilla From = Previous leader (if still existing)
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_federation_new_leader
 		subtype[on_federation_new_leader] = { }
+		### Vanilla This = Country scope, federation leader
+		### Vanilla From = Country to exclude from the federation psionicbattle
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_federation_leader_challenge
 		subtype[on_federation_leader_challenge] = { }
+		### Vanilla This = Federation Leader
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_federation_new_level_unlocked
 		subtype[on_federation_new_level_unlocked] = { }
+		### Vanilla This = created country
+		### Vanilla From = root of context where create_country/create_rebels happens
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_country_created
 		subtype[on_country_created] = { }
+		### Vanilla This = destroyed country
+		### Vanilla From = optional, destroyer (country)
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_country_destroyed
 		subtype[on_country_destroyed] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_country_type_changed
 		subtype[on_country_type_changed] = { }
+		## replace_scope = { this = country root = country from = megastructure fromfrom = system }
 		## type_key_filter = on_megastructure_built
 		subtype[on_megastructure_built] = { }
+		## replace_scope = { this = country root = country from = megastructure fromfrom = system }
 		## type_key_filter = on_megastructure_upgrade_begin
 		subtype[on_megastructure_upgrade_begin] = { }
+		## replace_scope = { this = country root = country from = megastructure fromfrom = system }
 		## type_key_filter = on_megastructure_upgraded
 		subtype[on_megastructure_upgraded] = { }
 		## type_key_filter = on_colony_1_year_old
@@ -448,74 +838,148 @@ types = {
 		subtype[on_colony_5_year_pulse] = { }
 		## type_key_filter = on_colony_10_year_pulse
 		subtype[on_colony_10_year_pulse] = { }
+		### Vanilla this = pop, fired via action.2021
+		## replace_scope = { this = pop root = pop }
 		## type_key_filter = on_colony_10_year_pulse_random_pop_events_list
 		subtype[on_colony_10_year_pulse_random_pop_events_list] = { }
+		### Vanilla scope: country, from: leader
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_leader_spawned
 		subtype[on_leader_spawned] = { }
+		### Vanilla scope: country, from: leader
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_added_to_leader_pool
 		subtype[on_added_to_leader_pool] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = empire_init_add_technologies
 		subtype[empire_init_add_technologies] = { }
+		### Vanilla from: founder species
+		### Vanilla fromfrom: secondary species (if exists)
+		## replace_scope = { this = planet root = planet from = species fromfrom = species }
 		## type_key_filter = empire_init_capital_planet
 		subtype[empire_init_capital_planet] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = empire_init_create_ships
 		subtype[empire_init_create_ships] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_election_started
 		subtype[on_election_started] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_election_ended
 		subtype[on_election_ended] = { }
+		## replace_scope = { this = bypass root = bypass from = fleet }
 		## type_key_filter = on_bypass_explored
 		subtype[on_bypass_explored] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_entering_gateway
 		subtype[on_entering_gateway] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_entering_wormhole
 		subtype[on_entering_wormhole] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_entering_shroud_tunnel
 		subtype[on_entering_shroud_tunnel] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_entering_strange_wormhole
 		subtype[on_entering_strange_wormhole] = { }
+		## replace_scope = { this = ship root = ship }
 		## type_key_filter = on_jump_drive
 		subtype[on_jump_drive] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = ship root = ship from = system fromfrom = system }
 		## type_key_filter = on_ship_quantum_catapult
 		subtype[on_ship_quantum_catapult] = { }
+		### Vanilla FROM = System jumping to
+		### Vanilla FROMFROM = System jumped from
+		## replace_scope = { this = fleet root = fleet from = system fromfrom = system }
 		## type_key_filter = on_fleet_quantum_catapult
 		subtype[on_fleet_quantum_catapult] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_pirate_spawn
 		subtype[on_pirate_spawn] = { }
+		### Vanilla THIS = Ship (Starbase)
+		### Vanilla FROM = Former Owner (Country)
+		## replace_scope = { this = starbase root = starbase from = country }
 		## type_key_filter = on_starbase_transfer
 		subtype[on_starbase_transfer] = { }
+		### Vanilla This = Aggressor Fleet
+		### Vanilla From = Attacked Fleet
+		### Vanilla FromFrom = Additional Attacked Fleet (if part of ongoing combat)
+		## replace_scope = { this = fleet root = fleet from = fleet fromfrom = fleet }
 		## type_key_filter = on_fleet_combat_joined_attacker
 		subtype[on_fleet_combat_joined_attacker] = { }
+		### Vanilla This = Attacked Fleet
+		### Vanilla From = Aggressor Fleet
+		### Vanilla FromFrom = Additional Attacked Fleet (if joining ongoing combat)
+		## replace_scope = { this = fleet root = fleet from = fleet fromfrom = country }
 		## type_key_filter = on_fleet_combat_joined_defender
 		subtype[on_fleet_combat_joined_defender] = { }
+		### Vanilla FromFrom = country (new owner)
+		### Vanilla This = country (previous owner)
+		## replace_scope = { this = country root = country from = system fromfrom = country }
 		## type_key_filter = on_system_lost
 		subtype[on_system_lost] = { }
+		### Vanilla FromFrom = country (previous owner)
+		### Vanilla This = country (new owner)
+		## replace_scope = { this = country root = country from = system fromfrom = country }
 		## type_key_filter = on_system_gained
 		subtype[on_system_gained] = { }
+		### Vanilla From = Country (buyer)
+		### Vanilla Fromfrom = Country (seller)
+		## replace_scope = { this = pop_group root = pop_group from = country fromfrom = country }
 		## type_key_filter = on_slave_sold_on_market
 		subtype[on_slave_sold_on_market] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_relic_received
 		subtype[on_relic_received] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_relic_activated
 		subtype[on_relic_activated] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_relic_lost
 		subtype[on_relic_lost] = { }
+		### Vanilla This = Fleet ( science vessel )
+		## replace_scope = { this = fleet root = fleet from = archaeological_site }
 		## type_key_filter = on_arch_stage_finished
 		subtype[on_arch_stage_finished] = { }
 		## type_key_filter = on_arch_site_finished
 		subtype[on_arch_site_finished] = { }
+		### Vanilla this/root = proposer
+		### Vanilla from = target if valid
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_resolution_put_to_vote
 		subtype[on_resolution_put_to_vote] = { }
+		### Vanilla this/root = vetoer
+		### Vanilla from = proposer
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_resolution_vetoed
 		subtype[on_resolution_vetoed] = { }
+		### Vanilla this/root = proposer
+		### Vanilla from = target if valid
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_resolution_passed
 		subtype[on_resolution_passed] = { }
+		### Vanilla this/root = proposer
+		### Vanilla from = target if valid
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_resolution_failed
 		subtype[on_resolution_failed] = { }
+		### Vanilla This = Country, first member added
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_galactic_community_formed
 		subtype[on_galactic_community_formed] = { }
 		## type_key_filter = on_galactic_council_established
 		subtype[on_galactic_council_established] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_add_community_member
 		subtype[on_add_community_member] = { }
 		## type_key_filter = on_remove_community_member
@@ -528,96 +992,190 @@ types = {
 		subtype[on_join_alliance] = { }
 		## type_key_filter = on_leave_alliance
 		subtype[on_leave_alliance] = { }
+		### Vanilla This = Country who accepted the proposal
+		### Vanilla From = Country who proposed the commercial pact
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_sign_commercial_pact
 		subtype[on_sign_commercial_pact] = { }
+		### Vanilla This = Country who accepted the proposal
+		### Vanilla From = Country who proposed the defensive pact
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_sign_defensive_pact
 		subtype[on_sign_defensive_pact] = { }
+		### Vanilla This = Country who accepted the proposal
+		### Vanilla From = Country who proposed the migration treaty
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_sign_migration_pact
 		subtype[on_sign_migration_pact] = { }
+		### Vanilla This = Country who accepted the proposal
+		### Vanilla From = Country who proposed the non-aggression pact
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_sign_non_aggression_pact
 		subtype[on_sign_non_aggression_pact] = { }
+		### Vanilla This = Country who accepted the proposal
+		### Vanilla From = Country who proposed the research agreement
+		## replace_scope = { this = country root = country from = agreement }
 		## type_key_filter = on_sign_research_pact
 		subtype[on_sign_research_pact] = { }
+		### Vanilla This = subject
+		### Vanilla From = subject's overlord
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_becoming_subject
 		subtype[on_becoming_subject] = { }
+		### Vanilla This = overlord
+		### Vanilla From = subject
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_subject_integrated
 		subtype[on_subject_integrated] = { }
+		### Vanilla This = released vassal
+		### Vanilla From = overlord
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_released_as_vassal
 		subtype[on_released_as_vassal] = { }
+		### Vanilla This = empire trying to leave federation
+		### Vanilla From = empire who declined (federation leader)
+		## replace_scope = { this = country root = country from = leader }
 		## type_key_filter = on_ask_to_leave_federation_declined
 		subtype[on_ask_to_leave_federation_declined] = { }
+		### Vanilla this = owner country, from = spynetwork scope
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_spynetwork_formed
 		subtype[on_spynetwork_formed] = { }
+		### Vanilla THIS = Country: Emperor
+		### Vanilla FROM = Country added to council
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_add_to_imperial_council
 		subtype[on_add_to_imperial_council] = { }
+		### Vanilla THIS = Country: Emperor
+		### Vanilla FROM = Country removed from council
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_remove_from_imperial_council
 		subtype[on_remove_from_imperial_council] = { }
+		## replace_scope = { this = first_contact root = first_contact }
 		## type_key_filter = on_first_contact_started
 		subtype[on_first_contact_started] = { }
+		## replace_scope = { this = first_contact root = first_contact }
 		## type_key_filter = on_first_contact_stage_1_no_path
 		subtype[on_first_contact_stage_1_no_path] = { }
+		## replace_scope = { this = first_contact root = first_contact }
 		## type_key_filter = on_first_contact_generic_stage_2
 		subtype[on_first_contact_generic_stage_2] = { }
+		### Vanilla THIS = Planet: Branch office planet
+		### Vanilla FROM = Country: Branch office owner
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_branch_office_established
 		subtype[on_branch_office_established] = { }
+		### Vanilla THIS = Planet: Branch office planet
+		### Vanilla FROM = Country: Branch office owner
+		## replace_scope = { this = planet root = planet from = country }
 		## type_key_filter = on_branch_office_closed
 		subtype[on_branch_office_closed] = { }
+		### Vanilla THIS = System: system being occupied
+		### Vanilla FROM = Country: Conqueror of the system
+		### Vanilla FROMFROM = Country: Original owner of the system
+		## replace_scope = { this = system root = system from = country fromfrom = country }
 		## type_key_filter = on_system_occupied
 		subtype[on_system_occupied] = { }
+		### Vanilla THIS = System: system whos controller has changed
+		### Vanilla FROM = Country: New controller of the system
+		### Vanilla FROMFROM = Country: Old controller of the system
+		## replace_scope = { this = system root = system from = country fromfrom = country }
 		## type_key_filter = on_system_controller_changed
 		subtype[on_system_controller_changed] = { }
+		### Vanilla THIS = System: system being returned from occupation
+		### Vanilla FROM = Country: Previous owner of the system
+		### Vanilla FROMFROM = Country: Occupier of the system
+		## replace_scope = { this = system root = system from = country fromfrom = country }
 		## type_key_filter = on_system_returned
 		subtype[on_system_returned] = { }
+		### Vanilla fromfrom = old owner
+		## replace_scope = { this = starbase root = starbase from = planet fromfrom = country }
 		## type_key_filter = on_orbital_defense_planet_ownerless
 		subtype[on_orbital_defense_planet_ownerless] = { }
+		### Vanilla FROM = Operation target
+		## replace_scope = { this = espionage_operation root = espionage_operation from = country }
 		## type_key_filter = on_operation_chapter_finished
 		subtype[on_operation_chapter_finished] = { }
+		### Vanilla FROM = Operation target
+		## replace_scope = { this = espionage_operation root = espionage_operation from = country }
 		## type_key_filter = on_operation_finished
 		subtype[on_operation_finished] = { }
+		## replace_scope = { this = espionage_operation root = espionage_operation }
 		## type_key_filter = on_operation_cancelled
 		subtype[on_operation_cancelled] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_pre_government_changed
 		subtype[on_pre_government_changed] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_post_government_changed
 		subtype[on_post_government_changed] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_custodian_term_ends
 		subtype[on_custodian_term_ends] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_tradition_picked
 		subtype[on_tradition_picked] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_ascension_perk_picked
 		subtype[on_ascension_perk_picked] = { }
+		### Vanilla this = new owner
+		### Vanilla fromfrom = old owner (if existing)
+		## replace_scope = { this = country root = country from = megastructure fromfrom = country }
 		## type_key_filter = on_megastructure_change_owner
 		subtype[on_megastructure_change_owner] = { }
+		### Vanilla this = solar system containing megastructure
+		### Vanilla fromfrom = old owner (if existing)
+		## replace_scope = { this = megastructure root = megastructure from = megastructure fromfrom = country }
 		## type_key_filter = on_megastructure_ownerless
 		subtype[on_megastructure_ownerless] = { }
 		## type_key_filter = on_crystalline_empire_task
 		subtype[on_crystalline_empire_task] = { }
+		### Vanilla From = destroyer (if using a star cracker)
+		## replace_scope = { this = system root = system from = country }
 		## type_key_filter = on_destroy_star_system
 		subtype[on_destroy_star_system] = { }
 		## type_key_filter = on_admirals_bickering_event_chain
 		subtype[on_admirals_bickering_event_chain] = { }
+		## replace_scope = { this = fleet root = fleet }
 		## type_key_filter = on_establish_mercenary_enclave
 		subtype[on_establish_mercenary_enclave] = { }
+		### Vanilla fromfrom = controller of destroyed ship
+		## replace_scope = { this = country root = country from = debris fromfrom = country }
 		## type_key_filter = on_debris_researched
 		subtype[on_debris_researched] = { }
+		### Vanilla fromfrom = controller of destroyed ship
+		## replace_scope = { this = country root = country from = debris fromfrom = country }
 		## type_key_filter = on_debris_scavenged
 		subtype[on_debris_scavenged] = { }
+		### Vanilla fromfrom = controller of destroyed ship
+		## replace_scope = { this = country root = country from = debris fromfrom = country }
 		## type_key_filter = on_debris_reanimated
 		subtype[on_debris_reanimated] = { }
+		### Vanilla fromfrom = controller of destroyed ship
+		## replace_scope = { this = country root = country from = debris fromfrom = country }
 		## type_key_filter = on_debris_scavenged_and_researched
 		subtype[on_debris_scavenged_and_researched] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = special_project_success
 		subtype[special_project_success] = { }
+		## replace_scope = { this = ship root = ship from = planet }
 		## type_key_filter = anomaly_success
 		subtype[anomaly_success] = { }
+		## replace_scope = { this = agreement root = agreement }
 		## type_key_filter = on_specialist_subject_conversion_started
 		subtype[on_specialist_subject_conversion_started] = { }
+		## replace_scope = { this = agreement root = agreement }
 		## type_key_filter = on_specialist_subject_conversion_finished
 		subtype[on_specialist_subject_conversion_finished] = { }
+		## replace_scope = { this = agreement root = agreement }
 		## type_key_filter = on_specialist_subject_conversion_aborted
 		subtype[on_specialist_subject_conversion_aborted] = { }
+		### Vanilla THIS = Country: Owner
+		### Vanilla FROM = Country: Other
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_capitals_connected
 		subtype[on_capitals_connected] = { }
+		## replace_scope = { this = agreement root = agreement }
 		## type_key_filter = on_agreement_change_accepted
 		subtype[on_agreement_change_accepted] = { }
 		## type_key_filter = on_shroudwalker_divination_visitors_situation
@@ -626,108 +1184,197 @@ types = {
 		subtype[on_shroudwalker_divination_locus_situation] = { }
 		## type_key_filter = on_shroudwalker_insight_situation_finish
 		subtype[on_shroudwalker_insight_situation_finish] = { }
+		### Vanilla THIS = AstralRift: spawned astral rift
+		## replace_scope = { this = astral_rift root = astral_rift }
 		## type_key_filter = on_astral_rift_spawned
 		subtype[on_astral_rift_spawned] = { }
+		### Vanilla THIS = Country: Explorer country
+		### Vanilla FROM = AstralRift: Explored astral rift
+		### Vanilla FROMFROM = Exploring Fleet
+		## replace_scope = { this = country root = country from = astral_rift fromfrom = fleet }
 		## type_key_filter = on_astral_rift_exploration_start
 		subtype[on_astral_rift_exploration_start] = { }
+		### Vanilla THIS = Country: Explorer country
+		### Vanilla FROM = AstralRift: Explored astral rift
+		### Vanilla FROMFROM = Exploring Fleet
+		## replace_scope = { this = country root = country from = astral_rift fromfrom = fleet }
 		## type_key_filter = on_astral_rift_pre_event_fire
 		subtype[on_astral_rift_pre_event_fire] = { }
+		### Vanilla THIS = Country: Explorer country
+		### Vanilla FROM = AstralRift: Explored astral rift
+		### Vanilla FROMFROM = Exploring Fleet
+		## replace_scope = { this = country root = country from = astral_rift fromfrom = fleet }
 		## type_key_filter = on_astral_rift_exploration_complete
 		subtype[on_astral_rift_exploration_complete] = { }
+		### Vanilla This = Active Country
+		### Vanilla From = Other participating Country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_commercial_pact_broken
 		subtype[on_commercial_pact_broken] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_agenda_finished
 		subtype[on_agenda_finished] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_agenda_finished_early
 		subtype[on_agenda_finished_early] = { }
+		## replace_scope = { this = fleet root = fleet }
 		## type_key_filter = on_cloaking_activated
 		subtype[on_cloaking_activated] = { }
+		## replace_scope = { this = fleet root = fleet }
 		## type_key_filter = on_cloaking_deactivated
 		subtype[on_cloaking_deactivated] = { }
+		### Vanilla This = PreFTL Country
+		### Vanilla From = Observing Country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_awareness_level_increase
 		subtype[on_awareness_level_increase] = { }
+		### Vanilla This = PreFTL Country
+		### Vanilla From = Observing Country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_awareness_level_decrease
 		subtype[on_awareness_level_decrease] = { }
 		## type_key_filter = on_pre_ftl_pop_ethic_shift
 		subtype[on_pre_ftl_pop_ethic_shift] = { }
+		### Vanilla This = attacked country
+		### Vanilla From = attacker country
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_country_attacked
 		subtype[on_country_attacked] = { }
+		### Vanilla From = fleet locking the bypass
+		## replace_scope = { this = bypass root = bypass from = bypass }
 		## type_key_filter = on_bypass_locked
 		subtype[on_bypass_locked] = { }
+		## replace_scope = { this = bypass root = bypass }
 		## type_key_filter = on_dimensional_lock_expired
 		subtype[on_dimensional_lock_expired] = { }
+		### Vanilla This = System containing the Storm
+		## replace_scope = { this = cosmic_storm root = cosmic_storm }
 		## type_key_filter = on_space_storm_created
 		subtype[on_space_storm_created] = { }
+		### Vanilla This = System containing the Storm
+		## replace_scope = { this = cosmic_storm root = cosmic_storm }
 		## type_key_filter = on_space_storm_destroyed
 		subtype[on_space_storm_destroyed] = { }
 		## type_key_filter = on_machine_leader_malfunction
 		subtype[on_machine_leader_malfunction] = { }
 		## type_key_filter = on_synth_leader_malfunction
 		subtype[on_synth_leader_malfunction] = { }
+		### Vanilla This = PopGroup
+		### Vanilla From = Planet Owner
+		## replace_scope = { this = pop_group root = pop_group from = country }
 		## type_key_filter = on_daily_pop_ethics_divergence
 		subtype[on_daily_pop_ethics_divergence] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_cyberization_situation_random_events_list
 		subtype[on_cyberization_situation_random_events_list] = { }
 		## type_key_filter = on_cyberization_hive_situation_random_events_list
 		subtype[on_cyberization_hive_situation_random_events_list] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_digitization_situation_random_events_list
 		subtype[on_digitization_situation_random_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_futureshock_chain_work_family_events_list
 		subtype[on_futureshock_chain_work_family_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_futureshock_chain_leisure_events_list
 		subtype[on_futureshock_chain_leisure_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_synthshock_chain_identity_events_list
 		subtype[on_synthshock_chain_identity_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_synthshock_chain_opportunity_events_list
 		subtype[on_synthshock_chain_opportunity_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_synth_queen_random_demand_list
 		subtype[on_synth_queen_random_demand_list] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_breach_the_shroud_situation_random_social_events_list
 		subtype[on_breach_the_shroud_situation_random_social_events_list] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_breach_the_shroud_situation_random_beneficial_events_list
 		subtype[on_breach_the_shroud_situation_random_beneficial_events_list] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_breach_the_shroud_situation_random_balanced_events_list
 		subtype[on_breach_the_shroud_situation_random_balanced_events_list] = { }
+		## replace_scope = { this = situation root = situation }
 		## type_key_filter = on_breach_the_shroud_situation_random_chaotic_events_list
 		subtype[on_breach_the_shroud_situation_random_chaotic_events_list] = { }
 		## type_key_filter = on_galaxy_map_during_tutorial
 		subtype[on_galaxy_map_during_tutorial] = { }
+		### Vanilla This = Snare Fleet
+		### Vanilla From = Fleet that sent the snare
+		## replace_scope = { this = fleet root = fleet from = fleet }
 		## type_key_filter = on_snare_sent
 		subtype[on_snare_sent] = { }
+		### Vanilla This = owner of the truce
+		### Vanilla From = target of the truce
+		## replace_scope = { this = country root = country from = country }
 		## type_key_filter = on_truce_end
 		subtype[on_truce_end] = { }
+		### Vanilla This = New controller
+		### Vanilla From = Starbase being occupied
+		## replace_scope = { this = country root = country from = starbase }
 		## type_key_filter = on_starbase_occupied
 		subtype[on_starbase_occupied] = { }
+		### Vanilla This = country receiving the specimen
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_specimen_acquired
 		subtype[on_specimen_acquired] = { }
+		### Vanilla This = country selling the specimen
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_specimen_sold
 		subtype[on_specimen_sold] = { }
+		### Vanilla This = Engulfed Ship (Defender)
+		### Vanilla From = Engulfing Ship (Attacker)
+		## replace_scope = { this = ship root = ship from = ship }
 		## type_key_filter = on_ship_engulfed
 		subtype[on_ship_engulfed] = { }
+		### Vanilla From: Storm
+		## replace_scope = { this = system root = system from = cosmic_storm }
 		## type_key_filter = on_storm_entered_system
 		subtype[on_storm_entered_system] = { }
+		### Vanilla From: Storm
+		## replace_scope = { this = system root = system from = cosmic_storm }
 		## type_key_filter = on_storm_left_system
 		subtype[on_storm_left_system] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_exhibit_unlocked
 		subtype[on_exhibit_unlocked] = { }
+		### Vanilla This = Ship captured by a gravity snare - deleted after event fired and sent to vivarium
+		### Vanilla From = Fleet / Gravity snare that captured the space fauna
+		## replace_scope = { this = fleet root = fleet from = fleet }
 		## type_key_filter = on_fauna_captured
 		subtype[on_fauna_captured] = { }
+		### Vanilla This = Fleet / Gravity Snare Fleet
+		## replace_scope = { this = fleet root = fleet }
 		## type_key_filter = on_fauna_capture_ended
 		subtype[on_fauna_capture_ended] = { }
+		## replace_scope = { this = country root = country from = design }
 		## type_key_filter = on_vivarium_populated
 		subtype[on_vivarium_populated] = { }
+		## replace_scope = { this = country root = country from = design }
 		## type_key_filter = on_space_fauna_culled
 		subtype[on_space_fauna_culled] = { }
+		### Vanilla This: Storm
+		## replace_scope = { this = cosmic_storm root = cosmic_storm }
 		## type_key_filter = on_storm_finished
 		subtype[on_storm_finished] = { }
+		### Vanilla From: Storm
+		## replace_scope = { this = country root = country from = cosmic_storm }
 		## type_key_filter = on_storm_encountered
 		subtype[on_storm_encountered] = { }
+		### Vanilla This = Leader captured
+		### Vanilla from = perpetrator country
+		### Vanilla fromfrom = victim country
+		## replace_scope = { this = leader root = leader from = country fromfrom = country }
 		## type_key_filter = on_leader_captured
 		subtype[on_leader_captured] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_biomass_monthly
 		subtype[on_biomass_monthly] = { }
 		## type_key_filter = debug_spawn_storm_random_system
 		subtype[debug_spawn_storm_random_system] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_ftl_society_enters_new_age
 		subtype[on_ftl_society_enters_new_age] = { }
 		## type_key_filter = on_genetic_ascension_events_list
@@ -746,8 +1393,10 @@ types = {
 		subtype[on_genetic_ascension_hive_approach_cloning_events_list] = { }
 		## type_key_filter = on_genetic_ascension_hive_approach_mutation_events_list
 		subtype[on_genetic_ascension_hive_approach_mutation_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_attunement_gained
 		subtype[on_attunement_gained] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_patron_contact_completed
 		subtype[on_patron_contact_completed] = { }
 		## type_key_filter = on_covenant_formed
@@ -758,14 +1407,23 @@ types = {
 		subtype[on_superstitious_beliefs_random_positive_events_list] = { }
 		## type_key_filter = on_superstitious_beliefs_random_negative_events_list
 		subtype[on_superstitious_beliefs_random_negative_events_list] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_shroud_breached
 		subtype[on_shroud_breached] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_shroud_delve
 		subtype[on_shroud_delve] = { }
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_patron_delve_failed
 		subtype[on_patron_delve_failed] = { }
+		### Vanilla This = Newly selected Country
+		## replace_scope = { this = country root = country }
 		## type_key_filter = on_new_country_selected
 		subtype[on_new_country_selected] = { }
+		### Vanilla Scope:
+		### Vanilla this/root = planet that have been fired upon
+		### Vanilla from = fleet that fired
+		## replace_scope = { this = planet root = planet from = fleet }
 		## type_key_filter = on_destroy_planet_with_PLANET_KILLER_CRACKER
 		subtype[on_destroy_planet_with_PLANET_KILLER_CRACKER] = { }
 		## type_key_filter = on_destroy_planet_with_PLANET_KILLER_CRACKER_queued
@@ -832,6 +1490,9 @@ types = {
 		subtype[on_destroy_planet_with_PLANET_KILLER_SMELTER_queued] = { }
 		## type_key_filter = on_destroy_planet_with_PLANET_KILLER_SMELTER_unqueued
 		subtype[on_destroy_planet_with_PLANET_KILLER_SMELTER_unqueued] = { }
+		### Vanilla This = target planet/target fleet/triggering fleet # depending on "scope" parameter on scripted_action
+		### Vanilla From = triggering fleet
+		## replace_scope = { this = planet root = planet from = fleet }
 		## type_key_filter = on_beholder_target_planet_reached
 		subtype[on_beholder_target_planet_reached] = { }
 		## type_key_filter = on_azaryn_target_planet_reached
@@ -866,20 +1527,5 @@ types = {
 		subtype[on_behemoth_superweapon_activated] = { }
 		## type_key_filter = on_behemoth_rage_triggered
 		subtype[on_behemoth_rage_triggered] = { }
-	}
-}
-
-on_action = {
-	## cardinality = 0..1
-	events = {
-		## cardinality = 0..inf
-		<event>
-	}
-	## cardinality = 0..1
-	random_events = {
-		## cardinality = 0..inf
-		int = 0
-		## cardinality = 0..inf
-		int = <event>
 	}
 }
