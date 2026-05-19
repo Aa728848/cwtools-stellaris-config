@@ -3727,7 +3727,8 @@ alias[effect:set_star_class] = <star_class>
 
 ###Fires an on_action (including custom-made ones), can set scopes like in fire event effects
 alias[effect:fire_on_action] = {
-	on_action = <on_action>
+	## completion_type = on_action
+	on_action = scalar
 	## cardinality = 0..1
 	scopes = {
 		## cardinality = 0..1
