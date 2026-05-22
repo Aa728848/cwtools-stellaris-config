@@ -176,6 +176,7 @@ enums = {
 		action_ask_to_become_subsidiary
 		action_ask_to_become_thrall
 		action_ask_to_become_tributary
+		action_ask_to_become_vassalized
 		action_stop_stratified_technological_enlightenment
 		action_stratified_technological_enlightenment
 	}
@@ -186,5 +187,6 @@ enums = {
 		action_demand_subsidiary
 		action_demand_thrall
 		action_demand_tributary
+		action_demand_vassalization
 	}
 }
