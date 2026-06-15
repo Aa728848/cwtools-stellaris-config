@@ -76,9 +76,13 @@ subject_specialist_perk = {
 }
 
 subject_specialist_type = {
+    ## cardinality = 0..1
     icon = <sprite>
+    ## cardinality = 0..1
     icon_large = <sprite>
+    ## cardinality = 0..1
     preferred_ethic = <ethos>
+    ## cardinality = 0..1
     ### The number of days to convert to this subject specialist type
     base_conversion_time = int
     ## replace_scope = { this = agreement root = agreement }
@@ -86,6 +90,8 @@ subject_specialist_type = {
     on_progress_complete = {
         alias_name[effect] = alias_match_left[effect]
     }
+
+    ## cardinality = 0..1
     ### The levels for this subject specialist type; the order is the order in which subjects will progress through the levels
     levels = {
         ## cardinality = 1..inf

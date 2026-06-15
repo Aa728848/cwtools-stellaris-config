@@ -43,4 +43,6 @@ event_chain = {
 	abort_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	situation_log_category = <situation_log_category>
 }

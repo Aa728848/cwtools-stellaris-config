@@ -24,15 +24,7 @@ types = {
 			Desc = "$_desc"
 		}
 	}
-	type[artifact_action] = {
-		path = "game/common/artifact_action"
-		localisation = {
-			## required
-			Name = "$"
-			## required
-			Desc = "$_desc"
-		}
-	}
+
 }
 
 
@@ -40,6 +32,9 @@ anomaly_category = {
 	## cardinality = 0..1
 	###Yes makes the anomaly exclusively used by the AI, no by the player. Default: no
 	should_ai_use = bool
+
+	## cardinality = 0..1
+	situation_log_category = <situation_log_category>
 
 	###If set to yes, this allows both the player and the AI to use the anomaly
 	## cardinality = 0..1
@@ -158,9 +153,9 @@ relic = {
 archaeological_site_type = {
 	## cardinality = 0..1
 	picture = <sprite>
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	desc = localisation
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	desc = {
 		## replace_scope = { this = archaeological_site root = archaeological_site }
 		trigger = {
@@ -168,6 +163,8 @@ archaeological_site_type = {
 		}
 		text = localisation
 	}
+	## cardinality = 0..1
+	situation_log_category = <situation_log_category>
 	## cardinality = 0..1
 	max_instances = int[1..inf]
 	## cardinality = 0..1
@@ -179,6 +176,7 @@ archaeological_site_type = {
 	}
 	## cardinality = 0..1
 	weight = int
+	## cardinality = 0..1
 	stages = int[1..inf]
 
 	## cardinality = 0..1
@@ -187,11 +185,13 @@ archaeological_site_type = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { root = fleet this = fleet from = archaeological_site }
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { root = country this = country from = archaeological_site }
 	visible = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -226,33 +226,4 @@ archaeological_site_type = {
 	}
 }
 
-## push_scope = country
-artifact_action = {
-	## cardinality = 0..1
-	resources = {
-		category = <economic_category>
-		alias_name[economic_template] = alias_match_left[economic_template]
-	}
 
-	## cardinality = 0..1
-	ai_weight = {
-		alias_name[modifier_rule] = alias_match_left[modifier_rule]
-	}
-
-	potential = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-
-	## cardinality = 0..1
-	effect = {
-		alias_name[effect] = alias_match_left[effect]
-	}
-
-	## cardinality = 0..1
-	allow = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-	
-	## cardinality = 0..1
-	sound = <sound_effect>
-}

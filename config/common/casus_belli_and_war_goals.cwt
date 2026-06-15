@@ -26,6 +26,11 @@ enums = {
 		occupied_only
 		no
 	}
+	enum[war_goal_hide] = {
+		never
+		always
+		no_cb
+	}
 }
 
 # TODO Confirm
@@ -105,9 +110,10 @@ war_goal = {
 
 	## cardinality = 0..1
 	total_war = bool
+
 	## cardinality = 0..1
 	###Hide this wargoal if country doesn't have the requisite CB. No by default.
-	hide_if_no_cb = bool
+	hide = enum[war_goal_hide]
 
 	## cardinality = 0..1
 	###Will countries that have sworn secret fealty to the attacker join the war? No by default.
@@ -178,26 +184,18 @@ war_goal = {
 	# CAN NOT USE ENUM DUE TO STUPID = "" HAVE TO LIST EACH OPTION HERE AS CARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	## cardinality = 0..1
 	forbidden_peace_offers = {
+		## cardinality = 0..1
 		demand_surrender = ""
+		## cardinality = 0..1
+		demand_surrender = localisation
+		## cardinality = 0..1
 		surrender = ""
-	}
-	## cardinality = 0..1
-	forbidden_peace_offers = {
-		demand_surrender = ""
-	}
-	## cardinality = 0..1
-	forbidden_peace_offers = {
-		surrender = ""
-	}
-	## cardinality = 0..1
-	forbidden_peace_offers = {
-		demand_surrender = ""
+		## cardinality = 0..1
+		surrender = localisation
+		## cardinality = 0..1
 		status_quo = ""
-		surrender = ""
-	}
-	## cardinality = 0..1
-	forbidden_peace_offers = {
-		status_quo = ""
+		## cardinality = 0..1
+		status_quo = localisation
 	}
 		
 	## cardinality = 0..1

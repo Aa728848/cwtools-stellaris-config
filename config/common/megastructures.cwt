@@ -8,12 +8,6 @@ types = {
 		subtype[has_prereqs] = {
 			prerequisites = { }
 		}
-#		subtype[not_buildable] = {
-#			potential = { always = no }
-#		}
-#		subtype[upgrade] = {
-#			upgrade_from = { <megastructure> }
-#		}
 		localisation = {
 			## required
 			Name = "$"
@@ -25,6 +19,10 @@ types = {
 				## optional
 				"Delayed info" = "$_CONSTRUCTION_INFO_DELAYED"
 			}
+		}
+		modifiers = {
+			"megastructure_$_intermediate_build_speed_mult" = Megastructures
+			"megastructure_$_build_speed_mult" = Megastructures
 		}
 	}
 	type[mega_overclock] = {
@@ -39,16 +37,29 @@ types = {
 }
 
 megastructure = {
-	entity = scalar #TODO entity suffixes
+	## cardinality = 0..1
+	## type_prefix_from = graphical_culture
+	entity = <model_entity>
+	## cardinality = 0..1
+	entity = scalar
 
+	## cardinality = 0..1
+	## type_prefix_from = graphical_culture
+	construction_entity = <model_entity> 
+	## cardinality = 0..1
+	construction_entity = scalar
+
+	## cardinality = 0..1
+	scripted_action = {
+		## cardinality = 0..inf
+		<scripted_action>
+	}
 	## cardinality = 0..1
 	rotate_to_center = bool
 	## cardinality = 0..1
 	scale_offset = bool
 	## cardinality = 0..1
 	use_planet_resource = bool
-	## cardinality = 0..1
-	construction_entity = scalar #TODO entity suffixes
 	## cardinality = 0..1
 	construction_scale = float
 	## cardinality = 0..1
@@ -94,12 +105,27 @@ megastructure = {
 	## cardinality = 0..1
 	custom_tooltip_requirements = localisation
 	## cardinality = 0..1
-	build_system_tooltip = localisation
+	build_system_tooltip = <system_tooltips>
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 1..inf
-		<technology>
+	tooltip_system_score = {
+		## cardinality = 0..inf
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..1
+	tooltip_system_score_low_threshold = int
+	## cardinality = 0..1
+	tooltip_system_score_high_threshold = int
+	## cardinality = 0..1
+	tooltip_best_systems_header = localisation
+	## cardinality = 0..1
+	## replace_scope = { this = system from = country }
+	tooltip_system_filter = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	tooltip_show_star_resources = bool
+	## cardinality = 0..1
+	prerequisites = single_alias_right[technology_prerequisite]
 	subtype[has_prereqs] = {
 		## cardinality = 0..1
 		show_prereqs = bool
@@ -196,7 +222,7 @@ megastructure = {
 	}
 	## cardinality = 0..1
 	## replace_scope = { this = system root = system from = country fromfrom = megastructure fromfromfrom = fleet }
-		on_build_complete = {
+	on_build_complete = {
 		## cardinality = 0..inf
 		alias_name[effect] = alias_match_left[effect]
 	}
@@ -238,6 +264,8 @@ megastructure = {
 	}
 	## cardinality = 0..1
 	can_be_dismantled_by_non_owner = bool
+	## cardinality = 0..1
+	can_prevent_crisis_terraformation = bool
 	
 	
 	## cardinality = 0..1
@@ -252,6 +280,16 @@ megastructure = {
 		
 	## cardinality = 0..1
 	on_dismantle_complete = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = system root = system from = country fromfrom = megastructure }
+	on_dismantle_start = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = system root = system from = country fromfrom = megastructure }
+	on_dismantle_cancel = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..1
@@ -272,9 +310,30 @@ megastructure = {
 	## cardinality = 0..1
 	cycle_icon = <sprite>
 	## cardinality = 0..1
+	## cardinality = 0..1
 	## replace_scope = { this = system root = system from = country fromfrom = megastructure fromfromfrom = fleet }
 	on_cycle_complete = {
 		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	### Whether to show this megastructure in the build menu
+	show_in_build_menu = bool
+
+	## cardinality = 0..1
+	### Icon displayed in the build order
+	order_icon = <sprite>
+
+	## cardinality = 0..1
+	## replace_scope = { this = system root = system from = country fromfrom = megastructure fromfromfrom = fleet }
+	context_menu_potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = fleet from = country }
+	build_menu_potential = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 

@@ -82,9 +82,7 @@ army = {
 	## cardinality = 0..1
 	occupation = bool
 	## cardinality = 0..1
-	prerequisites = {
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	show_tech_unlock_if = {

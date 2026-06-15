@@ -3,12 +3,8 @@ types = {
 		path = "game/flags" #this is stored under flags but it does more than that
 		skip_root_key = colors
 	}
-	## type_key_filter = randomizable_combo
-	type[randomizable_combo] = {
-		path = "game/flags" #this is stored under flags but it does more than that
-	}
-	type[named_color] = {
-		path = "common/named_colors"
+	type[traitcolors] = {
+		path = "game/common/named_colors"
 	}
 }
 
@@ -25,11 +21,6 @@ color_define = {
 	use_as_border_color = no
 }
 
-randomizable_combo = {
-	## cardinality = 3..3
-	<color_define>
-}
-
-named_color = {
+traitcolors = {
 	color = colour[rgb]
 }

@@ -136,6 +136,12 @@ colony_type = {
 	}
 
 	## cardinality = 0..1
+	ai_building_set_affinity = { 
+		## cardinality = 0..inf
+		enum[building_sets] = float
+	}
+
+	## cardinality = 0..1
 	### Used by AI to estimate the current effects of this designation
 	ai_resource_current_conversion = {
 		## cardinality = 0..inf
@@ -160,7 +166,7 @@ colony_type = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
-	## replace_scope = { this = planet root = planet }
+	## cardinality = 0..inf
 	alias_name[triggered_planet_modifier_planet] = alias_match_left[triggered_planet_modifier_planet]
 
 	weight_modifier = {

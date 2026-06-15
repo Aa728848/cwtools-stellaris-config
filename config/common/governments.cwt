@@ -68,6 +68,9 @@ types = {
 		subtype[civic] = {
 			civic = <civic_or_origin.civic>
 		}
+		modifiers = {
+			"$_exp_gain" = Leaders
+		}
 	}
 	type[council_agenda] = {
 		path = "game/common/council_agendas"
@@ -118,8 +121,11 @@ authority = {
 	## cardinality = 0..inf
 	advanced_authority_swap = {
 		name = localisation
+		## cardinality = 0..1
 		description = localisation
+		## cardinality = 0..1
 		inherit_icon = bool
+		## cardinality = 0..1
 		inherit_effects = bool
 		## cardinality = 0..1
 		has_heir = bool
@@ -139,6 +145,10 @@ authority = {
 		tags = {
 			## cardinality = 1..inf
 			localisation
+		}
+		## cardinality = 0..1
+		weight = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
 	
@@ -582,9 +592,11 @@ council_agenda = {
 	## cardinality = 0..1
 	### Optional, Overrides COUNCIL_AGENDA_COOLDOWN define, how many days until the agenda can be selected again
 	agenda_cooldown = value_field
+	## cardinality = 0..1
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -594,6 +606,11 @@ council_agenda = {
 	## cardinality = 0..1
 	###Modifiers applied while the agenda is active (being prepared); usually similar but smaller modifiers compared to the finish_modifier
 	modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
+		## cardinality = 0..1
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	## cardinality = 0..1
@@ -627,7 +644,7 @@ alias[government_trigger:authority] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..inf
+		## cardinality = 1..99
 		value = <authority>
 	}
 	## cardinality = 0..inf
@@ -642,7 +659,7 @@ alias[government_trigger:authority] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..inf
+		## cardinality = 1..99
 		value = <authority>
 	}
 }
@@ -655,13 +672,14 @@ alias[government_trigger:country_type] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <country_type>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <country_type>
 	}
 	## cardinality = 0..inf
@@ -669,7 +687,7 @@ alias[government_trigger:country_type] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <country_type>
 	}
 }
@@ -682,13 +700,14 @@ alias[government_trigger:ethics] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <ethos>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <ethos>
 	}
 	## cardinality = 0..inf
@@ -696,7 +715,7 @@ alias[government_trigger:ethics] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <ethos>
 	}
 }
@@ -709,13 +728,14 @@ alias[government_trigger:civics] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <civic_or_origin.civic>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <civic_or_origin.civic>
 	}
 	## cardinality = 0..inf
@@ -723,7 +743,7 @@ alias[government_trigger:civics] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <civic_or_origin.civic>
 	}
 }
@@ -737,13 +757,14 @@ alias[government_trigger:traits] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <trait>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <trait>
 	}
 	## cardinality = 0..inf
@@ -751,7 +772,7 @@ alias[government_trigger:traits] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <trait>
 	}
 }
@@ -765,13 +786,14 @@ alias[government_trigger:preferred_planet_class] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <planet_class>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <planet_class>
 	}
 	## cardinality = 0..inf
@@ -779,7 +801,7 @@ alias[government_trigger:preferred_planet_class] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <planet_class>
 	}
 }
@@ -793,23 +815,24 @@ alias[government_trigger:graphical_culture] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
-		value = <civic_or_origin.origin>
+		## cardinality = 1..99
+		value = <graphical_culture>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
-		value = <civic_or_origin.origin>
+		## cardinality = 0..inf
+		value = <graphical_culture>
 	}
 	## cardinality = 0..inf
 	NOR = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
-		value = <civic_or_origin.origin>
-		## cardinality = 2..99
+		## cardinality = 1..99
+		value = <graphical_culture>
+		## cardinality = 1..99
 		value = <graphical_culture>
 	}
 }
@@ -822,13 +845,14 @@ alias[government_trigger:origin] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <civic_or_origin.origin>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <civic_or_origin.origin>
 	}
 	## cardinality = 0..inf
@@ -836,7 +860,7 @@ alias[government_trigger:origin] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <civic_or_origin.origin>
 	}
 }
@@ -848,13 +872,14 @@ alias[government_trigger:species_class] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <species_class>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <species_class>
 	}
 	## cardinality = 0..inf
@@ -862,7 +887,7 @@ alias[government_trigger:species_class] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <species_class>
 	}
 }
@@ -875,13 +900,14 @@ alias[government_trigger:species_archetype] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <species_archetype>
 	}
 	## cardinality = 0..inf
 	NOT = {
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..inf
 		value = <species_archetype>
 	}
 	## cardinality = 0..inf
@@ -889,7 +915,7 @@ alias[government_trigger:species_archetype] = {
 		## cardinality = 0..1
 		text = localisation
 		## severity = info
-		## cardinality = 2..99
+		## cardinality = 1..99
 		value = <species_archetype>
 	}
 }
@@ -920,11 +946,9 @@ alias[government_trigger:limit] = {
 }
 
 alias[government_trigger:host_has_dlc] = enum[DLCs]
-
 alias[government_trigger:always] = bool
-
 alias[government_trigger:text] = localisation
-
 alias[government_trigger:has_synthetic_dawn] = bool
 alias[government_trigger:has_machine_age_dlc] = bool
 alias[government_trigger:has_shroud_dlc] = bool
+alias[government_trigger:is_nomadic] = bool

@@ -35,13 +35,21 @@ enums = {
 }
 
 pop_faction = {
-
+	## cardinality = 0..1
+	name = localisation
+	## cardinality = 0..1
+	desc = localisation
+	## cardinality = 0..1
+	icon = <sprite>
 	### Allows to have multiple of this faction type within a single country
 	unique = bool
 
 	## cardinality = 0..1
 	### How much extra weight will receive a candidate from this faction
 	support_multiplier = float
+
+	## cardinality = 0..1
+	support_weight_exponent = float
 
 	## cardinality = 0..1
 	### Primary ethic for this faction
@@ -66,6 +74,12 @@ pop_faction = {
 	### This = Country. Existence requirements for this faction
 	is_potential = {
 		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	country_modifier = {
+		## cardinality = 0..1
+		alias_name[modifier] = alias_match_left[modifier]
 	}
 
 	## cardinality = 0..1
@@ -223,6 +237,7 @@ pop_faction = {
 		}
 
 	}
+	## cardinality = 0..1
 	resources = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]

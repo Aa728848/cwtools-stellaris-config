@@ -36,7 +36,7 @@ types = {
 #TODO Confirm
 #TODO Document
 diplo_phrase = {
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	greetings = {
 		## cardinality = 0..inf
 		localisation = {

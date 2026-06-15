@@ -71,7 +71,7 @@ textcolors = {
 
 bitmapfont = {
 	name = scalar
-	# cardinality = 0..1
+	## cardinality = 0..1
 	ttf_font = <font>
 	## cardinality = 0..1
 	ttf_size = int
@@ -85,7 +85,7 @@ bitmapfont = {
 		## cardinality = 1..inf
 		scalar
 	}
-	#TODO: hex
+	## cardinality = 0..1
 	color = scalar
 	## cardinality = 0..1
 	cursor_offset = {
@@ -139,26 +139,16 @@ bitmapfont_override = {
 			scalar
 		}
 	}
+	## cardinality = 0..1
+	color = scalar
+	## cardinality = 0..1
+	cursor_offset = {
+		## cardinality = 2..2
+		int
+	}
+	## cardinality = 0..1
+	selection_offset = {
+		## cardinality = 2..2
+		int
+	}
 }
-
-#bitmapfont entries are connected to the fonts defined at game/fonts and the file there (see pull requests).
-#example:
-# bitmapfont = {
-#		name = "cg_16b" -> name defined at game/fonts
-#		path = "gfx/fonts/cg_16b" -> file path to ttf or otf file
-#		color = 0xffffffff -> hex color code: this needs to be addressed somehow
-#		cursor_offset = { -3 -5 }
-#		selection_offset = { 0 3 }
-#	}
-
-
-#overrides appear to replace defines for fonts for speciesi languages:
-#example:
-#	 bitmapfont_override = {
-#		name = "cg_16b"
-#		fontfiles = {
-#			"gfx/fonts/stellaris_main"
-#		}
-#		languages = { "l_russian" "l_polish" }
-#	 }
-

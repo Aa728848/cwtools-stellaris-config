@@ -49,6 +49,14 @@ ship_behavior = {
 	combat_target_anchor = enum[combat_anchor]
 	## cardinality = 0..1
 	ignore_combat_movement = bool
+	## cardinality = 0..1
+	allow_disengage = bool
+	## cardinality = 0..1
+	allow_emergency_ftl = bool
+	## cardinality = 0..1
+	combat_movement = enum[combat_movement_enum]
+	## cardinality = 0..1
+	flee_when_overpowered = bool
 }
 enums = {
 	enum[move_pattern] = {
@@ -73,5 +81,9 @@ enums = {
 	enum[range_components_enum] = {
 		weapon
 		strike_craft
+	}
+	enum[combat_movement_enum] = {
+		ignore
+		player_override
 	}
 }

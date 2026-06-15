@@ -1,6 +1,7 @@
 types = {
 	type[game_rule] = {
 		path = "game/common/game_rules"
+		error_unknown_keys = yes
 
 		## type_key_filter = is_valid_rival
 		## replace_scope = { this = country root = country }
@@ -18,10 +19,6 @@ types = {
 		## replace_scope = { this = species root = country }
 		subtype[species_has_citizenship] = {
 		}
-		## type_key_filter = should_abduct_pop
-		## replace_scope = { this = pop_group root = country }
-		subtype[should_abduct_pop] = {
-		}
 		## type_key_filter = species_can_live_on_planet
 		## replace_scope = { this = species root = planet }
 		subtype[species_can_live_on_planet] = {
@@ -30,10 +27,6 @@ types = {
 		## replace_scope = { this = pop_group root = country }
 		subtype[can_vote_in_democratic_election] = {
 		}
-		## type_key_filter = can_generate_leader_from_pop
-		## replace_scope = { this = pop_group root = country }
-		subtype[can_generate_leader_from_pop] = {
-		}
 		## type_key_filter = can_generate_leader_from_species
 		## replace_scope = { this = species root = country }
 		subtype[can_generate_leader_from_species] = {
@@ -41,14 +34,6 @@ types = {
 		## type_key_filter = can_create_espionage_asset_from_species
 		## replace_scope = { this = species root = country }
 		subtype[can_create_espionage_asset_from_species] = {
-		}
-		## type_key_filter = can_generate_military_leader_from_pop
-		## replace_scope = { this = pop_group root = country }
-		subtype[can_generate_military_leader_from_pop] = {
-		}
-		## type_key_filter = can_generate_army_from_planet
-		## replace_scope = { this = country root = species }
-		subtype[can_generate_army_from_planet] = {
 		}
 		## type_key_filter = can_release_vassal
 		## replace_scope = { this = country root = planet }
@@ -90,25 +75,13 @@ types = {
 		## replace_scope = { this = planet root = country }
 		subtype[can_terraform_planet] = {
 		}
-		## type_key_filter = can_colonize_with_pop
-		## replace_scope = { this = pop_group root = country }
-		subtype[can_colonize_with_pop] = {
-		}
 		## type_key_filter = can_colonize_with_species
 		## replace_scope = { this = species root = country }
 		subtype[can_colonize_with_species] = {
 		}
-		## type_key_filter = pop_has_random_ethics
-		## replace_scope = { this = pop_group root = pop_group from = country }
-		subtype[pop_has_random_ethics] = {
-		}
 		## type_key_filter = species_has_happiness
 		## replace_scope = { this = species root = species from = country }
 		subtype[species_has_happiness] = {
-		}
-		## type_key_filter = can_be_hostile_towards
-		## replace_scope = { this = country root = country }
-		subtype[can_be_hostile_towards] = {
 		}
 		## type_key_filter = can_species_procreate
 		## replace_scope = { this = species root = planet }
@@ -162,21 +135,9 @@ types = {
 		## replace_scope = { this = country root = country }
 		subtype[can_have_robot_pops] = {
 		}
-		## type_key_filter = can_stop_purge_pop_manually
-		## replace_scope = { this = pop_group root = pop_group }
-		subtype[can_stop_purge_pop_manually] = {
-		}
-		## type_key_filter = can_purge_pop_manually
-		## replace_scope = { this = pop_group root = pop_group }
-		subtype[can_purge_pop_manually] = {
-		}
 		## type_key_filter = fleet_uses_templates
 		## replace_scope = { this = fleet }
 		subtype[fleet_uses_templates] = {
-		}
-		## type_key_filter = can_orbital_repair_ships
-		# ## replace_scope = { this = starbase root = starbase } #can be a megastructure or planet too
-		subtype[can_orbital_repair_ships] = {
 		}
 		## type_key_filter = can_spawn_debris
 		## replace_scope = { this = ship root = country }
@@ -206,21 +167,9 @@ types = {
 		## replace_scope = { this = system root = country }
 		subtype[can_enter_system_by_jump] = {
 		}
-		## type_key_filter = can_resettle_pop
-		## replace_scope = { this = pop_group root = pop_group }
-		subtype[can_resettle_pop] = {
-		}
 		## type_key_filter = can_country_resettle
 		## replace_scope = { this = country root = country }
 		subtype[can_country_resettle] = {
-		}
-		## type_key_filter = can_resettle_planet
-		## replace_scope = { this = planet root = planet }
-		subtype[can_resettle_planet] = {
-		}
-		## type_key_filter = can_resettle_planet_no_owner_check
-		## replace_scope = { this = planet root = planet }
-		subtype[can_resettle_planet_no_owner_check] = {
 		}
 		## type_key_filter = should_spawn_deposits
 		## replace_scope = { this = planet }
@@ -229,34 +178,6 @@ types = {
 		## type_key_filter = is_new_colony
 		## replace_scope = { this = planet }
 		subtype[is_new_colony] = {
-		}
-		## type_key_filter = pop_generates_crime
-		## replace_scope = { this = pop_group }
-		subtype[pop_generates_crime] = {
-		}
-		## type_key_filter = can_pops_grow_on_planet
-		## replace_scope = { this = planet }
-		subtype[can_pops_grow_on_planet] = {
-		}
-		## type_key_filter = can_pops_assemble_on_planet
-		## replace_scope = { this = planet }
-		subtype[can_pops_assemble_on_planet] = {
-		}
-		## type_key_filter = can_pops_decline_on_planet
-		## replace_scope = { this = planet }
-		subtype[can_pops_decline_on_planet] = {
-		}
-		## type_key_filter = can_force_grow_on_planet
-		## replace_scope = { this = planet root = country }
-		subtype[can_force_grow_on_planet] = {
-		}
-		## type_key_filter = can_force_decline_on_planet
-		## replace_scope = { this = planet root = country }
-		subtype[can_force_decline_on_planet] = {
-		}
-		## type_key_filter = can_force_decline_species
-		## replace_scope = { this = species root = country }
-		subtype[can_force_decline_species] = {
 		}
 		## type_key_filter = should_force_decline_species
 		## replace_scope = { this = species root = species from = planet }
@@ -270,17 +191,9 @@ types = {
 		## replace_scope = { this = country }
 		subtype[can_support_branch_offices] = {
 		}
-		## type_key_filter = can_build_branch_office_on_planet
-		## replace_scope = { this = planet root = country }
-		subtype[can_build_branch_office_on_planet] = {
-		}
 		## type_key_filter = is_criminal_syndicate_rule
 		## replace_scope = { this = country }
 		subtype[is_criminal_syndicate_rule] = {
-		}
-		## type_key_filter = can_crossbreed_species_on_planet
-		## replace_scope = { this = planet }
-		subtype[can_crossbreed_species_on_planet] = {
 		}
 		## type_key_filter = can_crossbreed_species
 		## replace_scope = { this = species root = species }
@@ -321,22 +234,6 @@ types = {
 		## type_key_filter = is_allowed_to_be_advanced_empire
 		## replace_scope = { this = country }
 		subtype[is_allowed_to_be_advanced_empire] = {
-		}
-		## type_key_filter = has_enough_pops_for_necrophage_on_planet
-		## replace_scope = { this = planet }
-		subtype[has_enough_pops_for_necrophage_on_planet] = {
-		}
-		## type_key_filter = can_pop_auto_migrate
-		## replace_scope = { this = pop_group root = planet }
-		subtype[can_pop_auto_migrate] = {
-		}
-		## type_key_filter = can_planet_auto_migrate
-		## replace_scope = { this = planet }
-		subtype[can_planet_auto_migrate] = {
-		}
-		## type_key_filter = can_planet_receive_auto_migration
-		## replace_scope = { this = planet }
-		subtype[can_planet_receive_auto_migration] = {
 		}
 		## type_key_filter = can_gene_mod_habitability
 		## replace_scope = { this = country root = country }
@@ -386,10 +283,6 @@ types = {
 		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_ruler_job] = {
 		}
-		## type_key_filter = should_planetary_automate
-		## replace_scope = { this = planet }
-		subtype[should_planetary_automate] = {
-		}
 		## type_key_filter = dismiss_leader_cost
 		## replace_scope = { this = leader }
 		subtype[dismiss_leader_cost] = {
@@ -409,10 +302,6 @@ types = {
 		## type_key_filter = can_country_connect_to_relay_network
 		## replace_scope = { this = country root = country }
 		subtype[can_country_connect_to_relay_network] = {
-		}
-		## type_key_filter = should_ai_build_stronghold_on_vulnerable_planet
-		## replace_scope = { this = planet }
-		subtype[should_ai_build_stronghold_on_vulnerable_planet] = {
 		}
 		## type_key_filter = will_leader_retire
 		## replace_scope = { this = leader }
@@ -482,10 +371,6 @@ types = {
 		## replace_scope = { this = country from = planet root = country }
 		subtype[can_build_research_station_around] = {
 		}
-		## type_key_filter = can_build_military_station_around
-		## replace_scope = { this = country from = planet root = country }
-		subtype[can_build_military_station_around] = {
-		}
 		## type_key_filter = can_build_observation_station_around
 		## replace_scope = { this = country from = planet root = country }
 		subtype[can_build_observation_station_around] = {
@@ -493,6 +378,496 @@ types = {
 		## type_key_filter = can_build_starbase_around
 		## replace_scope = { this = country from = planet root = country }
 		subtype[can_build_starbase_around] = {
+		}
+
+		# Added from vanilla v4.4.0 scan (rules-sync report); scopes harvested from vanilla comments.
+		## type_key_filter = ai_should_not_restrict_system
+		## replace_scope = { this = system root = country }
+		subtype[ai_should_not_restrict_system] = {
+		}
+		## type_key_filter = ai_will_accept_ally
+		## replace_scope = { this = country root = country from = country }
+		subtype[ai_will_accept_ally] = {
+		}
+		## type_key_filter = ai_will_accept_enemy
+		## replace_scope = { this = country root = country from = country }
+		subtype[ai_will_accept_enemy] = {
+		}
+		## type_key_filter = ai_will_join_offensive_wars
+		## replace_scope = { this = country root = country }
+		subtype[ai_will_join_offensive_wars] = {
+		}
+		## type_key_filter = ai_will_join_wars
+		## replace_scope = { this = country root = country }
+		subtype[ai_will_join_wars] = {
+		}
+		## type_key_filter = ai_will_leave_wars
+		## replace_scope = { this = country root = country }
+		subtype[ai_will_leave_wars] = {
+		}
+		## type_key_filter = are_all_leaders_forced_immortal
+		## replace_scope = { this = country root = country }
+		subtype[are_all_leaders_forced_immortal] = {
+		}
+		## type_key_filter = benefits_from_waystation_network
+		## replace_scope = { this = country root = country from = country }
+		subtype[benefits_from_waystation_network] = {
+		}
+		## type_key_filter = building_automation_civilians_threshold
+		subtype[building_automation_civilians_threshold] = {
+		}
+		## type_key_filter = building_automation_unemployment_threshold
+		subtype[building_automation_unemployment_threshold] = {
+		}
+		## type_key_filter = calc_planet_specific_war_attack_priority
+		## replace_scope = { this = planet root = planet }
+		subtype[calc_planet_specific_war_attack_priority] = {
+		}
+		## type_key_filter = calc_system_specific_war_attack_priority
+		## replace_scope = { this = system root = country }
+		subtype[calc_system_specific_war_attack_priority] = {
+		}
+		## type_key_filter = can_accept_contracts
+		## replace_scope = { this = country root = country }
+		subtype[can_accept_contracts] = {
+		}
+		## type_key_filter = can_access_decisions
+		## replace_scope = { this = country root = country from = country }
+		subtype[can_access_decisions] = {
+		}
+		## type_key_filter = can_access_vivarium
+		## replace_scope = { this = country root = country }
+		subtype[can_access_vivarium] = {
+		}
+		## type_key_filter = can_ai_assign_governor
+		## replace_scope = { from = country }
+		subtype[can_ai_assign_governor] = {
+		}
+		## type_key_filter = can_be_sent_to_war
+		## replace_scope = { this = country root = country from = country }
+		subtype[can_be_sent_to_war] = {
+		}
+		## type_key_filter = can_build_branch_office_on_colony
+		## replace_scope = { root = country }
+		subtype[can_build_branch_office_on_colony] = {
+		}
+		## type_key_filter = can_reform_government_for_free
+		## replace_scope = { root = country }
+		subtype[can_reform_government_for_free] = {
+		}
+		## type_key_filter = can_capture_ship
+		## replace_scope = { this = ship root = ship from = ship }
+		subtype[can_capture_ship] = {
+		}
+		## type_key_filter = can_colony_auto_migrate
+		subtype[can_colony_auto_migrate] = {
+		}
+		## type_key_filter = can_colony_receive_auto_migration
+		subtype[can_colony_receive_auto_migration] = {
+		}
+		## type_key_filter = can_country_initiate_storm
+		subtype[can_country_initiate_storm] = {
+		}
+		## type_key_filter = can_crossbreed_species_on_colony
+		subtype[can_crossbreed_species_on_colony] = {
+		}
+		## type_key_filter = can_delve
+		## replace_scope = { this = country root = country }
+		subtype[can_delve] = {
+		}
+		## type_key_filter = can_excavate_outside_borders
+		## replace_scope = { this = country root = country from = system }
+		subtype[can_excavate_outside_borders] = {
+		}
+		## type_key_filter = can_explore_astral_rift
+		## replace_scope = { this = country root = country from = astral_rift }
+		subtype[can_explore_astral_rift] = {
+		}
+		## type_key_filter = can_explore_rifts_outside_borders
+		## replace_scope = { this = country root = country from = system }
+		subtype[can_explore_rifts_outside_borders] = {
+		}
+		## type_key_filter = can_fauna_grow
+		## replace_scope = { this = country root = country }
+		subtype[can_fauna_grow] = {
+		}
+		## type_key_filter = can_fill_precursor_job
+		subtype[can_fill_precursor_job] = {
+		}
+		## type_key_filter = can_fleet_be_captured_by_snares
+		## replace_scope = { this = fleet root = fleet from = country }
+		subtype[can_fleet_be_captured_by_snares] = {
+		}
+		## type_key_filter = can_force_see_fleets_in_system
+		subtype[can_force_see_fleets_in_system] = {
+		}
+		## type_key_filter = can_generate_army_from_colony
+		## replace_scope = { this = pop_group root = species }
+		subtype[can_generate_army_from_colony] = {
+		}
+		## type_key_filter = can_generate_leader_from_pop_group
+		## replace_scope = { this = pop_group root = country }
+		subtype[can_generate_leader_from_pop_group] = {
+		}
+		## type_key_filter = can_generate_military_leader_from_pop_group
+		## replace_scope = { this = pop_group root = country }
+		subtype[can_generate_military_leader_from_pop_group] = {
+		}
+		## type_key_filter = can_get_colony_events
+		subtype[can_get_colony_events] = {
+		}
+		## type_key_filter = can_have_contact
+		## replace_scope = { this = country root = country }
+		subtype[can_have_contact] = {
+		}
+		## type_key_filter = can_initiate_storm_on_planet
+		subtype[can_initiate_storm_on_planet] = {
+		}
+		## type_key_filter = can_interact_with_astral_rift
+		## replace_scope = { this = country root = country from = astral_rift }
+		subtype[can_interact_with_astral_rift] = {
+		}
+		## type_key_filter = can_issue_contracts
+		## replace_scope = { this = country root = country }
+		subtype[can_issue_contracts] = {
+		}
+		## type_key_filter = can_leader_be_councilor
+		## replace_scope = { this = leader root = leader from = country }
+		subtype[can_leader_be_councilor] = {
+		}
+		## type_key_filter = can_leader_be_ruler
+		## replace_scope = { this = leader root = leader from = country }
+		subtype[can_leader_be_ruler] = {
+		}
+		## type_key_filter = can_leader_explore_astral_rift
+		## replace_scope = { this = leader root = leader from = astral_rift }
+		subtype[can_leader_explore_astral_rift] = {
+		}
+		## type_key_filter = can_leader_get_council_trait
+		## replace_scope = { this = leader root = leader }
+		subtype[can_leader_get_council_trait] = {
+		}
+		## type_key_filter = can_leader_get_destiny_trait
+		## replace_scope = { this = leader root = leader }
+		subtype[can_leader_get_destiny_trait] = {
+		}
+		## type_key_filter = can_leader_get_normal_trait
+		## replace_scope = { this = leader root = leader }
+		subtype[can_leader_get_normal_trait] = {
+		}
+		## type_key_filter = can_leader_get_subclass_trait
+		## replace_scope = { this = leader root = leader }
+		subtype[can_leader_get_subclass_trait] = {
+		}
+		## type_key_filter = can_lock_bypass
+		## replace_scope = { this = country root = country from = system }
+		subtype[can_lock_bypass] = {
+		}
+		## type_key_filter = can_nomad_settle
+		## replace_scope = { this = planet root = country }
+		subtype[can_nomad_settle] = {
+		}
+		## type_key_filter = can_open_shroud_tab
+		## replace_scope = { this = country root = country }
+		subtype[can_open_shroud_tab] = {
+		}
+		## type_key_filter = can_orbitable_repair_ships
+		# ## replace_scope = { this = starbase root = starbase } #this can be a starbase, megastructure or planet
+		subtype[can_orbitable_repair_ships] = {
+		}
+		## type_key_filter = can_pop_group_auto_migrate
+		## replace_scope = { this = pop_group root = pop_group }
+		subtype[can_pop_group_auto_migrate] = {
+		}
+		## type_key_filter = can_pops_assemble_on_colony
+		subtype[can_pops_assemble_on_colony] = {
+		}
+		## type_key_filter = can_pops_decline_on_colony
+		subtype[can_pops_decline_on_colony] = {
+		}
+		## type_key_filter = can_pops_grow_on_colony
+		## replace_scope = { this = pop_group root = pop_group }
+		subtype[can_pops_grow_on_colony] = {
+		}
+		## type_key_filter = can_resettle_colony
+		subtype[can_resettle_colony] = {
+		}
+		## type_key_filter = can_resettle_pop_group
+		## replace_scope = { this = pop_group root = pop_group }
+		subtype[can_resettle_pop_group] = {
+		}
+		## type_key_filter = can_scavenge_and_research_debris
+		## replace_scope = { root = country }
+		subtype[can_scavenge_and_research_debris] = {
+		}
+		## type_key_filter = can_scavenge_debris
+		## replace_scope = { root = country }
+		subtype[can_scavenge_debris] = {
+		}
+		## type_key_filter = can_see_aura_intensity
+		## replace_scope = { this = country root = country from = system }
+		subtype[can_see_aura_intensity] = {
+		}
+		## type_key_filter = can_toggle_encampment
+		subtype[can_toggle_encampment] = {
+		}
+		## type_key_filter = can_trade_favor
+		## replace_scope = { from = country }
+		subtype[can_trade_favor] = {
+		}
+		## type_key_filter = can_trade_sensor
+		## replace_scope = { from = country }
+		subtype[can_trade_sensor] = {
+		}
+		## type_key_filter = can_trade_specimens
+		## replace_scope = { this = country root = country from = country }
+		subtype[can_trade_specimens] = {
+		}
+		## type_key_filter = can_unlock_accords
+		## replace_scope = { this = country root = country }
+		subtype[can_unlock_accords] = {
+		}
+		## type_key_filter = can_uplift_species
+		## replace_scope = { this = species root = country }
+		subtype[can_uplift_species] = {
+		}
+		## type_key_filter = can_use_artificial_breeding
+		## replace_scope = { this = country root = country }
+		subtype[can_use_artificial_breeding] = {
+		}
+		## type_key_filter = can_use_exhibits
+		## replace_scope = { this = country root = country }
+		subtype[can_use_exhibits] = {
+		}
+		## type_key_filter = can_use_mutations
+		## replace_scope = { this = country root = country }
+		subtype[can_use_mutations] = {
+		}
+		## type_key_filter = can_voidworms_bombard_country
+		## replace_scope = { this = country root = country }
+		subtype[can_voidworms_bombard_country] = {
+		}
+		## type_key_filter = count_as_split_fallen_empire
+		## replace_scope = { this = country root = country }
+		subtype[count_as_split_fallen_empire] = {
+		}
+		## type_key_filter = count_shroud_worlds_to_display
+		subtype[count_shroud_worlds_to_display] = {
+		}
+		## type_key_filter = crisis_flag_is_shown
+		## replace_scope = { this = country root = country }
+		subtype[crisis_flag_is_shown] = {
+		}
+		## type_key_filter = crisis_name_is_shown
+		## replace_scope = { this = country root = country }
+		subtype[crisis_name_is_shown] = {
+		}
+		## type_key_filter = crisis_opinion_is_shown
+		## replace_scope = { this = country root = country }
+		subtype[crisis_opinion_is_shown] = {
+		}
+		## type_key_filter = doom_clock_is_shown
+		## replace_scope = { this = country root = country }
+		subtype[doom_clock_is_shown] = {
+		}
+		## type_key_filter = empire_diplomacy_leads_to_shroud
+		## replace_scope = { this = country root = country }
+		subtype[empire_diplomacy_leads_to_shroud] = {
+		}
+		## type_key_filter = force_create_default_ship_design
+		## replace_scope = { this = ship root = ship from = country }
+		subtype[force_create_default_ship_design] = {
+		}
+		## type_key_filter = founder_species_uses_assembly
+		subtype[founder_species_uses_assembly] = {
+		}
+		## type_key_filter = founder_species_uses_bonus_growth_mult
+		subtype[founder_species_uses_bonus_growth_mult] = {
+		}
+		## type_key_filter = founder_species_uses_logistic_growth_mult
+		## replace_scope = { root = country from = species }
+		subtype[founder_species_uses_logistic_growth_mult] = {
+		}
+		## type_key_filter = has_borders
+		## replace_scope = { this = country root = country }
+		subtype[has_borders] = {
+		}
+		## type_key_filter = has_breached_shroud_storm
+		subtype[has_breached_shroud_storm] = {
+		}
+		## type_key_filter = has_custom_diplomacy
+		## replace_scope = { this = country root = country from = country }
+		subtype[has_custom_diplomacy] = {
+		}
+		## type_key_filter = has_enough_pops_for_necrophage_on_colony
+		## replace_scope = { this = country root = country }
+		subtype[has_enough_pops_for_necrophage_on_colony] = {
+		}
+		## type_key_filter = has_extra_council_position
+		## replace_scope = { this = country root = country }
+		subtype[has_extra_council_position] = {
+		}
+		## type_key_filter = has_inworld_capital
+		subtype[has_inworld_capital] = {
+		}
+		## type_key_filter = has_planet_specific_war_attack_priority
+		## replace_scope = { this = country root = country }
+		subtype[has_planet_specific_war_attack_priority] = {
+		}
+		## type_key_filter = has_relative_economy_power
+		## replace_scope = { from = country }
+		subtype[has_relative_economy_power] = {
+		}
+		## type_key_filter = has_shroud_insights
+		subtype[has_shroud_insights] = {
+		}
+		## type_key_filter = is_country_psionic
+		## replace_scope = { this = country root = country from = country }
+		subtype[is_country_psionic] = {
+		}
+		## type_key_filter = is_delve_blocked
+		## replace_scope = { this = country root = country }
+		subtype[is_delve_blocked] = {
+		}
+		## type_key_filter = is_ending_cycle
+		## replace_scope = { this = country root = country }
+		subtype[is_ending_cycle] = {
+		}
+		## type_key_filter = is_expelled_from
+		## replace_scope = { this = country root = country from = country }
+		subtype[is_expelled_from] = {
+		}
+		## type_key_filter = is_hostile_to_aura_owner
+		## replace_scope = { this = country root = country }
+		subtype[is_hostile_to_aura_owner] = {
+		}
+		## type_key_filter = is_mercenary
+		## replace_scope = { this = country root = country }
+		subtype[is_mercenary] = {
+		}
+		## type_key_filter = is_mindwarden_exiled_first_contact
+		## replace_scope = { this = country root = country from = country }
+		subtype[is_mindwarden_exiled_first_contact] = {
+		}
+		## type_key_filter = is_organic_leader
+		## replace_scope = { this = leader root = leader }
+		subtype[is_organic_leader] = {
+		}
+		## type_key_filter = is_organic_pop_group
+		## replace_scope = { this = pop root = pop from = country }
+		subtype[is_organic_pop_group] = {
+		}
+		## type_key_filter = is_planetary_ascension_free
+		## replace_scope = { this = country root = country }
+		subtype[is_planetary_ascension_free] = {
+		}
+		## type_key_filter = is_psionic_species
+		## replace_scope = { this = species root = species }
+		subtype[is_psionic_species] = {
+		}
+		## type_key_filter = is_science_fleet_gravity_snare_on_cooldown
+		## replace_scope = { this = fleet root = fleet }
+		subtype[is_science_fleet_gravity_snare_on_cooldown] = {
+		}
+		## type_key_filter = is_seeded
+		## replace_scope = { this = fleet root = fleet from = country }
+		subtype[is_seeded] = {
+		}
+		## type_key_filter = is_star_seeker_empire
+		## replace_scope = { this = country root = country }
+		subtype[is_star_seeker_empire] = {
+		}
+		## type_key_filter = needs_psionic_aura_insights
+		subtype[needs_psionic_aura_insights] = {
+		}
+		## type_key_filter = pop_group_can_join_factions
+		## replace_scope = { this = pop_group root = country }
+		subtype[pop_group_can_join_factions] = {
+		}
+		## type_key_filter = pop_group_generates_crime
+		## replace_scope = { this = pop_group root = pop_group }
+		subtype[pop_group_generates_crime] = {
+		}
+		## type_key_filter = pop_group_has_random_ethics
+		## replace_scope = { this = species root = pop_group from = country }
+		subtype[pop_group_has_random_ethics] = {
+		}
+		## type_key_filter = should_abduct_pop_group
+		## replace_scope = { this = pop_group root = country }
+		subtype[should_abduct_pop_group] = {
+		}
+		## type_key_filter = should_ai_build_stronghold_on_vulnerable_colony
+		subtype[should_ai_build_stronghold_on_vulnerable_colony] = {
+		}
+		## type_key_filter = should_ai_support_galactic_empire
+		## replace_scope = { this = country root = country from = country }
+		subtype[should_ai_support_galactic_empire] = {
+		}
+		## type_key_filter = should_ai_undermine_galactic_empire
+		## replace_scope = { this = country root = country from = country }
+		subtype[should_ai_undermine_galactic_empire] = {
+		}
+		## type_key_filter = should_colonize_use_terraform
+		## replace_scope = { this = country root = country from = planet }
+		subtype[should_colonize_use_terraform] = {
+		}
+		## type_key_filter = should_colony_automate
+		subtype[should_colony_automate] = {
+		}
+		## type_key_filter = should_hide_planet_sector_pop_amount
+		## replace_scope = { this = country root = country }
+		subtype[should_hide_planet_sector_pop_amount] = {
+		}
+		## type_key_filter = should_hide_pop_group_size
+		## replace_scope = { this = pop_group root = pop_group from = country }
+		subtype[should_hide_pop_group_size] = {
+		}
+		## type_key_filter = should_hide_resources_for_planet
+		## replace_scope = { this = country root = country }
+		subtype[should_hide_resources_for_planet] = {
+		}
+		## type_key_filter = should_leader_gain_trait_every_level
+		## replace_scope = { this = leader root = leader }
+		subtype[should_leader_gain_trait_every_level] = {
+		}
+		## type_key_filter = should_pay_for_leader_upkeep
+		## replace_scope = { this = leader root = leader }
+		subtype[should_pay_for_leader_upkeep] = {
+		}
+		## type_key_filter = should_reduce_aura_hostile_effect
+		## replace_scope = { this = country root = country }
+		subtype[should_reduce_aura_hostile_effect] = {
+		}
+		## type_key_filter = should_surrender_planets_to
+		## replace_scope = { this = country root = country }
+		subtype[should_surrender_planets_to] = {
+		}
+		## type_key_filter = shroud_delve_cooldown_days
+		subtype[shroud_delve_cooldown_days] = {
+		}
+		## type_key_filter = species_can_live_on_ship
+		## replace_scope = { this = species root = ship }
+		subtype[species_can_live_on_ship] = {
+		}
+		## type_key_filter = species_has_uncapped_habitability_on_planet
+		## replace_scope = { this = species root = planet }
+		subtype[species_has_uncapped_habitability_on_planet] = {
+		}
+		## type_key_filter = species_has_uncapped_habitability_on_ship
+		## replace_scope = { this = species root = ship }
+		subtype[species_has_uncapped_habitability_on_ship] = {
+		}
+		## type_key_filter = species_uses_bonus_growth
+		## replace_scope = { this = species root = species }
+		subtype[species_uses_bonus_growth] = {
+		}
+		## type_key_filter = unbidden_additional_conquer_desire
+		## replace_scope = { this = country root = country }
+		subtype[unbidden_additional_conquer_desire] = {
+		}
+		## type_key_filter = will_leader_survive
+		## replace_scope = { this = leader root = leader }
+		subtype[will_leader_survive] = {
 		}
 	}
 }

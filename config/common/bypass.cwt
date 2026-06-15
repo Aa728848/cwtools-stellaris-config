@@ -60,11 +60,7 @@ bypass = {
 	### number of days to wait for the jump animation to be played
 	animation_time = int
 	## cardinality = 0..1
-	prerequisites = {
-		## severity = info
-		## cardinality = 1..inf
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	## cardinality = 0..1
 	### an effect that is called just before the jump of a right click "explore" action of a fleet
 	on_pre_explore = {
@@ -86,7 +82,8 @@ bypass = {
 	### THIS = Fleet
 	### FROM = System jumping to
 	### FROMFROM = System jumped from
-	on_action = scalar #TODO expand
+	## severity = warning
+	on_action = <on_action>
 	subtype[scripted] = {
 		scripted_connection = {
 

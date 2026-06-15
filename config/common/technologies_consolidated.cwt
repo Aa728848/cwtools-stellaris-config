@@ -29,6 +29,14 @@ types = {
 			Name = "$"
 			## required
 			Description = "$_desc"
+			## optional
+			"Categories Tech" = "category_$_draw_chance_mult"
+			## optional
+			"Categories Speed" = "category_$_research_speed_mult"
+		}
+		modifiers = {
+			"category_$_research_speed_mult" = Countries
+			"category_$_draw_chance_mult" = Countries
 		}
 	}
 	type[pre_ftl_age] = {
@@ -55,6 +63,12 @@ technology = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
+	is_custom_tech_1 = bool
+	## cardinality = 0..1
+	is_custom_tech_2 = bool
+	## cardinality = 0..1
+	is_custom_tech_3 = bool
+	## cardinality = 0..1
 	cost = value_field
 	subtype[!start_tech] = {
 		## cardinality = 0..1
@@ -69,15 +83,7 @@ technology = {
 		levels = int[-1..100]
 	}
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..100
-		<technology>
-		## cardinality = 0..1
-		OR = {
-			## cardinality = 0..100
-			<technology>
-		}
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	potential = {
@@ -103,6 +109,8 @@ technology = {
 	## cardinality = 0..1
 	start_tech = bool
 	## cardinality = 0..1
+	previously_unlocked = int
+	## cardinality = 0..1
 	is_reverse_engineerable = bool
 	## cardinality = 0..1
 	is_rare = bool
@@ -115,6 +123,8 @@ technology = {
 	feature_flags = {
 		## cardinality = 0..100
 		enum[feature_flags]
+		## cardinality = 0..inf
+		scalar
 	}
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }

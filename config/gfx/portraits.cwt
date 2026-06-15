@@ -15,13 +15,17 @@ types = {
 }
 
 portrait = {
+	## cardinality = 0..inf
 	entity = <model_entity>
+	## cardinality = 0..1
 	clothes_selector = <asset_selector.clothes>
+	## cardinality = 0..1
 	attachment_selector = <asset_selector.hair>
 	## cardinality = 0..1
 	custom_attachment_label = localisation
 	## cardinality = 0..1
 	textureFile = filepath
+	## cardinality = 0..1
 	custom_close_up_position_offset = {
 		x = int
 		y = int
@@ -159,7 +163,34 @@ portrait_group = {
 	pop_group = {
 		## cardinality = 0..inf
 		add = {
+			## replace_scope = { this = pop_group root = pop_group }
+			## cardinality = 0..1
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			portraits = {
+				## cardinality = 0..inf
+				<portrait>
+			}
+		}
+		## cardinality = 0..inf
+		set = {
 			## replace_scope = { this = pop root = pop }
+			## cardinality = 0..1
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			portraits = {
+				## cardinality = 0..inf
+				<portrait>
+			}
+		}
+	}
+	## cardinality = 0..1
+	pop = {
+		## cardinality = 0..inf
+		add = {
+			## replace_scope = { this = pop_group root = pop_group }
 			## cardinality = 0..1
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]

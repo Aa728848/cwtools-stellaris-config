@@ -2,9 +2,6 @@
 #I like to put separate unless I get worn down by too many then I start putting them here - 17blue17 :)
 
 types = {
-	type[traitcolors] = {
-		path = "game/common/named_colors"
-	}
 	type[ambient_object] = {
 		name_field = "name"
 		path = "game/common/ambient_objects"
@@ -161,9 +158,7 @@ types = {
 	type[ai_espionage_spynetworks] = {
 		path = "game/common/ai_espionage/spynetworks"
 	}
-	type[astral_rifts] = {
-		path = "game/common/astral_rifts"
-	}
+
 	type[cloaking_strength_levels] = {
 		path = "game/common/cloaking_strength_levels"
 	}
@@ -203,11 +198,52 @@ types = {
 	type[resolution_groups] = {
 		path = "game/common/resolution_groups"
 	}
-	type[ship_sets] = {
-		path = "game/common/ship_sets"
-	}
+
 	type[system_tooltips] = {
 		path = "game/common/system_tooltips"
+	}
+	type[ascension_perk_category] = {
+		path = "game/common/ascension_perk_categories"
+		localisation = {
+			## required
+			Name = "$"
+			## required
+			Desc = "$_desc"
+		}
+	}
+	type[mission_category] = {
+		path = "game/common/missions/mission_categories"
+		localisation = {
+			## required
+			Name = "$"
+		}
+	}
+	type[mission] = {
+		path = "game/common/missions/missions"
+		localisation = {
+			## required
+			Name = "$"
+		}
+	}
+	type[resource_converter] = {
+		path = "game/common/resource_converters"
+	}
+	type[scripted_action] = {
+		path = "game/common/scripted_actions"
+	}
+	type[situation_log_category] = {
+		path = "game/common/situation_log/categories"
+		localisation = {
+			## required
+			Name = "$"
+		}
+	}
+	type[frontend_background] = {
+		path = "game/common/frontend_backgrounds"
+		localisation = {
+			## required
+			Name = "$_FRONTEND_NAME"
+		}
 	}
 }
 
@@ -728,6 +764,7 @@ scripted_modifier = {
 	## cardinality = 0..1
 	###Default no
 	localize_with_value_key = bool
+	## cardinality = 0..1
 	###sets the modifier category, which is sometimes used to determine whether it is applied to a certain object (so make sure this is set to what you want)
 	category = enum[scripted_modifier_categories]
 }
@@ -746,8 +783,12 @@ concept = {
 	## cardinality = 0..1
 	databank = {
 		category = <concept_categories>
+		## cardinality = 0..1
 		icon = <sprite>
+		## cardinality = 0..1
 		picture = <sprite>
+		## cardinality = 0..1
+		postfix = localisation
 	}
 	## cardinality = 0..1
 	wiki = scalar
@@ -798,6 +839,8 @@ leader_class = {
 	## cardinality = 0..1
 	default_category = enum[leader_classes]
 	## cardinality = 0..1
+	default_category = enum[old_leader_classes]
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	ai_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -819,7 +862,7 @@ leader_class = {
 	## cardinality = 0..1
 	can_be_assigned_to_galactic_community = bool
 	## cardinality = 0..1
-	leader_capacity = @base_leader_cap
+	leader_capacity = int
 	## cardinality = 0..inf
 	replaces_old_class = enum[old_leader_classes]
 	## cardinality = 0..1
@@ -952,6 +995,22 @@ ai_espionage_spynetworks = {
 	network_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	
+	## cardinality = 0..1
+	operation_selector = scalar
+
+	## cardinality = 0..1
+	operations = {
+		scalar = {
+			operation_policy = <ai_espionage_operations>
+			target_value = { 
+				## cardinality = 0..1
+				min = int_value_field
+				## cardinality = 0..1
+				max = int_value_field
+			}
+		}
+	}
 }
 
 astral_rifts = {
@@ -992,9 +1051,15 @@ colony_automation_categories = {
 }
 
 colors = {
-	rgb = {
+	## cardinality = 0..inf
+	scalar = {
 		## cardinality = 3..4
-		int
+		scalar
+	}
+	## cardinality = 0..inf
+	{
+		## cardinality = 3..4
+		scalar
 	}
 }
 
@@ -1039,16 +1104,18 @@ gamesetup_settings = {
 	## cardinality = 0..inf
 	categories = {
 		## cardinality = 0..inf
-		scalar = {
+		{
 			name = localisation
 			## cardinality = 0..inf
 			settings = {
 				## cardinality = 0..inf
-				scalar = scalar
-				## cardinality = 0..inf
-				scalar = {
+				{
 					## cardinality = 0..inf
 					scalar = scalar
+					## cardinality = 0..1
+					visible = {
+						alias_name[trigger] = alias_match_left[trigger]
+					}
 				}
 			}
 		}
@@ -1141,6 +1208,11 @@ portrait_sets = {
 random_names_base = {
 	## cardinality = 0..inf
 	scalar
+	## cardinality = 0..inf
+	scalar = {
+		## cardinality = 0..inf
+		scalar
+	}
 }
 
 resolution_groups = {
@@ -1161,5 +1233,439 @@ system_tooltips = {
 		## cardinality = 0..1
 		success_text = localisation
 		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+enums = {
+	enum[situation_log_tabs] = {
+		anomalies
+	}
+
+	enum[ai_minister_types] = {
+		none
+		interior
+		military
+	}
+	enum[scripted_action_behaviors] = {
+		scripted_catapult_order
+		scripted_survey_order
+		scripted_build_megastructure_order
+	}
+	enum[scripted_action_vfx_types] = {
+		survey_effect
+		harvest_effect
+	}
+	enum[contract_ai_behaviours] = {
+		attack
+		raid
+	}
+}
+
+ascension_perk_category = {
+	## cardinality = 0..1
+	ascension_perks = {
+		## cardinality = 0..inf
+		<ascension_perk>
+	}
+}
+
+mission_category = {
+	## cardinality = 0..1
+	is_contract = bool
+	## cardinality = 0..1
+	map_icon = filepath
+	## cardinality = 0..1
+	map_icon = <sprite>
+	## cardinality = 0..1
+	log_icon = filepath
+	## cardinality = 0..1
+	show_in_issue_list = bool
+}
+
+mission = {
+	## cardinality = 0..1
+	category = <mission_category>
+	## cardinality = 0..1
+	icon = filepath
+	## cardinality = 0..1
+	picture = <sprite>
+	## cardinality = 0..1
+	picture = filepath
+	## cardinality = 0..1
+	small_picture = <sprite>
+	## cardinality = 0..1
+	event_chain = <event_chain>
+	## cardinality = 0..1
+	location = bool
+	## cardinality = 0..1
+	time_to_accept = int
+	## cardinality = 0..1
+	time_to_complete = int
+	## cardinality = 0..1
+	ai_behaviour = enum[contract_ai_behaviours]
+	## cardinality = 0..1
+	sound = bool
+	## cardinality = 0..1
+	cost = int
+	## cardinality = 0..1
+	location = bool
+
+	## cardinality = 0..inf
+	abort_trigger = { 
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..inf
+	counter = {
+		## cardinality = 0..inf
+		localisation = {
+			## cardinality = 0..1
+			max = int
+		}
+	}
+
+	## cardinality = 0..1
+	desc = localisation
+	## cardinality = 0..inf
+	alias_name[triggered_desc] = alias_match_left[triggered_desc]
+
+	## cardinality = 0..inf
+	desc_operator = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		text = localisation
+	}
+	## cardinality = 0..inf
+	desc_issuer = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		text = localisation
+	}
+
+	## cardinality = 0..1
+	lore_issued = localisation
+	## cardinality = 0..1
+	lore_completed = localisation
+	## cardinality = 0..1
+	lore_failed = localisation
+
+	## cardinality = 0..1
+	potential = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	potential_operator = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	possible = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	possible_operator = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	potential_issuer = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	possible_issuer = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	abort_trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	issued_abort_trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	on_daily = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_monthly = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_issue = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_accept = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_cancel = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_start = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_success = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_stop = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_success = { 
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	ai_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+resource_converter = {
+	## cardinality = 0..1
+	resource_conversions = {
+		## cardinality = 0..inf
+		<resource> = {
+			## cardinality = 0..1
+			should_cap = bool
+			## cardinality = 0..1
+			bottomless = bool
+			## cardinality = 0..1
+			visible = bool
+			## cardinality = 0..1
+			visible_stockpile = bool
+			## cardinality = 0..1
+			can_buy = bool
+			## cardinality = 0..1
+			can_sell = bool
+			## cardinality = 0..1
+			affected_situation = <situation_type>
+			## cardinality = 0..1
+			affected_situation_mult = int
+			## cardinality = 0..1
+			affected_situation_mult = float
+			## cardinality = 0..1
+			override_trade_restriction = bool
+
+			## cardinality = 0..1
+			can_be_paid_with = {
+				## cardinality = 0..inf
+				<resource> = float
+			}
+		}
+	}
+	## cardinality = 0..1
+	visibility_overrides = {
+		## cardinality = 0..inf
+		scalar = bool
+	}
+}
+
+scripted_action = {
+	user_scope = enum[scripted_action_user_scope]
+	scope = enum[scripted_action_scope]
+
+	## cardinality = 0..1
+	possible = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	finished = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	hide_from_context_menu = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	button_clickable = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	button_visible = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	## severity = warning
+	on_completed = <on_action>
+	## cardinality = 0..1
+	## severity = warning
+	on_queued = <on_action>
+	## cardinality = 0..1
+	## severity = warning
+	on_started = <on_action>
+	## cardinality = 0..1
+	## severity = warning
+	on_progress_start = <on_action>
+	## cardinality = 0..1
+	## severity = warning
+	on_cancelled = <on_action>
+
+	## cardinality = 0..1
+	also_automate = {
+		## cardinality = 1..inf
+		<scripted_action>
+	}
+	## cardinality = 0..1
+	automation_priority = int
+	## cardinality = 0..1
+	automation_default_on = bool
+
+	## cardinality = 0..1
+	context_menu_name = localisation
+	## cardinality = 0..1
+	tooltip = localisation
+	## cardinality = 0..1
+	icon = <sprite>
+	## cardinality = 0..1
+	icon_selected = <sprite>
+	## cardinality = 0..1
+	on_click_sound = <sound_effect>
+	## cardinality = 0..1
+	on_execution_sound = <sound_effect>
+	## cardinality = 0..1
+	activity_key = localisation
+	## cardinality = 0..1
+	progress_activity_key = localisation
+	## cardinality = 0..1
+	required_progress = int_value_field
+	## cardinality = 0..1
+	required_progress_key = localisation
+	## cardinality = 0..1
+	cooldown = int_value_field
+	## cardinality = 0..1
+	cost = {
+		## cardinality = 0..inf
+		<resource> = float
+		## cardinality = 0..inf
+		<resource> = value_field
+	}
+	## cardinality = 0..1
+	fleet_action_range = float
+	## cardinality = 0..1
+	wait = bool
+
+	## cardinality = 0..1
+	ai = {
+		## cardinality = 0..1
+		weight = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+		## cardinality = 0..1
+		ai_minister = enum[ai_minister_types]
+		## cardinality = 0..1
+		war = bool
+		## cardinality = 0..1
+		enemy = bool
+		## cardinality = 0..1
+		max_jumps = int
+		## cardinality = 0..1
+		target_owned_starbases = bool
+		## cardinality = 0..1
+		good_enough_weight = int_value_field
+	}
+
+	## cardinality = 0..1
+	shortcut = scalar
+	## cardinality = 0..1
+	slot = int
+	## cardinality = 0..1
+	begin_anim_state = enum[model_states]
+	## cardinality = 0..1
+	progress_anim_state = enum[model_states]
+	## cardinality = 0..1
+	finish_anim_state = enum[model_states]
+	## cardinality = 0..1
+	specific_behavior = enum[scripted_action_behaviors]
+	## cardinality = 0..1
+	category = scalar
+	## cardinality = 0..1
+	category_limit = int
+	## cardinality = 0..1
+	important = bool
+	## cardinality = 0..1
+	overrides_gained_resources = bool
+	## cardinality = 0..1
+	completion_message_type = <message_type>
+	## cardinality = 0..1
+	completion_message_localization = localisation
+	## cardinality = 0..1
+	completion_message_days = int
+	## cardinality = 0..1
+	uses_vfx_type = enum[scripted_action_vfx_types]
+	## cardinality = 0..1
+	click_to_act_key = localisation
+}
+
+situation_log_category = {
+	## cardinality = 0..1
+	collapsible = bool
+	## cardinality = 0..1
+	priority = int
+	## cardinality = 0..1
+	localization = localisation
+	## cardinality = 0..1
+	icon = <sprite>
+	## cardinality = 0..1
+	icon = filepath
+	## cardinality = 0..1
+	default = bool
+	## cardinality = 0..1
+	target_tab = enum[situation_log_tabs]
+}
+
+frontend_background = {
+	## cardinality = 0..1
+	entity = <model_entity>
+	## cardinality = 0..1
+	default = bool
+}
+
+enums = {
+	enum[scripted_action_scope] = {
+		galactic_object
+		planet
+		fleet
+		self
+	}
+	enum[scripted_action_user_scope] = {
+		fleet
+		megastructure
 	}
 }

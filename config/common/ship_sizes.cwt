@@ -15,6 +15,107 @@ types = {
 			## cardinality = 0..1
 			is_designable = yes
 		}
+		modifiers = {
+			"shipsize_$_hull_add" = Ship
+			"shipsize_$_hull_mult" = Ship
+			"shipsize_$_hull_regen_add_perc" = Ship
+			"shipsize_$_hull_regen_mult" = Ship
+			"shipsize_$_hull_regen_add_static" = Ship
+			"shipsize_$_hull_damage_mult" = Ship
+			"shipsize_$_armor_add" = Ship
+			"shipsize_$_armor_mult" = Ship
+			"shipsize_$_armor_reduction" = Ship
+			"shipsize_$_armor_regen_add_perc" = Ship
+			"shipsize_$_armor_regen_mult" = Ship
+			"shipsize_$_armor_regen_add_static" = Ship
+			"shipsize_$_armor_damage_mult" = Ship
+			"shipsize_$_armor_penetration_mult" = Ship
+			"shipsize_$_armor_penetration_add" = Ship
+			"shipsize_$_armor_hardening_add" = Ship
+			"shipsize_$_shield_add" = Ship
+			"shipsize_$_shield_mult" = Ship
+			"shipsize_$_shield_reduction" = Ship
+			"shipsize_$_shield_regen_add_perc" = Ship
+			"shipsize_$_shield_regen_mult" = Ship
+			"shipsize_$_shield_regen_add_static" = Ship
+			"shipsize_$_shield_damage_mult" = Ship
+			"shipsize_$_shield_penetration_mult" = Ship
+			"shipsize_$_shield_penetration_add" = Ship
+			"shipsize_$_shield_hardening_add" = Ship
+			"shipsize_$_weapon_damage" = Ship
+			"shipsize_$_weapon_range_mult" = Ship
+			"shipsize_$_engagement_range_mult" = Ship
+			"shipsize_$_orbital_bombardment_mult" = Ship
+			"shipsize_$_fire_rate_mult" = Ship
+			"shipsize_$_home_territory_fire_rate_mult" = Ship
+			"shipsize_$_hyperlane_range_add" = Ship
+			"shipsize_$_ftl_jumpdrive_range_mult" = Ship
+			"shipsize_$_emergency_ftl_min_days_add" = Ship
+			"shipsize_$_emergency_ftl_min_days_mult" = Ship
+			"shipsize_$_disengage_chance_mult" = Ship
+			"shipsize_$_disengage_chance_reduction" = Ship
+			"shipsize_$_disengage_opportunities_add" = Ship
+			"shipsize_$_evasion_add" = Ship
+			"shipsize_$_evasion_mult" = Ship
+			"shipsize_$_accuracy_add" = Ship
+			"shipsize_$_accuracy_mult" = Ship
+			"shipsize_$_tracking_add" = Ship
+			"shipsize_$_tracking_mult" = Ship
+			"shipsize_$_base_speed_mult" = Ship
+			"shipsize_$_speed_mult" = Ship
+			"shipsize_$_landing_time_mult" = Ship
+			"shipsize_$_sensor_range_add" = Ship
+			"shipsize_$_windup_mult" = Ship
+			"shipsize_$_winddown_mult" = Ship
+			"shipsize_$_interstellar_speed_mult" = Ship
+			"shipsize_$_emergency_ftl" = Ship
+			"shipsize_$_anomaly_fail_risk" = Ship
+			"shipsize_$_anomaly_research_speed" = Ship
+			"shipsize_$_anomaly_research_speed_uninhabitable" = Ship
+			"shipsize_$_anomaly_generation_chance" = Ship
+			"shipsize_$_anomaly_generation_chance_uninhabitable" = Ship
+			"shipsize_$_science_survey_speed" = Ship
+			"shipsize_$_science_survey_speed_uninhabitable" = Ship
+			"shipsize_$_starting_experience_add" = Ship
+			"shipsize_$_experience_gain_mult" = Ship
+			"shipsize_$_jumpdrive_cooldown_mult" = Ship
+			"shipsize_$_naval_cap_usage_add" = Ship
+			"shipsize_$_naval_cap_usage_mult" = Ship
+			"shipsize_$_cloaking_detection_add" = Ship
+			"shipsize_$_target_weight_mult" = Ship
+			"shipsize_$_starbase_stockpile_collection_rate_add" = Ship
+			"shipsize_$_starbase_stockpile_collection_rate_mult" = Ship
+			"shipsize_$_stockpile_capacity_add" = Ship
+			"shipsize_$_stockpile_capacity_mult" = Ship
+			"shipsize_$_federation_territory_fire_rate_mult" = Ship
+			"shipsize_$_federation_territory_speed_mult" = Ship
+			"shipsize_$_community_territory_speed_mult" = Ship
+			"shipsize_$_military_speed_mult" = Ship
+			"shipsize_$_science_speed_mult" = Ship
+			"shipsize_$_damage_against_starbases_mult" = Ship
+			"shipsize_$_damage_against_boss_mult" = Ship
+			"shipsize_$_repair_hull_mult" = Ship
+			"shipsize_$_repair_armor_mult" = Ship
+			"shipsize_$_friendly_territory_armor_add" = Ship
+			"shipsize_$_friendly_territory_armor_mult" = Ship
+			"shipsize_$_friendly_territory_shield_add" = Ship
+			"shipsize_$_friendly_territory_shield_mult" = Ship
+			"shipsize_$_friendly_territory_evasion_add" = Ship
+			"shipsize_$_friendly_territory_evasion_mult" = Ship
+			"shipsize_$_friendly_territory_accuracy_add" = Ship
+			"shipsize_$_friendly_territory_accuracy_mult" = Ship
+			"shipsize_$_friendly_territory_tracking_add" = Ship
+			"shipsize_$_friendly_territory_tracking_mult" = Ship
+			"shipsize_$_friendly_territory_fire_rate_mult" = Ship
+			"shipsize_$_capture_chance_add" = Ship
+			"shipsize_$_capture_amount_add" = Ship
+			"shipsize_$_damage_against_space_fauna_mult" = Ship
+			"shipsize_$_steal_defeated_ship_chance" = Ship
+			"shipsize_$_psionic_aura_speed_mult" = Ship
+			"shipsize_$_psionic_aura_fire_rate_mult" = Ship
+			"shipsize_$_size_damage_factor" = Ship
+			"shipsize_$_build_speed_mult" = Ship
+		}
 		localisation = {
 			## required
 			Name = "$"
@@ -23,7 +124,7 @@ types = {
 		}
 	}
 	type[shipset] = {
-		path = "game/common/ship_set"
+		path = "game/common/ship_sets"
 	}
 }
 
@@ -35,6 +136,39 @@ ship_size = {
 	}
 	## cardinality = 0..2
 	graphical_culture = bool
+
+	## cardinality = 0..1
+	is_orbital_ring = bool
+	## cardinality = 0..1
+	stay_disabled = bool
+	## cardinality = 0..1
+	is_starting_arkship = bool
+	## cardinality = 0..1
+	accepts_all_modifiers = bool
+	## cardinality = 0..1
+	carries_colony = <planet_class>
+	## cardinality = 0..1
+	collects_stockpile_to_country = bool
+	## cardinality = 0..1
+	collects_stockpile_from = {
+		## cardinality = 0..inf
+		enum[shipsize_classes]
+	}
+	## cardinality = 0..1
+	construction_capabilities = {
+		## cardinality = 0..inf
+		enum[construction_capabilities_enum]
+	}
+	## cardinality = 0..1
+	arkship_picture = <sprite>
+	## cardinality = 0..1
+	automation_icon = <sprite>
+	## cardinality = 0..1
+	scripted_action = {
+		## cardinality = 0..inf
+		<scripted_action>
+	}
+
 	## cardinality = 0..1
 	is_space_object = bool
 	## cardinality = 0..1
@@ -46,9 +180,9 @@ ship_size = {
 	## cardinality = 0..1
 	pre_communications_name = localisation
 	## cardinality = 0..1
+	## type_prefix_from = graphical_culture
 	entity = <model_entity>
 	## cardinality = 0..1
-	# reference to other ship_sizes + _entity, handled by manual validator
 	entity = scalar
 	## cardinality = 0..1
 	formation_priority = int
@@ -59,13 +193,21 @@ ship_size = {
 	## cardinality = 0..1
 	rotation_speed = float
 	## cardinality = 0..1
+	base_ship_size = <ship_size>
+	## cardinality = 0..1
+	construction_offset_mult = float
+	## cardinality = 0..1
 	collision_radius = float
 	## cardinality = 0..1
 	max_hitpoints = int
 	## cardinality = 0..1
 	is_listed = bool
 	## cardinality = 0..1
+	display_attack_neutral_fleet_button = bool
+	## cardinality = 0..1
 	map_counter_icon = enum[map_counter_icon]
+	## cardinality = 0..1
+	arkship_picture = scalar
 	## cardinality = 0..1
 	components_add_to_cost = bool
 	## cardinality = 0..1
@@ -97,11 +239,19 @@ ship_size = {
 	## cardinality = 0..1
 	on_click_sound = <sound_effect>
 	## cardinality = 0..1
-	is_hero_ship = bool
-	## cardinality = 0..1
-	custom_state_loc_prefix = scalar
-	## cardinality = 0..1
-	hero_ship_fleet_background = <sprite>
+	hero_ship = {
+		## cardinality = 0..1
+		hero_ship_fleet_background = <sprite>
+		## cardinality = 0..1
+		capabilities = {
+			## cardinality = 0..inf
+			enum[capabilities_enum]
+		}
+		## cardinality = 0..1
+		custom_class_text_color = scalar
+		## cardinality = 0..1
+		custom_state_loc_prefix = scalar
+	}
 		
 	subtype[starbase] = {
 		## cardinality = 0..1
@@ -140,7 +290,7 @@ ship_size = {
 			locator = scalar #TODO: Some locators are in .mesh files, so are missed by the enum
 		}
 	}
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	###Determines sprites. ship_size_military_1 is default. The following sprite keys are generated from it: GFX_text_<key>, GFX_<key>, GFX_<key>_top, GFX_<key>_top_damaged
 	icon = scalar
 	## cardinality = 0..1
@@ -198,10 +348,7 @@ ship_size = {
 		}
 	}
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..inf
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	#this is where ship classes are defined! this is important for other files, and it also causes the game to auto generate modifiers for each shipclass!
 	class = enum[shipsize_classes]
 	## cardinality = 0..1
@@ -234,6 +381,10 @@ ship_size = {
 	auto_upgrade = bool
 	## cardinality = 0..1
 	ship_class_icon_frame = int
+	## cardinality = 0..1
+	ship_stockpile_capacity = float
+	## cardinality = 0..1
+	force_show_ship_class_icon_frame = bool
 	## cardinality = 0..1
 	uses_name_prefix = bool
 	## cardinality = 0..1
@@ -360,6 +511,8 @@ ship_size = {
 		normal = <sprite>
 		mixed = <sprite>
 		cloaked = <sprite>
+		## cardinality = 0..1
+		encamped = <sprite>
 	}
 }
 
@@ -430,5 +583,22 @@ enums = {
 		offspring_weaver_class
 		stinger_class
 		weaver_class
+	}
+	enum[capabilities_enum] = {
+		can_repair
+		can_upgrade
+		can_turn_into_mercenary_enclave
+		can_transfer
+		can_split
+		can_reinforce
+	}
+	enum[construction_capabilities_enum] = {
+		starbase
+		mining_station
+		research_station
+		observation_station
+		automated_construction
+		automated_collection
+		megastructure
 	}
 }

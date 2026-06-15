@@ -32,9 +32,6 @@ types = {
 		## type_key_filter = strike_craft_component_template
 		subtype[strike_craft_component_template] = {
 		}
-		subtype[scripted_action] = {
-			scripted_action_name = <on_action>
-		}
 		localisation = {
 			## required
 			Name = "$"
@@ -120,10 +117,7 @@ component_template = {
 	## cardinality = 0..1
 	use_ship_main_target = bool
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..inf
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	## cardinality = 0..1
 	potential = {
 		## cardinality = 0..1
@@ -203,6 +197,11 @@ component_template = {
 	ai_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..1
+	scripted_action = {
+		## cardinality = 0..inf
+		<scripted_action>
+	}
 	subtype[utility_component_template] = {
 		power = int
 		## replace_scope = { root = ship this = ship }
@@ -221,6 +220,10 @@ component_template = {
 		## cardinality = 0..1
 		## replace_scope = { this = ship root = ship }
 		modifier = {
+			## cardinality = 0..1
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1
@@ -228,20 +231,19 @@ component_template = {
 		ship_modifier = {
 			## cardinality = 0..1
 			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = ship root = ship }
-		triggered_ship_design_modifier = {
-			potential = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			alias_name[modifier] = alias_match_left[modifier]
-		}
+		alias_name[triggered_ship_design_modifier] = alias_match_left[triggered_ship_design_modifier]
 		## cardinality = 0..1
 		build_time = int
 		## cardinality = 0..1
 		ftl = bool
+		## cardinality = 0..1
+		ftl_magnet = bool
 		## cardinality = 0..1
 		ftl_inhibitor = bool
 		## cardinality = 0..1
@@ -278,6 +280,10 @@ component_template = {
 			## cardinality = 0..1
 			## replace_scope = { this = ship root = ship }
 			modifier = {
+				## cardinality = 0..1
+				custom_tooltip = localisation
+				## cardinality = 0..1
+				show_only_custom_tooltip = bool
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 
@@ -318,6 +324,10 @@ component_template = {
 			## cardinality = 0..1
 			## replace_scope = { this = ship root = ship }
 			modifier = {
+				## cardinality = 0..1
+				custom_tooltip = localisation
+				## cardinality = 0..1
+				show_only_custom_tooltip = bool
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 
@@ -339,7 +349,7 @@ component_template = {
 				## cardinality = 0..1
 				accuracy = float
 				## cardinality = 0..1
-				damage = { min = int max = int }
+				damage = { min = float max = float }
 				## cardinality = 0..1
 				shield_damage = float
 				## cardinality = 0..1
@@ -348,65 +358,14 @@ component_template = {
 				armor_penetration = float
 				## cardinality = 0..1
 				size_damage_factor = float
+				## cardinality = 0..1
+				armor_damage = float
+				## cardinality = 0..1
+				hull_damage = float
 			}
 		}
 		## cardinality = 0..1
 		military_power_multiplier = float
-		## cardinality = 0..1
-		scripted_action = {
-			scope = self
-			scope = planet
-			## cardinality = 0..1
-			finish_anim_state = enum[model_states]
-			## cardinality = 0..1
-			possible = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			## cardinality = 0..1
-			button_clickable = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			## cardinality = 0..1
-			button_visible = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			name = scalar
-			tooltip = localisation
-			## cardinality = 0..1
-			icon = <sprite>
-			## cardinality = 0..1
-			icon_selected = <sprite>
-			## cardinality = 0..1
-			activity_key = localisation
-			activity_key = enum[scripted_action_activity_key]
-			## cardinality = 0..1
-			context_menu_name = localisation
-			## cardinality = 0..1
-			progress_activity_key = localisation
-			## cardinality = 0..1
-			required_progress = int
-			## cardinality = 0..1
-			on_click_sound = scalar
-			## cardinality = 0..1
-			cooldown = int
-			## cardinality = 0..1
-			cost = { 
-				## cardinality = 0..inf
-				<resource> = int
-			}
-			## cardinality = 0..1
-			shortcut = scalar
-			## cardinality = 0..1
-			slot = int
-			## cardinality = 0..1
-			wait = bool
-			## cardinality = 0..1
-			finished = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			## cardinality = 0..1
-			on_cancel = localisation
-		}
 	}
 	subtype[weapon_component_template] = {
 		size = enum[weapon_slot_size]
@@ -435,9 +394,17 @@ component_template = {
 		target_focus = enum[component_target_focus]
 		## cardinality = 0..1	
 		modifier = {
+			## cardinality = 0..1
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		ship_modifier = {
+			## cardinality = 0..1
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}	
 		## cardinality = 0..1		
@@ -481,6 +448,10 @@ component_template = {
 			## cardinality = 0..1
 			## replace_scope = { this = ship root = ship }
 			modifier = {
+				## cardinality = 0..1
+				custom_tooltip = localisation
+				## cardinality = 0..1
+				show_only_custom_tooltip = bool
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 
@@ -521,6 +492,10 @@ component_template = {
 			## cardinality = 0..1
 			## replace_scope = { this = ship root = ship }
 			modifier = {
+				## cardinality = 0..1
+				custom_tooltip = localisation
+				## cardinality = 0..1
+				show_only_custom_tooltip = bool
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 
@@ -542,7 +517,7 @@ component_template = {
 				## cardinality = 0..1
 				accuracy = float
 				## cardinality = 0..1
-				damage = { min = int max = int }
+				damage = { min = float max = float }
 				## cardinality = 0..1
 				shield_damage = float
 				## cardinality = 0..1
@@ -551,6 +526,10 @@ component_template = {
 				armor_penetration = float
 				## cardinality = 0..1
 				size_damage_factor = float
+				## cardinality = 0..1
+				armor_damage = float
+				## cardinality = 0..1
+				hull_damage = float
 			}
 		}
 		## cardinality = 0..1
@@ -564,7 +543,10 @@ component_template = {
 		## cardinality = 0..1
 		ai_tag_weight = int
 		## cardinality = 0..1
-		entity = scalar #TODO: Replace with hardcoded  graphical_culture + <model_entity>
+		## type_prefix_from = graphical_culture
+		entity = <model_entity>
+		## cardinality = 0..1
+		entity = scalar
 		## cardinality = 0..1
 		power = float
 		## replace_scope = { root = ship this = ship }
@@ -575,15 +557,11 @@ component_template = {
 		## cardinality = 0..1
 		can_destroy_stars = bool
 		## cardinality = 0..1
-		use_ship_kill_target = bool
-		## cardinality = 0..1
 		firing_arc = float
 		## cardinality = 0..1
 		min_range = float
 		## cardinality = 0..1
 		prio_projectile = bool
-		## cardinality = 0..1
-		static_rotation = bool #link to a GFX_ link defined under /interface
 		## cardinality = 0..1
 		planet_destruction_gfx = scalar
 		## cardinality = 0..1
@@ -591,6 +569,21 @@ component_template = {
 			## cardinality = 1..inf
 			scalar = float
 		}
+
+		## cardinality = 0..1
+		collateral_damage = { min = float max = float }
+		## cardinality = 0..1
+		collateral_damage = float
+		## cardinality = 0..1
+		collateral_range = float
+		## cardinality = 0..1
+		chain_damage = { min = float max = float }
+		## cardinality = 0..1
+		chain_damage = float
+		## cardinality = 0..1
+		chain_range = float
+		## cardinality = 0..1
+		chain_count = float
 
 		#these are optional, vanilla uses an .csv file to create these
 		## cardinality = 0..1
@@ -643,7 +636,11 @@ component_template = {
 	}
 	subtype[strike_craft_component_template] = {
 		size = enum[weapon_slot_size]
-		entity = scalar #TODO: Replace with hardcoded  graphical_culture + <model_entity>
+		## cardinality = 0..1
+		## type_prefix_from = graphical_culture
+		entity = <model_entity>
+		## cardinality = 0..1
+		entity = scalar
 		weapon_type = enum[weapon_type2]
 		ship_behavior = <ship_behavior>
 		projectile_gfx = scalar #tied to defined entites under gfx
@@ -683,45 +680,36 @@ component_template = {
 		hull_damage = float
 		## cardinality = 0..1
 		size_damage_factor = float
+
+		## cardinality = 0..1
+		collateral_damage = { min = float max = float }
+		## cardinality = 0..1
+		collateral_damage = float
+		## cardinality = 0..1
+		collateral_range = float
+		## cardinality = 0..1
+		chain_damage = { min = float max = float }
+		## cardinality = 0..1
+		chain_damage = float
+		## cardinality = 0..1
+		chain_range = float
+		## cardinality = 0..1
+		chain_count = float
+
 		## cardinality = 0..1
 		attack_range = float
 		## cardinality = 0..1
 		ship_modifier = {
+			## cardinality = 0..1
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1
 		build_time = int	
 		## cardinality = 0..1
 		military_power_multiplier = float
-	}
-	subtype[scripted_action] = {
-		scripted_action_name = <on_action>
-		scripted_action_tooltip = localisation
-		scripted_action_icon = <sprite>
-		scripted_action_activity_key = localisation
-		## cardinality = 0..1
-		## replace_scope = { root = planet this = planet }
-		scripted_action_possible = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## cardinality = 0..1
-		## replace_scope = { root = planet this = planet }
-		scripted_action_button_possible = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## cardinality = 0..1
-		## replace_scope = { root = planet this = planet }
-		scripted_action_finished = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## cardinality = 0..1
-		scripted_action_on_cancel = <on_action>
-		## cardinality = 0..1
-		scripted_action_context_menu_name = localisation
-		## cardinality = 0..1
-		scripted_action_progress_activity_key = localisation
-		## cardinality = 0..1
-		scripted_action_required_progress = int
 	}
 }
 
@@ -751,6 +739,7 @@ enums = {
 		titanic
 		engulf
 		any
+		aux
 	}
 	enum[utility_slot_size] = {
 		extra_large

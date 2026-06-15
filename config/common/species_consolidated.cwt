@@ -401,12 +401,6 @@ citizenship_type = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -431,9 +425,7 @@ citizenship_type = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
@@ -469,12 +461,6 @@ colonization_control = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -499,8 +485,8 @@ colonization_control = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 living_standard = {
@@ -543,12 +529,6 @@ living_standard = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -573,8 +553,8 @@ living_standard = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 migration_control = {
@@ -609,12 +589,6 @@ migration_control = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -639,8 +613,8 @@ migration_control = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 military_service_type = {
@@ -672,12 +646,6 @@ military_service_type = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -702,8 +670,8 @@ military_service_type = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 population_control = {
@@ -738,12 +706,6 @@ population_control = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -768,8 +730,8 @@ population_control = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 purge_type = {
@@ -805,12 +767,6 @@ purge_type = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -842,8 +798,8 @@ purge_type = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 slavery_type = {
@@ -879,12 +835,6 @@ slavery_type = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = pop_group root = pop_group }
-	free_pop_modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-
-	## cardinality = 0..1
 	### tooltip that appears on each Pop with this species right
 	pop_tooltip = localisation
 	## cardinality = 0..1
@@ -909,8 +859,8 @@ slavery_type = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
-	alias_name[triggered_pop_modifier] = alias_match_left[triggered_pop_modifier]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 }
 
 subspecies_integration_type = {

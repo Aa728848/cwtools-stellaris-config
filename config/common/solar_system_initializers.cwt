@@ -22,10 +22,10 @@ solar_system_initializer = {
 	name = localisation
 	#the class below here represents star class, which is the icon of the system in galactic view.
 	class = <star_class> #this also includes random lists of stars, as defined in the star_classes files
-	class = enum[star_class_random_list]
+	class = <star_class_random_list>
 	## cardinality = 0..1
 	namelist = scalar
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	flags = { #star_flag
 		## cardinality = 0..inf
 		value_set[star_flag]
@@ -183,6 +183,8 @@ alias[planet_initializer:planet] = {
 	flags = { #planet flags
 		## cardinality = 0..inf
 		value_set[planet_flag]
+		## cardinality = 0..inf
+		value_set[carrier_flag]
 	}
 
 	## cardinality = 0..1
@@ -291,6 +293,8 @@ alias[moon_initializer:moon] = {
 	flags = { #planet flags
 		## cardinality = 0..inf
 		value_set[planet_flag]
+		## cardinality = 0..inf
+		value_set[carrier_flag]
 	}
 
 	## cardinality = 0..1
@@ -366,6 +370,7 @@ enums = {
 		custom_empire
 		fallen_empire_init
 		origin
+		nomad_init
 	}
 	enum[fallen_empire_usage]= {
 		fallen_empire_init

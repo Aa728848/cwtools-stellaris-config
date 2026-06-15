@@ -1,14 +1,15 @@
 #subtype[species_trait] needs a lack of leader_trait = yes. Using [!leader_trait] for now
-
 types = {
 	type[trait] = {
 		path = "game/common/traits"
 		subtype[species_trait] = {
 			## cardinality = 0..0
-			leader_class = { }
+			leader_class = {
+			}
 		}
 		subtype[leader_trait] = {
-			leader_class = { }
+			leader_class = {
+			}
 		}
 		subtype[leader_trait_subclass] = {
 			subclass_trait = yes
@@ -27,7 +28,8 @@ types = {
 		}
 		subtype[leader_trait_not_replacement] = {
 			## cardinality = 0..0
-			replace_traits = { }
+			replace_traits = {
+			}
 		}
 		localisation = {
 			## optional
@@ -54,11 +56,10 @@ trait = {
 	## cardinality = 0..1
 	### Default = no
 	immortal_leaders = bool
-
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	### If omitted, the default icon is gfx/interface/icons/traits/<trait_name>.dds
 	icon = filepath
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	### Layered icon format introduced in Paragon.
 	icon = {
 		## cardinality = 1..inf
@@ -70,7 +71,7 @@ trait = {
 			icon = filepath
 			## cardinality = 0..1
 			### Layer color tint. Color name defined in "common\named_colors" folder.
-			color = <named_color>
+			color = <traitcolors>
 			## cardinality = 0..1
 			## replace_scope = { this = leader root = leader }
 			### Scripted trigger. If false, hide layer.
@@ -92,12 +93,132 @@ trait = {
 	cost = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
-	
 	## cardinality = 0..1
 	auto_mod = bool
 	## cardinality = 0..1
 	category = enum[species_category_type]
-
+	## cardinality = 0..1
+	forced_integration = bool
+	## cardinality = 0..inf
+	triggered_leader_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+	}
+	## cardinality = 0..inf
+	triggered_planet_growth_habitability_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+	}
+	## cardinality = 0..inf
+	triggered_planet_pop_group_modifier_for_species = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+	}
+	## cardinality = 0..inf
+	triggered_pop_group_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+	}
+	## cardinality = 0..inf
+	triggered_self_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+	}
 	## cardinality = 0..1
 	valid_for_all_ethics = bool
 	## cardinality = 0..1
@@ -115,19 +236,18 @@ trait = {
 		## cardinality = 1..inf
 		<civic_or_origin.origin>
 	}
-	
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	sorting_priority = int
-	
 	## cardinality = 0..1
 	bound_to_planet_classes = {
 		## cardinality = 0..inf
 		<planet_class>
 	}
-	
+	## cardinality = 0..inf
+	### Replaces auto-generated trait subtitle with localization key.
+	custom_subtitle = localisation
 	## cardinality = 0..1
 	leader_trait_type = enum[leader_trait_rarity]
-	
 	subtype[species_trait] = {
 		## cardinality = 0..1
 		## replace_scope = { this = species root = species from = planet }
@@ -238,7 +358,6 @@ trait = {
 		country_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..1
 		localized_tags = {
 			## cardinality = 0..inf
@@ -251,69 +370,53 @@ trait = {
 		## cardinality = 0..1
 		portrait_override = {
 			## cardinality = 0..inf
-			<portrait_group> 
+			<portrait_group>
 			## cardinality = 0..inf
-			<portrait> 
+			<portrait>
 		}
-		
 		## cardinality = 0..1
 		alias_name[triggered_planet_pop_group_modifier_species] = alias_match_left[triggered_planet_pop_group_modifier_species]
-	
 		## replace_scope = { this = species root = species from = country }
 		## cardinality = 0..1
 		species_possible_merge_add = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
 		## cardinality = 0..1
 		tags = {
 			## cardinality = 0..inf
 			<trait_tags>
 		}
-			
 		## replace_scope = { this = species root = species from = country }
 		## cardinality = 0..1
 		species_possible_merge_remove = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		## cardinality = 0..1
-		prerequisites = {
-			## cardinality = 0..1
-			<technology>
-			## cardinality = 0..1
-			OR = {
-				## cardinality = 0..inf
-				<technology>
-			}
-		}
+		prerequisites = single_alias_right[technology_prerequisite]
 		## cardinality = 0..1
 		opposites = {
 			## cardinality = 0..inf
 			<trait.species_trait>
 		}
-		
 		## cardinality = 0..1
 		forbidden_ethics = {
 			## cardinality = 0..inf
 			<ethos>
 		}
-
 		## cardinality = 0..1
 		potential_crossbreeding_chance = float
-
 		## cardinality = 0..1
 		slave_cost = {
-			energy = int
+			## cardinality = 0..inf
+			<resource> = int
 		}
 		## cardinality = 0..1
 		infertile = bool
-
 		## cardinality = 0..1
 		random_weight = {
 			## cardinality = 1..inf
 			<species_class> = float
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_species_modifier = {
@@ -322,16 +425,39 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
 		## cardinality = 0..1
 		resources = {
 			category = <economic_category>
 			alias_name[economic_template] = alias_match_left[economic_template]
 		}
+		## cardinality = 0..1
+		forced_integration = {
+			## cardinality = 0..inf
+			enum[forced_integration_enum] = float
+		}
+		## cardinality = 0..1
+		forbidden_origins = {
+			## cardinality = 0..inf
+			<civic_or_origin.origin>
+		}
 	}
-
 	subtype[leader_trait] = {
 		## cardinality = 0..1
 		### This trait is available in ruler creation. (Default: no)
@@ -341,6 +467,11 @@ trait = {
 		forbidden_origins = {
 			## cardinality = 1..inf
 			<civic_or_origin.origin>
+		}
+		## cardinality = 0..1
+		forbidden_ethics = {
+			## cardinality = 0..inf
+			<ethos>
 		}
 		## cardinality = 0..1
 		### Is this trait only active if the leader is on the Council? (Default: no)
@@ -376,7 +507,7 @@ trait = {
 		### (Default: no)
 		hide_age = bool
 		## cardinality = 0..1
-		can_retreat = bool #admiral
+		can_retreat = bool		#admiral
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader }
 		### Modifier applied to leader itself.
@@ -421,26 +552,12 @@ trait = {
 			text = localisation
 		}
 		## cardinality = 0..1
-		### Replaces auto-generated trait subtitle with localization key.
-		custom_subtitle = localisation
-		## cardinality = 0..1
-		### AND - Trait only available if the technology specified has been researched by the Empire.
-		prerequisites = {
-			## cardinality = 0..1
-			<technology>
-			## cardinality = 0..1
-			OR = {
-				## cardinality = 0..inf
-				<technology>
-			}
-		}
-		
+		prerequisites = single_alias_right[technology_prerequisite]
 		## cardinality = 0..1
 		resources = {
 			category = <economic_category>
 			alias_name[economic_template] = alias_match_left[economic_template]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_modifier = {
@@ -449,20 +566,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		councilor_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_councilor_modifier = {
@@ -471,20 +600,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		fleet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_fleet_modifier = {
@@ -493,20 +634,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		army_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_army_modifier = {
@@ -515,20 +668,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-				
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		sector_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-				
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_sector_modifier = {
@@ -537,20 +702,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = planet }
 		planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = planet }
 		triggered_planet_modifier = {
@@ -559,21 +736,32 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			show_only_custom_tooltip = bool
 		}
-		
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = planet }
 		background_planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = planet }
 		triggered_background_planet_modifier = {
@@ -582,16 +770,28 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = system }
 		system_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = system }
 		triggered_system_modifier = {
@@ -600,16 +800,28 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		federation_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_federation_modifier = {
@@ -618,17 +830,28 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
-		
-		
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		galcom_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
 		## cardinality = 0..inf
 		## replace_scope = { this = leader root = leader from = country }
 		triggered_galcom_modifier = {
@@ -637,20 +860,31 @@ trait = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
-				
 		leader_class = all
 		leader_class = {
 			## cardinality = 1..5
 			enum[leader_classes]
 		}
 		leader_trait_rarity = enum[leader_trait_rarity]
-		
 		## cardinality = 0..1
 		trade_acceptance_weight = int
-				
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
 		leader_potential_add = {
@@ -716,7 +950,6 @@ trait = {
 		## cardinality = 1..4
 		enum[trait_ai_classes]
 	}
-	
 	## cardinality = 0..inf
 	triggered_desc = {
 		## cardinality = 0..1
@@ -731,7 +964,6 @@ trait = {
 		}
 		text = localisation
 	}
-
 	## cardinality = 0..1
 	initial = bool
 	## cardinality = 0..1
@@ -744,7 +976,6 @@ trait = {
 	## cardinality = 0..1
 	### Appends localization key to the end of auto-generated modifier effect text.
 	custom_tooltip_with_modifiers = localisation
-
 	## cardinality = 0..1
 	ai_weight = int
 	## cardinality = 0..1
@@ -771,5 +1002,9 @@ enums = {
 		negative
 		destiny
 		subclass
+	}
+	enum[forced_integration_enum] = {
+		integration_rate
+		minimum_colony_age
 	}
 }

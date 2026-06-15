@@ -3,24 +3,25 @@ types = {
 	type[song] = {
 		name_field = name
 		path = "game/music"
-  }
-  	## type_key_filter = music
+	}
+	## type_key_filter = music
 	type[music] = {
 		name_field = name
 		path = "game/music"
 		localisation = {
 			name = "$"
 		}
-  }
+	}
 }
-#TODO: Add check for files existence, currently set to scalar!
 
+#TODO: Add check for files existence, currently set to scalar!
 song = {
 	name = scalar
 }
+
 music = {
-	name = <song>	
-	file = scalar 
+	name = <song>
+	file = scalar
 	## cardinality = 0..1
 	volume = float
 }

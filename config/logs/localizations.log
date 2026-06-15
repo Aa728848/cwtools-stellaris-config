@@ -1,4 +1,4 @@
-[22:06:02][game_application.cpp:1424]: 
+[22:35:55][game_application.cpp:1432]: 
 == LOCALIZATION DOCUMENTATION ==
 This is a list of all hardcoded scoped localization commands in the game. It does not include scripted locs (see game/customizable_localization).
 In most cases, it is also possible to get the value of variables with '[Scope.my_variable]' and saved dates with '[Scope.my_date_flag]'.
@@ -33,7 +33,9 @@ Promotions:
  Species
  Federation
 Properties
+ GetIcon
  GetName
+ GetNamePlural
  GetNamePersistent
  GetAdj
  GetAdjective
@@ -102,8 +104,6 @@ Properties
  GetAdj
  GetAdjPersistent
  GetStarName
- GetPlanetMoon
- GetPlanetMoonCap
  GetNebula
  GetOwnerName
  GetControllerName
@@ -130,21 +130,9 @@ Properties
  GetDesignNamePersistent
  GetShipCategoryName
 
---Pop--
-Promotions:
- Planet
- Faction
- Species
-Properties
- GetName
- GetSpeciesName
- GetSpeciesNamePersistent
- GetSpeciesNamePlural
- GetSpeciesAdj
-
 --Pop Group--
 Promotions:
- Planet
+ Colony
  Faction
  Species
 Properties
@@ -242,7 +230,7 @@ Properties
 --Army--
 Promotions:
  Owner
- Planet
+ Colony
  Leader
  Species
 Properties
@@ -494,5 +482,40 @@ Promotions:
  Country
 Properties
  GetPreCommunicationName
+
+--Colony--
+Promotions:
+ Owner
+ System
+ Sector
+ Planet
+ Ship
+Properties
+ GetName
+ GetNamePersistent
+ GetAdj
+ GetAdjPersistent
+ GetStarName
+ GetNebula
+ GetOwnerName
+ GetControllerName
+ GetClassName
+ GetClassAdj
+
+--Specimen--
+Promotions:
+ EVENT_TARGET_0
+ EVENT_TARGET_1
+ EVENT_TARGET_2
+ EVENT_TARGET_3
+ EVENT_TARGET_4
+ EVENT_TARGET_5
+ EVENT_TARGET_6
+ EVENT_TARGET_7
+ EVENT_TARGET_8
+ EVENT_TARGET_9
+Properties
+ GetOrigin
+ GetOriginalOwner
 
 =================

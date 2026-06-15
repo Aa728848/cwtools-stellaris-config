@@ -57,7 +57,7 @@ policy = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
-	## cardinality = 1..20
+	## cardinality = 1..inf
 	option = {
 		name = localisation
 		## cardinality = 0..1
@@ -112,7 +112,7 @@ policy = {
 		}
 
 		## cardinality = 0..1
-		prerequisites = { <technology> }
+		prerequisites = single_alias_right[technology_prerequisite]
 
 		## cardinality = 0..1
 		AI_weight = {

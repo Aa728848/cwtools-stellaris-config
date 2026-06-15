@@ -1,7 +1,7 @@
 localisation_commands = {
-    GetAdj = { country fleet galactic_object planet species system }
+    GetAdj = { country fleet galactic_object planet carrier species system }
     GetAdjective = country
-	GetAdjPersistent = { country planet system fleet species }
+	GetAdjPersistent = { country planet carrier system fleet species }
 	GetAdjectivePersistent = country
     GetAllianceName = country
 	GetAllianceNamePersistent = country
@@ -12,8 +12,10 @@ localisation_commands = {
     GetLeaderName = { fleet ship starbase }
 	GetLeaderNamePersistent = { fleet ship starbase }
 	GetGovernmentName = country
+    GetIcon = any
+    GetNamePlural = { country planet carrier ship starbase system fleet leader army species pop_faction sector  }
     GetName = any
-	GetNamePersistent = { country planet ship starbase system fleet leader army species pop_faction sector  }
+	GetNamePersistent = { country planet carrier ship starbase system fleet leader army species pop_faction sector  }
     GetRealName = country
     GetRandomSpeciesSound = { country species }
     GetRegnalName = leader
@@ -22,16 +24,16 @@ localisation_commands = {
 	GetRulerNamePersistent = { country species leader army fleet }
     GetRulerTitle = { country species leader }
 	GetRulerTitlePersistent = { country species leader }
-    GetSpeciesAdj = { country pop pop_group }
-	GetSpeciesAdjPersistent = { country pop pop_group }
+    GetSpeciesAdj = { country pop pop_group species }
+	GetSpeciesAdjPersistent = { country pop pop_group species }
     GetSpeciesClass = country
     GetSpeciesClassPlural = country
     GetSpeciesName = { country pop pop_group }
 	GetLastAcquiredSpecimenName = { country pop pop_group }
     GetSpeciesNameCompliment = country
     GetSpeciesNameInsult = country
-    GetSpeciesNamePlural = { country pop pop_group }
-	GetSpeciesNamePersistent = { country pop pop_group }
+    GetSpeciesNamePlural = { country pop pop_group species }
+	GetSpeciesNamePersistent = { country pop pop_group species }
     GetSpeciesNamePluralCompliment = country
     GetSpeciesNamePluralInsult = country
     GetSpeciesOrganName = country
@@ -49,9 +51,9 @@ localisation_commands = {
 	GetSpeciesRemnantNamePlural = country
     GetSpeciesSpawnName = country
     GetSpeciesSpawnNamePlural = country
-    GetNebula = { planet ship starbase galactic_object ambient_object system }
-    GetStarName = { planet ship starbase fleet ambient_object }
-	GetStarNamePersistent = { planet ship starbase fleet ambient_object }
+    GetNebula = { planet carrier ship starbase galactic_object ambient_object system }
+    GetStarName = { planet carrier ship starbase fleet ambient_object }
+	GetStarNamePersistent = { planet carrier ship starbase fleet ambient_object }
     GetHerHim = leader
     GetSheHe = leader
     GetSheHeCap = leader
@@ -75,10 +77,8 @@ localisation_commands = {
     MainAttacker = war
     GetOwnerName = planet
     GetControllerName = planet
-    GetPlanetMoon = planet
-    GetPlanetMoonCap = planet
     GetAttitudeColor = country   
-    GetClassName = { planet galactic_object system }
+    GetClassName = { planet carrier galactic_object system }
     GetClassAdj = planet
     GetLastLostRelic = country
     GetLastReceivedRelic = country
@@ -173,7 +173,7 @@ localisation_links = {
         output_scope = planet
     }
     MoonOf = {
-        input_scopes = { planet }
+        input_scopes = { planet carrier }
         output_scope = planet
     }
     AmbientObject = {
@@ -193,11 +193,11 @@ localisation_links = {
         output_scope = system
     }
     System = {
-        input_scopes = { planet fleet first_contact megastructure astral_rift bypass }
+        input_scopes = { planet carrier fleet first_contact megastructure astral_rift bypass }
         output_scope = system
     }
     Owner = {
-        input_scopes = { planet ship starbase system fleet leader army pop_faction first_contact  espionage_operation spy_network megastructure sector agreement situation }
+        input_scopes = { planet carrier ship starbase system fleet leader army pop_faction first_contact  espionage_operation spy_network megastructure sector agreement situation }
         output_scope = country
     }
     ContactCountry = {
@@ -229,7 +229,7 @@ localisation_links = {
         output_scope = pop_faction
     }
     Sector = {
-        input_scopes = { planet system }
+        input_scopes = { planet carrier system }
         output_scope = sector
     }
     MainDefender = {
@@ -263,7 +263,7 @@ localisation_links = {
         input_scopes = { espionage_operation spy_network agreement situation }
         output_scope = country #any, but good enough
     }
-	Job = { pop_job planet leader country }
+	Job = { pop_job planet carrier leader country }
 }
 
 alias[name:name] = localisation
@@ -272,3 +272,4 @@ alias[name:name] = {
     ## cardinality = 0..inf
     variable_string = scalar
 }
+alias[name:name] = scalar

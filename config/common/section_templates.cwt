@@ -17,6 +17,46 @@ types = {
 	}
 }
 
+single_alias[technology_prerequisite] = {
+	## cardinality = 0..inf
+	<technology>
+	## cardinality = 0..inf
+	AND = {
+		## cardinality = 1..inf
+		<technology>
+		## cardinality = 0..inf
+		AND = {
+			## cardinality = 1..inf
+			<technology>
+		}
+		## cardinality = 0..inf
+		OR = {
+			## cardinality = 1..inf
+			<technology>
+		}
+	}
+	## cardinality = 0..inf
+	OR = {
+		## cardinality = 1..inf
+		<technology>
+		## cardinality = 0..inf
+		AND = {
+			## cardinality = 1..inf
+			<technology>
+			## cardinality = 0..inf
+			OR = {
+				## cardinality = 1..inf
+				<technology>
+			}
+		}
+		## cardinality = 0..inf
+		OR = {
+			## cardinality = 1..inf
+			<technology>
+		}
+	}
+}
+
 component_slot_template = {
 	size = enum[weapon_slot_size]
 	component = weapon
@@ -27,89 +67,80 @@ component_slot_template = {
 	## cardinality = 0..1
 	entities = {
 		## cardinality = 1..inf
-		enum[weapon_type] = scalar #<model_entity>, but that doesn't work
+		enum[weapon_type] = <model_entity>
+		## cardinality = 1..inf
+		enum[weapon_type] = scalar
 	}
 }
 
 section_template = {
-  key = scalar
-  ## cardinality = 0..inf
-  ship_size = <ship_size>
-  ## cardinality = 0..inf
-  #TODO section slots
-  fits_on_slot = enum[section_slots]
-  entity = scalar #TODO: graphical culture <model_entity>
-
+	key = scalar
+	## cardinality = 0..inf
+	ship_size = <ship_size>
+	## cardinality = 0..inf
+	fits_on_slot = enum[section_slots]
+	## cardinality = 0..1
+	entity = scalar
+	## cardinality = 0..1
+	## type_prefix_from = graphical_culture
+	entity = <model_entity>
+	## cardinality = 0..1
+	entity = scalar
 	## cardinality = 0..1
 	###As far as I can tell, this is unused (the Vanilla ones refer to non-existent sprites and I couldn't find an ingame effect) -Caligula
 	icon = scalar
-
-  ## cardinality = 0..1
-  icon_frame = int
-  
-  ## cardinality = 0..1
-  compatible_with_all_ship_sizes = bool
-
-  ## cardinality = 0..1
-  ai_tags = {
+	## cardinality = 0..1
+	icon_frame = int
+	## cardinality = 0..1
+	compatible_with_all_ship_sizes = bool
+	## cardinality = 0..1
+	ai_tags = {
 		## cardinality = 0..inf
 		enum[component_tags]
 		## cardinality = 0..1
 		citadel
-  }
-  ## cardinality = 0..1
-  should_draw_components = bool
+	}
+	## cardinality = 0..1
+	should_draw_components = bool
 	## cardinality = 0..1
 	resources = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
-
 	## cardinality = 0..1
-  	prerequisites = {
-		## cardinality = 0..inf
-		<technology>
-		## cardinality = 0..1
-		OR = {
-			## cardinality = 2..inf
-			<technology>
-		}
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	## cardinality = 0..inf
-  component_slot = {
-    name = scalar
-	template = <component_slot_template>
-
-	## cardinality = 0..1
-    locatorname = enum[locators]
-	## cardinality = 0..1
-    locatorname = scalar #TODO: Some locators are in .mesh files, so are missed by the enum
-   
-   ## cardinality = 0..1
-	is_side_slot = bool
-    ## cardinality = 0..1
-	rotation = int
-	## cardinality = 0..1
-	position = {
-		x = float
-		y = float
+	component_slot = {
+		name = scalar
+		template = <component_slot_template>
+		## cardinality = 0..1
+		locatorname = enum[locators]
+		## cardinality = 0..1
+		locatorname = scalar		#TODO: Some locators are in .mesh files, so are missed by the enum
+		## cardinality = 0..1
+		is_side_slot = bool
+		## cardinality = 0..1
+		rotation = int
+		## cardinality = 0..1
+		position = {
+			x = float
+			y = float
+		}
+		## cardinality = 0..1
+		section_instance = int
 	}
 	## cardinality = 0..1
-	section_instance = int
-  }
-  ## cardinality = 0..1
-  small_utility_slots = int
-  ## cardinality = 0..1
-  medium_utility_slots = int
-  ## cardinality = 0..1
-  large_utility_slots = int
-  ## cardinality = 0..1
-  aux_utility_slots = int
+	small_utility_slots = int
 	## cardinality = 0..1
-  ai_weight = {
+	medium_utility_slots = int
+	## cardinality = 0..1
+	large_utility_slots = int
+	## cardinality = 0..1
+	aux_utility_slots = int
+	## cardinality = 0..1
+	ai_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
-	
 	## cardinality = 0..1
 	## replace_scope = { this = ship root = ship }
 	modifier = {
@@ -121,11 +152,12 @@ section_template = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 }
+
 enums = {
-  	enum[slot_type] = {
-     	strike_craft
-    	weapon
-   	}
+	enum[slot_type] = {
+		strike_craft
+		weapon
+	}
 	complex_enum[component_slots] = {
 		path = "game/common/section_templates"
 		name = {
@@ -165,6 +197,8 @@ enums = {
 		SMALL_UTILITY_28
 		SMALL_UTILITY_29
 		SMALL_UTILITY_30
+		SMALL_UTILITY_31
+		SMALL_UTILITY_32
 		MEDIUM_UTILITY_1
 		MEDIUM_UTILITY_2
 		MEDIUM_UTILITY_3
@@ -195,6 +229,8 @@ enums = {
 		MEDIUM_UTILITY_28
 		MEDIUM_UTILITY_29
 		MEDIUM_UTILITY_30
+		MEDIUM_UTILITY_31
+		MEDIUM_UTILITY_32
 		LARGE_UTILITY_1
 		LARGE_UTILITY_2
 		LARGE_UTILITY_3
@@ -255,6 +291,10 @@ enums = {
 		LARGE_UTILITY_58
 		LARGE_UTILITY_59
 		LARGE_UTILITY_60
+		LARGE_UTILITY_61
+		LARGE_UTILITY_62
+		LARGE_UTILITY_63
+		LARGE_UTILITY_64
 		AUX_UTILITY_1
 		AUX_UTILITY_2
 		AUX_UTILITY_3
@@ -285,5 +325,7 @@ enums = {
 		AUX_UTILITY_28
 		AUX_UTILITY_29
 		AUX_UTILITY_30
+		AUX_UTILITY_31
+		AUX_UTILITY_32
 	}
 }

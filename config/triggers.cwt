@@ -14,22 +14,31 @@ alias[trigger:<scripted_trigger>] = {
 
 ###Evaluates the triggers if the display_triggers of the limit are met
 alias[trigger:if] = {
-	## severity = warning
+	## cardinality = 0..inf
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	## cardinality = 0..inf
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ###Evaluates the enclosed triggers if the display_triggers of the preceding `if` or `else_if` is not met and its own display_trigger of the limit is met
 alias[trigger:else_if] = {
-	## severity = warning
+	## cardinality = 0..inf
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..inf
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ###Evaluates the triggers if the display_triggers of preceding 'if' or 'else_if' is not met
-alias[trigger:else] = { alias_name[trigger] = alias_match_left[trigger] }
+alias[trigger:else] = { 
+	## cardinality = 0..inf
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..inf
+	alias_name[trigger] = alias_match_left[trigger] 
+}
 
 
 ###Checks if the country has any instance of target faction type
@@ -76,6 +85,7 @@ alias[trigger:has_country_flag] = enum[inline_script_flags]
 ## severity = warning
 ###Checks if the planet has a specific, arbitrarily-named, flag
 alias[trigger:has_planet_flag] = value[planet_flag]
+alias[trigger:has_planet_flag] = value[carrier_flag]
 alias[trigger:has_planet_flag] = enum[country_flag_enum]
 ## severity = warning
 ###Checks if the pop faction has a specific, arbitrarily-named, flag
@@ -100,6 +110,7 @@ alias[trigger:has_fleet_flag] = enum[fleet_flag_enum]
 ## severity = warning
 ###Checks if the ship has a specific, arbitrarily-named, flag
 alias[trigger:has_ship_flag] = value[ship_flag]
+alias[trigger:has_ship_flag] = value[carrier_flag]
 alias[trigger:has_ship_flag] = enum[ship_flag_enum]
 ## severity = warning
 ###Checks if a Global Flag has been set
@@ -201,7 +212,6 @@ alias[trigger:has_invalid_civic] = <civic_or_origin.civic>
 
 ###Checks if the country has a specific policy
 alias[trigger:has_policy_flag] = enum[policy_flag]
-
 ###Checks if the current scope and the target scope are the same thing
 alias[trigger:is_same_value] = scope[any]
 
@@ -525,7 +535,7 @@ alias[trigger:def_war_exhaustion_sum] == value_field
 
 ###Checks the scope's total fleet power
 alias[trigger:fleet_power] == value_field
-alias[trigger:fleet_power] = enum[exe_set_variable]
+alias[trigger:fleet_power] == enum[exe_set_variable]
 
 ###is_megastructure_type = <name of type>. Compares the type of scope's mega structure to a type from the database
 alias[trigger:is_megastructure_type] = <megastructure>
@@ -547,6 +557,7 @@ alias[trigger:is_designable] = bool
 
 ###Checks if the leader is of a specific class
 alias[trigger:leader_class] = enum[leader_classes]
+alias[trigger:leader_class] = enum[old_leader_classes]
 
 ###Checks if the observation post has a specific mission
 alias[trigger:has_mission] = <observation_station_mission>
@@ -813,6 +824,9 @@ alias[trigger:has_strategic_resource] = bool
 
 ###Checks the country's monthly income of a specific resource
 alias[trigger:has_monthly_income] = {
+	## cardinality = 0..1
+	type = <resource>
+	## cardinality = 0..1
 	resource = <resource>
 	value = value_field
 }
@@ -940,6 +954,7 @@ alias[trigger:fail_text] = {
 	text = localisation
 	alias_name[trigger] = alias_match_left[trigger]
 }
+alias[trigger:fail_text] = localisation
 
 ### Compares the former citizenship type with the given one.
 alias[trigger:former_citizenship_type] = <citizenship_type>
@@ -1440,6 +1455,7 @@ alias[trigger:success_text] = {
 	## cardinality = 0..inf
 	alias_name[trigger] = alias_match_left[trigger]
 }
+alias[trigger:success_text] = localisation
 
 #switch = {
 # 	trigger = pop_has_ethic
@@ -1545,10 +1561,22 @@ alias[trigger:has_commercial_pact] = scope_group[target_country]
 alias[trigger:resource_stockpile_compare] = {
 	resource = <resource>
 	value = value_field
-	## cardinality = 0..1
+	## cardinality = 0..inf
+	mult = value[variable]
+	## cardinality = 0..inf
 	mult = value_field
-	## cardinality = 0..1
+	## cardinality = 0..inf
+	mult = trigger:<trigger>
+	## cardinality = 0..inf
 	mult = enum[exe_set_variable]
+	## cardinality = 0..inf
+	multiplier = value[variable]
+	## cardinality = 0..inf
+	multiplier = value_field
+	## cardinality = 0..inf
+	multiplier = trigger:<trigger>
+	## cardinality = 0..inf
+	multiplier = enum[exe_set_variable]
 	## cardinality = 0..1
 	multiplier = value_field
 }
@@ -1833,7 +1861,7 @@ alias[trigger:num_owned_relics] == int_value_field
 ## 2.6.3
 
 ###Checks if the federation has a specific flag.
-alias[trigger:has_federation_flag] = value[federation_flag]
+alias[trigger:has_federation_flag] = value[federation_flag].
 
 ###Checks the country's number of envoys sent to its federation.
 alias[trigger:num_envoys_to_federation] == int_value_field
@@ -2042,6 +2070,7 @@ alias[trigger:species_has_happiness_with_owner] = scope_group[target_country]
 
 ###Checks the number of pops the planet or country has that work a specific job.
 alias[trigger:num_assigned_jobs] = {
+	## cardinality = 0..inf
 	job = <job>
 	value = int_value_field
 	## cardinality = 0..1
@@ -2121,7 +2150,7 @@ alias[trigger:galactic_defense_force_exists] = bool
 alias[trigger:check_variable_arithmetic] = {
 	which = value_field
 	## cardinality = 0..inf
-	enum[maths] = value_field
+	enum[maths] == value_field
 	###Specify >/< on the value or variable fields
 	value = value_field
 }
@@ -2199,6 +2228,9 @@ alias[trigger:num_non_aggression_pacts] == int_value_field
 
 ###Checks the number of commercial pacts the current country has.
 alias[trigger:num_commercial_pacts] == int_value_field
+
+###Checks the number of commercial pacts the current country has.
+alias[trigger:num_waystation_pacts] == int_value_field
 
 ###Checks the number of research agreements a country has
 alias[trigger:num_research_agreements] == int_value_field
@@ -2565,7 +2597,6 @@ alias[trigger:can_afford_special_offer] = {
 ###Checks if the design has a specific flag
 ###(note: one can use e.g. my_flag@from to track relationships between objects)
 alias[trigger:has_design_flag] = value_set[design_flag]
-
 ###Checks if L-Gates are enabled in game setup
 alias[trigger:lgate_enabled] = bool
 
@@ -2845,6 +2876,7 @@ alias[trigger:has_extorted_faction] = bool
 
 ###Checks the number of unique traits within the set parameters on a species or pop group
 alias[trigger:count_species_traits] = { 
+	## cardinality = 0..1		
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -3007,8 +3039,9 @@ alias[trigger:ai_terraform_plans] == value_field
 alias[trigger:pop_group_has_happiness] = bool
 
 ###Checks if the size of the pop group is according to the argument.
+## supported_scopes = pop_group
 alias[trigger:pop_group_size] == value_field
-alias[trigger:pop_group_size] = local_spent_<resource>
+alias[trigger:pop_group_size] == local_spent_<resource>
 
 ###Checks if a trait has all tags in the list 
 alias[trigger:trait_has_all_tags] = { 
@@ -3158,7 +3191,9 @@ alias[trigger:governors_skill_in_system] == int_value_field
 
 ###Checks the number of neighbor systems within a specific distance
 alias[trigger:num_neighbor_systems] = {
+	## cardinality = 0..1
 	max_distance = int
+	## cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
 }
 
@@ -3240,6 +3275,7 @@ alias[trigger:has_most_attunement] = <patrons>
 alias[trigger:patron_has_all_accords_unlocked] = <patrons>
 
 ###Checks the raw crime value of a pop group. When scope is a colony, checks the sum of every pop group's raw crime in the planet.
+## supported_scopes = planet pop_group
 alias[trigger:pop_group_crime] == value_field
 
 ###Checks if the scoped country can increment towards given counter
@@ -3254,3 +3290,270 @@ alias[trigger:can_be_crisis_terraformed] = bool
 
 ###Checks if the planet is currently being terraformed manually by script
 alias[trigger:is_scripted_terraforming] = bool
+
+### Checks the armor_ratio of the ai personality of the scoped country.
+## supported_scopes = country
+alias[trigger:ai_armor_ratio] == value_field
+
+### Checks the shields_ratio of the ai personality of the scoped country.
+## supported_scopes = country
+alias[trigger:ai_shields_ratio] == value_field
+
+### Checks if the carrier is of a specific type
+## supported_scopes = planet ship colony
+alias[trigger:carrier_is_type] = enum[planet_ship]
+
+### Checks the systems total cosmic storm influence
+## supported_scopes = galactic_object
+alias[trigger:cosmic_storm_system_influence] == value_field
+
+### Count all currently available contracts to the scoped country
+## supported_scopes = country
+alias[trigger:count_available_contracts] == value_field
+
+### Count all contracts currently in progress by the scoped country
+## supported_scopes = country
+alias[trigger:count_contracts_in_progress] == value_field
+
+### Count all contracts issued by the scoped country (either available to be picked up or in progress by someone)
+## supported_scopes = country
+alias[trigger:count_issued_contracts] == value_field
+
+### Count all contracts visible to the scoped country (ie available and in progress)
+## supported_scopes = country
+alias[trigger:count_visible_contracts] == value_field
+
+### Checks Fallen / Awakened Empire strength scaling in game setup
+## supported_scopes = all
+alias[trigger:fallen_empire_strength_scale] == value_field
+
+### Checks the radius of the galaxy as it was calculated when generating the map.
+## supported_scopes = all
+alias[trigger:galaxy_radius] == value_field
+
+### Checks if the colony carrier has a specific flag
+## supported_scopes = planet ship colony
+alias[trigger:has_carrier_flag] = value[carrier_flag]
+alias[trigger:has_carrier_flag] = value[planet_flag]
+alias[trigger:has_carrier_flag] = value[ship_flag]
+alias[trigger:has_carrier_flag] = value[situation_flag]
+
+### Checks if the job or the pop group has the one of the civilian pop categories
+## supported_scopes = pop pop_group
+alias[trigger:has_civilian_job_category] = bool
+
+### Checks if the scoped country is working on a specific contract
+## supported_scopes = country
+alias[trigger:has_contract] = <mission>
+
+### Checks if the scoped country is working on a contract of a certain category
+## supported_scopes = country
+alias[trigger:has_contract_of_category] = scalar
+
+### Checks if the mission has a specific flag
+## supported_scopes = mission
+alias[trigger:has_mission_flag] = value[mission_flag]
+
+### Check if the country has a Waystation Pact with target country
+## supported_scopes = country
+alias[trigger:has_waystation_pact] = scope[country]
+
+### Returns the hostile military power in the system (galactic_object scope) as perceived by the given country
+## supported_scopes = galactic_object
+alias[trigger:hostile_military_power] = {
+	## cardinality = 0..1
+	who = scope[any]
+	## cardinality = 0..1
+	safety_buffer = bool
+	## cardinality = 0..1
+	value = value_field
+}
+alias[trigger:hostile_military_power] == value_field
+
+### Checks if any fleet of the given fleet's controller (other than the given fleet itself) is currently executing a survey order targeting this planet/deposit holder.
+## supported_scopes = planet ship astral_rift
+alias[trigger:is_being_surveyed] = {
+	who = scope[fleet]
+}
+alias[trigger:is_being_surveyed] = bool
+
+### Returns true if the scoped mission is of type <type>
+## supported_scopes = mission
+alias[trigger:is_mission_type] = scalar
+
+### Checks if the country is nomadic
+## supported_scopes = country
+alias[trigger:is_nomadic] = bool
+
+### Checks if the scoped fleet/carrier is locked in its current system.
+## supported_scopes = planet ship fleet colony
+alias[trigger:is_system_locked] = bool
+
+### Checks if the job or pop group has the one of the unemployment pop categories
+## supported_scopes = pop pop_group pop job
+alias[trigger:is_unemployed] = bool
+
+### Counts the number of claims the scoped empire has on the target system
+## supported_scopes = country
+alias[trigger:num_claims_on_system] = {
+	## cardinality = 0..1
+	target = scope[any]
+	## cardinality = 0..1
+	count = value_field
+}
+alias[trigger:num_claims_on_system] == value_field
+
+### Checks the country's or sector's number of owned colonies (includes both planet and ship colonies)
+## supported_scopes = country sector
+alias[trigger:num_owned_colonies] == value_field
+
+### Checks what fraction of the country's storage cap for a resource is currently filled (0.00-1.00).
+## supported_scopes = country
+alias[trigger:resource_stockpile_percent] = {
+	resource = <resource>
+	value = value_field
+}
+
+### Checks the number of starbases in the same waystation network as the scoped starbase
+## supported_scopes = starbase
+alias[trigger:starbase_network_size] == value_field
+
+### Checks the country's used starbase capacity in absolute numbers
+## supported_scopes = country
+alias[trigger:used_starbase_capacity] == value_field
+
+### Checks the used percentage (0.00-1.00) of the ship's or starbase's local stockpile capacity. If over capacity, returns 1.
+## supported_scopes = ship starbase
+alias[trigger:used_stockpile_capacity_percentage] == value_field
+
+### Checks if the waystation has remote stockpile collection capability
+## supported_scopes = starbase
+alias[trigger:waystation_has_remote_collection] = bool
+
+### Checks if any waystation in the network has remote stockpile collection capability
+## supported_scopes = starbase
+alias[trigger:waystation_network_has_remote_collection] = bool
+
+### Checks max stockpile usage across all waystations in the network (0.0 to 1.0)
+## supported_scopes = starbase
+alias[trigger:waystation_network_stockpile_used] == value_field
+
+### Iterate through each colony controlled by the current empire - checks whether the enclosed triggers return true for any of them
+## supported_scopes = country
+## push_scope = colony
+alias[trigger:any_controlled_colony] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each mission that the current country has issued - checks whether the enclosed triggers return true for any of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:any_issued_mission] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each colony owned by the current empire - checks whether the enclosed triggers return true for any of them
+## supported_scopes = country sector
+## push_scope = colony
+alias[trigger:any_owned_colony] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each contract a country has - checks whether the enclosed triggers return true for any of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:any_owned_contract] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each mission a country has - checks whether the enclosed triggers return true for any of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:any_owned_mission] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through every starbase in the same waystation network as the scoped starbase. - checks whether the enclosed triggers return true for any of them
+## supported_scopes = starbase
+## push_scope = starbase
+alias[trigger:any_starbase_in_network] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each colony controlled by the current empire - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = colony
+alias[trigger:count_controlled_colony] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each mission that the current country has issued - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_issued_mission] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each colony owned by the current empire - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country sector
+## push_scope = colony
+alias[trigger:count_owned_colony] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each contract a country has - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_owned_contract] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each mission a country has - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_owned_mission] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through every starbase in the same waystation network as the scoped starbase. - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = starbase
+## push_scope = starbase
+alias[trigger:count_starbase_in_network] = {
+	count = int_value_field
+	count = value[variable]
+	count = all
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}

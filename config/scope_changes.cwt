@@ -231,9 +231,9 @@ alias[trigger:any_war_participant] = {
 ###Checks if any close-by systems meet the criteria. Conditions in limit = { } filters the systems within the min/max steps limits. If no system meets the condition, the trigger will return as false. Conditions outside of the limit = { } will check whether these conditions are true for *the closest* system for which the trigger conditions and min_steps conditions.
 alias[trigger:closest_system] = {
 	##cardinality = 0..1
-	min_steps = int
+	min_steps = int_value_field
 	##cardinality = 0..1
-	max_steps = int
+	max_steps = int_value_field
 	##cardinality = 0..1
 	valid = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -822,7 +822,7 @@ alias[effect:ordered_owned_army] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -1904,9 +1904,9 @@ alias[effect:random_controlled_planet] = {
 ###Runs an effect on the nearest system that meets the criteria
 alias[effect:closest_system] = {
 	##cardinality = 0..1
-	min_steps = int
+	min_steps = int_value_field
 	##cardinality = 0..1
-	max_steps = int
+	max_steps = int_value_field
 	##cardinality = 0..1
 	use_bypasses = bool
 	##cardinality = 0..1
@@ -4598,7 +4598,15 @@ alias[trigger:count_owned_nonprimary_starbase] = {
 
 ## push_scope = planet
 ###Iterate through each colony in the current system - executes the enclosed effects on all of them for which the limit triggers return true
-alias[effect:every_system_colony] = {
+alias[effect:every_system_planet_colony] = {
+	## cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+### Iterate through each ship colony in the current system - executes the enclosed effects on all of them for which the limit triggers return true
+## supported_scopes = galactic_object
+## push_scope = colony
+alias[effect:every_system_ship_colony] = {
 	## cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[effect] = alias_match_left[effect]
@@ -4606,7 +4614,31 @@ alias[effect:every_system_colony] = {
 
 ## push_scope = planet
 ###Iterate through each colony in the current system - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
-alias[effect:ordered_system_colony] = {
+alias[effect:ordered_system_planet_colony] = {
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+		##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = { 
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	inverse = bool
+	## cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+### Iterate through each ship colony in the current system - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
+## supported_scopes = galactic_object
+## push_scope = colony
+alias[effect:ordered_system_ship_colony] = {
 	position = int[0..inf]
 	##cardinality = 0..1
 	order_by = value_field
@@ -4629,7 +4661,21 @@ alias[effect:ordered_system_colony] = {
 
 ## push_scope = planet
 ###Iterate through each colony in the current system - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
-alias[effect:random_system_colony] = {
+alias[effect:random_system_planet_colony] = {
+	## cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+	## cardinality = 0..1
+	###(optional - adds weights to affect the chance a specific object is selected)
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+### Iterate through each ship colony in the current system - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
+## supported_scopes = galactic_object
+## push_scope = colony
+alias[effect:random_system_ship_colony] = {
 	## cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[effect] = alias_match_left[effect]
@@ -4642,12 +4688,31 @@ alias[effect:random_system_colony] = {
 
 ## push_scope = planet
 ###Iterate through every colony in the system - checks whether the enclosed triggers return true for any of them
-alias[trigger:any_system_colony] = {
+alias[trigger:any_system_planet_colony] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Iterate through each ship colony in the current system - checks whether the enclosed triggers return true for any of them
+## supported_scopes = galactic_object
+## push_scope = colony
+alias[trigger:any_system_ship_colony] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ###Iterate through every colony in the system - checks whether the enclosed triggers return true for X/all of them
-alias[trigger:count_system_colony] = {
+alias[trigger:count_system_planet_colony] = {
+	count = all
+	count = int_value_field
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = planet
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+}
+
+### Iterate through each ship colony in the current system - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = galactic_object
+## push_scope = colony
+alias[trigger:count_system_ship_colony] = {
 	count = all
 	count = int_value_field
 	count = value[variable]

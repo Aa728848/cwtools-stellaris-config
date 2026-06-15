@@ -47,10 +47,7 @@ resource = {
 	culling_conversion_value = int
 
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..1
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 
 	## cardinality = 0..1
 	visibility_prerequisite = {

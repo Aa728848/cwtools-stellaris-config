@@ -2,6 +2,9 @@
 types = {
 	type[country_type] = {
 		path = "game/common/country_types"
+		modifiers = {
+			"damage_vs_country_type_$_mult" = Ships
+		}
 	}
 	type[ownership_limit] = {
 		path = "game/common/country_limits/ownership_limits"
@@ -357,6 +360,7 @@ ship_of_size_limit = {
 	}
 	### Base (minimal) shared capacity of ships
 	base = int[0..inf]
+	base = int_value_field[0..inf]
 	## cardinality = 0..1
 	### Maximal shared capacity of ships
 	max = int[0..inf]

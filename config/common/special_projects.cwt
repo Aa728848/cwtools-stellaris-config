@@ -35,10 +35,9 @@ special_project = {
 	icon = filepath
 	## cardinality = 0..1
 	remove_when_completed = bool
+
 	## cardinality = 0..1
-	project_type = project_type_research
-	## cardinality = 0..1
-	project_type = project_type_bombardment
+	project_type = enum[project_type_enum]
 
 	## cardinality = 0..inf
 	desc = {
@@ -104,6 +103,8 @@ special_project = {
 
 		## cardinality = 0..1
 		leader = enum[leader_classes]
+		## cardinality = 0..1
+		leader = enum[old_leader_classes]
 
 		## cardinality = 0..1
 		assault_armies = int
@@ -126,18 +127,35 @@ special_project = {
 		fleet_power = int
 
 		## cardinality = 0..1
+		carries_colony = int
+
+		## cardinality = 0..1
 		is_founder_species = bool
 		## cardinality = 0..1
 		has_trait = <trait.leader_trait>
 		## cardinality = 0..1
 		size_requirement = {
+			## cardinality = 0..1
 			ship_size = <ship_size>
+			## cardinality = 0..1
 			count = int
 		}
 		## cardinality = 0..1
 		has_technology = <technology>
 		## cardinality = 0..1
 		handled_by_event_tooltip = localisation
+	}
+
+	## cardinality = 0..inf
+	triggered_requirement = {
+		## cardinality = 0..1
+		text = localisation
+		## cardinality = 0..1
+		count = int
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	}
 
 	## push_scope = country
@@ -199,5 +217,11 @@ enums = {
 		ship_event
 		planet_event
 		country_event
+		carrier_event
+	}
+	enum[project_type_enum] = {
+		project_type_research
+		project_type_bombardment
+		project_type_contract
 	}
 }

@@ -7,6 +7,11 @@ types = {
 			Name = "$"
 			## required
 			Description = "$_desc"
+			## optional
+			"Petron Attun" = "add_attunement_$"
+		}
+		modifiers = {
+			"add_attunement_$" = Country
 		}
 	}
 	type[patrons_callings] = {
@@ -529,8 +534,22 @@ psionic_auras = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		alias_name[modifier] = alias_match_left[modifier]
-		## cardinality = 0..1
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
 		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
 		## cardinality = 0..1
 		custom_tooltip = localisation
 	}

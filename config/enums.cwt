@@ -334,6 +334,7 @@ enums = {
 		station
 		system
 		trade
+		colony
 	}
 	enum[job_triggers] = {
 		can_fill_drone_job
@@ -508,6 +509,7 @@ enums = {
 		trophy_hunter_gained_rare_crystals
 		trophy_hunter_gained_unity
 		xeno_geology_specimen_count
+		root.local_pop_amount
 	}
 	enum[global_flags] = {
 		authoritarian_leader_1
@@ -867,5 +869,20 @@ enums = {
 		shroud_forged_590_negative_1
 		shroud_forged_590_positive_1
 		took_pops
+	}
+
+	enum[resource_groups] = {
+		basic
+		advanced
+		strategic
+		rare
+		other
+		research
+		material
+	}
+
+	enum[planet_ship] = {
+		planet
+		ship
 	}
 }

@@ -76,6 +76,15 @@ menace_perk = {
 	## cardinality = 0..1
 	## replace_scopes = { this = country root = country }
 	modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	## replace_scopes = { this = country root = country }
+	federation_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 

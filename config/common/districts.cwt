@@ -88,6 +88,8 @@ district = {
 	## cardinality = 0..1
 	gridbox = <district>
 	## cardinality = 0..1
+	gridbox = enum[gridbox]
+	## cardinality = 0..1
 	is_capped_by_modifier = bool
 	## cardinality = 0..1
 	###whether this district should be shown in the expansion planner; 
@@ -141,10 +143,7 @@ district = {
 	}
 
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..inf
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 
 	## cardinality = 0..1
 	conversion_ratio = float
@@ -165,6 +164,10 @@ district = {
 		## cardinality = 0..inf
 		<zone_slots>
 	}
+
+	## cardinality = 0..1
+	### The district type used for shared max capacity modifier pool
+	shared_capacity_modifier = <district>
 	
 	## cardinality = 0..inf
 	## replace_scope = { this = planet root = planet }

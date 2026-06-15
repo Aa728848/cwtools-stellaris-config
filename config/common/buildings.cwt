@@ -42,9 +42,9 @@ enums = {
 	}
 	complex_enum[building_sets] = {
 		path = "game/common/buildings"
-			name = {
-				building_sets = {
-					enum_name
+		name = {
+			building_sets = {
+				enum_name
 			}
 		}
 	}
@@ -131,18 +131,7 @@ building = {
 	planet_limit = {
 		base = int
 		## cardinality = 0..inf
-		modifier = {
-			## cardinality = 0..1
-			factor = int
-			alias_name[trigger] = alias_match_left[trigger]
-			## cardinality = 0..1
-			add = int
-			## cardinality = 0..1
-			mult = value_field
-			# stupid inline script
-			## cardinality = 0..1
-			has_country_flag = scalar
-		}
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 		
 	## cardinality = 0..1
@@ -208,6 +197,8 @@ building = {
 	## cardinality = 0..1
 	## replace_scope = { root = country }
 	empire_limit = {
+		base = int
+		## cardinality = 0..inf
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
@@ -295,11 +286,7 @@ building = {
 	}
 	
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 0..inf
-		## incomingReferenceLabel = prereq
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 	
 	## cardinality = 0..1
 	custom_storm_ai_weight = {

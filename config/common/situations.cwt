@@ -88,6 +88,8 @@ situation_type = {
 	###Modifier applying to the target planet of a Situation, if the triggers are true. Does not work on other scope types!
 	alias_name[triggered_target_modifier_situation] = alias_match_left[triggered_target_modifier_situation]
 	## cardinality = 0..1
+	situation_log_category = <situation_log_category>
+	## cardinality = 0..1
 	###Note: technically, this is an on_action called test_situation. So don't call your situation "on_monthly_pulse"!
 	on_monthly = {
 		## cardinality = 0..1
@@ -202,11 +204,17 @@ situation_type = {
 	fail_icon = <sprite>
 	## cardinality = 0..1
 	fail_icon_frame = <sprite>
+	## cardinality = 0..1
+	permanent = bool
+	## cardinality = 0..1
+	show_in_outliner = bool
 	## cardinality = 0..inf
 	stages = {
-		## cardinality = 1..inf
+		## cardinality = 0..inf
 		###Expects the key to be localised. You can also define <key>_desc and it will show on the tooltip, but this is optional.
 	 	scalar = {
+			## cardinality = 0..inf
+			color = <traitcolors>
 			###Where the stage ends and a new one starts. Determines the end value of the Situation, if it is the final stage.
 			## cardinality = 0..1
 	 		end = int
@@ -214,10 +222,12 @@ situation_type = {
 			end = {
 				## cardinality = 0..1
 				base = int
-				## cardinality = 0..1
-				mult = value_field
+				## cardinality = 0..inf
+				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
+			## cardinality = 0..1
 			icon = <sprite>
+			## cardinality = 0..1
 			icon_background = <sprite>
 			## cardinality = 0..1
 			custom_tooltip = localisation
@@ -256,6 +266,10 @@ situation_type = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		text = localisation
+	}
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 

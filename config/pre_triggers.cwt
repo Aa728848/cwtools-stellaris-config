@@ -79,3 +79,18 @@ alias[situation_pre_trigger:has_owner] = bool
 # country:
 #### whether the situation has a valid owner
 alias[country_pre_trigger:is_ai] = bool
+
+
+
+#  Information form game common\pop_jobs\000_pretriggers.txt and game events\000_added_pre_triggers_to_planet_events.txt   May be out of date as appears to be missing some pop job ones we have include below that are used.
+
+#planets:
+
+#### whether the  planet has an owner
+alias[carrier_pre_trigger:has_owner] = bool
+alias[carrier_pre_trigger:is_homeworld] = bool
+alias[carrier_pre_trigger:original_owner] = bool
+alias[carrier_pre_trigger:is_ai] = bool
+alias[carrier_pre_trigger:has_ground_combat] = bool
+alias[carrier_pre_trigger:is_capital] = bool
+alias[carrier_pre_trigger:is_occupied_flag] = bool

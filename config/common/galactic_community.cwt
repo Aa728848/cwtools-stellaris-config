@@ -29,6 +29,7 @@ types = {
 }
 
 galactic_focus = {
+	## cardinality = 0..1
 	icon = <sprite>
 	## replace_scope = { this = country root = country }
 	effect = {
@@ -46,10 +47,14 @@ galactic_focus = {
 }
 
 resolution_category = {
+	## cardinality = 0..1
 	group = localisation
+	## cardinality = 0..1
 	icon = <sprite>
 	## cardinality = 0..1
-	multiple_active_resolutions = yes
+	multiple_active_resolutions = bool
+
+	## cardinality = 0..1
 	resolution_types = {
 		## cardinality = 1..inf
 		<resolution>
@@ -58,7 +63,8 @@ resolution_category = {
 
 ## replace_scope = { this = country root = country from = country }
 resolution = {
-	icon = scalar #not really
+	## cardinality = 0..1
+	icon = <sprite> #not really
 	resources = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
@@ -118,8 +124,28 @@ resolution = {
 	valid_target = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..inf
+	triggered_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
+		}
+	}
+	## cardinality = 0..1
 	ai_weight = {
+		## cardinality = 0..1
 		enum[weight_or_base] = float
+		## cardinality = 0..1
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }

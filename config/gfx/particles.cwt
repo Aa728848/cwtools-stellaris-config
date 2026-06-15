@@ -125,6 +125,8 @@ particle_type = {
 		## cardinality = 0..1
 		rotation = float
 		## cardinality = 0..1
+		rotation = scalar
+		## cardinality = 0..1
 		rotation = {
 			## cardinality = 1..2
 			scalar
@@ -213,8 +215,10 @@ particle_type = {
 		velocity = scalar
 		## cardinality = 0..1
 		velocity = {
-			## cardinality = 1..2
+			## cardinality = 0..inf
 			float
+			## cardinality = 0..inf
+			scalar
 		}
 		## cardinality = 0..1
 		velocity_pitch = {
@@ -288,6 +292,10 @@ particle_type = {
 			## cardinality = 0..1
 			billboard = bool
 			## cardinality = 0..1
+			spritesheet_animation = bool
+			## cardinality = 0..1
+			spritesheet_animation_loop = float
+			## cardinality = 0..1
 			hide = bool
 			## cardinality = 0..1
 			texture={
@@ -310,8 +318,13 @@ particle_type = {
 			}
 			## cardinality = 0..1
 			duration = float
+			## cardinality = 0..1
+			duration = {
+				## cardinality = 0..inf
+				float
+			}
 			life = {
-				## cardinality = 1..2
+				## cardinality = 1..inf
 				float
 			}
 			life = float
@@ -323,6 +336,7 @@ particle_type = {
 				scalar
 			}
 			size = float
+			size = scalar
 			## cardinality = 0..1
 			rotation = float
 			## cardinality = 0..1
@@ -399,19 +413,21 @@ particle_type = {
 			velocity = float
 			## cardinality = 0..1
 			velocity = {
-				## cardinality = 0..2
+				## cardinality = 0..inf
 				float
+				## cardinality = 0..inf
+				scalar
 			}
 			## cardinality = 0..1
 			velocity_pitch = {
-				## cardinality = 2..2
+				## cardinality = 2..inf
 				float
 			}
 			## cardinality = 0..1
 			velocity_pitch = scalar
 			## cardinality = 0..1
 			velocity_yaw = {
-				## cardinality = 2..2
+				## cardinality = 2..inf
 				float
 			}
 			## cardinality = 0..1
@@ -509,9 +525,9 @@ alias[subsystem_color:color] = {
 	b = { float[0.0..255.0] }
 	## cardinality = 0..1
 	alpha = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		float[0.0..255.0]
-		## cardinality = 0..2
+		## cardinality = 0..inf
 		scalar
 	}
 	 

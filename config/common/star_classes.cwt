@@ -2,6 +2,7 @@ types = {
 	## type_key_filter <> random_list
 	type[star_class] = {
 		path = "game/common/star_classes"
+		path_strict = yes
 		localisation = {
 			## required
 			Name = "$"
@@ -9,9 +10,8 @@ types = {
 			Description = "$_desc"
 		}
 	}
-	## type_key_filter = random_list
 	type[star_class_random_list] = {
-		path = "game/common/star_classes"
+		path = "game/common/star_classes/randomizers"
 	}
 }
 
@@ -49,21 +49,16 @@ star_class = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	## cardinality = 0..1
+	arkship_picture = scalar
 }
 
 star_class_random_list = {
+	## cardinality = 0..1
 	name = scalar
+	## cardinality = 0..1
 	stars = {
 		## cardinality = 0..inf
 		<star_class>
 	}
-}
-
-enums = {
-	complex_enum[star_class_random_list] = {
-		path = "game/common/star_classes"
-		name = {
-			name = enum_name
-		}
-	}
-}
+}

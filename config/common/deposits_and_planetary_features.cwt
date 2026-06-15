@@ -83,10 +83,7 @@ deposit = {
 		all_blocker_swap_types = yes
 
 		## cardinality = 0..1
-		prerequisites = {
-			## cardinality = 0..inf
-			<technology>
-		}
+		prerequisites = single_alias_right[technology_prerequisite]
 
 		## cardinality = 0..1
 		## replace_scope = { this = country root = country }
@@ -144,6 +141,9 @@ deposit = {
 	alias_name[triggered_planet_pop_group_modifier_species] = alias_match_left[triggered_planet_pop_group_modifier_species]
 
 	## cardinality = 0..inf
+	alias_name[triggered_planet_modifier_pop_group] = alias_match_left[triggered_planet_modifier_pop_group]	
+
+	## cardinality = 0..inf
 	drop_weight = {
 		factor = int
 	}
@@ -165,6 +165,8 @@ deposit = {
 		station = shipclass_research_station
 	}
 
+
+	## cardinality = 0..inf
 	alias_name[triggered_planet_modifier_planet] = alias_match_left[triggered_planet_modifier_planet]
 
 	alias_name[resources_template_optional] = alias_match_left[resources_template_optional]

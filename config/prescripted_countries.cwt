@@ -2,7 +2,7 @@ types = {
 	type[prescripted_country] = {
 		path = "game/prescripted_countries"
 	}
-	type[prescripted_country_flags] = {
+	type[prescripted_country_flag] = {
 		path = "game/common/prescripted_flags"
 	}
 }
@@ -14,12 +14,18 @@ prescripted_country = {
 	spawn_enabled = bool # yes / no / always ---> this one receives always as well!
 	## cardinality = 0..1
 	spawn_enabled = always
-	
-	## cardinality = 0..1
-	flag = <prescripted_country_flags>
 
 	## cardinality = 0..1
-	default = yes
+	ship_size = <ship_size>
+	
+	## cardinality = 0..1
+	flag = <prescripted_country_flag>
+
+	## cardinality = 0..1
+	default = bool
+
+	## cardinality = 0..1
+	is_nomadic = bool
 
 	## cardinality = 0..1
 	ignore_portrait_duplication = bool
@@ -187,7 +193,7 @@ prescripted_country = {
 	trait = <trait.species_trait>
 }
 
-prescripted_country_flags = {
+prescripted_country_flag = {
 	## cardinality = 0..1
 	flags = {
 		## cardinality = 0..inf

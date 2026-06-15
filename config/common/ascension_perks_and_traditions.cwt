@@ -238,6 +238,8 @@ tradition = {
 		## cardinality = 0..inf
 		custom_tooltip_with_modifiers = localisation
 	
+		## cardinality = 0..1
+		unlocks_agenda = <council_agenda>
 		#Should be only if not inheriting effects
 		## cardinality = 0..1
 		###accepts only country modifiers
@@ -287,8 +289,22 @@ tradition = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
 			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
 		}
 	}
 }

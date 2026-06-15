@@ -17,6 +17,9 @@ decision = {
 	## cardinality = 0..1
 	owned_planets_only = bool
 	## cardinality = 0..1
+	### Marks this decision as important in the UI
+	important = bool
+	## cardinality = 0..1
 	enactment_time = int
 	## cardinality = 0..1
 	sound = <sound>
@@ -35,7 +38,7 @@ decision = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	resources = {
 		## cardinality = 0..1
 		category = <economic_category>
@@ -88,8 +91,5 @@ decision = {
 	}
 
 	## cardinality = 0..1
-	prerequisites = {
-		## cardinality = 1..inf
-		<technology>
-	}
+	prerequisites = single_alias_right[technology_prerequisite]
 }

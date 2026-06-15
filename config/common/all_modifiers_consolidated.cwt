@@ -48,11 +48,13 @@ types = {
 static_modifier = {
 	alias_name[modifier] = alias_match_left[modifier]
 	subtype[planet] = {
-		icon_frame = int[0..9]
+		icon_frame = int
 		icon = filepath
 	}
 	## cardinality = 0..1
 	icon = filepath
+	## cardinality = 0..1
+	icon = <sprite>
 	## cardinality = 0..1
 	important = bool
 	## cardinality = 0..1
@@ -75,6 +77,45 @@ opinion_modifier = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	opinion = float
+
+	## cardinality = 0..1
+	decay = float
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
+	decay = {
+		###root = country with the opinion, from = country it has the opinion of
+		## cardinality = 0..inf
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	growth = float
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
+	growth = {
+		###root = country with the opinion, from = country it has the opinion of
+		## cardinality = 0..inf
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## cardinality = 0..1
+	###No by default
+	accumulative = bool
+
+	## cardinality = 0..1
+	###For use with accumulative if the base is negative
+	min = int
+	## cardinality = 0..1
+	###For use with accumulative if the base is positive
+	max = int
+
+	## cardinality = 0..1
+	unique = bool
+
+	##cardinality = 0..1
+	monthly = yes
+
+	##cardinality = 0..1
+	months = int
 
 	subtype[!triggered_opinion_modifier] = {
 		## cardinality = 0..1
@@ -145,6 +186,7 @@ planet_modifier = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
 	spawn_chance = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
