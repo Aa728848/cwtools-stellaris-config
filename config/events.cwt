@@ -444,7 +444,7 @@ event = {
 			}
 
 			subtype[diplomatic] = {
-				## cardinality = 0..1
+				## cardinality = 0..inf
 				response_text = localisation
 				## cardinality = 0..1
 				is_dialog_only = bool
@@ -453,14 +453,14 @@ event = {
 			subtype[leader_recruit] = {
 				## cardinality = 0..1
 				tag = enum[leader_recruit_tag_type]
-				## cardinality = 0..1
+				## cardinality = 0..inf
 				response_text = localisation
 				## cardinality = 0..1
 				is_dialog_only = bool
 			}
 
 			subtype[leader_story] = {
-				## cardinality = 0..1
+				## cardinality = 0..inf
 				response_text = localisation
 				## cardinality = 0..1
 				is_dialog_only = bool
@@ -474,7 +474,7 @@ event = {
 			## cardinality = 0..1
 			alias_name[effect] = alias_match_left[effect]
 
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			response_text = localisation
 			## cardinality = 0..1
 			is_dialog_only = yes
