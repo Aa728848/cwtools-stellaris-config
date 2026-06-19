@@ -17,15 +17,15 @@ Output Scope: leader
 
 orbit - Scopes to the planet the current object is in orbit of.
 Supported Scopes: planet ship fleet army starbase colony
-Output Scope: planet
+Output Scope: Fleet Ship Megastructure Army planet Starbase
 
 planet - Scopes from an object to the planet it is on.
 Supported Scopes: megastructure planet ship pop_group leader army starbase deposit archaeological_site pop job colony
-Output Scope: planet
+Output Scope: megastructure planet colony pop pop_group leader army starbase deposit archaeological_site
 
 star - Scopes from an object to the primary star (planet scope) of the system it is in.
 Supported Scopes: megastructure planet ship fleet galactic_object ambient_object bypass starbase archaeological_site first_contact debris astral_rift colony
-Output Scope: planet
+Output Scope: planet colony Ship Fleet System ambient_object bypass Megastructure Starbase archaeological_site first_contact debris astral_rift
 
 last_added_deposit - Scopes to the last deposit added to the current planet
 Supported Scopes: planet ship colony
