@@ -4,6 +4,7 @@ types = {
 		path = "game/common/districts"
 		modifiers = {
 			"planet_$_build_speed_mult" = Planets
+			"$_max_add" = Planets
 		}
 		subtype[capped] = {
 			## cardinality = 0..1

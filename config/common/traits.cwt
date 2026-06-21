@@ -997,7 +997,7 @@ enums = {
 		subclass_commander_admiral
 	}
 	enum[leader_trait_rarity] = {
-		common
+		basic
 		veteran
 		paragon
 		free_or_veteran
