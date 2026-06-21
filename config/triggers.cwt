@@ -558,6 +558,7 @@ alias[trigger:is_designable] = bool
 ###Checks if the leader is of a specific class
 alias[trigger:leader_class] = enum[leader_classes]
 alias[trigger:leader_class] = enum[old_leader_classes]
+alias[trigger:leader_class] = <leader_class>
 
 ###Checks if the observation post has a specific mission
 alias[trigger:has_mission] = <observation_station_mission>
@@ -3478,82 +3479,4 @@ alias[trigger:any_owned_mission] = {
 ## push_scope = starbase
 alias[trigger:any_starbase_in_network] = {
 	alias_name[trigger] = alias_match_left[trigger]
-}
-
-### Iterate through each colony controlled by the current empire - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = country
-## push_scope = colony
-alias[trigger:count_controlled_colony] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-### Iterate through each mission that the current country has issued - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = country
-## push_scope = mission
-alias[trigger:count_issued_mission] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-### Iterate through each colony owned by the current empire - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = country sector
-## push_scope = colony
-alias[trigger:count_owned_colony] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-### Iterate through each contract a country has - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = country
-## push_scope = mission
-alias[trigger:count_owned_contract] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-### Iterate through each mission a country has - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = country
-## push_scope = mission
-alias[trigger:count_owned_mission] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-### Iterate through every starbase in the same waystation network as the scoped starbase. - checks whether the enclosed triggers return true for X/all of them
-## supported_scopes = starbase
-## push_scope = starbase
-alias[trigger:count_starbase_in_network] = {
-	count = int_value_field
-	count = value[variable]
-	count = all
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
 }

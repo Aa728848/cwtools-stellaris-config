@@ -251,8 +251,11 @@ alias[trigger:closest_system] = {
 
 ###Iterate through every owned sector
 alias[trigger:count_owned_sector] = {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = sector
@@ -311,8 +314,11 @@ alias[trigger:count_neighbor_country] =  {
 
 ### Iterate through each army that is owned by the country
 alias[trigger:count_owned_army] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = army
@@ -321,8 +327,11 @@ alias[trigger:count_owned_army] =  {
 
 ### Iterate through each owned megastructure
 alias[trigger:count_owned_megastructure] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = megastructure
@@ -331,8 +340,11 @@ alias[trigger:count_owned_megastructure] =  {
 
 ### Iterate through all owned pop groups - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_pop_group] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = pop_group
@@ -353,8 +365,11 @@ alias[trigger:count_owned_pop_amount] =  {
 
 ### Iterate through each species of a country's owned pops
 alias[trigger:count_owned_pop_species] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = species
@@ -363,8 +378,11 @@ alias[trigger:count_owned_pop_species] =  {
 
 ### Iterate through every owned primary starbase
 alias[trigger:count_owned_starbase] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = starbase
@@ -373,8 +391,11 @@ alias[trigger:count_owned_starbase] =  {
 
 ### Iterate through each defending army on a planet
 alias[trigger:count_planet_army] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = army
@@ -383,8 +404,11 @@ alias[trigger:count_planet_army] =  {
 
 ### Iterate through all planets in the galaxy
 alias[trigger:count_galaxy_planet] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = planet
@@ -403,8 +427,11 @@ alias[trigger:count_system_planet] =  {
 
 ### Iterate through each leader that is recruitable for the country
 alias[trigger:count_pool_leader] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = leader
@@ -413,8 +440,11 @@ alias[trigger:count_pool_leader] =  {
 
 ### Iterate through all relations
 alias[trigger:count_relation] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = country
@@ -433,8 +463,11 @@ alias[trigger:count_rim_system] =  {
 
 ### Iterate through all systems
 alias[trigger:count_system] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = system
@@ -443,8 +476,11 @@ alias[trigger:count_system] =  {
 
 ### Iterate through each megastructure in system
 alias[trigger:count_system_megastructure] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = megastructure
@@ -453,8 +489,11 @@ alias[trigger:count_system_megastructure] =  {
 
 ### Iterate through all systems within the country's borders
 alias[trigger:count_system_within_border] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = system
@@ -463,8 +502,11 @@ alias[trigger:count_system_within_border] =  {
 
 ### Iterate through all war participants
 alias[trigger:count_war_participant] =  {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = country
@@ -525,9 +567,12 @@ alias[trigger:count_armies] = {
 }
 
 alias[trigger:count_owned_ship] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = ship
 	limit = {
@@ -536,9 +581,12 @@ alias[trigger:count_owned_ship] = {
 }
 
 alias[trigger:count_controlled_ship] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = ship
 	limit = {
@@ -561,9 +609,12 @@ alias[trigger:count_potential_war_participants] = {
 
 ###Iterate through every ambient object in the game
 alias[trigger:count_ambient_object] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = ambient_object
 	limit = {
@@ -573,9 +624,12 @@ alias[trigger:count_ambient_object] = {
 
 ###Iterate through every ambient object in the solar system
 alias[trigger:count_system_ambient_object] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = ambient_object
 	limit = {
@@ -585,9 +639,12 @@ alias[trigger:count_system_ambient_object] = {
 
 ###Iterate through all subjects of the scoped country
 alias[trigger:count_subject] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = country
 	limit = {
@@ -597,9 +654,12 @@ alias[trigger:count_subject] = {
 
 ###Iterate through each fleet owned by the country
 alias[trigger:count_owned_fleet] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = fleet
 	limit = {
@@ -636,9 +696,12 @@ alias[trigger:count_owned_leader] = {
 
 ###Iterate through each planet within the current empire's borders
 alias[trigger:count_planet_within_border] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = planet
 	limit = {
@@ -648,9 +711,12 @@ alias[trigger:count_planet_within_border] = {
 
 ###Iterate through each inhabited planet owned by the current empire
 alias[trigger:count_owned_planet] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = planet
 	limit = {
@@ -2629,9 +2695,12 @@ alias[trigger:count_owned_species] = {
 	##cardinality = 0..1
 	## push_scope = species
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 }
 
 ## push_scope = species
@@ -3842,8 +3911,11 @@ alias[trigger:any_owned_pop_job] = {
 
 ##Iterate through all owned pop jobs - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_pop_job] = {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = pop_job
@@ -3852,8 +3924,11 @@ alias[trigger:count_owned_pop_job] = {
 
 ##Sums all workforce - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_workforce] = {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = pop_job
@@ -4526,9 +4601,12 @@ alias[trigger:any_owned_design] = {
 
 ###Iterate through all designs owned by the current country - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_design] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = design
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -4588,8 +4666,11 @@ alias[trigger:any_owned_nonprimary_starbase] = {
 
 ###Iterate through every owned non-primary starbase (e.g. orbital rings), not including juggernauts - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_nonprimary_starbase] = {
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
 	count = int_value_field
+	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
 	## push_scope = starbase
@@ -5161,14 +5242,114 @@ alias[trigger:any_owned_storm_influence_field] = {
 
 ###Iterate through all influence fields owned by a country - checks whether the enclosed triggers return true for X/all of them
 alias[trigger:count_owned_storm_influence_field] = {
-	count = int_value_field
-	count = value[variable]
+	## cardinality = 0..1
 	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
 	## push_scope = cosmic_storm_influence_field
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
+
+### Iterate through each colony controlled by the current empire - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = colony
+alias[trigger:count_controlled_colony] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each mission that the current country has issued - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_issued_mission] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each colony owned by the current empire - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country sector
+## push_scope = colony
+alias[trigger:count_owned_colony] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each contract a country has - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_owned_contract] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through each mission a country has - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = country
+## push_scope = mission
+alias[trigger:count_owned_mission] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+### Iterate through every starbase in the same waystation network as the scoped starbase. - checks whether the enclosed triggers return true for X/all of them
+## supported_scopes = starbase
+## push_scope = starbase
+alias[trigger:count_starbase_in_network] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
 
 ## push_scope = system
 ###Iterate through all influence fields owned by a country - checks whether the enclosed triggers return true for any of them
@@ -5218,7 +5399,7 @@ alias[effect:ordered_cosmic_storm] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]

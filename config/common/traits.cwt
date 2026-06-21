@@ -879,8 +879,10 @@ trait = {
 		}
 		leader_class = all
 		leader_class = {
-			## cardinality = 1..5
+			## cardinality = 0..inf
 			enum[leader_classes]
+			## cardinality = 0..inf
+			<leader_class>
 		}
 		leader_trait_rarity = enum[leader_trait_rarity]
 		## cardinality = 0..1

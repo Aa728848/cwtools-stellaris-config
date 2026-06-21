@@ -105,6 +105,8 @@ special_project = {
 		leader = enum[leader_classes]
 		## cardinality = 0..1
 		leader = enum[old_leader_classes]
+		## cardinality = 0..1
+		leader = <leader_class>
 
 		## cardinality = 0..1
 		assault_armies = int

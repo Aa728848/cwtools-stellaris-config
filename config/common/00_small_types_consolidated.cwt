@@ -140,6 +140,15 @@ types = {
 			## optional
 			Desc = "$_description"
 		}
+		modifiers = {
+			"$_exp_gain" = Leaders
+			"$_skill_levels" = Leaders
+			"$_skill_add" = Leaders
+			"$_initial_skill" = Leaders
+			"country_$_cap_add" = Leaders
+			"$_lifespan_add" = Leaders
+			"$_lifespan_mult" = Leaders
+		}
 	}
 	type[targettype] = {
 		path = "game/common/target_types"
@@ -804,8 +813,11 @@ concept_categories = {
 }
 
 leader_class = {
+	## cardinality = 0..1
 	name = localisation
+	## cardinality = 0..1
 	name_plural = localisation
+	## cardinality = 0..1
 	description = localisation
 	## cardinality = 0..1
 	###default = no

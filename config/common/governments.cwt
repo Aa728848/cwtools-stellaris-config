@@ -454,6 +454,8 @@ civic_or_origin = {
 	}
 	subtype[civic] = {
 		## cardinality = 0..1
+		cost = int
+		## cardinality = 0..1
 		playable = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
@@ -530,8 +532,10 @@ councilor = {
 	## cardinality = 0..1
 	### Which leader classes can have this council position. Currently only used for the Recruit New Leader buttons. (Default = none)
 	leader_class = {
-		## cardinality = 1..5
+		## cardinality = 1..inf
 		enum[leader_classes]
+		## cardinality = 1..inf
+		<leader_class>
 	}
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
