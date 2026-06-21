@@ -532,9 +532,9 @@ councilor = {
 	## cardinality = 0..1
 	### Which leader classes can have this council position. Currently only used for the Recruit New Leader buttons. (Default = none)
 	leader_class = {
-		## cardinality = 1..inf
+		## cardinality = 0..inf
 		enum[leader_classes]
-		## cardinality = 1..inf
+		## cardinality = 0..inf
 		<leader_class>
 	}
 	## cardinality = 0..1
