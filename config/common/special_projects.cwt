@@ -121,7 +121,7 @@ special_project = {
 		observation_station = yes
 
 		## cardinality = 0..1
-		skill = int[1..10]
+		skill = int
 
 		## cardinality = 0..1
 		fleet_power = int
