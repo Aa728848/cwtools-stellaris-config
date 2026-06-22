@@ -14,6 +14,15 @@ types = {
 			## required
 			Description = "$_desc"
 		}
+		modifiers = {
+			"country_resource_max_$_add" = Countries
+			"starbase_stockpile_$_capacity_add" = Waystations
+			"starbase_stockpile_$_capacity_mult" = Waystations
+			"starbase_collected_system_$_add" = Starbases
+			"starbase_collected_system_$_mult" = Starbases
+			"ship_starbase_stockpile_$_collection_rate_add" = Ships
+			"ship_starbase_stockpile_$_collection_rate_mult" = Ships
+		}
 	}
 }
 
