@@ -220,6 +220,7 @@ enums = {
 		planet_event
 		country_event
 		carrier_event
+		colony_event
 	}
 	enum[project_type_enum] = {
 		project_type_research
