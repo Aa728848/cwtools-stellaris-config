@@ -3074,7 +3074,7 @@ Printing Modifier Definitions:
 - job_capital_merchant_add, Category: Countries
 - job_capital_trader_add, Category: Countries
 - biomorphosis_progress_mult, Category: Countries
-- knight_quest_progress_add, Category: Colony
+- knight_quest_progress_add, Category: Countries
 - clone_soldiers_sustained, Category: Colony
 - trade_from_trait_mult, Category: Countries
 - fake_pop_growth_mod, Category: Colony
