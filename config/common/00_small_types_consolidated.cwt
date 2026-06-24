@@ -1267,6 +1267,10 @@ enums = {
 		survey_effect
 		harvest_effect
 	}
+	enum[scripted_action_context_menu_ordering] = {
+		distance
+		weight
+	}
 	enum[contract_ai_behaviours] = {
 		attack
 		raid
@@ -1562,6 +1566,8 @@ scripted_action = {
 	## cardinality = 0..1
 	context_menu_name = localisation
 	## cardinality = 0..1
+	context_menu_ordering = enum[scripted_action_context_menu_ordering]
+	## cardinality = 0..1
 	tooltip = localisation
 	## cardinality = 0..1
 	icon = <sprite>
@@ -1629,6 +1635,8 @@ scripted_action = {
 	category = scalar
 	## cardinality = 0..1
 	category_limit = int
+	## cardinality = 0..1
+	category_limit_fail_text = localisation
 	## cardinality = 0..1
 	important = bool
 	## cardinality = 0..1

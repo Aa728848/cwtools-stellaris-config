@@ -144,6 +144,8 @@ ship_size = {
 	## cardinality = 0..1
 	is_starting_arkship = bool
 	## cardinality = 0..1
+	preserve_movement_animation_progress = bool
+	## cardinality = 0..1
 	accepts_all_modifiers = bool
 	## cardinality = 0..1
 	carries_colony = <planet_class>
@@ -161,6 +163,8 @@ ship_size = {
 	}
 	## cardinality = 0..1
 	arkship_picture = <sprite>
+	## cardinality = 0..1
+	planet_view_header = <sprite>
 	## cardinality = 0..1
 	automation_icon = <sprite>
 	## cardinality = 0..1

@@ -63,6 +63,8 @@ special_project = {
 
 	## cardinality = 0..1
 	event_chain = <event_chain>
+	## cardinality = 0..1
+	situation_log_category = <situation_log_category>
 	
 	## cardinality = 0..1
 	<resource> = int

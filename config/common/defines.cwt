@@ -2057,6 +2057,8 @@ NGameplay = {
 	## cardinality = 0..1
 	PLANET_ORBIT_STACK_DISTANCE = float
 	## cardinality = 0..1
+	MOBILE_STARBASE_ORBIT_FOLLOW_BUFFER = float
+	## cardinality = 0..1
 	BASE_SURVEY_TIME = float
 	
 	## cardinality = 0..1
@@ -4453,6 +4455,8 @@ NAI = {
 	AI_AGGRESSIVENESS_NO_COLONY_TARGET_MULT = float
 	## cardinality = 0..1
 	AI_VULNERABLE_PLANET_DISTANCE = float
+	## cardinality = 0..1
+	AI_HOSTILE_FLEET_DISTANCE = float
 	
 	## cardinality = 0..1
 	ACTION_MIN_DAYS_REJECTED = float
@@ -5281,6 +5285,12 @@ NAI = {
 	PLAYER_ISSUED_CONTRACT_PREFERENCE = scalar
 	## cardinality = 0..1
 	PICKUP_CONTRACT_CHANCE = scalar
+	## cardinality = 0..1
+	ABANDON_CONTRACT_MIN_YEARS = float
+	## cardinality = 0..1
+	ABANDON_CONTRACT_MAX_YEARS = float
+	## cardinality = 0..1
+	ABANDON_CONTRACT_CHANCE = float
 
 	## cardinality = 0..1
 	JOIN_WAR_MIN_TRADE_VALUE = scalar

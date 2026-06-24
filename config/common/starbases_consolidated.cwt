@@ -324,6 +324,29 @@ starbase_module = {
 		}
 	}
 	## cardinality = 0..1
+	collected_colony_resources = {
+		## cardinality = 0..1
+		collection_type = enum[colony_resource_collection_type]
+		## cardinality = 0..inf
+		## replace_scope = { this = starbase root = starbase from = planet }
+		<resource> = {
+			## cardinality = 0..inf
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		## replace_scope = { this = starbase root = starbase from = planet }
+		enum[resource_type] = {
+			## cardinality = 0..inf
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = starbase root = starbase from = planet }
+		all = {
+			## cardinality = 0..inf
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
+	## cardinality = 0..1
 	show_component_tooltips = bool
 	## cardinality = 0..1
 	remote_network_resource_collection = bool
@@ -619,5 +642,9 @@ enums = {
 		orbital_ring
 		waystation
 		all
+	}
+	enum[colony_resource_collection_type] = {
+		steal
+		clone
 	}
 }
