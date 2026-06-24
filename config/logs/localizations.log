@@ -33,7 +33,6 @@ Promotions:
  Species
  Federation
 Properties
- GetIcon
  GetName
  GetNamePlural
  GetNamePersistent

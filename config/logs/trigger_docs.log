@@ -7852,7 +7852,7 @@ add_resource_to_local_stockpile = {
 	...
 	mult = <variable> (optional: multiplies all gained resources by a variable)
 }
-Supported Scopes: ship
+Supported Scopes: ship fleet
 
 issue_contract - Adds the specified contract to a target system.
 The issuing country is the scoped country, contract and system are specified as parameter to the effect. You can additionally restrict who can pick up the contract by using a target
@@ -7982,7 +7982,7 @@ colony_event = {
 	random = y (optional: specify random delay, capped at value)
 	scopes = { from = fromfrom } (optional: specify scope overrides)
 }
-Supported Scopes: colony planet
+Supported Scopes: colony
 
 carrier_event - Fires a colony carrier event for the scoped carrier, with optional DAYS and RANDOM delay
 carrier_event = {
