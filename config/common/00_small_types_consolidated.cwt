@@ -171,9 +171,6 @@ types = {
 	type[cloaking_strength_levels] = {
 		path = "game/common/cloaking_strength_levels"
 	}
-	type[colony_automation_categories] = {
-		path = "game/common/colony_automation_categories"
-	}
 	type[colors] = {
 		path = "game/common/colors"
 	}
@@ -1052,13 +1049,6 @@ cloaking_strength_levels = {
 	## cardinality = 0..1
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
-	}
-}
-
-colony_automation_categories = {
-	## cardinality = 0..1
-	available = {
-		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 

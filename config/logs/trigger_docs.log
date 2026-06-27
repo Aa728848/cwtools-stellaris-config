@@ -3448,7 +3448,7 @@ is_aura_intensity_level = 2
 Supported Scopes: galactic_object
 
 planet_happiness_above_threshold - Checks if a planet's happiness is past a given threshold. Can be used in a scoped system, then it returns the sum of every planets' happiness past the given threshold.
-planet_happiness_above_threshold = { threshold = 0.5 value > 0
+planet_happiness_above_threshold = { threshold = 0.5 value > 0 }
 Supported Scopes: planet galactic_object
 
 governors_skill_in_system - Checks if valid colony governors in the scoped has a specific base experience level

@@ -71,10 +71,10 @@ links = {
 	}
 	capital_scope = {
 		input_scopes = { Country Sector carrier System }
-		output_scope = Planet
+		output_scope = Colony
 	}
 	orbit = {
-		input_scopes = { Fleet Ship Megastructure Army Planet Starbase carrier }
+		input_scopes = { Fleet Ship Megastructure Army Planet Starbase carrier colony }
 		output_scope = Planet
 	}
 	home_planet = {

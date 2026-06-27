@@ -17,14 +17,17 @@ types = {
 	type[colony_automation_exceptions] = {
 		path = "game/common/colony_automation_exceptions"
 	}
+	type[colony_automation_categories] = {
+		path = "game/common/colony_automation_categories"
+	}
 }
 
 ## push_scope = planet
 colony_automation = {
 	# this is a scalar rather than an enum, because the category strings themselves are defined in 00_defines.txt
-	category = scalar
+	category = <colony_automation_categories>
 
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -44,7 +47,7 @@ colony_automation = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	buildings = {
 		## cardinality = 1..inf
 		scalar = {
@@ -59,11 +62,19 @@ colony_automation = {
 	}
 }
 
+colony_automation_categories = {
+	## cardinality = 0..1
+	## replace_scope = { this = colony root = colony }
+	available = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
 colony_automation_exceptions = {
 	# this is a scalar rather than an enum, because the category strings themselves are defined in 00_defines.txt
-	category = scalar
+	category = <colony_automation_categories>
 
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -84,7 +95,7 @@ colony_automation_exceptions = {
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	buildings = {
 		## cardinality = 1..inf
 		scalar = {
@@ -106,7 +117,7 @@ colony_automation_exceptions = {
 	should_ai_use_job_micro = bool
 	
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }	
+	## replace_scope = { this = colony root = colony }
 	job_changes = {
 		## cardinality = 1..inf
 		scalar = {
@@ -129,7 +140,7 @@ colony_type = {
 	ai_resource_conversion = {
 		## cardinality = 0..inf
 		<resource> = float
-		## replace_scope = { this = planet root = planet }
+		## replace_scope = { this = colony root = colony from = country }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
@@ -146,12 +157,13 @@ colony_type = {
 	ai_resource_current_conversion = {
 		## cardinality = 0..inf
 		<resource> = float
-		## replace_scope = { this = planet root = planet }
+		## replace_scope = { this = colony root = colony from = country }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
 
+	## replace_scope = { this = colony root = colony from = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
