@@ -123,7 +123,7 @@ scopes = {
 	"Ship Growth Stage" = {
 		aliases = { ship_growth_stage }
 	}
-    "First Damage Country"" = {
+    "First Damage Country" = {
         aliases = { first_damaging_country }
     }
     "Second Damage Country" = {
