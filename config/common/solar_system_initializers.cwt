@@ -152,7 +152,10 @@ alias[planet_initializer:planet] = {
 		max = int
 	}
 	## cardinality = 0..1
-	entity = scalar
+	entity = ""
+	## cardinality = 0..1
+	## type_suffix_pattern = _$_entity
+	entity = <model_entity>
 
 	### the class in planet init represents planet_class, not star_class. class = star means the planet class of this star is star.
 	## cardinality = 0..1
@@ -264,7 +267,10 @@ alias[moon_initializer:moon] = {
 		max = int
 	}
 	## cardinality = 0..1
-	entity = scalar
+	entity = ""
+	## cardinality = 0..1
+	## type_suffix_pattern = _$_entity
+	entity = <model_entity>
 
 
 	### the class in planet init represents planet_class, not star_class. class = star means the planet class of this star is star.
