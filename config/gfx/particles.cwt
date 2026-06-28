@@ -16,10 +16,10 @@ types = {
 #TODO: Shader keys
 
 particle = {
-		name = scalar
-		type = <particle_type>
-		## cardinality = 0..1
-		scale = float
+	name = scalar
+	type = <particle_type>
+	## cardinality = 0..1
+	scale = float
 }
 
 particle_type = {
