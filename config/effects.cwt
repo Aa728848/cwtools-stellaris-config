@@ -3194,6 +3194,7 @@ alias[effect:set_mission] = <observation_station_mission>
 ### Change entity of a planet.
 alias[effect:set_planet_entity] = {
 	## cardinality = 0..1
+	## type_prefix_from = graphical_culture
 	entity = <model_entity>
 	## cardinality = 0..1
 	entity = ""
