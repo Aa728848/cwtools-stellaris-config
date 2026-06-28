@@ -546,8 +546,6 @@ component_template = {
 		## type_prefix_from = graphical_culture
 		entity = <model_entity>
 		## cardinality = 0..1
-		entity = ""
-		## cardinality = 0..1
 		power = float
 		## replace_scope = { root = ship this = ship }
 		resources = {
@@ -639,8 +637,6 @@ component_template = {
 		## cardinality = 0..1
 		## type_prefix_from = graphical_culture
 		entity = <model_entity>
-		## cardinality = 0..1
-		entity = ""
 		weapon_type = enum[weapon_type2]
 		ship_behavior = <ship_behavior>
 		projectile_gfx = <projectile> #tied to defined entites under gfx
