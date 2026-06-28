@@ -41,13 +41,13 @@ megastructure = {
 	## type_prefix_from = graphical_culture
 	entity = <model_entity>
 	## cardinality = 0..1
-	entity = scalar
+	entity = ""
 
 	## cardinality = 0..1
 	## type_prefix_from = graphical_culture
 	construction_entity = <model_entity> 
 	## cardinality = 0..1
-	construction_entity = scalar
+	construction_entity = ""
 
 	## cardinality = 0..1
 	scripted_action = {
@@ -368,4 +368,3 @@ enums = {
 		around_planet
 	}
 }
-	
