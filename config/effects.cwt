@@ -3150,8 +3150,24 @@ alias[effect:set_disable_at_health] = value_field[0.0..1.0]
 alias[effect:set_disable_at_health] = no
 ### Enables or disables the scoped ship
 alias[effect:set_disabled] = bool
-### Sets the flag of the current Empire.
-alias[effect:set_empire_flag] = scalar #TODO
+### Sets the flag of the current Empire.  
+alias[effect:set_empire_flag] = {
+	## cardinality = 0..1
+	icon = {
+		category = scalar 
+		file = scalar 
+	}
+	background = {
+		category = scalar 
+		file = scalar 
+	}
+	colors = {
+		## cardinality = 0..4
+		<color_define>
+		## cardinality = 0..4
+		"null"
+	}
+} 
 ### Sets the name of the current Empire.
 alias[effect:set_empire_name] = localisation
 ### Silently disables the scoped fleet to prevent player action, remember to unlock at the end of the event
