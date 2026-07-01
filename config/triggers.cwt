@@ -2406,6 +2406,7 @@ alias[trigger:is_in_sensor_range] = scope[fleet]
 
 ###Checks if the specified ship, fleet, planet or system can be seen by the scoped country.
 alias[trigger:is_in_sensor_range] = scope[planet]
+alias[trigger:is_in_sensor_range] = scope[colony]
 
 ###Checks if the specified ship, fleet, planet or system can be seen by the scoped country.
 alias[trigger:is_in_sensor_range] = scope[galactic_object]

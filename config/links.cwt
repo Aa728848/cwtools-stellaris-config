@@ -308,15 +308,15 @@ links = {
 		output_scope = country
 	}
 	orbital_defence = {
-		input_scopes = { planet carrier }
+		input_scopes = { planet colony carrier }
 		output_scope = fleet
 	}
 	army_leader = {
-		input_scopes = { planet carrier }
+		input_scopes = { planet colony carrier }
 		output_scope = leader
 	}
 	creator = {
-		input_scopes = { leader carrier }
+		input_scopes = { leader colony carrier }
 		output_scope = country
 	}
 	script_value = {

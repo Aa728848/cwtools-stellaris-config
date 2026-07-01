@@ -298,6 +298,8 @@ event = {
 		force_open = bool
 
 		## cardinality = 0..1
+		location = scope[colony]
+		## cardinality = 0..1
 		location = scope[planet]
 		## cardinality = 0..1
 		location = scope[system]

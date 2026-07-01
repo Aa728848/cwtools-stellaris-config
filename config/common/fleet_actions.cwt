@@ -21,6 +21,9 @@ alias[fleet_action:repeat] = {
 
 ###This requires the fleet to be a planet destroyer
 alias[fleet_action:destroy_planet] = {
+    ## cardinality = 0..1
+    target = scope[colony]
+    ## cardinality = 0..1
 	target = scope[planet]
 	## cardinality = 0..1
 	skip_rules = bool
@@ -181,9 +184,11 @@ alias[fleet_action:attack_fleet] = {
 alias[fleet_action:move_to] = scope_group[celestial_coordinate]
 
 alias[fleet_action:orbit_planet] = scope[planet]
+alias[fleet_action:orbit_planet] = scope[colony]
 alias[fleet_action:orbit_planet] = random
 
 alias[fleet_action:terraform_fleet] = scope[planet]
+alias[fleet_action:terraform_fleet] = scope[colony]
 alias[fleet_action:terraform_fleet] = random
 
 alias[fleet_action:change_stance] = {
