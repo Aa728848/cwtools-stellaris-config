@@ -1146,6 +1146,7 @@ lawsuits = {
 }
 
 portrait_categories = {
+	## cardinality = 0..1
 	name = localisation
 	sets = {
 		## cardinality = 0..inf

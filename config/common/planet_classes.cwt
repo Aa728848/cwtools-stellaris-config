@@ -69,6 +69,7 @@ planet_class = {
 	fixed_entity_scale = bool
 	## cardinality = 0..1
 	icon = <sprite>
+	## cardinality = 0..1
 	icon_large = <sprite>
 	## cardinality = 0..inf
 	conditional_icon = {
