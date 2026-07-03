@@ -4,12 +4,12 @@ types = {
 	type[font] = {
 		name_field = name
 		path = "game/fonts"
-   }
- }
- 
- font = {
+	}
+}
+
+font = {
 	name = scalar
-	
+
 	fontstyle = {
 		style = enum[font_style]
 		### supports *.ttf and *.otf files!
@@ -18,7 +18,7 @@ types = {
 }
 
 enums = { 
-  enum[font_style] = {
-    regular
-   }
- }
+	enum[font_style] = {
+		regular
+	}
+}
