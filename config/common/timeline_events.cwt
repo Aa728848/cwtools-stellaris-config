@@ -13,20 +13,27 @@ timeline_events_type = {
 		scalar
 	}
 	## cardinality = 0..1
+	tooltip = localisation
+	## cardinality = 0..1
+	tooltip_delayed = localisation
+	## cardinality = 0..1
 	types = {
-		## cardinality = 0..1
-		country
-		## cardinality = 0..1
-		planet
+		## cardinality = 0..inf
+		enum[scope_type_tokens]
+	}
+	## cardinality = 0..1
+	targets = {
+		## cardinality = 0..inf
+		scope[any]
 	}
 	## cardinality = 0..1
 	text = { 
 		## cardinality = 0..inf
-		localisation
+		prefix_field[localisation]
 	}
 	## cardinality = 0..1
 	texture = {
 		## cardinality = 0..inf
-		scalar
+		prefix_field[<sprite>]
 	}
 }
