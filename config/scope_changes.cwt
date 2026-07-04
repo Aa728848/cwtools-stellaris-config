@@ -77,7 +77,7 @@ alias[trigger:any_system_planet] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = planet
+## push_scope = colony
 ###Checks if any of the country's owned planets meet the specified criteria
 alias[trigger:any_owned_planet] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -718,7 +718,7 @@ alias[trigger:count_owned_planet] = {
 	## cardinality = 0..1
 	count = value[variable]
 	## cardinality = 0..1
-	## push_scope = planet
+	## push_scope = colony
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -1184,7 +1184,7 @@ alias[effect:random_country] = {
 	}
 }
 
-## push_scope = planet
+## push_scope = colony
 ###Executes enclosed effects on every planet -owned by the scoped country- that meet the limit criteria
 alias[effect:every_owned_planet] = {
 	##cardinality = 0..1
@@ -1192,7 +1192,7 @@ alias[effect:every_owned_planet] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = planet
+## push_scope = colony
 ###Executes enclosed effects on every planet - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
 alias[effect:ordered_owned_planet] = {
 	##cardinality = 0..1
@@ -1216,7 +1216,7 @@ alias[effect:ordered_owned_planet] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = planet
+## push_scope = colony
 ###Executes enclosed effects on a planet -owned by the scoped country- that meets the limit criteria
 alias[effect:random_owned_planet] = {
 	##cardinality = 0..1
