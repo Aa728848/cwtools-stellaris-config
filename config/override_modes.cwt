@@ -1,0 +1,182 @@
+# Path override/load-order modes used by editor hovers and AI tools.
+# Source: Stellaris Wiki "Modding" / "Overwriting specific elements".
+# Exact LIOS/FIOS/DUPL rows keep their mode; mixed, NO, and unknown rows use UNKNOWN.
+# Longest path prefix wins.
+priorities = {
+    # LIOS - Last In, Only Served.
+    "common/anomalies" = LIOS
+    "common/armies" = LIOS
+    "common/artifact_actions" = LIOS
+    "common/ascension_perks" = LIOS
+    "common/ascension_perk_categories" = LIOS
+    "common/attitudes" = LIOS
+    "common/bombardment_stances" = LIOS
+    "common/buildings" = LIOS
+    "common/button_effects" = LIOS
+    "common/bypass" = LIOS
+    "common/casus_belli" = LIOS
+    "common/colony_automation_categories" = LIOS
+    "common/colony_types" = LIOS
+    "common/council_agendas" = LIOS
+    "common/country_focus" = LIOS
+    "common/country_limits" = LIOS
+    "common/country_limits/ship_of_size_limits" = LIOS
+    "common/country_types" = LIOS
+    "common/crisis_levels" = LIOS
+    "common/crisis_objectives" = LIOS
+    "common/decisions" = LIOS
+    "common/defines" = LIOS
+    "common/deposits" = LIOS
+    "common/diplomatic_actions" = LIOS
+    "common/diplomatic_economy" = LIOS
+    "common/districts" = LIOS
+    "common/economic_categories" = LIOS
+    "common/edicts" = LIOS
+    "common/espionage_assets" = LIOS
+    "common/espionage_operation_types" = LIOS
+    "common/ethics" = LIOS
+    "common/game_rules" = LIOS
+    "common/governments" = LIOS
+    "common/governments/civics" = LIOS
+    "common/leader_classes" = LIOS
+    "common/mandates" = LIOS
+    "common/map_modes" = LIOS
+    "common/megastructures" = LIOS
+    "common/personalities" = LIOS
+    "common/planet_modifiers" = LIOS
+    "common/policies" = LIOS
+    "common/pop_categories" = LIOS
+    "common/pop_faction_types" = LIOS
+    "common/pop_jobs" = LIOS
+    "common/relics" = LIOS
+    "common/resolution_groups" = LIOS
+    "common/resolutions" = LIOS
+    "common/script_values" = LIOS
+    "common/scripted_effects" = LIOS
+    "common/scripted_modifiers" = LIOS
+    "common/scripted_triggers" = LIOS
+    "common/sector_focuses" = LIOS
+    "common/ship_sizes" = LIOS
+    "common/situations" = LIOS
+    "common/specialist_subject_perks" = LIOS
+    "common/specialist_subject_types" = LIOS
+    "common/species_archetypes" = LIOS
+    "common/species_classes" = LIOS
+    "common/species_rights" = LIOS
+    "common/specimens" = LIOS
+    "common/star_classes" = LIOS
+    "common/starbase_buildings" = LIOS
+    "common/starbase_levels" = LIOS
+    "common/starbase_modules" = LIOS
+    "common/starbase_types" = LIOS
+    "common/static_modifiers" = LIOS
+    "common/subjects" = LIOS
+    "common/system_types" = LIOS
+    "common/technology" = LIOS
+    "common/technology/tier" = LIOS
+    "common/trade_conversions" = LIOS
+    "common/tradition_categories" = LIOS
+    "common/traditions" = LIOS
+    "common/war_goals" = LIOS
+    "common/agreement_presets" = LIOS
+    "common/agreement_resources" = LIOS
+    "common/agreement_terms" = LIOS
+    "common/ai_budget" = LIOS
+    "common/ai_espionage" = LIOS
+    "common/ai_espionage/operations" = LIOS
+    "common/ai_espionage/spynetworks" = LIOS
+    "common/colony_automation" = LIOS
+    "common/colony_automation_exceptions" = LIOS
+    "common/country_container" = LIOS
+    "common/country_customization" = LIOS
+    "common/observation_station_missions" = LIOS
+    "common/opinion_modifiers" = LIOS
+    "common/planet_classes" = LIOS
+    "common/ship_categories" = LIOS
+    "common/ship_sets" = LIOS
+    "common/storm_types" = LIOS
+    "common/technology/category" = LIOS
+    "common/zone_slots" = LIOS
+    "common/zones" = LIOS
+    "common/economic_plans" = LIOS
+    "fonts" = LIOS
+    "interface" = LIOS
+    "localisation" = LIOS
+
+    # FIOS - First In, Only Served.
+    "common/agreement_term_values" = FIOS
+    "common/component_sets" = FIOS
+    "common/component_templates" = FIOS
+    "common/event_chains" = FIOS
+    "common/global_ship_designs" = FIOS
+    "common/governments/authorities" = FIOS
+    "common/scripted_loc" = FIOS
+    "common/scripted_variables" = FIOS
+    "common/ship_behaviors" = FIOS
+    "common/solar_system_initializers" = FIOS
+    "common/special_projects" = FIOS
+    "common/start_screen_messages" = FIOS
+    "events" = FIOS
+
+    # DUPL - Duplicates.
+    "common/inline_scripts" = DUPL
+    "common/name_lists" = DUPL
+    "common/strategic_resources" = DUPL
+    "common/terraform" = DUPL
+
+    # NO - Cannot be overridden, unless it’s an exact name match.
+    "common/section_templates" = NO
+    "common/traits" = NO
+    "common/achievements" = NO
+
+    # MERGE - AUTO MERGE
+    "common/on_actions" = MERGE
+    "common/country_limits/ownership_limits" = MERGE
+    "common/job_tags" = MERGE
+    "common/component_tags" = MERGE
+    "common/trait_tags" = MERGE
+
+
+    # UNKNOWN - Unknown
+    "common/ambient_objects" = UNKNOWN
+    "common/archaeological_site_types" = UNKNOWN
+    "common/asteroid_belts" = UNKNOWN
+    "common/colors" = UNKNOWN
+    "common/component_slot_templates" = UNKNOWN
+    "common/deposit_categories" = UNKNOWN
+    "common/diplo_phrases" = UNKNOWN
+    "common/dynamic_text" = UNKNOWN
+    "common/espionage_operation_categories" = UNKNOWN
+    "common/fallen_empires" = UNKNOWN
+    "common/federation_law_categories" = UNKNOWN
+    "common/federation_laws" = UNKNOWN
+    "common/federation_perks" = UNKNOWN
+    "common/federation_types" = UNKNOWN
+    "common/first_contact" = UNKNOWN
+    "common/galactic_community_actions" = UNKNOWN
+    "common/galactic_focuses" = UNKNOWN
+    "common/game_concept_categories" = UNKNOWN
+    "common/gamesetup_settings" = UNKNOWN
+    "common/graphical_culture" = UNKNOWN
+    "common/greeting_overlay_sounds" = UNKNOWN
+    "common/intel_categories" = UNKNOWN
+    "common/intel_levels" = UNKNOWN
+    "common/lawsuits" = UNKNOWN
+    "common/leader_tiers" = UNKNOWN
+    "common/menace_perks" = UNKNOWN
+    "common/message_types" = UNKNOWN
+    "common/missions" = UNKNOWN
+    "common/mutations" = UNKNOWN
+    "common/notification_modifiers" = UNKNOWN
+    "common/patrons" = UNKNOWN
+    "common/precursor_civilizations" = UNKNOWN
+    "common/prescripted_flags" = UNKNOWN
+    "common/random_names" = UNKNOWN
+    "common/random_names/base" = UNKNOWN
+    "common/resolution_categories" = UNKNOWN
+    "common/sector_types" = UNKNOWN
+    "common/species_names" = UNKNOWN
+    "common/system_tooltips" = UNKNOWN
+    "common/target_types" = UNKNOWN
+    "common/timeline_events" = UNKNOWN
+}
