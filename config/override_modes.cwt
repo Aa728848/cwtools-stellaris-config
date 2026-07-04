@@ -1,7 +1,3 @@
-# Path override/load-order modes used by editor hovers and AI tools.
-# Source: Stellaris Wiki "Modding" / "Overwriting specific elements".
-# Exact LIOS/FIOS/DUPL rows keep their mode; mixed, NO, and unknown rows use UNKNOWN.
-# Longest path prefix wins.
 priorities = {
     # LIOS - Last In, Only Served.
     "common/anomalies" = LIOS
