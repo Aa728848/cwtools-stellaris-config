@@ -176,3 +176,51 @@ priorities = {
     "common/target_types" = UNKNOWN
     "common/timeline_events" = UNKNOWN
 }
+
+# Override-mode legend. Each entry documents one strategy value used in
+# `priorities` above (meaning / who wins by default / how to override vanilla).
+# Parsed from `## ` comments the same way as `system_scopes`; consumed by the
+# AI agent via query_override_modes -> modeInfo / matchedModeInfo.
+override_modes_info = {
+    LIOS = {
+        ## Last In, Only Served.
+        ## Who wins by default: the last-loaded definition of a key.
+        ## How to override vanilla: redefine the same key; your mod loads after vanilla, so it wins.
+        name = "Last In, Only Served"
+    }
+
+    FIOS = {
+        ## First In, Only Served.
+        ## Who wins by default: the first-loaded definition (vanilla wins by default).
+        ## How to override vanilla: name the file so it sorts before the vanilla file (e.g. 00_ / ! prefix), or replace the whole file. Redefining a key in a normal file does NOT override.
+        name = "First In, Only Served"
+    }
+
+    DUPL = {
+        ## Duplicates kept.
+        ## Who wins by default: both entries are kept (additive/merge), which can corrupt the entity.
+        ## How to override vanilla: replace the entire vanilla file (same relative path/filename) rather than add a same-key entry.
+        name = "Duplicates"
+    }
+
+    NO = {
+        ## Cannot be individually overwritten (exact name match only).
+        ## Who wins by default: existing entries cannot be replaced at all.
+        ## How to override vanilla: replace the whole vanilla file. For some (e.g. on_actions) new entries merge with existing ones instead of overwriting.
+        name = "No individual override"
+    }
+
+    MERGE = {
+        ## Auto merge.
+        ## Who wins by default: entries merge into the existing collection.
+        ## How to override vanilla: add new entries; they merge with vanilla. To remove vanilla behaviour, overwrite the whole file.
+        name = "Auto merge"
+    }
+
+    UNKNOWN = {
+        ## Unknown / not explicitly mapped.
+        ## Who wins by default: behaviour is undefined by the active CWT rules.
+        ## How to override vanilla: verify with local examples/diagnostics; do not assume a specific strategy.
+        name = "Unknown"
+    }
+}
