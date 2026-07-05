@@ -143,6 +143,11 @@ scopes = {
 		aliases = { carrier }
 		is_subscope_of = { planet ship colony }
 	}
+	# Polymorphic scope for decisions that can target either a planet or a ship
+	PlanetShip = {
+		aliases = { planet_ship }
+		is_subscope_of = { planet ship }
+	}
 }
 
 scope_groups = {

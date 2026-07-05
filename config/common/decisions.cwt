@@ -12,7 +12,7 @@ types = {
 	}
 }
 
-## replace_scope = { this = planet root = planet from = country }
+## replace_scope = { this = planet_ship root = planet_ship from = country }
 decision = {
 	## cardinality = 0..1
 	owned_planets_only = bool
