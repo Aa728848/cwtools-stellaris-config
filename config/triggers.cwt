@@ -666,6 +666,7 @@ alias[trigger:distance] = {
 	## cardinality = 0..1
 	###Must use <= or will create error log entry
 	max_distance = value_field
+	## cardinality = 0..1
 	###Must use >= or will create error log entry
 	min_distance = value_field
 	## cardinality = 0..1

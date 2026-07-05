@@ -68,6 +68,7 @@ enums = {
 		defenders
 	}
 	enum[scope_type_tokens] = {
+		colony
 		agreement
 		alliance
 		ambient_object

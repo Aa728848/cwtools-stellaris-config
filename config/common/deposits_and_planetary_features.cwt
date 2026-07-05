@@ -119,6 +119,10 @@ deposit = {
 	## cardinality = 0..1
 	## replace_scope = { this = planet root = planet }
 	planet_modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
