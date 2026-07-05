@@ -385,7 +385,7 @@ civic_or_origin = {
 			## cardinality = 1..inf
 			<solar_system_initializer>
 		}
-		max_once_global = yes
+		max_once_global = bool
 		## cardinality = 0..1
 		flags = {
 			## cardinality = 0..inf

@@ -40,9 +40,9 @@ types = {
 
 federation_law_category = {
 	## cardinality = 0..1
-	show_succession_date = yes
+	show_succession_date = bool
 	## cardinality = 0..1
-	centralization = yes
+	centralization = bool
 	laws = {
 		## cardinality = 1..inf
 		<federation_law>

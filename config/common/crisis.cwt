@@ -60,7 +60,7 @@ crisis_objective = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
-	recurring = yes
+	recurring = bool
 }
 
 menace_perk = {

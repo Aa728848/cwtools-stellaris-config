@@ -61,10 +61,10 @@ diplo_phrase = {
 				}
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_trade = yes
+				only_for_trade = bool
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_gift = yes
+				only_for_gift = bool
 			}
 		}
 	}
@@ -81,10 +81,10 @@ diplo_phrase = {
 				}
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_trade = yes
+				only_for_trade = bool
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_gift = yes
+				only_for_gift = bool
 			}
 		}
 	}
@@ -104,10 +104,10 @@ diplo_phrase = {
 				}
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_trade = yes
+				only_for_trade = bool
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_gift = yes
+				only_for_gift = bool
 			}
 		}
 	}
@@ -126,10 +126,10 @@ diplo_phrase = {
 				}
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_trade = yes
+				only_for_trade = bool
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_gift = yes
+				only_for_gift = bool
 			}
 		}
 	}
@@ -148,10 +148,10 @@ diplo_phrase = {
 				}
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_trade = yes
+				only_for_trade = bool
 				## cardinality = 0..1
 				###Only with action_offer_trade_deal
-				only_for_gift = yes
+				only_for_gift = bool
 			}
 		}
 	}

@@ -204,7 +204,7 @@ planet_class = {
 		ideal = bool
 
 		## cardinality = 0..1
-		initial = yes
+		initial = bool
 		## cardinality = 0..1
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
@@ -229,9 +229,9 @@ planet_class = {
 	show_health_bar_in_planet_view = bool
 
 	## cardinality = 0..1
-	starting_planet = no
+	starting_planet = bool
 	## cardinality = 0..1
-	show_city = no
+	show_city = bool
 	## cardinality = 0..1
 	default_planet_selection = bool
 	## cardinality = 0..1
@@ -239,11 +239,11 @@ planet_class = {
 	## cardinality = 0..1
 	planet_custom_label_offset = float
 	## cardinality = 0..1
-	astral_rift_gfx = yes
+	astral_rift_gfx = bool
 	## cardinality = 0..1
-	astral_scar = yes
+	astral_scar = bool
 	## cardinality = 0..1
-	ideal = yes
+	ideal = bool
 }
 
 planet_class_random_list = {

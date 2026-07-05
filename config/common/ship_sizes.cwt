@@ -225,7 +225,7 @@ ship_size = {
 	is_civilian = bool
 	## cardinality = 0..1
 	###hides the cloaking button
-	cloaking_forbidden = yes
+	cloaking_forbidden = bool
 	## cardinality = 0..1
 	build_block_radius = int
 	## cardinality = 0..1
@@ -397,7 +397,7 @@ ship_size = {
 	combat_disengage_chance = float
 	## cardinality = 0..1
 	###if yes, ship design will have a 3d view in the ship browser
-	enable_3dview_in_ship_browser = yes
+	enable_3dview_in_ship_browser = bool
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	potential_country = {

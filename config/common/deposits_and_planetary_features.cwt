@@ -80,7 +80,7 @@ deposit = {
 		use_weights_for_blocker_swap_types = bool
 
 		## cardinality = 0..1
-		all_blocker_swap_types = yes
+		all_blocker_swap_types = bool
 
 		## cardinality = 0..1
 		prerequisites = single_alias_right[technology_prerequisite]
@@ -167,7 +167,7 @@ deposit = {
 
 deposit_category = {
 	## cardinality = 0..1
-	blocker = yes
+	blocker = bool
 	## cardinality = 0..1
-	important = yes
+	important = bool
 }

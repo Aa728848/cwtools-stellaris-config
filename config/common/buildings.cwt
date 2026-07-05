@@ -280,8 +280,12 @@ building = {
 	}
 
 	## cardinality = 0..inf
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	
@@ -309,18 +313,30 @@ building = {
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	country_modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
 	## cardinality = 0..1
 	## replace_scope = { this = army root = army }
 	army_modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	
 	## cardinality = 0..1
 	## replace_scope = { this = system root = system }
 	system_modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 

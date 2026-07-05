@@ -116,13 +116,13 @@ special_project = {
 		defense_armies = int
 
 		## cardinality = 0..1
-		research_station = yes
+		research_station = bool
 
 		## cardinality = 0..1
-		mining_station = yes
+		mining_station = bool
 
 		## cardinality = 0..1
-		observation_station = yes
+		observation_station = bool
 
 		## cardinality = 0..1
 		skill = int

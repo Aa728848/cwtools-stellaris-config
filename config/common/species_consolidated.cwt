@@ -375,15 +375,15 @@ citizenship_type = {
 	}
 
 	## cardinality = 0..1
-	is_full_citizenship = yes
+	is_full_citizenship = bool
 	## cardinality = 0..1
-	is_assimilation = yes
+	is_assimilation = bool
 	## cardinality = 0..1
-	is_slavery = yes
+	is_slavery = bool
 	## cardinality = 0..1
-	is_robot_servant = yes
+	is_robot_servant = bool
 	## cardinality = 0..1
-	is_purge = yes
+	is_purge = bool
 	## cardinality = 0..1
 	new_pop_weight = float
 
@@ -819,7 +819,7 @@ slavery_type = {
 
 	## cardinality = 0..1
 	### otherwise, AI will not colonise with enslaved species
-	ai_can_colonize = yes
+	ai_can_colonize = bool
 	
 	## cardinality = 0..1
 	## replace_scope = { this = army root = army }

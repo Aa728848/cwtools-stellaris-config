@@ -535,7 +535,7 @@ alias[gui_button:buttonType] = {
 	  y = int
 	}
 	## cardinality = 0..inf
-	centerPosition = yes
+	centerPosition = bool
 	## cardinality = 0..inf
 	dynamic_extra_height = float
 	

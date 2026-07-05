@@ -604,7 +604,7 @@ starbase_type = {
 	###Set it so that the AI will build defense platforms (note: it will always build them in the capital system). Default: no
 	ai_use_defense_platforms = bool
 	## cardinality = 0..1
-	is_waystation = yes
+	is_waystation = bool
 	## cardinality = 0..1
 	ai_design = {
 		#one of these is required

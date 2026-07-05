@@ -128,7 +128,7 @@ situation_type = {
 		###Sets the Approach to be the Situation's default. This means that it will be picked when the Situation starts, and if the current
 		###Approach is invalidated (fails potential or allow check). This won't happen while the Situation is locked, so events which demand
 		###a choice of Approach can lock the situation (set_situation_locked) in immediate (or the Situation's on_start) and unlock them in after.
-		default = yes
+		default = bool
 		## cardinality = 0..1
 		###If this fails, the Approach is greyed out
 		allow = {
