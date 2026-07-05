@@ -665,6 +665,11 @@ alias[trigger:distance] = {
 	min_distance = int
 	## cardinality = 0..1
 	###Must use <= or will create error log entry
+	max_distance = value_field
+	###Must use >= or will create error log entry
+	min_distance = value_field
+	## cardinality = 0..1
+	###Must use <= or will create error log entry
 	max_distance = int
 	## cardinality = 0..1
 	###Euclidean means the shortest distance from A to B, "as the crow flies" (hyperlane by default)
