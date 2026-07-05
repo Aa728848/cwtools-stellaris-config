@@ -3231,6 +3231,8 @@ alias[effect:set_planet_entity] = {
 	## type_prefix_from = graphical_culture
 	entity = <model_entity>
 	## cardinality = 0..1
+	entity = <planet_class>
+	## cardinality = 0..1
 	entity = ""
 	## cardinality = 0..1
 	graphical_culture = <graphical_culture>
@@ -5394,7 +5396,12 @@ alias[effect:complete_deed] = <patrons_deeds>
 ###Accepts covenant proposition with Shroud Patron.
 alias[effect:accept_covenant] = <patrons>
 ###Refuses covenant proposition with Shroud Patron.
-alias[effect:refuse_covenant] = <patrons>
+alias[effect:refuse_covenant] = {
+	## cardinality = 0..1
+	patron = <patrons>
+	## cardinality = 0..1
+	reset_attunement = bool
+}
 ###Increments (or decrements with negative values) a patron objective counter for the scoped country by a specific amount. Can multiply the attunement given by the patron objective (if it's a deed).
 alias[effect:add_patron_objective_counter] = {
 	counter = enum[patrons_deeds_po]
