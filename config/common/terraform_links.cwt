@@ -11,14 +11,10 @@ terraform_link = {
 	
 	# for inline script
 	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = planet }
 	on_queued = {
 		## cardinality = 0..inf
-		if = {
-			limit = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			alias_name[effect] = alias_match_left[effect]
-		}
+		alias_name[effect] = alias_match_left[effect]
 	}
 	
 	# for inline script

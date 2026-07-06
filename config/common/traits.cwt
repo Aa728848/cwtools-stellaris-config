@@ -105,6 +105,12 @@ trait = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
+		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..inf
 		mult = value[variable]
@@ -128,6 +134,12 @@ trait = {
 		## cardinality = 0..1
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
 		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..inf
@@ -153,6 +165,12 @@ trait = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
+		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..inf
 		mult = value[variable]
@@ -177,6 +195,12 @@ trait = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
+		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..inf
 		mult = value[variable]
@@ -200,6 +224,12 @@ trait = {
 		## cardinality = 0..1
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..1
+			custom_tooltip = localisation
 		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..inf
@@ -609,6 +639,12 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
 			mult = value[variable]
@@ -642,6 +678,12 @@ trait = {
 			## cardinality = 0..1
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
 			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
@@ -677,6 +719,12 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
 			mult = value[variable]
@@ -710,6 +758,12 @@ trait = {
 			## cardinality = 0..1
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
 			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
@@ -745,6 +799,12 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
 			mult = value[variable]
@@ -779,6 +839,12 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
 			mult = value[variable]
@@ -808,6 +874,12 @@ trait = {
 			## cardinality = 0..1
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
 			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
@@ -839,6 +911,12 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
 			mult = value[variable]
@@ -868,6 +946,12 @@ trait = {
 			## cardinality = 0..1
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
 			}
 			alias_name[modifier] = alias_match_left[modifier]
 			## cardinality = 0..inf
