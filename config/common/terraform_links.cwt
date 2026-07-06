@@ -11,7 +11,7 @@ terraform_link = {
 	
 	# for inline script
 	## cardinality = 0..1
-	## replace_scope = { this = country root = country from = planet }
+	## replace_scope = { this = planet root = planet from = country }
 	on_queued = {
 		## cardinality = 0..inf
 		alias_name[effect] = alias_match_left[effect]
@@ -19,14 +19,10 @@ terraform_link = {
 	
 	# for inline script
 	## cardinality = 0..1
+	## replace_scope = { this = planet root = planet from = country }
 	on_unqueued = {
 		## cardinality = 0..inf
-		if = {
-			limit = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			alias_name[effect] = alias_match_left[effect]
-		}
+		alias_name[effect] = alias_match_left[effect]
 	}
 	
 	resources = {
