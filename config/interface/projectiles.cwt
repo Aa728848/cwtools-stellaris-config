@@ -121,19 +121,23 @@ planet_killer_animation = {
 		duration = float
 		## cardinality = 0..1
 		width = {
-			## cardinality = 2..8
+			## cardinality = 0..inf
 			float 
 		}
 		## cardinality = 0..1
+		texture_scroll_speed = float
+		## cardinality = 0..1
+		texture_tiling = float
+		## cardinality = 0..1
 		texture_scroll_speed = {
-			## cardinality = 2..6
+			## cardinality = 0..inf
 			float
 		}
 		## cardinality = 0..1
 		texture_tiling = float
 		## cardinality = 0..1
 		alpha = {
-			## cardinality = 2..10
+			## cardinality = 0..inf
 			float
 		}
 	}
@@ -153,10 +157,16 @@ planet_killer_animation = {
 			## cardinality = 0..inf
 			float
  		}
+		## cardinality = 0..1
+		texture_scroll_speed = float
+		## cardinality = 0..1
+		texture_tiling = float
+		## cardinality = 0..1
  		texture_scroll_speed = {
 			## cardinality = 0..inf
 			float
  		}
+		## cardinality = 0..1
 		texture_tiling = {
 			## cardinality = 0..inf
 			float 
@@ -172,10 +182,16 @@ planet_killer_animation = {
 			## cardinality = 0..inf
 			float
 		}
+		## cardinality = 0..1
+		texture_scroll_speed = float
+		## cardinality = 0..1
+		texture_tiling = float
+		## cardinality = 0..1
 		texture_scroll_speed = {
 			## cardinality = 0..inf
 			float
 		}
+		## cardinality = 0..1
 		texture_tiling = {
 			## cardinality = 0..inf
 			float 
@@ -191,10 +207,16 @@ planet_killer_animation = {
 			## cardinality = 0..inf
 			float
 		}
+		## cardinality = 0..1
+		texture_scroll_speed = float
+		## cardinality = 0..1
+		texture_tiling = float
+		## cardinality = 0..1
 		texture_scroll_speed = {
 			## cardinality = 0..inf
 			float
 		}
+		## cardinality = 0..1
 		texture_tiling = {
 			## cardinality = 0..inf
 			float 

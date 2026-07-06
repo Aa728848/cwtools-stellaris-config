@@ -114,6 +114,14 @@ zones = {
 		## cardinality = 0..inf
 		<building>
 	}
+
+	## cardinality = 0..1
+	exclude = {
+		## cardinality = 0..1
+		all
+		## cardinality = 0..inf
+		<building>
+	}
 	
 	## cardinality = 0..inf
 	## severity = warning
