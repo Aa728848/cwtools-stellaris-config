@@ -76,6 +76,7 @@ enums = {
 		army
 		astral_rift
 		background_planet
+		background_colony
 		bypass
 		cosmic_storm
 		country
@@ -115,6 +116,13 @@ enums = {
 		storms
 		trait
 		war
+	}
+	enum[automation_settings] = {
+		unsurveyed_targets
+		empty_targets
+		waystation_systems
+		hostile_systems
+		rescanning
 	}
 	enum[intel_level] = {
 		none

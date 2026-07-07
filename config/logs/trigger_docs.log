@@ -369,7 +369,7 @@ has_access_fleet - Checks if the target country is allowed to enter the system
 has_access_fleet = <target>
 Supported Scopes: galactic_object
 
-is_point_of_interest - Checks if the planet/country/ship/system/ambient object has a specific point of interest for a specific event chain for a specific country
+is_point_of_interest - Checks if the planet/country/ship/system/ambient object has a point of interest for a country. id and event_chain are optional; when omitted, matches any point of interest located at the scope for the owner.
 is_point_of_interest = { id = <id> event_chain = <event_chain> owner = <target> }
 Supported Scopes: planet country ship galactic_object ambient_object
 
@@ -1088,6 +1088,10 @@ num_owned_colonies - Checks the country's or sector's number of owned colonies (
 num_owned_colonies < 8
 Supported Scopes: country sector
 
+has_automation_setting - Checks whether the given automation setting is active for this fleet. Only valid during automated target selection (an action's ai.weight or possible block); the active-setting set is transient and empty everywhere else, so this returns false in events and other contexts.
+has_automation_setting = waystation_systems
+Supported Scopes: fleet
+
 num_owned_planets - Checks the country's or sector's number of owned colonies (includes both planet and ship colonies)
 num_owned_planets < 8
 Supported Scopes: country sector
@@ -1582,6 +1586,10 @@ Supported Scopes: country
 
 situation_progress - Checks if the scoped situation's progress is a certain value.
 situation_progress > 15
+Supported Scopes: situation
+
+situation_progress_percent - Checks the scoped situation's progress as a percentage (0-100) of its completion value, so it stays correct when the progress bar is rescaled.
+situation_progress_percent >= 33
 Supported Scopes: situation
 
 situation_monthly_progress - Checks if the scoped situation's monthly progress is a certain value. Returns the cached value from the last monthly tick.
@@ -3659,10 +3667,6 @@ hostile_military_power - Returns the hostile military power in the system (galac
 optionally multiplied by ENEMY_FLEET_POWER_MULT as a safety buffer.
 hostile_military_power = { who = root safety_buffer = yes value > 5000 }
 Supported Scopes: galactic_object
-
-num_owned_colonies - Checks the country's or sector's number of owned colonies (includes both planet and ship colonies)
-num_owned_colonies < 8
-Supported Scopes: country sector
 
 any_agreement - Iterate through each agreement - checks whether the enclosed triggers return true for any of them
 any_agreement = { <triggers> }

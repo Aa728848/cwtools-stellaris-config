@@ -1545,14 +1545,40 @@ scripted_action = {
 	on_cancelled = <on_action>
 
 	## cardinality = 0..1
-	also_automate = {
-		## cardinality = 1..inf
-		<scripted_action>
+	automation = {
+		## cardinality = 0..1
+		priority = int
+		## cardinality = 0..1
+		default_on = bool
+
+		## cardinality = 0..1
+		parent = <scripted_action>
+
+		## cardinality = 0..1
+		also_automate = {
+			## cardinality = 1..inf
+			<scripted_action>
+		}
+
+		## cardinality = 0..1
+		options = {
+			## cardinality = 1..inf
+			option = {
+				## cardinality = 0..1
+				automation_setting = enum[automation_settings]
+				## cardinality = 0..1
+				default = bool
+				## cardinality = 0..1
+				name = localisation
+				## cardinality = 0..1
+				tooltip = localisation
+				## cardinality = 0..1
+				ai_weight = {
+					alias_name[modifier_rule] = alias_match_left[modifier_rule]
+				}
+			}
+		}
 	}
-	## cardinality = 0..1
-	automation_priority = int
-	## cardinality = 0..1
-	automation_default_on = bool
 
 	## cardinality = 0..1
 	context_menu_name = localisation

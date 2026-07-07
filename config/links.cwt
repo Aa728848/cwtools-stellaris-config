@@ -81,6 +81,10 @@ links = {
 		input_scopes = { Country Species Pop pop_group Leader carrier }
 		output_scope = Planet
 	}
+	home_colony = {
+		input_scopes = { Country Species Pop pop_group Leader carrier }
+		output_scope = Colony
+	}
 	target_system = {
 		input_scopes = { cosmic_storm }
 		output_scope = galactic_object
@@ -338,6 +342,10 @@ links = {
 	background_planet = {
 		input_scopes = { leader carrier }
 		output_scope = planet
+	}
+	background_colony = {
+		input_scopes = { leader carrier }
+		output_scope = colony
 	}
 	astral_rift = {
 		input_scopes = { galactic_object leader carrier }

@@ -1276,16 +1276,13 @@ alias[trigger:is_overlord] = bool
 ### Checks if the country has an overlord attitude towards target country
 alias[trigger:is_overlord_to] = scope_group[target_country]
 
-### Checks if the planet/country/ship/system/ambient object has a specific point of interest for a specific event chain for a specific country
+### Checks if the planet/country/ship/system/ambient object has a point of interest for a country. id and event_chain are optional; when omitted, matches any point of interest located at the scope for the owner.
 alias[trigger:is_point_of_interest] = {
+	## cardinality = 0..1
 	id = value[point_of_interest]
+	## cardinality = 0..1
 	event_chain = <event_chain>
-	owner = scope_group[target_country]
-}
-### Checks if the planet/country/ship/system/ambient object has a specific point of interest for a specific event chain for a specific country
-alias[trigger:is_point_of_interest] = {
-	id = enum[enum_point_of_interest]
-	event_chain = <event_chain>
+	## cardinality = 0..1
 	owner = scope_group[target_country]
 }
 
@@ -2425,6 +2422,9 @@ alias[trigger:is_in_sensor_range_of_country] = scope_group[target_country]
 ###Checks if the scoped situation's progress is a certain value.
 alias[trigger:situation_progress] == value_field
 
+###Checks the scoped situation's progress as a percentage (0-100) of its completion value, so it stays correct when the progress bar is rescaled.
+alias[trigger:situation_progress_percent] == value_field
+
 ###Checks if the scoped situation's monthly progress is a certain value. Returns the cached value from the last monthly tick.
 alias[trigger:situation_monthly_progress] == value_field
 
@@ -3414,6 +3414,10 @@ alias[trigger:num_claims_on_system] == value_field
 ### Checks the country's or sector's number of owned colonies (includes both planet and ship colonies)
 ## supported_scopes = country sector
 alias[trigger:num_owned_colonies] == value_field
+
+### Checks whether the given automation setting is active for this fleet. Only valid during automated target selection (an action's ai.weight or possible block); the active-setting set is transient and empty everywhere else, so this returns false in events and other contexts.
+## supported_scopes = fleet
+alias[trigger:has_automation_setting] == enum[automation_settings]
 
 ### Checks what fraction of the country's storage cap for a resource is currently filled (0.00-1.00).
 ## supported_scopes = country

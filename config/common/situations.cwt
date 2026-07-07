@@ -23,7 +23,6 @@ types = {
 }
 
 # nothing seems to change the scopes in this file but the next line.  Push scope Replace Scope - Nothing!!!!!!  I had to override here to get things to work!!!!!!!
-## replace_scope = { this = any root = any }
 situation_type = {
 	## cardinality = 0..inf
 	picture = <sprite>
@@ -31,6 +30,20 @@ situation_type = {
 	desc = localisation
 	## cardinality = 0..1
 	initial_progress = float
+	## cardinality = 0..1
+	## replace_scope = { root = situation this = situation }
+	total_progress = {
+		## cardinality = 0..1
+		base = int
+		alias_name[modifier_rule_with_loc] = alias_match_left[modifier_rule_with_loc]
+	}
+	## cardinality = 0..1
+	override_finisher_title = localisation
+	## cardinality = 0..1
+	override_finisher_desc = localisation
+	## cardinality = 0..1
+	override_progress_current_desc = localisation
+
 	## cardinality = 0..inf
 	picture = {
 		picture = <sprite>
@@ -51,28 +64,30 @@ situation_type = {
 	}
 	## cardinality = 0..1
 	###Effects when the Situation is created
+	## replace_scope = { root = situation this = situation }
 	on_start = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..1
 	###Effects when Situation's total progress is below 0
 	###You should always call destroy_situation = this from here or from an event fired by here
+	## replace_scope = { root = situation this = situation }
 	on_fail = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..1
 	###Effects when Situation is cancelled via abort_trigger trigger
+	## replace_scope = { root = situation this = situation }
 	on_abort = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..1
 	###Trigger for when a Situation should abort, firing on_abort
+	## replace_scope = { root = situation this = situation }
 	abort_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
-	## replace_scope = { this = country root = country }
-	## push_scope = country
 	###Modifier applying to the country experiencing the situation
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -80,7 +95,6 @@ situation_type = {
 	###Triggered modifier applying to the country experiencing the situation, if the triggers are true
 	alias_name[triggered_modifier_situation] = alias_match_left[triggered_modifier_situation]
 	## cardinality = 0..1
-	## push_scope = planet
 	###Modifier applying to the target planet of a Situation. Does not work on other scope types!
 	target_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -113,8 +127,8 @@ situation_type = {
 	}
 	###Effects when Situation's progress has reached its completion
 	###You should always call destroy_situation = this from here or from an event fired by here
-	## replace_scope = { root = situation this = situation }
 	## cardinality = 0..1
+	## replace_scope = { root = situation this = situation }
 	on_progress_complete = {
 		alias_name[effect] = alias_match_left[effect]
 	}
@@ -140,13 +154,11 @@ situation_type = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		## cardinality = 0..1
-		## push_scope = country
 		modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		alias_name[triggered_modifier_situation] = alias_match_left[triggered_modifier_situation]
 		## cardinality = 0..1
-		## push_scope = planet
 		target_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
@@ -247,13 +259,11 @@ situation_type = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			## cardinality = 0..1
-			## push_scope = country
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 			alias_name[triggered_modifier_situation] = alias_match_left[triggered_modifier_situation]
 			## cardinality = 0..1
-			## push_scope = planet
 			target_modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}

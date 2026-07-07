@@ -11,6 +11,14 @@ background_planet - Scopes from a leader to their background planet.
 Supported Scopes: leader
 Output Scope: planet
 
+background_colony - Scopes from a leader to their background colony.
+Supported Scopes: leader
+Output Scope: colony
+
+home_colony - Scopes to a species' home colony.
+Supported Scopes: country pop_group leader species
+Output Scope: colony
+
 army_leader - Scopes from an object to its army leader, e.g. planet->general
 Supported Scopes: planet
 Output Scope: leader

@@ -102,6 +102,9 @@ scopes = {
 	"Background Planet" = {
         aliases = { "backgroundplanet" "background_planet" }
     }
+    "Background Colony" = {
+        aliases = { "backgroundcolony" "background_colony" }
+    }
 	"Astral Rift" = {
 		aliases = { "astral_rift" }
 	}

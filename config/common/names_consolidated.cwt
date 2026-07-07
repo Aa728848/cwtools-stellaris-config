@@ -392,6 +392,8 @@ species_name = {
 		## cardinality = 0..1
 		### Name of the home planet, if this entry is used when generating random playable empire on game start, e. g. Earth
 		home_planet = localisation
+		### Name of the home colony, if this entry is used when generating random playable empire on game start, e. g. Earth
+		home_colony = localisation
 		## cardinality = 0..1
 		### Name of the home system, if this entry is used when generating random playable empire on game start, e. g. Sol
 		home_system = localisation

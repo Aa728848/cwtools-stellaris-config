@@ -2782,6 +2782,8 @@ Printing Modifier Definitions:
 - AIANOM_MININGDEPO_CAT_research_speed_mult, Category: Leaders
 - AIANOM_RESEARCHDEPO_CAT_research_speed_mult, Category: Leaders
 - AIANOM_CLUE_CAT_research_speed_mult, Category: Leaders
+- situation_nomad_economy_max_progress_add, Category: Countries
+- situation_nomad_economy_max_progress_mult, Category: Countries
 - operation_gather_information_speed_mult, Category: Espionage
 - operation_gather_information_difficulty_add, Category: Espionage
 - operation_gather_information_difficulty_mult, Category: Espionage
@@ -3082,6 +3084,7 @@ Printing Modifier Definitions:
 - robotic_pop_bonus_workforce_mult, Category: Colony
 - cyborg_pop_bonus_workforce_mult, Category: Colony
 - organic_pop_bonus_workforce_mult, Category: Colony
+- lithoid_pop_bonus_workforce_mult, Category: Colony
 - experimental_testing_test_subjects_death, Category: Countries
 - cycle_positive_effects_bonus_mult, Category: Countries
 - cycle_negative_effects_bonus_mult, Category: Countries
@@ -3115,7 +3118,7 @@ Printing Modifier Definitions:
 - unlicensed_waystations_scaling_mult, Category: Countries
 - nomadic_constructor_limit_add, Category: Countries
 - nomadic_contract_value_mult, Category: Countries
-- arkship_action_speed, Category: Countries
+- arkship_action_speed, Category: Ships
 - ship_speed_from_technicians, Category: Ships
 - ship_shield_from_technicians, Category: Ships
 - ship_shield_regen_from_technicians, Category: Ships

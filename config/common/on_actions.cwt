@@ -983,6 +983,19 @@ types = {
 		subtype[on_waystation_built] = { }
 		## type_key_filter = on_waystation_lost
 		subtype[on_waystation_lost] = { }
+
+		## type_key_filter = on_arkship_voidlure_crystalline_entity
+		subtype[on_arkship_voidlure_crystalline_entity] = { }
+		## type_key_filter = on_arkship_voidlure_cutholoid
+		subtype[on_arkship_voidlure_cutholoid] = { }
+		## type_key_filter = on_arkship_voidlure_generic
+		subtype[on_arkship_voidlure_generic] = { }
+		## type_key_filter = on_arkship_voidlure_space_amoeba
+		subtype[on_arkship_voidlure_space_amoeba] = { }
+		## type_key_filter = on_arkship_voidlure_tiyanki
+		subtype[on_arkship_voidlure_tiyanki] = { }
+		## type_key_filter = on_arkship_voidlure_voidworm
+		subtype[on_arkship_voidlure_voidworm] = { }
 	}
 }
 
