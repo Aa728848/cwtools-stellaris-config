@@ -309,6 +309,7 @@ Printing Modifier Definitions:
 - starbase_defense_platform_capacity_add, Category: Starbases
 - starbase_defense_platform_capacity_mult, Category: Starbases
 - starbase_stockpile_capacity_add, Category: Waystations
+- starbase_collected_colony_resources_add, Category: Waystations
 - starbase_stockpile_capacity_mult, Category: Waystations
 - starbase_collected_system_resources_mult, Category: Starbases, Waystations
 - ship_starbase_stockpile_collection_rate_add, Category: Ships

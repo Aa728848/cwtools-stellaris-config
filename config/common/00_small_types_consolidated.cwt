@@ -1550,6 +1550,8 @@ scripted_action = {
 		priority = int
 		## cardinality = 0..1
 		default_on = bool
+		## cardinality = 0..1
+		tooltip = localisation
 
 		## cardinality = 0..1
 		parent = <scripted_action>

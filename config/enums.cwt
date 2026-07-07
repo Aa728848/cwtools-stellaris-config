@@ -122,6 +122,8 @@ enums = {
 		empty_targets
 		waystation_systems
 		hostile_systems
+		friendly_systems
+		hostile_systems
 		rescanning
 	}
 	enum[intel_level] = {

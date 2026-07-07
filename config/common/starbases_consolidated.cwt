@@ -352,6 +352,41 @@ starbase_module = {
 	remote_network_resource_collection = bool
 	## cardinality = 0..1
 	custom_tooltip_with_modifiers = localisation
+
+	## cardinality = 0..1
+	scripted_effect_cooldown = int
+	## cardinality = 0..1
+	scripted_effect_cooldown_flag = value_set[starbase_flag]
+	## cardinality = 0..inf
+	scripted_effect_cooldown_flag_desc = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		text = localisation
+	}
+
+	## cardinality = 0..inf
+	name = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		text = localisation
+	}
+
+	## cardinality = 0..inf
+	icon = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		icon = <sprite>
+	}
+
 	## cardinality = 0..1
 	cannot_fit_on_slots = {
 		## cardinality = 1..inf

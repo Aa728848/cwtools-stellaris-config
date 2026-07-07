@@ -1,7 +1,7 @@
 localisation_commands = {
-    GetAdj = { country fleet galactic_object planet carrier species system }
+    GetAdj = { country fleet galactic_object planet colony carrier species system }
     GetAdjective = country
-	GetAdjPersistent = { country planet carrier system fleet species }
+	GetAdjPersistent = { country planet colony carrier system fleet species }
 	GetAdjectivePersistent = country
     GetAllianceName = country
 	GetAllianceNamePersistent = country
@@ -14,7 +14,7 @@ localisation_commands = {
 	GetGovernmentName = country
     GetNamePlural = { country species }
     GetName = any
-	GetNamePersistent = { country planet carrier ship starbase system fleet leader army species pop_faction sector  }
+	GetNamePersistent = { country planet colony carrier ship starbase system fleet leader army species pop_faction sector  }
     GetRealName = country
     GetRandomSpeciesSound = { country species }
     GetRegnalName = leader
@@ -50,9 +50,9 @@ localisation_commands = {
 	GetSpeciesRemnantNamePlural = country
     GetSpeciesSpawnName = country
     GetSpeciesSpawnNamePlural = country
-    GetNebula = { planet carrier ship starbase galactic_object ambient_object system }
-    GetStarName = { planet carrier ship starbase fleet ambient_object }
-	GetStarNamePersistent = { planet carrier ship starbase fleet ambient_object }
+    GetNebula = { planet carrier colony ship starbase galactic_object ambient_object system }
+    GetStarName = { planet carrier colony ship starbase fleet ambient_object }
+	GetStarNamePersistent = { planet colony carrier ship starbase fleet ambient_object }
     GetHerHim = leader
     GetSheHe = leader
     GetSheHeCap = leader
@@ -75,9 +75,11 @@ localisation_commands = {
 	MainDefender = war
     MainAttacker = war
     GetOwnerName = planet
+    GetOwnerName = Colony
     GetControllerName = planet
+    GetControllerName = Colony
     GetAttitudeColor = country   
-    GetClassName = { planet carrier galactic_object system }
+    GetClassName = { planet colony carrier galactic_object system }
     GetClassAdj = planet
     GetLastLostRelic = country
     GetLastReceivedRelic = country
@@ -166,9 +168,13 @@ localisation_links = {
         input_scopes = { pop_group pop army archaeological_site deposit megastructure }
         output_scope = planet
     }
+    Colony = {
+        input_scopes = { pop_group pop army archaeological_site deposit megastructure }
+        output_scope = Colony
+    }
     Capital = {
         input_scopes = { country sector }
-        output_scope = planet
+        output_scope = Colony
     }
     MoonOf = {
         input_scopes = { planet carrier }
@@ -191,11 +197,11 @@ localisation_links = {
         output_scope = system
     }
     System = {
-        input_scopes = { planet carrier fleet first_contact megastructure astral_rift bypass }
+        input_scopes = { planet colony carrier fleet first_contact megastructure astral_rift bypass }
         output_scope = system
     }
     Owner = {
-        input_scopes = { planet carrier ship starbase system fleet leader army pop_faction first_contact  espionage_operation spy_network megastructure sector agreement situation }
+        input_scopes = { planet colony carrier ship starbase system fleet leader army pop_faction first_contact  espionage_operation spy_network megastructure sector agreement situation }
         output_scope = country
     }
     ContactCountry = {
@@ -227,7 +233,7 @@ localisation_links = {
         output_scope = pop_faction
     }
     Sector = {
-        input_scopes = { planet carrier system }
+        input_scopes = { planet colony carrier system }
         output_scope = sector
     }
     MainDefender = {
@@ -261,7 +267,7 @@ localisation_links = {
         input_scopes = { espionage_operation spy_network agreement situation }
         output_scope = country #any, but good enough
     }
-	Job = { pop_job planet carrier leader country }
+	Job = { pop_job planet colony carrier leader country }
 }
 
 alias[name:name] = localisation
