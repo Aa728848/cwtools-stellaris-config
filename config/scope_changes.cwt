@@ -5947,7 +5947,7 @@ alias[effect:ordered_starbase_in_system] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -5962,7 +5962,7 @@ alias[effect:ordered_starbase_in_system] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-##  push_scope =  starbase
+## push_scope = starbase
 ###Iterate through every starbase in the scoped galactic object. - executes the enclosed effects on all of them for which the limit triggers return true
 alias[effect:every_starbase_in_system] = {
 	##cardinality = 0..1
@@ -5970,7 +5970,7 @@ alias[effect:every_starbase_in_system] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-##  push_scope =  trait
+## push_scope = trait
 ###Iterate through all existing species traits in the game - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 alias[effect:random_existing_species_traits] = {
 	##cardinality = 0..1
@@ -5984,7 +5984,7 @@ alias[effect:random_existing_species_traits] = {
 	}
 }
 
-##  push_scope =  trait
+## push_scope = trait
 ### Iterate through all existing species traits in the game - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = 
 alias[effect:ordered_existing_species_traits] = {
 	position = int[0..inf]
@@ -5992,7 +5992,7 @@ alias[effect:ordered_existing_species_traits] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -6037,7 +6037,7 @@ alias[effect:ordered_trait_of_species] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -6082,7 +6082,7 @@ alias[effect:ordered_trait_available_for_species] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -6217,7 +6217,7 @@ alias[effect:ordered_job_pop_group] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
@@ -6262,7 +6262,7 @@ alias[effect:ordered_system_with_aura] = {
 	order_by = value_field
 	##cardinality = 0..1
 	order_by = value[variable]
-		##cardinality = 0..1
+	##cardinality = 0..1
 	order_by = trigger:<trigger>
 	##cardinality = 0..1
 	order_by = enum[order_by]
