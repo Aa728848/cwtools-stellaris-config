@@ -3344,7 +3344,6 @@ alias[trigger:galaxy_radius] == value_field
 alias[trigger:has_carrier_flag] = value[carrier_flag]
 alias[trigger:has_carrier_flag] = value[planet_flag]
 alias[trigger:has_carrier_flag] = value[ship_flag]
-alias[trigger:has_carrier_flag] = value[situation_flag]
 
 ### Checks if the job or the pop group has the one of the civilian pop categories
 ## supported_scopes = pop pop_group

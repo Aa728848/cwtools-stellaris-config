@@ -141,10 +141,10 @@ scopes = {
 	Mission = {
 		aliases = { mission }
 	}
-	# Colony carrier: polymorphic scope used by carrier_event (a carrier is a planet, ship, or colony)
+	# Physical colony host used by carrier_event. At runtime this is a planet or
+	# ship; colony is only an accepted forwarding entry for carrier-aware commands.
 	Carrier = {
 		aliases = { carrier }
-		is_subscope_of = { planet ship colony }
 	}
 	# Polymorphic scope for decisions that can target either a planet or a ship
 	PlanetShip = {
