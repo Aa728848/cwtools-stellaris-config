@@ -151,6 +151,24 @@ scopes = {
 		aliases = { planet_ship }
 		is_subscope_of = { planet ship }
 	}
+	# Union scopes used by engine contracts whose entry position accepts more
+	# than one otherwise unrelated scope type.
+	"Planet or Astral Rift" = {
+		aliases = { planet_astral_rift }
+		is_subscope_of = { planet astral_rift }
+	}
+	"Repairable Orbital" = {
+		aliases = { repairable_orbital }
+		is_subscope_of = { planet starbase megastructure }
+	}
+	"Orbital Location" = {
+		aliases = { orbital_location }
+		is_subscope_of = { planet starbase megastructure astral_rift }
+	}
+	"Planet or Fleet" = {
+		aliases = { planet_fleet }
+		is_subscope_of = { planet fleet }
+	}
 }
 
 scope_groups = {

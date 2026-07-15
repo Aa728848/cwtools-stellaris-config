@@ -48,11 +48,11 @@ types = {
 		subtype[can_generate_army_from_species] = {
 		}
 		## type_key_filter = can_modify_species
-		## replace_scope = { this = country root = species }
+		## replace_scope = { this = species root = country }
 		subtype[can_modify_species] = {
 		}
 		## type_key_filter = subject_can_expand
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = country root = country from = system }
 		subtype[subject_can_expand] = {
 		}
 		## type_key_filter = can_take_hostile_actions
@@ -80,15 +80,15 @@ types = {
 		subtype[can_colonize_with_species] = {
 		}
 		## type_key_filter = species_has_happiness
-		## replace_scope = { this = species root = species from = country }
+		## replace_scope = { this = species root = pop_group from = country }
 		subtype[species_has_happiness] = {
 		}
 		## type_key_filter = can_species_procreate
-		## replace_scope = { this = species root = planet }
+		## replace_scope = { this = species root = colony }
 		subtype[can_species_procreate] = {
 		}
 		## type_key_filter = can_species_be_assembled
-		## replace_scope = { this = species root = planet }
+		## replace_scope = { this = species root = colony }
 		subtype[can_species_be_assembled] = {
 		}
 		## type_key_filter = can_orbital_bombard
@@ -104,7 +104,7 @@ types = {
 		subtype[has_full_sensor_range] = {
 		}
 		## type_key_filter = show_notification_for_ground_combat
-		## replace_scope = { this = planet root = country from = country }
+		## replace_scope = { this = colony root = country from = country }
 		subtype[show_notification_for_ground_combat] = {
 		}
 		## type_key_filter = should_apply_neighbor_rival_modifier
@@ -128,7 +128,7 @@ types = {
 		subtype[is_extradimensional_anchor] = {
 		}
 		## type_key_filter = will_anger_fallen_empire
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = planet root = country }
 		subtype[will_anger_fallen_empire] = {
 		}
 		## type_key_filter = can_have_robot_pops
@@ -172,15 +172,15 @@ types = {
 		subtype[can_country_resettle] = {
 		}
 		## type_key_filter = should_spawn_deposits
-		## replace_scope = { this = planet }
+		## replace_scope = { this = carrier }
 		subtype[should_spawn_deposits] = {
 		}
 		## type_key_filter = is_new_colony
-		## replace_scope = { this = planet }
+		## replace_scope = { this = colony }
 		subtype[is_new_colony] = {
 		}
 		## type_key_filter = should_force_decline_species
-		## replace_scope = { this = species root = species from = planet }
+		## replace_scope = { this = species from = colony }
 		subtype[should_force_decline_species] = {
 		}
 		## type_key_filter = can_build_branch_offices
@@ -252,7 +252,7 @@ types = {
 		subtype[can_remove_positive_traits_organic] = {
 		}
 		## type_key_filter = can_modify_organic_portraits
-		## replace_scope = { this = country }
+		## replace_scope = { this = country root = country }
 		subtype[can_modify_organic_portraits] = {
 		}
 		## type_key_filter = can_have_first_contact
@@ -268,19 +268,19 @@ types = {
 		subtype[can_use_envoys_to_lower_imperial_authority] = {
 		}
 		## type_key_filter = can_fill_drone_job
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = pop root = pop }
 		subtype[can_fill_drone_job] = {
 		}
 		## type_key_filter = can_fill_worker_job
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = pop root = pop }
 		subtype[can_fill_worker_job] = {
 		}
 		## type_key_filter = can_fill_specialist_job
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = pop root = pop }
 		subtype[can_fill_specialist_job] = {
 		}
 		## type_key_filter = can_fill_ruler_job
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = pop root = pop }
 		subtype[can_fill_ruler_job] = {
 		}
 		## type_key_filter = dismiss_leader_cost
@@ -300,7 +300,7 @@ types = {
 		subtype[should_count_towards_leader_cap] = {
 		}
 		## type_key_filter = can_country_connect_to_relay_network
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = country root = country from = country }
 		subtype[can_country_connect_to_relay_network] = {
 		}
 		## type_key_filter = will_leader_retire
@@ -356,27 +356,27 @@ types = {
 		subtype[has_ascension_for_terraforming_candidate] = {
 		}
 		## type_key_filter = can_be_renamed_by
-		## replace_scope = { this = country root = country from = planet }
+		## replace_scope = { this = country root = country from = colony }
 		subtype[can_be_renamed_by] = {
 		}
 		## type_key_filter = can_build_station_around
-		## replace_scope = { this = country from = planet root = country }
+		## replace_scope = { this = country root = country from = planet_astral_rift }
 		subtype[can_build_station_around] = {
 		}
 		## type_key_filter = can_build_mining_station_around
-		## replace_scope = { this = country from = planet root = country }
+		## replace_scope = { this = country root = country from = planet_astral_rift }
 		subtype[can_build_mining_station_around] = {
 		}
 		## type_key_filter = can_build_research_station_around
-		## replace_scope = { this = country from = planet root = country }
+		## replace_scope = { this = country root = country from = planet_astral_rift }
 		subtype[can_build_research_station_around] = {
 		}
 		## type_key_filter = can_build_observation_station_around
-		## replace_scope = { this = country from = planet root = country }
+		## replace_scope = { this = country root = country from = planet_astral_rift }
 		subtype[can_build_observation_station_around] = {
 		}
 		## type_key_filter = can_build_starbase_around
-		## replace_scope = { this = country from = planet root = country }
+		## replace_scope = { this = country root = country from = planet_astral_rift }
 		subtype[can_build_starbase_around] = {
 		}
 
@@ -414,9 +414,11 @@ types = {
 		subtype[benefits_from_waystation_network] = {
 		}
 		## type_key_filter = building_automation_civilians_threshold
+		## replace_scope = { this = colony }
 		subtype[building_automation_civilians_threshold] = {
 		}
 		## type_key_filter = building_automation_unemployment_threshold
+		## replace_scope = { this = colony }
 		subtype[building_automation_unemployment_threshold] = {
 		}
 		## type_key_filter = calc_planet_specific_war_attack_priority
@@ -432,7 +434,7 @@ types = {
 		subtype[can_accept_contracts] = {
 		}
 		## type_key_filter = can_access_decisions
-		## replace_scope = { this = country root = country from = country }
+		## replace_scope = { this = carrier from = country }
 		subtype[can_access_decisions] = {
 		}
 		## type_key_filter = can_access_vivarium
@@ -440,7 +442,7 @@ types = {
 		subtype[can_access_vivarium] = {
 		}
 		## type_key_filter = can_ai_assign_governor
-		## replace_scope = { from = country }
+		## replace_scope = { this = colony from = country }
 		subtype[can_ai_assign_governor] = {
 		}
 		## type_key_filter = can_be_sent_to_war
@@ -448,11 +450,11 @@ types = {
 		subtype[can_be_sent_to_war] = {
 		}
 		## type_key_filter = can_build_branch_office_on_colony
-		## replace_scope = { root = country }
+		## replace_scope = { this = colony root = country }
 		subtype[can_build_branch_office_on_colony] = {
 		}
 		## type_key_filter = can_reform_government_for_free
-		## replace_scope = { root = country }
+		## replace_scope = { this = country root = country }
 		subtype[can_reform_government_for_free] = {
 		}
 		## type_key_filter = can_capture_ship
@@ -460,15 +462,19 @@ types = {
 		subtype[can_capture_ship] = {
 		}
 		## type_key_filter = can_colony_auto_migrate
+		## replace_scope = { this = colony }
 		subtype[can_colony_auto_migrate] = {
 		}
 		## type_key_filter = can_colony_receive_auto_migration
+		## replace_scope = { this = colony }
 		subtype[can_colony_receive_auto_migration] = {
 		}
 		## type_key_filter = can_country_initiate_storm
+		## replace_scope = { this = country root = country }
 		subtype[can_country_initiate_storm] = {
 		}
 		## type_key_filter = can_crossbreed_species_on_colony
+		## replace_scope = { this = colony }
 		subtype[can_crossbreed_species_on_colony] = {
 		}
 		## type_key_filter = can_delve
@@ -492,6 +498,7 @@ types = {
 		subtype[can_fauna_grow] = {
 		}
 		## type_key_filter = can_fill_precursor_job
+		## replace_scope = { this = pop root = pop }
 		subtype[can_fill_precursor_job] = {
 		}
 		## type_key_filter = can_fleet_be_captured_by_snares
@@ -499,10 +506,11 @@ types = {
 		subtype[can_fleet_be_captured_by_snares] = {
 		}
 		## type_key_filter = can_force_see_fleets_in_system
+		## replace_scope = { this = system root = system }
 		subtype[can_force_see_fleets_in_system] = {
 		}
 		## type_key_filter = can_generate_army_from_colony
-		## replace_scope = { this = pop_group root = species }
+		## replace_scope = { this = colony root = species }
 		subtype[can_generate_army_from_colony] = {
 		}
 		## type_key_filter = can_generate_leader_from_pop_group
@@ -514,13 +522,15 @@ types = {
 		subtype[can_generate_military_leader_from_pop_group] = {
 		}
 		## type_key_filter = can_get_colony_events
+		## replace_scope = { this = colony }
 		subtype[can_get_colony_events] = {
 		}
 		## type_key_filter = can_have_contact
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = country from = country }
 		subtype[can_have_contact] = {
 		}
 		## type_key_filter = can_initiate_storm_on_planet
+		## replace_scope = { this = star root = star }
 		subtype[can_initiate_storm_on_planet] = {
 		}
 		## type_key_filter = can_interact_with_astral_rift
@@ -572,24 +582,28 @@ types = {
 		subtype[can_open_shroud_tab] = {
 		}
 		## type_key_filter = can_orbitable_repair_ships
+		## replace_scope = { this = repairable_orbital }
 		# ## replace_scope = { this = starbase root = starbase } #this can be a starbase, megastructure or planet
 		subtype[can_orbitable_repair_ships] = {
 		}
 		## type_key_filter = can_pop_group_auto_migrate
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = pop_group root = colony }
 		subtype[can_pop_group_auto_migrate] = {
 		}
 		## type_key_filter = can_pops_assemble_on_colony
+		## replace_scope = { this = colony }
 		subtype[can_pops_assemble_on_colony] = {
 		}
 		## type_key_filter = can_pops_decline_on_colony
+		## replace_scope = { this = colony }
 		subtype[can_pops_decline_on_colony] = {
 		}
 		## type_key_filter = can_pops_grow_on_colony
-		## replace_scope = { this = pop_group root = pop_group }
+		## replace_scope = { this = colony }
 		subtype[can_pops_grow_on_colony] = {
 		}
 		## type_key_filter = can_resettle_colony
+		## replace_scope = { this = colony }
 		subtype[can_resettle_colony] = {
 		}
 		## type_key_filter = can_resettle_pop_group
@@ -597,11 +611,11 @@ types = {
 		subtype[can_resettle_pop_group] = {
 		}
 		## type_key_filter = can_scavenge_and_research_debris
-		## replace_scope = { root = country }
+		## replace_scope = { this = debris root = country }
 		subtype[can_scavenge_and_research_debris] = {
 		}
 		## type_key_filter = can_scavenge_debris
-		## replace_scope = { root = country }
+		## replace_scope = { this = debris root = country }
 		subtype[can_scavenge_debris] = {
 		}
 		## type_key_filter = can_see_aura_intensity
@@ -609,14 +623,15 @@ types = {
 		subtype[can_see_aura_intensity] = {
 		}
 		## type_key_filter = can_toggle_encampment
+		## replace_scope = { this = carrier }
 		subtype[can_toggle_encampment] = {
 		}
 		## type_key_filter = can_trade_favor
-		## replace_scope = { from = country }
+		## replace_scope = { this = country root = country from = country }
 		subtype[can_trade_favor] = {
 		}
 		## type_key_filter = can_trade_sensor
-		## replace_scope = { from = country }
+		## replace_scope = { this = country root = country from = country }
 		subtype[can_trade_sensor] = {
 		}
 		## type_key_filter = can_trade_specimens
@@ -693,6 +708,7 @@ types = {
 		subtype[has_borders] = {
 		}
 		## type_key_filter = has_breached_shroud_storm
+		## replace_scope = { this = country root = country from = cosmic_storm }
 		subtype[has_breached_shroud_storm] = {
 		}
 		## type_key_filter = has_custom_diplomacy
@@ -700,7 +716,7 @@ types = {
 		subtype[has_custom_diplomacy] = {
 		}
 		## type_key_filter = has_enough_pops_for_necrophage_on_colony
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = colony }
 		subtype[has_enough_pops_for_necrophage_on_colony] = {
 		}
 		## type_key_filter = has_extra_council_position
@@ -708,6 +724,7 @@ types = {
 		subtype[has_extra_council_position] = {
 		}
 		## type_key_filter = has_inworld_capital
+		## replace_scope = { this = country root = country }
 		subtype[has_inworld_capital] = {
 		}
 		## type_key_filter = has_planet_specific_war_attack_priority
@@ -715,7 +732,7 @@ types = {
 		subtype[has_planet_specific_war_attack_priority] = {
 		}
 		## type_key_filter = has_relative_economy_power
-		## replace_scope = { from = country }
+		## replace_scope = { this = country root = country from = country }
 		subtype[has_relative_economy_power] = {
 		}
 		## type_key_filter = has_shroud_insights
@@ -738,7 +755,7 @@ types = {
 		subtype[is_expelled_from] = {
 		}
 		## type_key_filter = is_hostile_to_aura_owner
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = country root = country from = country }
 		subtype[is_hostile_to_aura_owner] = {
 		}
 		## type_key_filter = is_mercenary
@@ -754,7 +771,7 @@ types = {
 		subtype[is_organic_leader] = {
 		}
 		## type_key_filter = is_organic_pop_group
-		## replace_scope = { this = pop root = pop from = country }
+		## replace_scope = { this = pop_group }
 		subtype[is_organic_pop_group] = {
 		}
 		## type_key_filter = is_planetary_ascension_free
@@ -797,6 +814,7 @@ types = {
 		subtype[should_abduct_pop_group] = {
 		}
 		## type_key_filter = should_ai_build_stronghold_on_vulnerable_colony
+		## replace_scope = { this = colony }
 		subtype[should_ai_build_stronghold_on_vulnerable_colony] = {
 		}
 		## type_key_filter = should_ai_support_galactic_empire
@@ -812,6 +830,7 @@ types = {
 		subtype[should_colonize_use_terraform] = {
 		}
 		## type_key_filter = should_colony_automate
+		## replace_scope = { this = colony }
 		subtype[should_colony_automate] = {
 		}
 		## type_key_filter = should_hide_planet_sector_pop_amount
@@ -823,7 +842,7 @@ types = {
 		subtype[should_hide_pop_group_size] = {
 		}
 		## type_key_filter = should_hide_resources_for_planet
-		## replace_scope = { this = country root = country }
+		## replace_scope = { this = planet root = country }
 		subtype[should_hide_resources_for_planet] = {
 		}
 		## type_key_filter = should_leader_gain_trait_every_level
@@ -858,7 +877,7 @@ types = {
 		subtype[species_has_uncapped_habitability_on_ship] = {
 		}
 		## type_key_filter = species_uses_bonus_growth
-		## replace_scope = { this = species root = species }
+		## replace_scope = { this = species root = colony }
 		subtype[species_uses_bonus_growth] = {
 		}
 		## type_key_filter = unbidden_additional_conquer_desire
