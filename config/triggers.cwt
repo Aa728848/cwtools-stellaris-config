@@ -3341,6 +3341,7 @@ alias[trigger:galaxy_radius] == value_field
 
 ### Checks if the colony carrier has a specific flag
 ## supported_scopes = planet ship colony
+## severity = warning
 alias[trigger:has_carrier_flag] = value[carrier_flag]
 alias[trigger:has_carrier_flag] = value[planet_flag]
 alias[trigger:has_carrier_flag] = value[ship_flag]
