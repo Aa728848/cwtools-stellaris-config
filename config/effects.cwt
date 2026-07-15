@@ -2174,9 +2174,7 @@ alias[effect:enable_special_project] = {
 	## cardinality = 0..1
 	owner = scope_group[target_country]
 	## cardinality = 0..1
-	location = scope_group[spatial_object]
-	## cardinality = 0..1
-	location = scope_group[celestial_coordinate]
+	location = scope[any]
 }
 
 ###Aborts a specific special project for the country, removing it from the situation log
@@ -4157,8 +4155,6 @@ alias[effect:start_situation] = {
 	type = <situation_type>
 	## cardinality = 0..1
 	target = scope[any]
-	## cardinality = 0..1
-	target = root.capital
 	## cardinality = 0..1
 	## push_scope = situation
 	effect = {
