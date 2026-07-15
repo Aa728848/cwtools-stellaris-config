@@ -120,6 +120,7 @@ situation_type = {
 		}
 	}
 	###Every month, progress ticks up or down based on factors defined here
+	## replace_scope = { root = situation this = situation }
 	monthly_progress = {
 		## cardinality = 0..1
 		add = int
