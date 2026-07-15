@@ -9,6 +9,7 @@ types = {
 		error_unknown_keys = suggest
 		should_be_used = unless_subtyped
 		## starts_with = on_destroy_planet_with_
+		## replace_scope = { this = planet root = planet from = fleet }
 		subtype[dynamic_planet_killer] = { }
 		obsolete_keys = {
 			empire_init_capital_planet = "renamed to empire_init_capital_colony"

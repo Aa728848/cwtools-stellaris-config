@@ -172,24 +172,26 @@ scopes = {
 }
 
 scope_groups = {
+    # Carrier is admitted only where the group already supports both physical
+    # hosts, preserving the Planet/Ship intersection contract.
     celestial_coordinate = {
         planet ship fleet system ambient_object megastructure starbase archaeological_site first_contact
-        deposit pop pop_group pop_job army country leader debris astral_rift bypass colony
+        deposit pop pop_group pop_job army country leader debris astral_rift bypass colony carrier
     }
     spatial_object = {
-        colony planet ship fleet ambient_object megastructure starbase archaeological_site debris galactic_object astral_rift bypass colony
+        colony planet ship fleet ambient_object megastructure starbase archaeological_site debris galactic_object astral_rift bypass carrier
     }
     target_species = {
-        country pop pop_group leader planet ship fleet army species first_contact colony
+        country pop pop_group leader planet ship fleet army species first_contact colony carrier
     }
     target_planet = {
-        pop pop_group planet deposit archaeological_site megastructure ship fleet army situation espionage_operation colony
+        pop pop_group planet deposit archaeological_site megastructure ship fleet army situation espionage_operation colony carrier
     }
     target_country = {
         planet fleet system ship pop pop_group pop_job army leader pop_faction country megastructure starbase deposit
-        sector archaeological_site first_contact spy_network agreement debris situation astral_rift bypass exhibit colony mission
+        sector archaeological_site first_contact spy_network agreement debris situation astral_rift bypass exhibit colony mission carrier
     }
     target_leader = {
-        country fleet ship army leader archaeological_site first_contact espionage_operation spy_network planet colony
+        country fleet ship army leader archaeological_site first_contact espionage_operation spy_network planet colony carrier
     }
 }
