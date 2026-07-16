@@ -188,7 +188,7 @@ scope_groups = {
         pop pop_group planet deposit archaeological_site megastructure ship fleet army situation espionage_operation colony planet carrier
     }
     target_country = {
-        planet fleet system ship pop pop_group pop_job army leader pop_faction country megastructure starbase deposit
+        planet fleet system ship species pop pop_group pop_job army leader pop_faction country megastructure starbase deposit
         sector archaeological_site first_contact spy_network agreement debris situation astral_rift bypass exhibit colony mission carrier
     }
     target_leader = {

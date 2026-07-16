@@ -1114,10 +1114,10 @@ Supported Scopes: country
 
 is_archetype - Checks if species has specified archetype:
 is_archetype = PRESAPIENT
-Supported Scopes: species
+Supported Scopes: species pop_group
 
 uplift_is_archetype - Checks if the uplifted version of the species has the specified archetype:
-	uplift_is_archetype = LITHOID
+uplift_is_archetype = LITHOID
 Supported Scopes: species
 
 is_inside_nebula - checks if the planet/ship/fleet/system is inside a nebula
