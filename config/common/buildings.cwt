@@ -107,12 +107,12 @@ enums = {
 	}
 }
 
-## push_scope = planet
+## push_scope = colony
 building = {
 	## cardinality = 0..inf
 	desc = {
 		## cardinality = 0..1
-		## replace_scope = { this = planet root = planet }
+		## replace_scope = { this = colony root = colony }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}

@@ -328,7 +328,7 @@ alias[resources_template_optional:resources] = {
 ### Templated Modifier Blocks ###
 # alias[cwt_alias_key:stellaris_object_key]
 
-## replace_scope = { this = planet root = planet }
+## replace_scope = { this = colony root = colony }
 alias[triggered_district_modifier_planet:triggered_district_planet_modifier] = {
 	## cardinality = 0..1
 	potential = {
@@ -365,7 +365,7 @@ alias[triggered_district_modifier_planet:triggered_district_planet_modifier] = {
 	key = localisation
 }
 
-## replace_scope = { this = planet root = planet }
+## replace_scope = { this = colony root = colony }
 alias[triggered_planet_modifier_planet:triggered_planet_modifier] = {
 	## cardinality = 0..1
 	potential = {
@@ -713,7 +713,7 @@ alias[triggered_country_modifier_pop:triggered_country_modifier] = {
 
 alias[triggered_country_modifier_planet:triggered_country_modifier] = {
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -750,7 +750,7 @@ alias[triggered_country_modifier_planet:triggered_country_modifier] = {
 
 alias[triggered_district_country_modifier_planet:triggered_district_country_modifier] = {
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

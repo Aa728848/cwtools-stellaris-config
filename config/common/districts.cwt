@@ -24,7 +24,7 @@ types = {
 	}
 }
 
-## push_scope = planet
+## push_scope = colony
 district = {
 	## cardinality = 0..1
 	is_uncapped = {
@@ -171,7 +171,7 @@ district = {
 	shared_capacity_modifier = <district>
 	
 	## cardinality = 0..inf
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
 		## cardinality = 0..1
 		custom_tooltip = localisation
