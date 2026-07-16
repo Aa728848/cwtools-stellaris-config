@@ -193,6 +193,7 @@ alias[modifier_rule:complex_trigger_modifier] = {
 alias[modifier_rule_with_loc:base] = float
 #modifier_rule_with_loc is deliberately more restrictive because of what we can make good tooltips with
 alias[modifier_rule_with_loc:base] = value_field
+alias[modifier_rule_with_loc:enum[complex_maths_enum]] = value_field
 
 alias[modifier_rule_with_loc:factor] = float
 alias[modifier_rule_with_loc:factor] = value_field
