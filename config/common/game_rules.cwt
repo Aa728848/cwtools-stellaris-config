@@ -530,7 +530,7 @@ types = {
 		subtype[can_have_contact] = {
 		}
 		## type_key_filter = can_initiate_storm_on_planet
-		## replace_scope = { this = star root = star }
+		## replace_scope = { this = planet root = planet }
 		subtype[can_initiate_storm_on_planet] = {
 		}
 		## type_key_filter = can_interact_with_astral_rift

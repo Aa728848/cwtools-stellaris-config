@@ -134,11 +134,18 @@ situation_type = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..inf
+	## replace_scope = { root = situation this = situation }
 	approach = {
 		###This is localised. If you add a loc key "approach_a_desc", it will also show, but this is optional.
 		name = localisation
 		icon = <sprite>
 		icon_background = <sprite>
+		## cardinality = 0..1
+		section_weight = float
+		## cardinality = 0..1
+		section_weight = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
 		## cardinality = 0..1
 		###Sets the Approach to be the Situation's default. This means that it will be picked when the Situation starts, and if the current
 		###Approach is invalidated (fails potential or allow check). This won't happen while the Situation is locked, so events which demand
@@ -189,6 +196,7 @@ situation_type = {
 	## cardinality = 0..inf
 	title = localisation
 	## cardinality = 0..inf
+	## replace_scope = { root = situation this = situation }
 	title = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
@@ -224,6 +232,7 @@ situation_type = {
 	## cardinality = 0..1
 	show_in_outliner = bool
 	## cardinality = 0..inf
+	## replace_scope = { root = situation this = situation }
 	stages = {
 		## cardinality = 0..inf
 		###Expects the key to be localised. You can also define <key>_desc and it will show on the tooltip, but this is optional.
@@ -274,6 +283,7 @@ situation_type = {
 	    }
 	}
 	## cardinality = 0..inf
+	## replace_scope = { root = situation this = situation }
 	triggered_blocked_desc = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
@@ -281,6 +291,7 @@ situation_type = {
 		text = localisation
 	}
 	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
