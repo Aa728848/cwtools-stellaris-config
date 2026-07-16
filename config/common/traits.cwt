@@ -300,6 +300,10 @@ trait = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		## cardinality = 0..1
+		ideal_planet_class = scope_group[target_planet]
+		## cardinality = 0..1
+		ideal_planet_class = scope_group[target_species]
+		## cardinality = 0..1
 		ideal_planet_class = <planet_class>
 		## cardinality = 0..1
 		species_class = {
