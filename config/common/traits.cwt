@@ -677,7 +677,7 @@ trait = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..inf
-		## replace_scope = { this = leader root = leader from = country }
+		## replace_scope = { this = leader root = leader from = fleet }
 		triggered_fleet_modifier = {
 			## cardinality = 0..1
 			potential = {

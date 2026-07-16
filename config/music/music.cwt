@@ -17,6 +17,12 @@ types = {
 #TODO: Add check for files existence, currently set to scalar!
 song = {
 	name = scalar
+	## cardinality = 0..1
+	chance = {
+		factor = float
+		## cardinality = 0..inf
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
 }
 
 music = {
