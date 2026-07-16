@@ -225,6 +225,7 @@ starbase_building = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
 		text = localisation
 	}
 	
@@ -235,6 +236,7 @@ starbase_building = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
 		text = localisation
 	}
 	
@@ -248,6 +250,7 @@ starbase_building = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
 		text = <sprite>
 	}
 		
@@ -276,8 +279,29 @@ starbase_building = {
 starbase_module = {
 	## cardinality = 0..1
 	section = <section_template>
-	## cardinality = 0..1
-	icon =  <sprite>
+	# for regular file
+	## cardinality = 0..inf
+	icon = <sprite>
+	# for inline script
+	## cardinality = 0..inf
+	icon = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		text = <sprite>
+	}
+	# for inline script
+	## cardinality = 0..inf
+	desc = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..inf
+		text = localisation
+	}
 	## cardinality = 0..1
 	construction_days = int
 	## cardinality = 0..1
