@@ -268,19 +268,19 @@ types = {
 		subtype[can_use_envoys_to_lower_imperial_authority] = {
 		}
 		## type_key_filter = can_fill_drone_job
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_drone_job] = {
 		}
 		## type_key_filter = can_fill_worker_job
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_worker_job] = {
 		}
 		## type_key_filter = can_fill_specialist_job
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_specialist_job] = {
 		}
 		## type_key_filter = can_fill_ruler_job
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_ruler_job] = {
 		}
 		## type_key_filter = dismiss_leader_cost
@@ -498,7 +498,7 @@ types = {
 		subtype[can_fauna_grow] = {
 		}
 		## type_key_filter = can_fill_precursor_job
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[can_fill_precursor_job] = {
 		}
 		## type_key_filter = can_fleet_be_captured_by_snares
