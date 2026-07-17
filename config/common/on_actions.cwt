@@ -444,7 +444,7 @@ types = {
 		## replace_scope = { this = colony root = colony from = army }
 		subtype[on_army_recruited] = { }
 		## type_key_filter = on_army_killed_in_combat
-		## replace_scope = { this = country root = country from = army fromfrom = army fromfromfrom = colony }
+		## replace_scope = { this = country root = country from = army fromfrom = country fromfromfrom = colony }
 		subtype[on_army_killed_in_combat] = { }
 		## type_key_filter = on_army_killed_no_combat
 		## replace_scope = { this = country root = country from = army }
