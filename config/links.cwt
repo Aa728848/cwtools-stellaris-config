@@ -60,7 +60,7 @@ links = {
 		output_scope = System
 	}
 	planet = {
-		input_scopes = { megastructure planet ship pop_group leader army starbase deposit archaeological_site pop_job colony }
+		input_scopes = { megastructure planet fleet ship pop_group leader army starbase deposit archaeological_site pop_job colony }
 		output_scope = planet
 	}
 	capital_scope = {
