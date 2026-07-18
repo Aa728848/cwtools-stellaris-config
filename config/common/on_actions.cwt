@@ -330,7 +330,7 @@ types = {
 		## replace_scope = { this = colony root = colony from = country }
 		subtype[on_pop_collateral_casualty] = { }
 		## type_key_filter = on_pop_sacrificed
-		## replace_scope = { this = pop root = pop from = colony fromfrom = country }
+		## replace_scope = { this = pop_group root = pop_group from = colony fromfrom = country }
 		subtype[on_pop_sacrificed] = { }
 		## type_key_filter = on_new_heir
 		## replace_scope = { this = leader root = leader }
@@ -621,7 +621,7 @@ types = {
 		## type_key_filter = on_colony_10_year_pulse
 		subtype[on_colony_10_year_pulse] = { }
 		## type_key_filter = on_colony_10_year_pulse_random_pop_events_list
-		## replace_scope = { this = pop root = pop }
+		## replace_scope = { this = pop_group root = pop_group }
 		subtype[on_colony_10_year_pulse_random_pop_events_list] = { }
 		## type_key_filter = on_leader_spawned
 		## replace_scope = { this = country root = country from = leader }
