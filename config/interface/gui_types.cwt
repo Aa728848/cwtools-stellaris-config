@@ -604,6 +604,8 @@ alias[gui_button:effectButtonType] = {
 	id = scalar
 	name = scalar
 
+	## cardinality = 0..1
+	text_offset = { x = int y = int }
 	### The effect key is defined under /common/button_effects.
 	effect = <button_effect>
 
