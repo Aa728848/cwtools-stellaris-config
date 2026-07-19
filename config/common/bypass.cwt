@@ -4,6 +4,11 @@ types = {
 		subtype[scripted] = {
 			connection_type = scripted_connection
 		}
+		modifiers = {
+			"$_empire_windup_mult" = Countries
+			"$_ship_windup_mult" = Ships
+			"$_megastructure_bypass_windup_mult" = Megastructures
+		}
 	}
 }
 
