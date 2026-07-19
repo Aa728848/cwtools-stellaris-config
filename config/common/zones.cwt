@@ -2,6 +2,9 @@
 types = {
 	type[zones] = {
 		path = "game/common/zones"
+		modifiers = {
+			"planet_$_build_speed_mult" = Planets
+		}
 	}
 	type[zone_slots] = {
 		path = "game/common/zone_slots"

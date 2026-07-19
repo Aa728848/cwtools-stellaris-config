@@ -11,7 +11,8 @@ types = {
 			"Petron Attun" = "add_attunement_$"
 		}
 		modifiers = {
-			"add_attunement_$" = Country
+			"add_attunement_$" = Countries
+			"$_attunement_mult" = Countries
 		}
 	}
 	type[patrons_callings] = {

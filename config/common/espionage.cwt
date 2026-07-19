@@ -2,6 +2,15 @@
 types = {
 	type[espionage_category] = {
 		path = "game/common/espionage_operation_categories"
+		modifiers = {
+			"$_speed_mult" = Espionage
+			"$_difficulty_add" = Espionage
+			"$_difficulty_mult" = Espionage
+			"hostile_$_difficulty_add" = Espionage
+			"hostile_$_difficulty_mult" = Espionage
+			"$_skill_add" = Espionage
+			"$_skill_mult" = Espionage
+		}
 	}
 	type[espionage_asset] = {
 		path = "game/common/espionage_assets"
@@ -9,6 +18,15 @@ types = {
 	## replace_scope = { this = espionage_operation root = espionage_operation }
 	type[espionage_operation] = {
 		path = "game/common/espionage_operation_types"
+		modifiers = {
+			"$_speed_mult" = Espionage
+			"$_difficulty_add" = Espionage
+			"$_difficulty_mult" = Espionage
+			"hostile_$_difficulty_add" = Espionage
+			"hostile_$_difficulty_mult" = Espionage
+			"$_skill_add" = Espionage
+			"$_skill_mult" = Espionage
+		}
 		localisation = {
 			## required
 			Name = "$"

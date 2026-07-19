@@ -72,7 +72,11 @@ types = {
 		path = "game/common/species_archetypes"
 		modifiers = {
 			"$_species_trait_picks_add" = Countries
-			"$_logistic_growth_mult" = Countries
+			"$_species_trait_points_add" = Countries
+			"$_pop_happiness" = Pops
+			"$_bonus_pop_growth" = Pops
+			"$_bonus_pop_growth_mult" = Pops
+			"$_logistic_growth_mult" = Pops
 		}
 		localisation = {
 			## optional

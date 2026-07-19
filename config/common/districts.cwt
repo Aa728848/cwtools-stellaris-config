@@ -5,6 +5,7 @@ types = {
 		modifiers = {
 			"planet_$_build_speed_mult" = Planets
 			"$_max_add" = Planets
+			"$_max_mult" = Planets
 		}
 		subtype[capped] = {
 			## cardinality = 0..1

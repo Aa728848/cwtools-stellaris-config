@@ -62,6 +62,9 @@ modifier_categories = {
     Starbases = {
         supported_scopes = { starbase country }
     }
+    Waystations = {
+        supported_scopes = { starbase country }
+    }
     "Economic Units" = {
         supported_scopes = { any }
     }

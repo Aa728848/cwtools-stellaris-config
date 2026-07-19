@@ -11,6 +11,9 @@ types = {
 	}
 	type[resolution_category] = {
 		path = "game/common/resolution_categories"
+		modifiers = {
+			"$_vote_strength_mult" = Countries
+		}
 		localisation = {
 			## required
 			Name = "$"

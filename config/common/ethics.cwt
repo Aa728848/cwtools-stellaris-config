@@ -2,6 +2,9 @@
 types = {
 	type[ethos] = {
 		path = "game/common/ethics"
+		modifiers = {
+			"pop_$_attraction_mult" = Pops
+		}
 		localisation = {
 			## required
 			Name = "$"

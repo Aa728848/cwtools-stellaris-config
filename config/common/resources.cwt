@@ -22,6 +22,7 @@ types = {
 			"starbase_collected_system_$_mult" = Starbases
 			"ship_starbase_stockpile_$_collection_rate_add" = Ships
 			"ship_starbase_stockpile_$_collection_rate_mult" = Ships
+			"arkship_harvest_resources_$_produces_mult" = Ships
 		}
 	}
 }

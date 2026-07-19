@@ -33,6 +33,8 @@ types = {
 		}
 		modifiers = {
 			"$_max_buildings_add" = Planets
+			"$_max_districts_add" = Planets
+			"$_habitability" = Habitability
 		}
 	}
 	## type_key_filter = random_list
