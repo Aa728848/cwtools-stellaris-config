@@ -185,10 +185,18 @@ map_setup_scenario = {
 			id = int
 			name = localisation
 			position = {
+				## cardinality = 0..1
 				x = int
+				## cardinality = 0..1
 				y = int
 				## cardinality = 0..1
 				z = int
+				## cardinality = 0..1
+				x = { min = int max = int }
+				## cardinality = 0..1
+				y = { min = int max = int }
+				## cardinality = 0..1
+				z = { min = int max = int }
 			}
 			## cardinality = 0..1
 			initializer = <solar_system_initializer>
@@ -211,10 +219,18 @@ map_setup_scenario = {
 		nebula = {
 			name = localisation
 			position = {
+				## cardinality = 0..1
 				x = int
+				## cardinality = 0..1
 				y = int
 				## cardinality = 0..1
 				z = int
+				## cardinality = 0..1
+				x = { min = int max = int }
+				## cardinality = 0..1
+				y = { min = int max = int }
+				## cardinality = 0..1
+				z = { min = int max = int }
 			}
 			radius = float
 		}
