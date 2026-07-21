@@ -7860,7 +7860,7 @@ Supported Scopes: ship fleet
 
 issue_contract - Adds the specified contract to a target system.
 The issuing country is the scoped country, contract and system are specified as parameter to the effect. You can additionally restrict who can pick up the contract by using a target
-example: issue_contract = {
+issue_contract = {
 	contract = harvest_resources
 	location = overlord.capital
 	<target = this>
