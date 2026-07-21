@@ -381,7 +381,7 @@ types = {
 		## replace_scope = { this = country root = country }
 		subtype[on_policy_changed] = { }
 		## type_key_filter = on_ship_built
-		## replace_scope = { this = ship root = ship from = planet }
+		## replace_scope = { this = ship root = ship from = starbase }
 		subtype[on_ship_built] = { }
 		## type_key_filter = on_ship_designed
 		## replace_scope = { this = country root = country }
