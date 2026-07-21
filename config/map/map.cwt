@@ -185,6 +185,7 @@ map_setup_scenario = {
 
 		system = {
 			id = int
+			## cardinality = 0..inf
 			name = localisation
 			position = {
 				## cardinality = 0..1
@@ -219,6 +220,7 @@ map_setup_scenario = {
 
 		## cardinality = 0..inf
 		nebula = {
+			## cardinality = 0..inf
 			name = localisation
 			position = {
 				## cardinality = 0..1
