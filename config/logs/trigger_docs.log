@@ -3546,7 +3546,7 @@ is_last_increased_tech_rare = yes
 Supported Scopes: country
 
 is_last_increased_tech_category - Checks if the last increased tech is of the specified category:
-	is_last_increased_tech_category = psionics
+is_last_increased_tech_category = psionics
 Supported Scopes: country
 
 get_attunement_points_for - Checks the amount of attunement points earned for a specified patron.

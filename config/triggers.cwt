@@ -3244,7 +3244,7 @@ alias[trigger:is_last_increased_tech_repeatable] = bool
 alias[trigger:is_last_increased_tech_rare] = bool
 
 ###Checks if the last increased tech is of the specified category:
-alias[trigger:is_last_increased_tech_category] = enum[research_areas]
+alias[trigger:is_last_increased_tech_category] = <technology_category>
 
 ###Checks the amount of attunement points earned for a specified patron.
 alias[trigger:get_attunement_points_for] = {
