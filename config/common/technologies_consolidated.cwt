@@ -53,7 +53,10 @@ types = {
 technology = {
 	area = enum[research_areas]
 	tier = <technology_tier>
-	category = { <technology_category> }
+	category = { 
+		## cardinality = 0..inf
+		<technology_category> 
+	}
 	## cardinality = 0..1
 	icon = icon[gfx/interface/icons/technologies]
 	## cardinality = 0..1
@@ -133,6 +136,10 @@ technology = {
 		description = localisation
 		## cardinality = 0..1
 		description_parameters = {
+			## cardinality = 0..inf
+			### Any value can go here to be used in localisation
+			scalar = float
+			## cardinality = 0..inf
 			POINTS = int
 		}
 		## cardinality = 0..1
@@ -170,7 +177,7 @@ technology = {
 		}
 		## cardinality = 0..1
 		weight = {
-			factor = int
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 		## cardinality = 0..1
 		modifier = {
@@ -186,7 +193,10 @@ technology = {
 		## cardinality = 0..1
 		area = enum[research_areas]
 		## cardinality = 0..1
-		category = { <technology_category> }
+		category = { 
+			## cardinality = 0..inf
+			<technology_category> 
+		}
 	}
 		
 	## cardinality = 0..inf
