@@ -20,6 +20,9 @@ modifier_categories = {
     Planets = {
         supported_scopes = { planet leader galacticobject country }
     }
+    Colony = {
+        supported_scopes = { Colony leader galacticobject country }
+    }
     "Pop Factions" = {
         supported_scopes = { popfaction country }
     }
