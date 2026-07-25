@@ -556,8 +556,7 @@ event = {
 	subtype[triggered] = {
 		## cardinality = 0..inf
 		weight_multiplier = {
-			factor = float
-			## cardinality = 0..100
+			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
@@ -613,17 +612,8 @@ event = {
 		specimen = <specimen>
 		## cardinality = 0..1
 		weight_multiplier = {
-			## cardinality = 0..1
-			factor = int
-			## cardinality = 0..1
-			modifier = {
-				## cardinality = 0..1
-				add = value_field
-				## cardinality = 0..1
-				factor = float
-				## cardinality = 0..1
-				alias_name[trigger] = alias_match_left[trigger]
-			}
+			## cardinality = 0..inf
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
 

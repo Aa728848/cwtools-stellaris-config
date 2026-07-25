@@ -34,6 +34,8 @@ star_class = {
     spawn_odds = float
 	## cardinality = 0..1
     num_planets = { min = int max = int }
+	## cardinality = 0..1
+	num_planets = int
     ## cardinality = 0..inf
 	#TODO check planet subtype
 	<planet_class.planet> = { spawn_odds = float }
@@ -61,4 +63,4 @@ star_class_random_list = {
 		## cardinality = 0..inf
 		<star_class>
 	}
-}
+}
