@@ -323,7 +323,7 @@ model_entity = {
 		## cardinality = 0..1
 		texture_wpo = scalar
 		## cardinality = 0..1
-		shader = scalar		#this seems to point to a shader mesh, dunno where its stored. example: "PdxMeshPlanetEmissive". I believe this is stored in a *.mesh file
+		shader = $shader_effect		#Effect declaration, for example "PdxMeshPlanetEmissive"
 	}
 }
 
@@ -375,7 +375,7 @@ model_mesh = {
 		## cardinality = 0..1
 		index = int
 		## cardinality = 0..1
-		shader = scalar		#Shader
+		shader = $shader_effect
 		## cardinality = 0..1
 		texture_diffuse = scalar		#filepath
 		## cardinality = 0..1

@@ -51,7 +51,7 @@ progressbartype = {
 	## cardinality = 0..1
 	flipdirection = bool
 	
-	effectFile = filepath #shader file
+	effectFile = filepath[gfx/FX/,.shader]
 
 	color = {
 		## cardinality = 3..3
@@ -74,7 +74,7 @@ sprite = {
 	## cardinality = 0..1
 	masking_texture = filepath
 	## cardinality = 0..1
-	effectFile = filepath
+	effectFile = filepath[gfx/FX/,.shader]
 	## cardinality = 0..1
 	alwaysTransparent = bool
 	## cardinality = 0..1

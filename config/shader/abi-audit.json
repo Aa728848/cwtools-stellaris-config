@@ -1,0 +1,153 @@
+{
+  "_schema": "cwtools/shader-abi-audit/v1",
+  "game": "stellaris",
+  "game_version": "4.4.6",
+  "review_status": "complete",
+  "automatic_promotion": false,
+  "candidate_universe": {
+    "source_directory": "gfx/FX",
+    "source_files": 72,
+    "shader_files": 49,
+    "effect_declarations": 473,
+    "unique_effect_names": 438,
+    "inventory_sha256": "744c2427aff34d857514589e52c8708cd7e694091914630c33f7bf5077f753ba",
+    "inventory_hash_algorithm": "sha256 of UTF-8 ordinal path|size|file_sha256 rows joined by LF without a trailing LF",
+    "declaration_inventory_sha256": "710c7a025a1567dcada94babbfbb6b683a56ebc59cf50e662c562dd3a6847a12",
+    "declaration_hash_algorithm": "sha256 of UTF-8 ordinal lowercase_logical_path|effect_name|selection_start_line|selection_start_column rows joined by LF without a trailing LF",
+    "baseline": "CWToolsTests/ShaderBaseline/vanilla-4.4.6.json",
+    "baseline_sha256": "13b23348ab2a361fec7b36156fd11f0b25700141787ddaa21d49750f5b016352"
+  },
+  "game_identity": {
+    "launcher_raw_version": "v4.4.6",
+    "launcher_settings_sha256": "c107352b3db2dd11387d60824d0cf4e1a05dd3162d8f120869338d1d9dc52d79",
+    "executable": "stellaris.exe",
+    "executable_size": 46418552,
+    "executable_sha256": "bc451c72d9654c8901f1bb0bee1dd78d76f415465c2fbf746e9f98ade333173a"
+  },
+  "executable_string_scan": {
+    "policy": "String presence is candidate evidence only and never proves a call path.",
+    "ascii_hits": 80,
+    "ascii_effect_names": [
+      "ArkshipBackground",
+      "ArkshipNebula",
+      "ArkshipShip",
+      "ArkshipStar",
+      "ArkshipTents",
+      "ArrowEffect",
+      "Asteroid",
+      "Beam",
+      "Blocker",
+      "BorderCentroid",
+      "BorderSDF",
+      "Character",
+      "City",
+      "Color",
+      "DebugLines",
+      "DebugLines2D",
+      "DebugNormal",
+      "DebugNormalSkinned",
+      "DebugTexture",
+      "DebugTextureAlpha",
+      "Disable",
+      "Down",
+      "Environment",
+      "GalaxyCenter",
+      "GalaxyCosmicStorm",
+      "GalaxyDust",
+      "GalaxyDustCloud",
+      "GalaxyNebula",
+      "GalaxyPsionicAura",
+      "GalaxyPsionicAuraHyperlane",
+      "GalaxyRestore",
+      "GalaxyStars",
+      "HyperlaneQuadLine",
+      "HyperlaneQuadLineAlphaPass1",
+      "HyperlaneQuadLineAlphaPass2",
+      "HyperlaneQuadLineFlatColorPass",
+      "Laser",
+      "Lines",
+      "LuminanceDownsample",
+      "LuminanceGather",
+      "MapNameBorder",
+      "MapNameNebula",
+      "OrbitLines",
+      "Over",
+      "ParticleAdditive",
+      "ParticleAlphaBlend",
+      "ParticlePreAlphaBlend",
+      "PdxMeshColor",
+      "PdxMeshColorShadow",
+      "PdxMeshColorSkinned",
+      "PdxMeshColorSkinnedShadow",
+      "Restore",
+      "Room",
+      "SectorSdf",
+      "SensorRange",
+      "ShipTrail",
+      "Simple",
+      "Simple3D",
+      "Sky",
+      "Sky_YCoCg",
+      "StarPin",
+      "StormInfluenceVisualisation",
+      "StrikeCraftTrail",
+      "Text",
+      "Text3D",
+      "TextDisable",
+      "TextDown",
+      "TextOver",
+      "TextUp",
+      "Texture",
+      "Up",
+      "WaystationNetworkHyperlane",
+      "blit",
+      "bloom",
+      "bloom_alpha",
+      "downsample",
+      "downsample2",
+      "downsample3",
+      "heatmap",
+      "lens_flare"
+    ],
+    "utf16le_hits": 3,
+    "utf16le_effect_names": ["Down", "Text", "Texture"]
+  },
+  "confirmed_engine_entries": [],
+  "evidence_reviews": [
+    {
+      "stage": "vanilla_shader_inventory",
+      "status": "reviewed",
+      "result": "473 Effect declarations (438 case-insensitive names) form the complete candidate universe for this corpus snapshot."
+    },
+    {
+      "stage": "textual_call_sites",
+      "status": "reviewed",
+      "result": "Located shader assignments are data_explicit evidence. Missing textual callers remain engine_or_unreferenced and were not promoted."
+    },
+    {
+      "stage": "renderer_contracts",
+      "status": "reviewed",
+      "result": "All 9 unique interface effectFile shader paths are covered by 13 versioned renderer-subtype contracts; those contracts prove only their listed Effects and are not EXE-hardcoded ABI entries."
+    },
+    {
+      "stage": "executable_or_runtime",
+      "status": "no_qualifying_evidence",
+      "result": "80 ASCII and 3 UTF-16LE Effect-name string matches were recorded, but string presence is not a call path. No reviewed runtime trace, disassembly call-site proof, or official engine-entry contract was supplied for an individual Effect. The ABI catalog therefore remains empty."
+    }
+  ],
+  "excluded_evidence": [
+    {
+      "signal": "no_textual_caller",
+      "reason": "Absence of a data caller is not proof of an executable call."
+    },
+    {
+      "signal": "effect_file_selection",
+      "reason": "A renderer selecting a file does not prove every Effect in that file and is modeled separately by renderer contracts."
+    },
+    {
+      "signal": "unreviewed_executable_string",
+      "reason": "A string occurrence without a reviewed call path or runtime observation cannot establish ABI reachability."
+    }
+  ],
+  "notes": "Complete means the versioned candidate universe and available evidence classes were reviewed under the fail-closed policy. It does not claim that the executable has no hardcoded entries; newly obtained qualifying evidence must be reviewed and added to both this audit and abi-catalog.json."
+}

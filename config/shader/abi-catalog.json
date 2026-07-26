@@ -1,0 +1,7 @@
+{
+    "_schema": "cwtools/shader-abi-catalog/v1",
+    "game": "stellaris",
+    "game_version": "4.4.6",
+    "review_policy": "Every entry requires reviewed runtime/executable/official evidence. Never promote an Effect merely because no textual caller was found.",
+    "entries": []
+}

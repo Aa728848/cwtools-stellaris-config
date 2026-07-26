@@ -13,7 +13,9 @@ types = {
 	}
 }
 
-#TODO: Shader keys
+# Shader fields name Effect declarations from gfx/FX/*.shader.  $shader_effect
+# keeps literal names and Paradox template expressions legal while exposing the
+# reference kind to CWTools and the Agent semantic catalog.
 
 particle = {
 	name = scalar
@@ -74,7 +76,7 @@ particle_type = {
 		## cardinality = 0..1
 		texture={
 			file = filepath
-			shader = scalar #<shader>
+			shader = $shader_effect
 			## cardinality = 0..1
 			x = int
 			## cardinality = 0..1
@@ -300,7 +302,7 @@ particle_type = {
 			## cardinality = 0..1
 			texture={
 				file = filepath
-				shader = scalar #<shader>
+				shader = $shader_effect
 				## cardinality = 0..1
 				x = int
 				## cardinality = 0..1
