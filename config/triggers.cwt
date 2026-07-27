@@ -2075,6 +2075,7 @@ alias[trigger:species_has_happiness_with_owner] = scope_group[target_country]
 alias[trigger:num_assigned_jobs] = {
 	## cardinality = 0..inf
 	job = <job>
+	## cardinality = 0..inf
 	value = int_value_field
 	## cardinality = 0..1
 	automated_workforce = bool
