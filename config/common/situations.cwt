@@ -61,6 +61,11 @@ situation_type = {
 		trigger = { alias_name[trigger] = alias_match_left[trigger] }
 		## cardinality = 0..1
 		text = localisation
+		## cardinality = 0..1
+		### Exclusive trigger replaces all other text in tooltip with localization key.
+		exclusive_trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	}
 	## cardinality = 0..1
 	###Effects when the Situation is created
