@@ -2211,7 +2211,8 @@ alias[effect:spawn_natural_wormhole] = {
 	## cardinality = 0..1
 	random_pos = bool
 	## cardinality = 0..1
-	graphics_entity_name = scalar
+	## type_prefix_from = graphical_culture
+	graphics_entity_name = <model_entity>
 	## cardinality = 0..1
 	init_effect = {
 		alias_name[effect] = alias_match_left[effect]
@@ -2454,7 +2455,7 @@ alias[effect:create_ambient_object] = {
 	## cardinality = 0..1
 	scale = float
 	## cardinality = 0..1
-	appear_state = scalar
+	appear_state = enum[model_states]
 	## cardinality = 0..1
 	use_3d_location = bool
 	## cardinality = 0..1
@@ -3046,7 +3047,7 @@ alias[effect:pop_remove_ethic] = {
 alias[effect:prevent_anomaly] = bool
 #randomize_flag_symbol = pirate
 ### Randomizes a country's flag symbol within the selected category
-alias[effect:randomize_flag_symbol] = scalar#TODO pirate
+alias[effect:randomize_flag_symbol] = scalar #TODO pirate
 ### Removes all armies on scoped planet
 alias[effect:remove_all_armies] = bool
 ### Removes the scoped army
@@ -4454,7 +4455,8 @@ alias[effect:spawn_astral_rift] = {
 	## cardinality = 0..1
 	spawn_sound = bool
 	## cardinality = 0..1
-	graphics_entity_name = scalar
+	## type_prefix_from = graphical_culture
+	graphics_entity_name = <model_entity>
 	## cardinality = 0..1
 	## push_scope = astral_rift
 	init_effect = {
@@ -4479,7 +4481,7 @@ alias[effect:lock_bypass] = {
 }
 
 ###Starts the cooldown of an astral action defined with uses_custom_cooldown = yes
-alias[effect:start_astral_action_cooldown] = scalar
+alias[effect:start_astral_action_cooldown] = <astral_action>
 ###Unlocks Astral Actions that have become unlockable since the last time this effect was called
 alias[effect:perform_astral_action_unlock_check] = yes
 ###Fires an astral rift event with optional DAYS and RANDOM delay
@@ -5623,7 +5625,7 @@ alias[effect:transfer_resource_stockpile] = {
 ### Sets the animation state of the scoped object
 ## supported_scopes = megastructure ship fleet
 alias[effect:set_animation_state] = enum[anim_states]
-alias[effect:lock_animation_state] = scalar
+alias[effect:set_animation_state] = scalar
 ### Locks the animation state of the scoped object. This will let it change states until it hits the given state, at which point it won't change states anymore. "none" clears this behavior.
 ## supported_scopes = ship fleet
 alias[effect:lock_animation_state] = enum[anim_states]
