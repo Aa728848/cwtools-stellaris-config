@@ -1,15 +1,16 @@
 types = {
+	## type_key_filter = pdxparticle
 	type[particle] = {
 		name_field = name
 		severity = warning
-		path = "game/gfx/particles"
+		path = "game/gfx"
 		skip_root_key = objectTypes
 	}
 	## type_key_filter = particle
   	type[particle_type] = {
 		name_field = name
 		severity = warning
-		path = "game/gfx/particles"
+		path = "game/gfx"
 	}
 }
 
