@@ -8147,7 +8147,7 @@ Supported Scopes: army
 
 prevent_anomaly - Disables or enables anomaly generation for the scoped planet
 prevent_anomaly = yes
-Supported Scopes: planet colony
+Supported Scopes: planet
 
 add_deposit - Adds resource deposit to the scoped object (note: if you add a blocker, it will add a random deposit that can be blocked by that deposit)
 add_deposit = <key/random/random_blocker/random_nonblocker>
@@ -8171,7 +8171,7 @@ Supported Scopes: leader
 
 conquer - Conquers the planet by setting its owner to target country and adding an unhappiness modifier
 conquer = <target country>
-Supported Scopes: planet colony
+Supported Scopes: planet
 
 pop_faction_event - Fires a pop faction event for the scoped pop faction, with optional DAYS and RANDOM delay
 pop_faction_event = {
@@ -8261,7 +8261,7 @@ clear_planet_purge_type = yes
 Supported Scopes: planet ship colony
 
 trigger_megastructure_icon - if a planet has trigger_megastructure_icon = yes then the map icon for the star will show a megastructure icon
-Supported Scopes: planet colony
+Supported Scopes: planet
 
 run_ai_strategic_data - Recomputes ALL strategic data for AI = yes
 Supported Scopes: country
@@ -9687,7 +9687,7 @@ random_fleet_in_orbit = {
 	}
 	<effects>
 }
-Supported Scopes: megastructure planet ship starbase colony
+Supported Scopes: megastructure planet ship starbase
 
 ordered_fleet_in_orbit - Iterate through each fleet orbiting the current planet/starbase/megastructure - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
 ordered_fleet_in_orbit = {
@@ -9697,11 +9697,11 @@ ordered_fleet_in_orbit = {
 	inverse = yes/no (default: no - if yes, then 0 is lowest rather than highest)
 	<effects>
 }
-Supported Scopes: megastructure planet ship starbase colony
+Supported Scopes: megastructure planet ship starbase
 
 every_fleet_in_orbit - Iterate through each fleet orbiting the current planet/starbase/megastructure - executes the enclosed effects on all of them for which the limit triggers return true
 every_fleet_in_orbit = { limit = { <triggers> } <effects> }
-Supported Scopes: megastructure planet ship starbase colony
+Supported Scopes: megastructure planet ship starbase
 
 random_orbital_station - Iterate through each orbital station owned by the current country or in the current system - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 random_orbital_station = {
