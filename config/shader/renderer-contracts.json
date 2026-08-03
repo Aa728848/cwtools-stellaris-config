@@ -1,18 +1,229 @@
 {
   "_schema": "cwtools/sprite-renderer-contracts v1. Version-matched mappings curated from the official Stellaris 4.4.6 interface and gfx/FX corpus. A contract confirms only the listed Effect entry points for the exact renderer subtype and shader file.",
   "contracts": [
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "normal", "shader_file": "gfx/FX/buttonstate.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "cornered_tile", "shader_file": "gfx/FX/buttonstate.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "normal", "shader_file": "gfx/FX/buttonstate_onlyanim.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "normal", "shader_file": "gfx/FX/buttonstate_onlydisable.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "cornered_tile", "shader_file": "gfx/FX/buttonstate_onlydisable.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "text_sprite", "shader_file": "gfx/FX/buttonstate_onlydisable.shader", "effects": ["Up", "Down", "Disable", "Over", "TextUp", "TextDown", "TextDisable", "TextOver"], "required_inputs": ["textureFile"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "normal", "shader_file": "gfx/FX/buttonstate_rendertarget.shader", "effects": ["Up", "Down", "Disable", "Over"], "required_inputs": [], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "portrait", "shader_file": "gfx/FX/buttonstate_rendertarget.shader", "effects": ["Up", "Down", "Disable", "Over"], "required_inputs": [], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "portrait", "shader_file": "gfx/FX/buttonstate_rendertarget_hologram.shader", "effects": ["Up", "Down", "Disable", "Over"], "required_inputs": [], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "flag_sprite", "shader_file": "gfx/FX/flag_sprite.shader", "effects": ["Up", "Down", "Disable", "Over"], "required_inputs": ["textureFile", "masking_texture"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "progress_bar", "shader_file": "gfx/FX/progress.shader", "effects": ["Color", "Texture"], "required_inputs": ["textureFile1", "textureFile2"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "progress_bar", "shader_file": "gfx/FX/progress_radial.shader", "effects": ["Color", "Texture"], "required_inputs": ["textureFile1", "textureFile2"], "evidence": "official_vanilla_contract" },
-    { "game": "stellaris", "game_version": "4.4.6", "renderer_subtype": "progress_bar", "shader_file": "gfx/FX/progress_startend.shader", "effects": ["Color", "Texture"], "required_inputs": ["textureFile1", "textureFile2"], "evidence": "official_vanilla_contract" }
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "normal",
+      "shader_file": "gfx/FX/buttonstate.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "cornered_tile",
+      "shader_file": "gfx/FX/buttonstate.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "normal",
+      "shader_file": "gfx/FX/buttonstate_onlyanim.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "normal",
+      "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "cornered_tile",
+      "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "text_sprite",
+      "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over",
+        "TextUp",
+        "TextDown",
+        "TextDisable",
+        "TextOver"
+      ],
+      "required_inputs": [
+        "textureFile"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "normal",
+      "shader_file": "gfx/FX/buttonstate_rendertarget.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over"
+      ],
+      "required_inputs": [],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "portrait",
+      "shader_file": "gfx/FX/buttonstate_rendertarget.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over"
+      ],
+      "required_inputs": [],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "portrait",
+      "shader_file": "gfx/FX/buttonstate_rendertarget_hologram.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over"
+      ],
+      "required_inputs": [],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "flag_sprite",
+      "shader_file": "gfx/FX/flag_sprite.shader",
+      "effects": [
+        "Up",
+        "Down",
+        "Disable",
+        "Over"
+      ],
+      "required_inputs": [
+        "textureFile",
+        "masking_texture"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "progress_bar",
+      "shader_file": "gfx/FX/progress.shader",
+      "effects": [
+        "Color",
+        "Texture"
+      ],
+      "required_inputs": [
+        "textureFile1",
+        "textureFile2"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "progress_bar",
+      "shader_file": "gfx/FX/progress_radial.shader",
+      "effects": [
+        "Color",
+        "Texture"
+      ],
+      "required_inputs": [
+        "textureFile1",
+        "textureFile2"
+      ],
+      "evidence": "official_vanilla_contract"
+    },
+    {
+      "game": "stellaris",
+      "game_version": "4.4.6",
+      "renderer_subtype": "progress_bar",
+      "shader_file": "gfx/FX/progress_startend.shader",
+      "effects": [
+        "Color",
+        "Texture"
+      ],
+      "required_inputs": [
+        "textureFile1",
+        "textureFile2"
+      ],
+      "evidence": "official_vanilla_contract"
+    }
   ]
 }
