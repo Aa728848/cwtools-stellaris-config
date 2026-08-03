@@ -4143,14 +4143,14 @@ Supported Scopes: country
 
 any_fleet_in_orbit - Iterate through each fleet orbiting the current planet/starbase/megastructure - checks whether the enclosed triggers return true for any of them
 any_fleet_in_orbit = { <triggers> }
-Supported Scopes: megastructure planet ship starbase colony
+Supported Scopes: megastructure planet ship starbase
 
 count_fleet_in_orbit - Iterate through each fleet orbiting the current planet/starbase/megastructure - checks whether the enclosed triggers return true for X/all of them
 count_fleet_in_orbit = {
 	count = <num/all/variable>
 	limit = { <triggers> }
 }
-Supported Scopes: megastructure planet ship starbase colony
+Supported Scopes: megastructure planet ship starbase
 
 any_orbital_station - Iterate through each orbital station owned by the current country or in the current system - checks whether the enclosed triggers return true for any of them
 any_orbital_station = { <triggers> }
