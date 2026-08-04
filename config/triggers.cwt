@@ -2654,7 +2654,7 @@ alias[trigger:is_under_stratified_technological_enlightenment] = scope_group[tar
 alias[trigger:has_pre_ftl_trade] = scope_group[target_country]
 
 ###Checks ship design has a certain role.
-alias[trigger:has_role] = enum[ship_size_ship_roles]
+alias[trigger:has_role] = value[ship_size_ship_roles]
 
 ###Checks the country's number of researched dangerous technologies
 alias[trigger:num_dangerous_techs] == int_value_field
