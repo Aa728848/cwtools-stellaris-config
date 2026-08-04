@@ -344,7 +344,7 @@ ship_size = {
 	triggered_ship_roles = {
 		## cardinality = 1..inf
 		{
-			name = value[ship_size_ship_roles]
+			name = value_set[ship_size_ship_roles]
 			## replace_scope = { this = country root = country }
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
@@ -550,27 +550,6 @@ enums = {
 		ship_counter_32
 		ship_counter_64
 		ship_counter_128
-	}
-	enum[ship_size_ship_roles] = {
-		artillery
-		artillery_stealth
-		brawler
-		brawler_stealth
-		buffer_role
-		buffer_role_stealth
-		carrier
-		carrier_stealth
-		citadel
-		debuffer_role
-		debuffer_role_stealth
-		energy_torpedoes
-		energy_torpedoes_stealth
-		explosive
-		explosive_stealth
-		gunship
-		gunship_stealth
-		screen
-		screen_stealth
 	}
 	enum[mutation_components_size] = {
 		small
