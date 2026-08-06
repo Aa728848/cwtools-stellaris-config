@@ -257,6 +257,9 @@ starbase_building = {
 	# for inline script
 	## cardinality = 0..inf
 	scripted_effect_cooldown = scalar
+
+	## cardinality = 0..1
+	custom_tooltip_with_modifiers = localisation
 	
 	# for inline script
 	## cardinality = 0..inf
