@@ -4913,7 +4913,7 @@ alias[effect:steal_specimens] = {
 	## cardinality = 0..1
 	who = scope_group[target_country]
 	## cardinality = 0..1
-	category = enum[specimen_type]
+	category = value[specimen_type]
 	## cardinality = 0..1
 	category = all
 	## cardinality = 0..1
@@ -4960,7 +4960,7 @@ alias[effect:create_smaller_size_creature_in_fleet] = {
 }
 
 ###Unlocks an exhibit for given category from the target country.
-alias[effect:unlock_exhibit] = enum[specimen_type]
+alias[effect:unlock_exhibit] = value[specimen_type]
 ###Refreshes the scoped country's leader pool.
 alias[effect:refresh_leader_pool] = bool
 ###Adds specific resource to the stockpile for the country scope and creates a debris notification.

@@ -3198,7 +3198,7 @@ NGameplay = {
 	## cardinality = 0..1
 	SPECIMEN_TYPES = { 
 		## cardinality = 0..inf
-		enum[specimen_type]
+		value_set[specimen_type]
 	}
 	## cardinality = 0..1
 	SPECIMEN_PRODUCTION_MODIFIER = <modifier>

@@ -131,9 +131,11 @@ authority = {
 		has_heir = bool
 		## cardinality = 0..1
 		ruler_council_position = <councilor>
+		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..1
 		modifier = {
 			## cardinality = 0..1
 			custom_tooltip = localisation

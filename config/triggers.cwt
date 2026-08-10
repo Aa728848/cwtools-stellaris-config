@@ -2972,7 +2972,7 @@ alias[trigger:is_ship_category] = <grand_archive_ship_category_type>
 alias[trigger:is_specimen_rarity] = enum[rarity]
 
 ###Checks if the specified specimen contained by the scoped exhibit is of indicated collection category
-alias[trigger:is_specimen_category] = enum[specimen_type]
+alias[trigger:is_specimen_category] = value[specimen_type]
 
 ###Retrieves the percentage of usage of a given resource in the ship size. If the ship size cost is 100 food and 300 minerals, the value when checking for food is 0.25
 alias[trigger:ship_size_cost_resource_percent] = <resource>
