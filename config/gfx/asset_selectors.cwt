@@ -17,7 +17,7 @@ types = {
 		subtype[hair] = {#this is identical in structure to the clothes asset selector, only difference is the key!
 
 		}
-		
+
 		## type_key_filter = room_selector
 		subtype[room] = {
 
@@ -32,9 +32,9 @@ types = {
 	}
 }
 
- #default has no trigger attached  it.
- #assets written under default replace the default entry given a trigger, or if no default is defined - when fulfilling the trigger.
- #see other.txt for the default no texture.
+#default has no trigger attached  it.
+#assets written under default replace the default entry given a trigger, or if no default is defined - when fulfilling the trigger.
+#see other.txt for the default no texture.
 
 asset_selector = {
 	subtype[clothes] = {
@@ -109,7 +109,7 @@ asset_selector = {
 			## cardinality = 0..inf
 			filepath = { alias_name[trigger] = alias_match_left[trigger] }
 		}
-		
+
 		## cardinality = 0..1
 		## replace_scope = { this = pop_group root = pop_group }
 		pop_group = {
@@ -163,7 +163,7 @@ asset_selector = {
 			default_background = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-		
+
 			## cardinality = 0..1
 			default = filepath #these do not have default in vanilla, but i assume default is supported.
 			## cardinality = 0..inf
@@ -213,10 +213,10 @@ asset_selector = {
 					filepath
 				}
 			}
-			
+
 			## cardinality = 0..inf
 			filepath = { alias_name[trigger] = alias_match_left[trigger] }
-			
+
 		}
 	}
 	subtype[hair] = {
@@ -348,10 +348,10 @@ asset_selector = {
 			}
 			## cardinality = 0..inf
 			filepath = { alias_name[trigger] = alias_match_left[trigger] }
-			
+
 		}
 	}
-		
+
 	subtype[entity] = {
 		#see entity_selectors.txt
 
@@ -378,26 +378,39 @@ asset_selector = {
 }
 
 room_textures = {
-		#room selectors use a special way to link to dds files stored under gfx/portraits/city_sets
-		##by pointingto a file that ends with _room.dds, always.
-		#this needs to be worked out by dayshine!
+	#room selectors use a special way to link to dds files stored under gfx/portraits/city_sets
+	##by pointingto a file that ends with _room.dds, always.
+	#this needs to be worked out by dayshine!
 
-		default = scalar #the room file link as explained in the above comment!
-		
-		## cardinality = 0..1
-		## replace_scope = { this = country root = country }
-		game_setup = {
-			## cardinality = 0..inf
-			scalar = { 
-				alias_name[trigger] = alias_match_left[trigger] 
-			}
-		}	
-		## cardinality = 0..1
-		## replace_scope = { this = leader root = leader }
-		ruler = {
-			## cardinality = 0..inf
-			scalar = { 
-				alias_name[trigger] = alias_match_left[trigger] 
-			}
-		}	
+	default = scalar #the room file link as explained in the above comment!
+
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	game_setup = {
+		## cardinality = 0..inf
+		scalar = { 
+			alias_name[trigger] = alias_match_left[trigger] 
+		}
+	}	
+	## cardinality = 0..1
+	## replace_scope = { this = leader root = leader }
+	ruler = {
+		## cardinality = 0..inf
+		default = scalar
+		## cardinality = 0..inf
+		scalar = { 
+			alias_name[trigger] = alias_match_left[trigger] 
+		}
+	}	
+
+	## cardinality = 0..1
+	## replace_scope = { this = leader root = leader }
+	leader = {
+		## cardinality = 0..inf
+		default = scalar
+		## cardinality = 0..inf
+		scalar = { 
+			alias_name[trigger] = alias_match_left[trigger] 
+		}
+	}	
 }
