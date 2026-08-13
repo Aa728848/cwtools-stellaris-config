@@ -947,7 +947,7 @@ alias[effect:locked_random_list] = {
 
 ###All enclosed effects may or may not be executed depending on set chance
 alias[effect:random] = {
-	chance = int_value_field[1...99]
+	chance = int_value_field[1..99]
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -4739,9 +4739,9 @@ alias[effect:storm_apply_aftermath_modifier] = {
 		## cardinality = 0..1
 		days = int
 		## cardinality = 0..1
-		days = int_value_field[1...inf]
+		days = int_value_field[1..inf]
 		chance = {
-			base = int_value_field[1...99]
+			base = int_value_field[1..99]
 			## cardinality = 0..inf
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}

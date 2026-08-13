@@ -129,7 +129,6 @@ alias[trigger:has_leader_flag] = enum[leader_flag_enum]
 ## severity = warning
 ###Checks if the ambient object has a specific, arbitrarily-named, flag
 alias[trigger:has_ambient_object_flag] = value[ambient_object_flag]
-alias[trigger:has_ambient_object_flag] = enum[ambient_object_flag_enum]
 ## severity = warning
 ###Checks if the mega structure has a specific, arbitrarily-named, flag
 alias[trigger:has_megastructure_flag] = value[megastructure_flag]
@@ -1864,7 +1863,7 @@ alias[trigger:num_owned_relics] == int_value_field
 ## 2.6.3
 
 ###Checks if the federation has a specific flag.
-alias[trigger:has_federation_flag] = value[federation_flag].
+alias[trigger:has_federation_flag] = value[federation_flag]
 
 ###Checks the country's number of envoys sent to its federation.
 alias[trigger:num_envoys_to_federation] == int_value_field
@@ -2336,7 +2335,7 @@ alias[trigger:num_repeatable_techs] == int_value_field
 
 ###Checks market price of a specific resource for the current country
 alias[trigger:market_resource_price] = {
-	resource = <resource_name>
+	resource = <resource>
 	## cardinality = 0..1
 	###Default = 1; basically a mult factor
 	amount = int #no variables here
