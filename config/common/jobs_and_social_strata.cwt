@@ -370,7 +370,7 @@ job = {
 		<job_tags>
 	}
 	
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	## replace_scope = { this = planet root = planet }
 	triggered_tags = {
 		trigger = { 
