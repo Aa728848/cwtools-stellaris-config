@@ -171,7 +171,7 @@ colony_type = {
 	## cardinality = 0..1
 	custom_tooltip = localisation
 	## cardinality = 0..1
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
 		## cardinality = 0..1
 		custom_tooltip = localisation

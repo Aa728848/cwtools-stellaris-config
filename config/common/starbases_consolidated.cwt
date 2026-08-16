@@ -168,7 +168,7 @@ starbase_building = {
 	}
 	## cardinality = 0..1
 	###planet modifiers, apply on system planets.
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	system_modifier = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
@@ -191,7 +191,7 @@ starbase_building = {
 
 	## cardinality = 0..1
 	###planet modifiers (orbital ring)
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
@@ -532,7 +532,7 @@ starbase_module = {
 	}
 	## cardinality = 0..1
 	###planet modifiers, apply on system planets.
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	system_modifier = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
@@ -555,7 +555,7 @@ starbase_module = {
 
 	## cardinality = 0..1
 	###planet modifiers (orbital ring)
-	## replace_scope = { this = planet root = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]

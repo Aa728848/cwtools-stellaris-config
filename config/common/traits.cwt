@@ -559,13 +559,13 @@ trait = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1
-		## replace_scope = { this = planet root = planet }
+		## replace_scope = { this = colony root = colony }
 		### Modifier applied to planet if General assigned to defense army.
 		planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..inf
-		## replace_scope = { this = planet root = planet }
+		## replace_scope = { this = colony root = colony }
 		### Modifier applied to planet if Scientist's science vessel assigned to assist research.
 		assist_research_planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
@@ -792,12 +792,12 @@ trait = {
 			show_only_custom_tooltip = bool
 		}
 		## cardinality = 0..1
-		## replace_scope = { this = leader root = leader from = planet }
+		## replace_scope = { this = leader root = leader from = colony }
 		planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..inf
-		## replace_scope = { this = leader root = leader from = planet }
+		## replace_scope = { this = leader root = leader from = colony }
 		triggered_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -832,12 +832,12 @@ trait = {
 			show_only_custom_tooltip = bool
 		}
 		## cardinality = 0..1
-		## replace_scope = { this = leader root = leader from = planet }
+		## replace_scope = { this = leader root = leader from = colony }
 		background_planet_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..inf
-		## replace_scope = { this = leader root = leader from = planet }
+		## replace_scope = { this = leader root = leader from = colony }
 		triggered_background_planet_modifier = {
 			## cardinality = 0..1
 			potential = {

@@ -260,7 +260,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		owner_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -286,7 +286,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		neutral_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -313,7 +313,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		rival_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -343,7 +343,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		owner_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -369,7 +369,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		neutral_planet_modifier = {
 			## cardinality = 0..1
 			potential = {
@@ -396,7 +396,7 @@ psionic_auras = {
 			}
 		}
 		## cardinality = 0..inf
-		## replace_scope = { root = planet this = planet }
+		## replace_scope = { root = colony this = colony }
 		rival_planet_modifier = {
 			## cardinality = 0..1
 			potential = {

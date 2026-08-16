@@ -64,13 +64,13 @@ zones = {
 	}
 		
 	## cardinality = 0..inf
-	## replace_scope = { root = planet this = planet }
+	## replace_scope = { this = colony root = colony }
 	district_planet_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
 	## cardinality = 0..inf
-	## replace_scope = { root = planet this = planet }
+	## replace_scope = { this = colony root = colony }
 	planet_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
