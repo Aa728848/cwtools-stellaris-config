@@ -42,6 +42,13 @@ enums = {
 
 policy = {
 	## cardinality = 0..1
+	category = <policy_category>
+	## cardinality = 0..1
+	category = {
+		## cardinality = 0..inf
+		<policy_category>
+	}
+	## cardinality = 0..1
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

@@ -141,10 +141,6 @@ Printing Modifier Definitions:
 - planet_max_districts_add, Category: Colony
 - planet_max_districts_mult, Category: Colony
 - planet_max_buildings_add, Category: Colony
-- planet_max_branch_office_buildings_add, Category: Colony
-- planet_max_branch_office_buildings_self_add, Category: Colony
-- planet_max_subject_holding_buildings_add, Category: Colony
-- planet_max_overlord_holding_buildings_add, Category: Colony
 - planet_pop_assembly_add, Category: Colony
 - planet_pop_assembly_mult, Category: Colony
 - planet_pop_assembly_reduction, Category: Colony
@@ -437,16 +433,16 @@ Printing Modifier Definitions:
 - catapult_range_mult, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Megastructures
 - ship_repair_hull_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
 - ship_repair_armor_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_cooldown_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_regeneration_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_count_add, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_count_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_armor_add, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_armor_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_shield_add, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_shield_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_hull_add, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- strike_craft_hull_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
+- strike_craft_cooldown_mult, Category: Ships
+- strike_craft_regeneration_mult, Category: Ships
+- strike_craft_count_add, Category: Ships
+- strike_craft_count_mult, Category: Ships
+- strike_craft_armor_add, Category: Ships
+- strike_craft_armor_mult, Category: Ships
+- strike_craft_shield_add, Category: Ships
+- strike_craft_shield_mult, Category: Ships
+- strike_craft_hull_add, Category: Ships
+- strike_craft_hull_mult, Category: Ships
 - monthly_loyalty, Category: Countries, Colony
 - monthly_loyalty_from_subjects, Category: Countries
 - monthly_loyalty_from_synthetic_subjects, Category: Countries
@@ -3045,7 +3041,7 @@ Printing Modifier Definitions:
 - divided_patrongage_max_subjects, Category: Countries
 - gravity_snare_cooldown_mult, Category: Fleets
 - enemy_ship_destroyed_energy_add, Category: Countries
-- deposit_increase_on_survey_chance_mult, Category: Countries
+- deposit_increase_on_survey_chance_mult, Category: Ships
 - branch_office_holding_crime_mult, Category: Countries
 - dyson_swarm_limit_add, Category: Countries
 - arc_furnace_limit_add, Category: Countries
@@ -3143,3 +3139,10 @@ Printing Modifier Definitions:
 - the_composer_of_strands_attunement_mult, Category: Countries
 - add_attunement_whisperers_in_the_void, Category: Countries
 - whisperers_in_the_void_attunement_mult, Category: Countries
+- leader_initial_traits_add, Category: Countries
+- missile_armor_add, Category: Ships
+- missile_armor_mult, Category: Ships
+- missile_health_add, Category: Ships
+- missile_health_mult, Category: Ships
+- missile_shield_add, Category: Ships
+- missile_shield_mult, Category: Ships

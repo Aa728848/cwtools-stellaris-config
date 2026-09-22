@@ -1,0 +1,14 @@
+types = {
+	type[policy_category] = {
+		path = "game/common/policy_categories"
+		localisation = {
+			## required
+			name = "policy_category_$"
+		}
+	}
+}
+
+policy_category = {
+	## cardinality = 0..1
+	icon = <sprite>
+}

@@ -83,7 +83,7 @@ alias[trigger:has_country_flag] = enum[pop_faction_inline_flag_enum]
 alias[trigger:has_country_flag] = enum[country_flag_enum]
 alias[trigger:has_country_flag] = enum[inline_script_flags]
 ## severity = warning
-###Checks if the planet has a specific, arbitrarily-named, flag
+###Checks if the planet has a specific, arbitrarily-named, flag. Also valid in colony/carrier/ship scope, where it reads the colony carrier's flags
 alias[trigger:has_planet_flag] = value[planet_flag]
 alias[trigger:has_planet_flag] = value[carrier_flag]
 alias[trigger:has_planet_flag] = enum[country_flag_enum]
@@ -239,8 +239,8 @@ alias[trigger:used_naval_capacity_percent] == value_field
 alias[trigger:is_country_type] = <country_type>
 ###Checks if a country/pop/leader/faction has a certain ethos
 alias[trigger:has_ethic] = <ethos>
-###Checks if the pop has a specific ethos
-alias[trigger:pop_has_ethic] = <ethos>
+###Checks if the pop has a specific ethos (Deprecated in 4.5)
+# alias[trigger:pop_has_ethic] = <ethos>
 
 ###Checks the country's used starbase capacity in relative terms (0.00-1.00)
 alias[trigger:used_starbase_capacity_percent] == value_field[0..1.0]
@@ -313,7 +313,7 @@ alias[trigger:has_non_aggression_pact] = scope_group[target_country]
 alias[trigger:is_controlled_by] = scope_group[target_country]
 ###Checks if the country/planet is neighbors with target country
 alias[trigger:is_neighbor_of] = scope_group[target_country]
-###Checks if the target country is the planet's original owner
+###Checks if the target country is the colony carrier's original owner
 alias[trigger:is_original_owner] = scope_group[target_country]
 ###Checks if the planet/system/army/ship is owned by the target country
 alias[trigger:is_owned_by] = scope_group[target_country]
@@ -604,7 +604,7 @@ alias[trigger:is_preventing_anomaly] = bool
 alias[trigger:has_observation_outpost] = bool
 ###Checks if the system is the starting system for any country
 alias[trigger:starting_system] = bool
-###Checks if the planet is still owned by its first colonizer
+###Checks if the colony carrier is still owned by its first colonizer
 alias[trigger:original_owner] = bool
 
 ###Checks if the pop is a robot
@@ -700,9 +700,6 @@ alias[trigger:has_ruler_trait] = <trait>
 
 ###Checks if the pop group has a specific trait
 alias[trigger:pop_group_has_trait] = <trait.species_trait>
-
-###Checks if a country/pop group/leader/faction has a certain ethos
-alias[trigger:pop_group_has_ethic] = <ethos>
 
 ###Checks if a species/pop group/leader has a particular citizenship type in their country
 alias[trigger:has_citizenship_type] = {
@@ -856,7 +853,7 @@ alias[trigger:host_has_dlc] = enum[DLCs]
 alias[trigger:is_multiplayer] = bool
 
 
-###Checks if the pop group belongs to any, or a specific, faction
+###Checks if the pop group has pops belonging to any, or a specific, faction
 alias[trigger:member_of_faction] = bool
 alias[trigger:member_of_faction] = scope[pop_faction]
 alias[trigger:member_of_faction] = <pop_faction>
@@ -902,12 +899,6 @@ alias[trigger:can_declare_war] = {
 
 ### Checks if scoped pop group can join a faction
 alias[trigger:can_join_factions] = bool
-
-### Checks if one of the faction's parameters is the same as target scope
-alias[trigger:check_pop_faction_parameter] = {
-	which = enum[pop_faction_parameters]
-	value = scope[any]
-}
 
 ### Checks the country's command limit
 alias[trigger:command_limit] == int_value_field
@@ -1134,7 +1125,7 @@ alias[trigger:has_presence] = bool
 ### Checks if the planet has an orbital research station
 alias[trigger:has_research_station] = bool
 
-### Checks if a country has the same ethos (complete set of ethics) as a country or pop group
+### Checks if a country has the same ethos (complete set of ethics) as another
 alias[trigger:has_same_ethos] = scope_group[target_country]
 
 ### Checks the scoped country has ever encountered a bypass of a given type before
@@ -1408,7 +1399,7 @@ alias[trigger:num_traits] == int_value_field
 ### Checks if the number of species on a planet, in an empire or in a pop faction is according to the argument. Counts genetically modified species as unique.
 alias[trigger:num_unique_species] == int_value_field
 
-### Checks how far removed the country/pop group's ethos is from target's
+### Checks the divergence between the scoped and the target countries' ethos
 alias[trigger:opposing_ethics_divergence] = {
 	steps = int_value_field
 	who = scope_group[target_country]
@@ -3492,4 +3483,74 @@ alias[trigger:any_owned_mission] = {
 ## push_scope = starbase
 alias[trigger:any_starbase_in_network] = {
 	alias_name[trigger] = alias_match_left[trigger]
+}
+
+###Checks whether a random non-blocker deposit could be added to the scoped planet
+alias[trigger:can_add_random_non_blocker_deposit] = bool
+
+###Checks whether a random anomaly could spawn on the planet for the given surveyor ship or fleet
+alias[trigger:can_spawn_random_anomaly] = scope[ship]
+alias[trigger:can_spawn_random_anomaly] = scope[fleet]
+
+###Checks whether a random archaeological site could spawn on the scoped planet
+alias[trigger:can_spawn_random_archaeological_site] = bool
+
+###custom_tooltip, but will always try to display the pass/fail icons, even at the root level of the trigger
+alias[trigger:custom_tooltip_icon] = localisation
+alias[trigger:custom_tooltip_icon] = {
+	## cardinality = 0..1
+	text = localisation
+	## cardinality = 0..1
+	fail_text = localisation
+	## cardinality = 0..1
+	success_text = localisation
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+###Checks if a country or a pop group ethos contains all ethics of the other target ethos
+alias[trigger:has_ethos] = scope[country]
+alias[trigger:has_ethos] = scope[pop_group]
+alias[trigger:has_ethos] = <ethos>
+
+###Checks which overclock mode the scoped megastructure is currently using.
+alias[trigger:has_overclock] = <mega_overclock>
+
+###Checks whether the scoped megastructure is still inside its overclock_cooldown and so cannot change mode yet.
+alias[trigger:has_overclock_cooldown] = bool
+
+###Checks whether the scoped country may assign a ship role to a ship size.
+alias[trigger:is_ai_ship_role] = {
+	ship_size = <ship_size>
+	role = value[ship_size_ship_roles]
+}
+
+###Checks if the country's AI prefers this weapon type for starbases (falls back to the empire-wide weapon preference when unset)
+alias[trigger:is_preferred_starbase_weapons] = enum[weapon_types]
+
+###Checks the amount or percentage of pops following or not following the ethic. If used rhs this return amount of pops.
+alias[trigger:pop_ethic_amount] == int_value_field
+alias[trigger:pop_ethic_amount] = {
+	## cardinality = 0..1
+	amount == int_value_field
+	## cardinality = 0..1
+	percentage == value_field
+	ethic = <ethos>
+}
+
+###Checks the amount or percentage of pops following or not following the ethic. If used rhs this return percentage of pops.
+alias[trigger:pop_ethic_percentage] == value_field
+alias[trigger:pop_ethic_percentage] = {
+	## cardinality = 0..1
+	amount == int_value_field
+	## cardinality = 0..1
+	percentage == value_field
+	ethic = <ethos>
+}
+
+###Returns the negotiated value (0 to 1) of a trade action in a trade deal with the specified empire.
+alias[trigger:trade_action_value] == value_field
+alias[trigger:trade_action_value] = {
+	action = <tradable_actions>
+	with_country = scope[country]
+	value == value_field
 }

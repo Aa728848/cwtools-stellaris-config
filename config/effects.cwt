@@ -231,39 +231,6 @@ alias[effect:pop_faction_event] = {
 	}
 }
 
-###Fires a pop event for the scoped pop, with optional DAYS and RANDOM delay
-alias[effect:pop_event] = {
-	id = <event.pop>
-	id = <event.scopeless>
-	## cardinality = 0..1
-	days = int
-	## cardinality = 0..1
-	days = value_field
-	## cardinality = 0..1
-	months = int
-	## cardinality = 0..1
-	months = value_field
-	## cardinality = 0..1
-	years = int
-	## cardinality = 0..1
-	years = value_field
-	## cardinality = 0..1
-	random = int
-	## cardinality = 0..1
-	random = value_field
-	## cardinality = 0..1
-	scopes = {
-		## cardinality = 0..1
-		from = scope[any]
-		## cardinality = 0..1
-		fromfrom = scope[any]
-		## cardinality = 0..1
-		fromfromfrom = scope[any]
-		## cardinality = 0..1
-		fromfromfromfrom = scope[any]
-	}
-}
-
 ###Fires a fleet event for the scoped fleet, with optional DAYS and RANDOM delay
 alias[effect:fleet_event] = {
 	id = <event.fleet>
@@ -593,9 +560,9 @@ alias[effect:set_timed_pop_group_flag] = {
 
 ###Sets an arbitrarily-named flag on the scoped country
 alias[effect:set_country_flag] = value_set[country_flag]
-###Sets an arbitrarily-named flag on the scoped planet
+###Sets an arbitrarily-named flag on the scoped planet. Also valid in colony/carrier/ship scope, where it writes the colony carrier's flags
 alias[effect:set_planet_flag] = value_set[planet_flag]
-###Sets an arbitrarily-named flag on the scoped pop group's faction/pop faction
+###Sets an arbitrarily-named flag on the scoped pop faction
 alias[effect:set_pop_faction_flag] = value_set[pop_faction_flag]
 ###Sets an arbitrarily-named flag on the scoped system
 alias[effect:set_star_flag] = value_set[star_flag]
@@ -645,12 +612,12 @@ alias[effect:remove_country_flag] = value[country_flag]
 alias[effect:remove_country_flag] = enum[country_flag_enum]
 alias[effect:remove_country_flag] = enum[inline_script_flags]
 ## severity = warning
-###Removes a flag from the scoped planet
+###Removes a flag from the scoped planet. Also valid in colony/carrier/ship scope, where it removes from the colony carrier's flags
 alias[effect:remove_planet_flag] = value[planet_flag]
 alias[effect:remove_planet_flag] = value[carrier_flag]
 alias[effect:remove_planet_flag] = enum[country_flag_enum]
 ## severity = warning
-###Removes a flag from the scoped pop group's faction/pop faction
+###Removes a flag from the scoped pop faction
 alias[effect:remove_pop_faction_flag] = value[pop_faction_flag]
 ## severity = warning
 ###Removes a flag from the scoped system
@@ -717,13 +684,15 @@ alias[effect:set_timed_country_flag] = {
 	enum[days_months_years] = int_value_field
 }
 
-###Sets an arbitrarily-named flag on the scoped planet for a set duration
+###Sets an arbitrarily-named flag on the scoped planet for a set duration. Also valid in colony/carrier/ship scope, where it writes the colony carrier's flags
+## supported_scopes = planet ship colony
 alias[effect:set_timed_planet_flag] = {
 	flag = value_set[planet_flag]
 	enum[days_months_years] = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped pop faction for a set duration
+## supported_scopes = pop_faction
 alias[effect:set_timed_pop_faction_flag] = {
 	flag = value_set[pop_faction_flag]
 	enum[days_months_years] = int_value_field
@@ -2143,7 +2112,7 @@ alias[effect:establish_contact] = {
 	location = scope_group[celestial_coordinate]
 }
 
-###Changes scoped pop to chosen ethic
+###Changes scoped pop group to chosen ethic
 alias[effect:pop_change_ethic] = {
 	## cardinality = 0..1
 	ethic = <ethos>
@@ -3022,7 +2991,7 @@ alias[effect:play_sound] = {
 }
 
 alias[effect:play_sound] = <sound_effect>
-### Adds a specific ethic to the scoped pop regardless if pop-species allows ethic divergence or not.
+### Adds a specific ethic to the scoped pop group regardless if pop-species allows ethic divergence or not.
 alias[effect:pop_force_add_ethic] = {
 	## cardinality = 0..1
 	ethic = <ethos>
@@ -3228,7 +3197,7 @@ alias[effect:set_policy] = {
 	cooldown = bool
 }
 
-### Sets the scoped pop group to belong to a specific pop faction
+### Sets a ratio of the scoped pop group to belong to a specific pop faction
 alias[effect:set_pop_faction] = <pop_faction>
 ### Adds or removes a planetary ring around the scoped planet
 alias[effect:set_ring] = bool
@@ -5794,4 +5763,99 @@ alias[effect:create_balanced_fleet] = {
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+}
+
+###Clears the AI armor ratio override, reverting to personality.
+alias[effect:clear_ai_armor_ratio] = bool
+
+###Clears the AI shields ratio override, reverting to personality.
+alias[effect:clear_ai_shields_ratio] = bool
+
+###Clears all AI ship role overrides for the scoped country, reverting to personality roles.
+alias[effect:clear_ai_ship_roles] = bool
+
+###Clears the AI starbase armor ratio override, reverting to the empire-wide ratio.
+alias[effect:clear_ai_starbase_armor_ratio] = bool
+
+###Clears the AI starbase shields ratio override, reverting to the empire-wide ratio.
+alias[effect:clear_ai_starbase_shields_ratio] = bool
+
+###Clears the AI starbase weapon preference override, reverting to the empire-wide preference.
+alias[effect:clear_ai_starbase_weapon_preference] = bool
+
+###Clears the AI weapon preference override, reverting to personality.
+alias[effect:clear_ai_weapon_preference] = bool
+
+###Removes an amount of pops from an ethic and redistribute these to any other
+alias[effect:pop_force_remove_ethic] = {
+	ethic = <ethos>
+	## cardinality = 0..1
+	amount = int_value_field
+	## cardinality = 0..1
+	percentage = value_field[0.0..1.0]
+	## cardinality = 0..1
+	random = int_value_field
+}
+
+###Transfers an amount of pops from an ethic to another
+alias[effect:pop_force_transfer_ethic] = {
+	new_ethic = <ethos>
+	old_ethic = <ethos>
+	## cardinality = 0..1
+	amount = int_value_field
+	## cardinality = 0..1
+	percentage = value_field[0.0..1.0]
+	## cardinality = 0..1
+	random = int_value_field
+}
+
+###Re-pick the auto-designed loadout of the country's non-designable starbases
+alias[effect:rebuild_owned_starbase_designs] = bool
+
+###Sets the AI armor ratio override for the scoped country.
+alias[effect:set_ai_armor_ratio] = value_field[0.0..1.0]
+
+###Sets the AI shields ratio override for the scoped country.
+alias[effect:set_ai_shields_ratio] = value_field[0.0..1.0]
+
+###Sets the AI ship role overrides for the scoped country.
+alias[effect:set_ai_ship_roles] = {
+	## cardinality = 0..inf
+	<ship_size> = value[ship_size_ship_roles]
+	## cardinality = 0..inf
+	<ship_size> = {
+		## cardinality = 0..inf
+		value[ship_size_ship_roles] = value_field
+	}
+}
+
+###Sets the AI armor ratio override for the scoped country's auto-designed starbases.
+alias[effect:set_ai_starbase_armor_ratio] = value_field[0.0..1.0]
+
+###Sets the AI shields ratio override for the scoped country's auto-designed starbases.
+alias[effect:set_ai_starbase_shields_ratio] = value_field[0.0..1.0]
+
+###Sets the AI weapon preference override for the scoped country's auto-designed starbases.
+alias[effect:set_ai_starbase_weapon_preference] = enum[weapon_types]
+
+###Sets the AI weapon preference override for the scoped country.
+alias[effect:set_ai_weapon_preference] = enum[weapon_types]
+
+###Switches the scoped megastructure to an overclock mode, replacing the current one.
+alias[effect:set_overclock] = <mega_overclock>
+alias[effect:set_overclock] = {
+	overclock = <mega_overclock>
+	## cardinality = 0..1
+	cooldown = bool
+}
+
+###Transfers the scoped country's stockpile of each listed resource to another country:
+alias[effect:transfer_resources_to_empire] = {
+	target = scope[country]
+	resources = {
+		## cardinality = 0..inf
+		<resource>
+	}
+	## cardinality = 0..1
+	percentage = value_field[0.0..1.0]
 }

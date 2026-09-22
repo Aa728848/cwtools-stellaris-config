@@ -294,7 +294,20 @@ megastructure = {
 	}
 	## cardinality = 0..1
 	is_shroud_seal = bool
-	
+	## cardinality = 0..1
+	nomad_reactivatable = bool
+
+	## cardinality = 0..1
+	custom_tooltip_with_modifiers = localisation
+
+	## cardinality = 0..1
+	overclock_loc_key = localisation
+
+	## cardinality = 0..1
+	overclock_cooldown = int
+	## cardinality = 0..1
+	overclock_cooldown = value_field
+
 	## cardinality = 0..1
 	## replace_scope = { this = system root = system from = country fromfrom = megastructure }
 	overclock_types = { 
@@ -339,6 +352,24 @@ megastructure = {
 
 
 mega_overclock = {
+	## cardinality = 0..1
+	overclock_group = value_set[megastructure_overclock_group]
+	## cardinality = 0..1
+	## replace_scope = { this = system root = system }
+	system_modifier = {
+		## cardinality = 0..inf
+		custom_tooltip = localisation
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = megastructure root = megastructure }
+	megastructure_modifier = {
+		## cardinality = 0..inf
+		custom_tooltip = localisation
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
 	icon = <sprite>
 	
 	## cardinality = 0..1

@@ -60,6 +60,20 @@ pop_faction = {
 
 	## cardinality = 0..1
 	use_guiding_ethic_as_pop_filter = bool
+	## cardinality = 0..1
+	use_guiding_ethic_as_growth_factor = bool
+	## cardinality = 0..1
+	pop_ethics_filter = {
+		## cardinality = 0..inf
+		<ethos>
+	}
+	## cardinality = 0..1
+	pop_attraction_tag = {
+		desc = localisation
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
 	
 	## cardinality = 0..1
 	persistent_faction = bool

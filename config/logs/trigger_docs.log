@@ -202,14 +202,6 @@ gender - Checks the leader's gender
 gender = female/male/indeterminable
 Supported Scopes: leader
 
-pop_has_ethic - Checks if the pop has a specific ethos
-pop_has_ethic = ethic_fanatic_xenophile
-Supported Scopes: pop pop_group
-
-pop_group_has_ethic - Checks if the pop group has a specific ethos
-pop_group_has_ethic = ethic_fanatic_xenophile
-Supported Scopes: pop_group
-
 pop_group_has_trait - Checks if the pop group has a specific trait
 pop_group_has_trait = trait_decadent
 Supported Scopes: pop_group
@@ -282,8 +274,7 @@ Supported Scopes: country
 
 has_pop_faction_flag - Checks if the pop faction has a specific flag
 has_pop_faction_flag = <flag> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: pop pop_group pop_faction
-
+Supported Scopes: pop_faction
 num_communications - Checks the country's number of established communications
 num_communications > 3
 Supported Scopes: country
@@ -300,10 +291,9 @@ last_increased_tech - Checks if the country's last researched technology was a s
 last_increased_tech = tech_gene_expressions
 Supported Scopes: country
 
-original_owner - Checks if the planet is still owned by its first colonizer
+original_owner - Checks if the colony carrier is still owned by its first colonizer
 original_owner = yes
 Supported Scopes: planet ship colony
-
 subjects - Checks the country's number of subjects
 subjects > 0
 Supported Scopes: country
@@ -340,10 +330,6 @@ city_graphical_culture - Checks if the country has a specific graphical culture 
 If the target is a country, this trigger will compare its city graphical culture to the scoped country city graphical culture
 city_graphical_culture = <fungoid_01/FROM>
 Supported Scopes: country
-
-check_pop_faction_parameter - Checks if one of the faction's parameters is the same as target scope
-check_pop_faction_parameter = { which = <parameter> value = <target> }
-Supported Scopes: pop_faction
 
 is_robot_pop - Checks if the pop is a robot
 is_robot_pop = yes
@@ -903,8 +889,7 @@ Supported Scopes: planet ship colony
 
 is_pop_category - Checks if the pop group has the chosen pop category
 is_pop_category = <key>
-Supported Scopes: pop_group pop
-
+Supported Scopes: pop_group
 won_the_game - Checks if scoped country won the game
 won_the_game = yes
 Supported Scopes: country
@@ -969,10 +954,9 @@ num_free_districts - Checks the number of available slots the colony has of any,
 num_free_districts = { type = <key/any> value > 2/variable }
 Supported Scopes: planet ship colony
 
-has_planet_flag - Checks if the planet has a specific flag
+has_planet_flag - Checks if the planet has a specific flag. Also valid in colony/carrier/ship scope, where it reads the colony carrier's flags (a settled colony's carrier is its planet; a Nomad Arkship's is its ship).
 has_planet_flag = <flag> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: planet
-
+Supported Scopes: planet ship colony
 has_carrier_flag - Checks if the colony carrier has a specific flag
 has_carrier_flag = <flag> (note: one can use e.g. my_flag@from to track relationships between objects)
 Supported Scopes: planet ship colony
@@ -1564,10 +1548,9 @@ is_ringworld - Checks if the planet is a ringworld
 is_ringworld = yes
 Supported Scopes: planet ship colony
 
-member_of_faction - Checks if the pop group belongs to any, or a specific, faction
+member_of_faction - Checks if the pop group has pops belonging to any, or a specific, faction
 member_of_faction = no/<pop faction scope>/isolationist
 Supported Scopes: pop pop_group
-
 support - Checks the support level of a faction, or that of a leader's faction(s)
  support > 0.5
 Supported Scopes: leader pop_faction
@@ -1656,10 +1639,12 @@ is_scope_valid - Checks if the current scope is valid
 is_scope_valid = yes
 Supported Scopes: all
 
-opposing_ethics_divergence - Checks how far removed the country/pop group's ethos is from target's
-opposing_ethics_divergence = { steps > 1/variable who = <target> }
-Supported Scopes: country pop pop_group
-
+opposing_ethics_divergence - Checks the divergence between the scoped and the target countries' ethos
+opposing_ethics_divergence = {
+	steps > <variable>
+	who = <target>
+}
+Supported Scopes: country
 is_war_leader - Checks if the country leads in a war
 is_war_leader = yes
 Supported Scopes: country pop_faction
@@ -1961,10 +1946,9 @@ has_association_status - Check if the country has federation association status 
 has_association_status = <target>
 Supported Scopes: country
 
-is_original_owner - Checks if the target country is the planet's original owner
+is_original_owner - Checks if the target country is the colony carrier's original owner
 is_original_owner = <target>
 Supported Scopes: planet ship colony
-
 subject_can_diplomacy - Checks if the current country is allowed by its overlord to take diplomatic action
 subject_can_diplomacy = <target>
 Supported Scopes: country
@@ -2126,10 +2110,9 @@ is_berserker_to - Checks if the country has a berserker attitude towards target 
 is_berserker_to = <target>
 Supported Scopes: country
 
-has_same_ethos - Checks if a country has the same ethos (complete set of ethics) as a country or pop group
+has_same_ethos - Checks if a country has the same ethos (complete set of ethics) as another
 has_same_ethos = <target>
-Supported Scopes: country pop pop_group
-
+Supported Scopes: country 
 is_majority_species - Checks if the specified species is the majority species on the current planet.
 is_majority_species = <species>
 Supported Scopes: planet ship colony
@@ -4427,17 +4410,15 @@ count_moon = {
 }
 Supported Scopes: planet ship colony
 
-any_pop_faction - Iterate through all the country's pop factions - checks whether the enclosed triggers return true for any of them
+any_pop_faction - Iterate through all the country/pop group/pop's pop factions - checks whether the enclosed triggers return true for any of them
 any_pop_faction = { <triggers> }
-Supported Scopes: country
-
-count_pop_faction - Iterate through all the country's pop factions - checks whether the enclosed triggers return true for X/all of them
+Supported Scopes: country pop pop_group
+count_pop_faction - Iterate through all the country/pop group/pop's pop factions - checks whether the enclosed triggers return true for X/all of them
 count_pop_faction = {
 	count = <num/all/variable>
 	limit = { <triggers> }
 }
-Supported Scopes: country
-
+Supported Scopes: country pop pop_group
 any_owned_pop_group - Iterate through all owned pop groups - checks whether the enclosed triggers return true for any of them
 any_owned_pop_group = { <triggers> }
 Supported Scopes: planet country ship galactic_object pop_faction sector colony
@@ -4652,19 +4633,17 @@ count_trait_of_species = {
 }
 Supported Scopes: pop pop_group leader species
 
-any_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
-traits_available_for_species = { trait_has_all_tags = { organic positive } } - checks whether the enclosed triggers return true for any of them
+any_trait_available_for_species - Iterate through all available species traits (minus DLC-locked) and check if scoped species doesn't have this trait
+trait_available_for_species = { trait_has_all_tags = { organic positive } } - checks whether the enclosed triggers return true for any of them
 any_trait_available_for_species = { <triggers> }
 Supported Scopes: pop pop_group leader species
-
-count_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
-traits_available_for_species = { trait_has_all_tags = { organic positive } } - checks whether the enclosed triggers return true for X/all of them
+count_trait_available_for_species - Iterate through all available species traits (minus DLC-locked) and check if scoped species doesn't have this trait
+trait_available_for_species = { trait_has_all_tags = { organic positive } } - checks whether the enclosed triggers return true for X/all of them
 count_trait_available_for_species = {
 	count = <num/all/variable>
 	limit = { <triggers> }
 }
 Supported Scopes: pop pop_group leader species
-
 any_owned_starbase - Iterate through every owned primary starbase (i.e. the starbase that claims ownership of a system). - checks whether the enclosed triggers return true for any of them
 any_owned_starbase = { <triggers> }
 Supported Scopes: country
@@ -4806,6 +4785,68 @@ count_war = {
 	count = <num/all/variable>
 	limit = { <triggers> }
 }
+Supported Scopes: country
+
+can_add_random_non_blocker_deposit - Checks whether a random non-blocker deposit could be added to the scoped planet
+can_add_random_non_blocker_deposit = yes
+Supported Scopes: planet
+
+can_spawn_random_anomaly - Checks whether a random anomaly could spawn on the planet for the given surveyor ship or fleet
+can_spawn_random_anomaly = <ship/fleet>
+Supported Scopes: planet
+
+can_spawn_random_archaeological_site - Checks whether a random archaeological site could spawn on the scoped planet
+can_spawn_random_archaeological_site = yes
+Supported Scopes: planet
+
+custom_tooltip_icon - custom_tooltip, but will always try to display the pass/fail icons, even at the root level of the trigger
+custom_tooltip_icon = {
+	fail_text = <text>
+	success_text = <text>
+	text = <text>
+	<triggers>
+}
+Supported Scopes: all
+
+has_ethos - Checks if a country or a pop group ethos contains all ethics of the other target ethos
+has_ethos = <target>
+Supported Scopes: country pop_group
+
+has_overclock - Checks which overclock mode the scoped megastructure is currently using.
+has_overclock = <overclock_type>
+Supported Scopes: megastructure
+
+has_overclock_cooldown - Checks whether the scoped megastructure is still inside its overclock_cooldown and so cannot change mode yet.
+has_overclock_cooldown = yes/no
+Supported Scopes: megastructure
+
+is_ai_ship_role - Checks whether the scoped country may assign a ship role to a ship size.
+Returns true if the role is among the configured roles for that size, including
+every entry of a weighted role block.
+is_ai_ship_role = { ship_size = weaver_stage_1 role = buffer_role }
+Supported Scopes: country
+
+is_preferred_starbase_weapons - Checks if the country's AI prefers this weapon type for starbases (falls back to the empire-wide weapon preference when unset)
+is_preferred_starbase_weapons = weapon_type_energy
+Supported Scopes: country
+
+pop_ethic_amount - Checks the amount or percentage of pops following or not following the ethic. If used rhs this return amount of pops.
+pop_ethic_amount = {
+	amount ><= <value>/<variable> OR percentage ><= <value>/<variable>
+	ethic = <key> OR ethic != <key>
+}
+Supported Scopes: country pop_group pop_faction colony
+
+pop_ethic_percentage - Checks the amount or percentage of pops following or not following the ethic. If used rhs this return percentage of pops.
+pop_ethic_percentage = {
+	amount ><= <value>/<variable> OR percentage ><= <value>/<variable>
+	ethic = <key> OR ethic != <key>
+}
+Supported Scopes: country pop_group pop_faction colony
+
+trade_action_value - Returns the negotiated value (0 to 1) of a trade action in a trade deal with the specified empire.
+with_country is required.
+trade_action_value = { action = <action_key> with_country = <other_country_scope> value >=< 0.5 }
 Supported Scopes: country
 
 
@@ -4994,10 +5035,9 @@ set_faction_properties - Sets country's faction properties:
 set_faction_properties = { some_flag_1 = yes some_flag_2 = no }
 Supported Scopes: country
 
-set_planet_flag - Sets an arbitrarily-named flag on the scoped planet
+set_planet_flag - Sets an arbitrarily-named flag on the scoped planet. Also valid in colony/carrier/ship scope, where it writes the colony carrier's flags.
 set_planet_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: planet
-
+Supported Scopes: planet ship colony
 set_carrier_flag - Sets an arbitrarily-named flag on the scoped colony carrier
 (Note: Colony doesn't store flags. Using any of the carrier_flag effects/triggers in colony scope will access flags in the colony carrier instead.)
 set_carrier_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
@@ -5039,10 +5079,9 @@ remove_country_flag - Removes a flag from the scoped country
 remove_country_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
 Supported Scopes: country
 
-remove_planet_flag - Removes a flag from the scoped planet
+remove_planet_flag - Removes a flag from the scoped planet. Also valid in colony/carrier/ship scope, where it removes from the colony carrier's flags.
 remove_planet_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: planet
-
+Supported Scopes: planet ship colony
 remove_carrier_flag - Removes a flag from the scoped colony carrier
 remove_carrier_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
 Supported Scopes: planet ship colony
@@ -5823,13 +5862,12 @@ set_timed_global_flag = {
 }
 Supported Scopes: all
 
-set_timed_planet_flag - Sets an arbitrarily-named flag on the scoped planet for a set duration
+set_timed_planet_flag - Sets an arbitrarily-named flag on the scoped planet for a set duration. Also valid in colony/carrier/ship scope, where it writes the colony carrier's flags.
 set_timed_planet_flag = { 
 	flag = <key> (note: one can use <key>@scope e.g. my_flag@from to track relationships between objects)
 	days/months/years = <int>/<variable>
 }
-Supported Scopes: planet
-
+Supported Scopes: planet ship colony
 set_timed_carrier_flag - Sets an arbitrarily-named flag on the scoped colony carrier for a set duration
 set_timed_carrier_flag = { 
 	flag = <key> (note: one can use <key>@scope e.g. my_flag@from to track relationships between objects)
@@ -5967,10 +6005,12 @@ switch = {
 }
 Supported Scopes: all
 
-set_pop_faction - Sets the scoped pop group to belong to a specific pop faction
-set_pop_faction = <target>
+set_pop_faction - Sets a ratio of the scoped pop group to belong to a specific pop faction
+set_pop_faction = {
+	faction = <target>
+	ratio = <value (0-1)>
+}
 Supported Scopes: pop pop_group
-
 set_graphical_culture - Sets the scoped object's graphical culture
 set_graphical_culture = <key>
 Supported Scopes: megastructure country ship fleet starbase
@@ -6375,14 +6415,13 @@ set_species_identity - Sets the current species scopes identity to match the tar
 set_species_identity = new/<target species>
 Supported Scopes: species
 
-pop_force_add_ethic - Adds a specific ethic to the scoped pop regardless if pop-species allows ethic divergence or not. 
+pop_force_add_ethic - Adds a specific ethic to the scoped pop group regardless if pop-species allows ethic divergence or not.
 pop_force_add_ethic = {
 	ethic = <key>
 	amount = <amount> OR percentage = <percentage>
 	random = <number> (optional) If set, the amount will be randomized in [max(0, size - random), size + random].
 }
 Supported Scopes: pop_group
-
 set_empire_name - Sets the name of the current Empire.
 set_empire_name = "name_loc_key"
 Supported Scopes: country
@@ -6504,14 +6543,13 @@ shift_ethic - Shifts an empire towards a specific ethic, adjusting afterwards to
 shift_ethic = <key>
 Supported Scopes: country
 
-pop_change_ethic - Changes scoped pop to chosen ethic. 
+pop_change_ethic - Changes scoped pop group to chosen ethic.
 pop_change_ethic = {
 	ethic = <key>
 	amount = <amount> OR percentage = <percentage>
 	random = <number> (optional) If set, the amount will be randomized in [max(0, size - random), size + random].
 }
 Supported Scopes: pop_group
-
 clear_ethos - Clears all ethics of specified pop group or country
 clear_ethos = yes
 Supported Scopes: country pop pop_group
@@ -8025,15 +8063,6 @@ ship_event = {
 }
 Supported Scopes: ship
 
-pop_event - Fires a pop event for the scoped pop, with optional DAYS and RANDOM delay
-pop_event = {
-	id = <id>
-	days = x (optional: specify delay)
-	random = y (optional: specify random delay from 0 to value, which is added on to the 'days' delay)
-	scopes = { from = fromfrom } (optional: specify scope overrides)
-}
-Supported Scopes: pop
-
 pop_group_event - Fires a pop group event for the scoped pop group, with optional DAYS and RANDOM delay
 pop_group_event = {
 	id = <id>
@@ -8182,21 +8211,18 @@ pop_faction_event = {
 }
 Supported Scopes: pop_faction
 
-set_pop_faction_flag - Sets an arbitrarily-named flag on the scoped pop group's faction/pop faction
+set_pop_faction_flag - Sets an arbitrarily-named flag on the scoped pop faction
 set_pop_faction_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: pop pop_group pop_faction
-
-remove_pop_faction_flag - Removes a flag from the scoped pop group's faction/pop faction
+Supported Scopes: pop_faction
+remove_pop_faction_flag - Removes a flag from the scoped pop faction
 remove_pop_faction_flag = <key> (note: one can use e.g. my_flag@from to track relationships between objects)
-Supported Scopes: pop pop_group pop_faction
-
+Supported Scopes: pop_faction
 set_timed_pop_faction_flag - Sets an arbitrarily-named flag on the scoped pop faction for a set duration
 set_timed_pop_faction_flag = {
 	flag = <key> (note: one can use <key>@scope e.g. my_flag@from to track relationships between objects)
 	days = <int>
 }
-Supported Scopes: pop pop_group pop_faction
-
+Supported Scopes: pop_faction
 add_tech_progress - Gives percentage progress (0.0-1.0) in a specific tech to the scoped country
 add_tech_progress = { tech = <key> progress = <float>/<variable> }
 Supported Scopes: country
@@ -10328,7 +10354,7 @@ every_moon - Iterate through each moon of the planet - executes the enclosed eff
 every_moon = { limit = { <triggers> } <effects> }
 Supported Scopes: planet ship colony
 
-random_pop_faction - Iterate through all the country's pop factions - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
+random_pop_faction - Iterate through all the country/pop group/pop's pop factions - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 random_pop_faction = {
 	limit = { <triggers> }
 	weights = { (optional - adds weights to affect the chance a specific object is selected)
@@ -10337,9 +10363,8 @@ random_pop_faction = {
 	}
 	<effects>
 }
-Supported Scopes: country
-
-ordered_pop_faction - Iterate through all the country's pop factions - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
+Supported Scopes: country pop pop_group
+ordered_pop_faction - Iterate through all the country/pop group/pop's pop factions - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
 ordered_pop_faction = {
 	limit = { <triggers> }
 	position = <integer, starting with 0>
@@ -10347,12 +10372,10 @@ ordered_pop_faction = {
 	inverse = yes/no (default: no - if yes, then 0 is lowest rather than highest)
 	<effects>
 }
-Supported Scopes: country
-
-every_pop_faction - Iterate through all the country's pop factions - executes the enclosed effects on all of them for which the limit triggers return true
+Supported Scopes: country pop pop_group
+every_pop_faction - Iterate through all the country/pop group/pop's pop factions - executes the enclosed effects on all of them for which the limit triggers return true
 every_pop_faction = { limit = { <triggers> } <effects> }
-Supported Scopes: country
-
+Supported Scopes: country pop pop_group
 random_owned_pop_group - Iterate through all owned pop groups - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 random_owned_pop_group = {
 	limit = { <triggers> }
@@ -10806,8 +10829,8 @@ trait_of_species = { trait_has_all_tags = { positive } } - executes the enclosed
 every_trait_of_species = { limit = { <triggers> } <effects> }
 Supported Scopes: pop pop_group leader species
 
-random_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
-traits_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
+random_trait_available_for_species - Iterate through all available species traits (minus DLC-locked) and check if scoped species doesn't have this trait
+trait_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 random_trait_available_for_species = {
 	limit = { <triggers> }
 	weights = { (optional - adds weights to affect the chance a specific object is selected)
@@ -10817,9 +10840,8 @@ random_trait_available_for_species = {
 	<effects>
 }
 Supported Scopes: pop pop_group leader species
-
-ordered_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
-traits_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
+ordered_trait_available_for_species - Iterate through all available species traits (minus DLC-locked) and check if scoped species doesn't have this trait
+trait_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
 ordered_trait_available_for_species = {
 	limit = { <triggers> }
 	position = <integer, starting with 0>
@@ -10828,12 +10850,10 @@ ordered_trait_available_for_species = {
 	<effects>
 }
 Supported Scopes: pop pop_group leader species
-
-every_trait_available_for_species - Iterate through all species traits and check if scope species doesn't have this trait
-traits_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on all of them for which the limit triggers return true
+every_trait_available_for_species - Iterate through all available species traits (minus DLC-locked) and check if scoped species doesn't have this trait
+trait_available_for_species = { trait_has_all_tags = { organic positive } } - executes the enclosed effects on all of them for which the limit triggers return true
 every_trait_available_for_species = { limit = { <triggers> } <effects> }
 Supported Scopes: pop pop_group leader species
-
 random_owned_starbase - Iterate through every owned primary starbase (i.e. the starbase that claims ownership of a system). - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
 random_owned_starbase = {
 	limit = { <triggers> }
@@ -11157,6 +11177,96 @@ Supported Scopes: country
 
 every_war - Iterate through all wars the country is engaged in - executes the enclosed effects on all of them for which the limit triggers return true
 every_war = { limit = { <triggers> } <effects> }
+Supported Scopes: country
+
+clear_ai_armor_ratio - Clears the AI armor ratio override, reverting to personality.
+clear_ai_armor_ratio = yes
+Supported Scopes: country
+
+clear_ai_shields_ratio - Clears the AI shields ratio override, reverting to personality.
+clear_ai_shields_ratio = yes
+Supported Scopes: country
+
+clear_ai_ship_roles - Clears all AI ship role overrides for the scoped country, reverting to personality roles.
+clear_ai_ship_roles = yes
+Supported Scopes: country
+
+clear_ai_starbase_armor_ratio - Clears the AI starbase armor ratio override, reverting to the empire-wide ratio.
+clear_ai_starbase_armor_ratio = yes
+Supported Scopes: country
+
+clear_ai_starbase_shields_ratio - Clears the AI starbase shields ratio override, reverting to the empire-wide ratio.
+clear_ai_starbase_shields_ratio = yes
+Supported Scopes: country
+
+clear_ai_starbase_weapon_preference - Clears the AI starbase weapon preference override, reverting to the empire-wide preference.
+clear_ai_starbase_weapon_preference = yes
+Supported Scopes: country
+
+clear_ai_weapon_preference - Clears the AI weapon preference override, reverting to personality.
+clear_ai_weapon_preference = yes
+Supported Scopes: country
+
+pop_force_remove_ethic - Removes an amount of pops from an ethic and redistribute these to any other
+pop_force_remove_ethic = {
+	ethic = <key>
+	amount = <amount> OR percentage = <percentage>
+	random = <number> (optional) If set, the amount will be randomized in [max(0, size - random), size + random].
+}
+Supported Scopes: pop_group
+
+pop_force_transfer_ethic - Transfers an amount of pops from an ethic to another
+pop_force_transfer_ethic = {
+	new_ethic = <key>
+	old_ethic = <key>
+	amount = <amount> OR percentage = <percentage>
+	random = <number> (optional) If set, the amount will be randomized in [max(0, size - random), size + random].
+}
+Supported Scopes: pop_group
+
+rebuild_owned_starbase_designs - Re-pick the auto-designed loadout of the country's non-designable starbases (so a changed starbase weapon/defense preference takes effect on existing stations)
+rebuild_owned_starbase_designs = yes
+Supported Scopes: country
+
+set_ai_armor_ratio - Sets the AI armor ratio override for the scoped country.
+set_ai_armor_ratio = 0.7
+Supported Scopes: country
+
+set_ai_shields_ratio - Sets the AI shields ratio override for the scoped country.
+set_ai_shields_ratio = 0.7
+Supported Scopes: country
+
+set_ai_ship_roles - Sets the AI ship role overrides for the scoped country.
+set_ai_ship_roles = { corvette = gunship destroyer = { artillery = 70 gunship = 30 } }
+Supported Scopes: country
+
+set_ai_starbase_armor_ratio - Sets the AI armor ratio override for the scoped country's auto-designed starbases.
+set_ai_starbase_armor_ratio = 0.7
+Supported Scopes: country
+
+set_ai_starbase_shields_ratio - Sets the AI shields ratio override for the scoped country's auto-designed starbases.
+set_ai_starbase_shields_ratio = 0.7
+Supported Scopes: country
+
+set_ai_starbase_weapon_preference - Sets the AI weapon preference override for the scoped country's auto-designed starbases.
+set_ai_starbase_weapon_preference = weapon_type_energy
+Supported Scopes: country
+
+set_ai_weapon_preference - Sets the AI weapon preference override for the scoped country.
+set_ai_weapon_preference = weapon_type_energy
+Supported Scopes: country
+
+set_overclock - Switches the scoped megastructure to an overclock mode, replacing the current one. Ignores potential, possible and cost, but starts the megastructure's overclock_cooldown unless told otherwise.
+set_overclock = <overclock_type>
+set_overclock = { overclock = <overclock_type> cooldown = yes/no }
+Supported Scopes: megastructure
+
+transfer_resources_to_empire - Transfers the scoped country's stockpile of each listed resource to another country:
+transfer_resources_to_empire = {
+	target = <country scope>
+	resources = { minerals energy ... }
+	percentage = 0.5/variable (optional: share of each stockpile to transfer, clamped to [0, 1]; default 1.0. Any amount above the target's storage capacity is lost, with the remainder disappearing)
+}
 Supported Scopes: country
 
 

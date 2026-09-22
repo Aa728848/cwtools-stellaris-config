@@ -327,6 +327,15 @@ starbase_module = {
 	show_in_tech = <technology>
 	## cardinality = 0..1
 	component_set =  <component_set>
+	## cardinality = 0..inf
+	triggered_component_set = {
+		## cardinality = 0..1
+		## replace_scope = { this = starbase root = starbase from = country }
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		component_set = <component_set>
+	}
 
 	## cardinality = 0..1
 	empire_limit = int

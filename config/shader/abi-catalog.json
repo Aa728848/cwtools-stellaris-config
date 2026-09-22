@@ -1,12 +1,12 @@
 {
   "_schema": "cwtools/shader-abi-catalog/v1",
   "game": "stellaris",
-  "game_version": "4.4.6",
+  "game_version": "4.5.0",
   "review_policy": "Entries are auto-registered from the gfx/FX inventory scan with automatic_inventory evidence and classify as engine entry points. Manually reviewed entries keep their original evidence across version upgrades while their declaration still exists.",
   "entries": [
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -16,7 +16,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00Construction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -26,7 +26,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00ConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -36,7 +36,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00ConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -46,7 +46,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00ConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -56,7 +56,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00Shadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -66,7 +66,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00Skinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -76,7 +76,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlend_00SkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -86,7 +86,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -96,7 +96,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00Construction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -106,7 +106,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00ConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -116,7 +116,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00ConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -126,7 +126,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00ConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -136,7 +136,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00Shadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -146,7 +146,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00Skinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -156,7 +156,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth_00SkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -166,7 +166,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepth",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -176,7 +176,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepthShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -186,7 +186,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepthSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -196,7 +196,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AlphaBlendNoDepthSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -206,7 +206,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArkshipBackground",
       "shader_file": "gfx/fx/portrait.shader",
@@ -216,7 +216,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArkshipNebula",
       "shader_file": "gfx/fx/portrait.shader",
@@ -226,7 +226,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArkshipShip",
       "shader_file": "gfx/fx/portrait.shader",
@@ -236,7 +236,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArkshipStar",
       "shader_file": "gfx/fx/portrait.shader",
@@ -246,7 +246,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArkshipTents",
       "shader_file": "gfx/fx/portrait.shader",
@@ -256,7 +256,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ArrowEffect",
       "shader_file": "gfx/fx/arrow.shader",
@@ -266,7 +266,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Asteroid",
       "shader_file": "gfx/fx/asteroid.shader",
@@ -276,7 +276,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "AsteroidEmissive",
       "shader_file": "gfx/fx/asteroid.shader",
@@ -286,7 +286,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Beam",
       "shader_file": "gfx/fx/planet_destruction.shader",
@@ -296,7 +296,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "blit",
       "shader_file": "gfx/fx/blit.shader",
@@ -306,7 +306,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Blocker",
       "shader_file": "gfx/fx/build_block.shader",
@@ -316,7 +316,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "bloom_alpha",
       "shader_file": "gfx/fx/bloom.shader",
@@ -326,7 +326,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "bloom",
       "shader_file": "gfx/fx/bloom.shader",
@@ -336,7 +336,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "BorderCentroid",
       "shader_file": "gfx/fx/border.shader",
@@ -346,7 +346,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "BorderSDF",
       "shader_file": "gfx/fx/border.shader",
@@ -356,7 +356,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Character",
       "shader_file": "gfx/fx/portrait.shader",
@@ -366,7 +366,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "City",
       "shader_file": "gfx/fx/portrait.shader",
@@ -376,7 +376,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Color",
       "shader_file": "gfx/fx/color.shader",
@@ -386,7 +386,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Color",
       "shader_file": "gfx/fx/progress_radial.shader",
@@ -396,7 +396,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Color",
       "shader_file": "gfx/fx/progress_startend.shader",
@@ -406,7 +406,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Color",
       "shader_file": "gfx/fx/progress.shader",
@@ -416,7 +416,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugLines",
       "shader_file": "gfx/fx/debuglines.shader",
@@ -426,7 +426,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugLines2D",
       "shader_file": "gfx/fx/debuglines.shader",
@@ -436,7 +436,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugNormal",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -446,7 +446,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugNormalSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -456,7 +456,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugTexture",
       "shader_file": "gfx/fx/debugtexture.shader",
@@ -466,7 +466,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "DebugTextureAlpha",
       "shader_file": "gfx/fx/debugtexture.shader",
@@ -476,7 +476,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -486,7 +486,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -496,7 +496,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/buttonstate_rendertarget_hologram.shader",
@@ -506,7 +506,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/buttonstate_rendertarget.shader",
@@ -516,7 +516,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -526,7 +526,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Disable",
       "shader_file": "gfx/fx/flag_sprite.shader",
@@ -536,7 +536,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -546,7 +546,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -556,7 +556,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/buttonstate_rendertarget_hologram.shader",
@@ -566,7 +566,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/buttonstate_rendertarget.shader",
@@ -576,7 +576,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -586,7 +586,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Down",
       "shader_file": "gfx/fx/flag_sprite.shader",
@@ -596,7 +596,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "downsample",
       "shader_file": "gfx/fx/downsample.shader",
@@ -606,7 +606,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "downsample2",
       "shader_file": "gfx/fx/downsample.shader",
@@ -616,7 +616,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "downsample3",
       "shader_file": "gfx/fx/downsample.shader",
@@ -626,7 +626,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Environment",
       "shader_file": "gfx/fx/portrait.shader",
@@ -636,7 +636,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyCenter",
       "shader_file": "gfx/fx/galaxy_center.shader",
@@ -646,7 +646,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyCosmicStorm",
       "shader_file": "gfx/fx/galaxy_cosmic_storm.shader",
@@ -656,7 +656,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyDust",
       "shader_file": "gfx/fx/galaxy_dust.shader",
@@ -666,7 +666,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyDustCloud",
       "shader_file": "gfx/fx/galaxy_dust_cloud.shader",
@@ -676,7 +676,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyNebula",
       "shader_file": "gfx/fx/galaxy_nebula.shader",
@@ -686,7 +686,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyPsionicAura",
       "shader_file": "gfx/fx/galaxy_psionic_aura.shader",
@@ -696,7 +696,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyPsionicAuraHyperlane",
       "shader_file": "gfx/fx/psionic_aura_hyperlane.shader",
@@ -706,7 +706,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyRestore",
       "shader_file": "gfx/fx/galaxy_lowgraphics.shader",
@@ -716,7 +716,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "GalaxyStars",
       "shader_file": "gfx/fx/galaxy_stars.shader",
@@ -726,7 +726,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "heatmap",
       "shader_file": "gfx/fx/heatmap.shader",
@@ -736,7 +736,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "HyperlaneLegacy",
       "shader_file": "gfx/fx/hyperlane.shader",
@@ -746,7 +746,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "HyperlaneQuadLine",
       "shader_file": "gfx/fx/hyperlane.shader",
@@ -756,7 +756,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "HyperlaneQuadLineAlphaPass1",
       "shader_file": "gfx/fx/hyperlane.shader",
@@ -766,7 +766,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "HyperlaneQuadLineAlphaPass2",
       "shader_file": "gfx/fx/hyperlane.shader",
@@ -776,7 +776,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "HyperlaneQuadLineFlatColorPass",
       "shader_file": "gfx/fx/hyperlane.shader",
@@ -786,7 +786,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Laser",
       "shader_file": "gfx/fx/projectile.shader",
@@ -796,7 +796,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "lens_flare",
       "shader_file": "gfx/fx/downsample.shader",
@@ -806,7 +806,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Lines",
       "shader_file": "gfx/fx/lines.shader",
@@ -816,7 +816,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "LuminanceDownsample",
       "shader_file": "gfx/fx/downsample_luminance.shader",
@@ -826,7 +826,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "LuminanceGather",
       "shader_file": "gfx/fx/downsample_luminance.shader",
@@ -836,7 +836,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "MapNameBorder",
       "shader_file": "gfx/fx/mapname.shader",
@@ -846,7 +846,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "MapNameNebula",
       "shader_file": "gfx/fx/mapname.shader",
@@ -856,7 +856,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "MaterialTestShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -866,7 +866,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "OrbitLines",
       "shader_file": "gfx/fx/lines.shader",
@@ -876,7 +876,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -886,7 +886,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -896,7 +896,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/buttonstate_rendertarget_hologram.shader",
@@ -906,7 +906,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/buttonstate_rendertarget.shader",
@@ -916,7 +916,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -926,7 +926,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Over",
       "shader_file": "gfx/fx/flag_sprite.shader",
@@ -936,7 +936,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAdditive",
       "shader_file": "gfx/fx/particle.shader",
@@ -946,7 +946,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAdditiveNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -956,7 +956,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAdditiveNoDepth",
       "shader_file": "gfx/fx/particle.shader",
@@ -966,7 +966,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAdditiveTrail",
       "shader_file": "gfx/fx/particle.shader",
@@ -976,7 +976,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAdditiveTrailNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -986,7 +986,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAlphaBlend",
       "shader_file": "gfx/fx/particle.shader",
@@ -996,7 +996,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAlphaBlendNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -1006,7 +1006,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAlphaBlendTrail",
       "shader_file": "gfx/fx/particle.shader",
@@ -1016,7 +1016,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticleAlphaBlendTrailNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -1026,7 +1026,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticlePreAlphaBlend",
       "shader_file": "gfx/fx/particle.shader",
@@ -1036,7 +1036,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticlePreAlphaBlendNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -1046,7 +1046,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticlePreAlphaBlendTrail",
       "shader_file": "gfx/fx/particle.shader",
@@ -1056,7 +1056,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ParticlePreAlphaBlendTrailNoBillboard",
       "shader_file": "gfx/fx/particle.shader",
@@ -1066,7 +1066,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAdvanced",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1076,7 +1076,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAdvancedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1086,7 +1086,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAdvancedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1096,7 +1096,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAdvancedSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1106,7 +1106,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditive",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1116,7 +1116,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUV",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1126,7 +1126,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlpha",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1136,7 +1136,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaMapUp",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1146,7 +1146,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaMapUpShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1156,7 +1156,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaOverride",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1166,7 +1166,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaOverrideShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1176,7 +1176,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1186,7 +1186,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1196,7 +1196,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVAlphaSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1206,7 +1206,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVErosion",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1216,7 +1216,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVErosionShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1226,7 +1226,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVErosionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1236,7 +1236,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVErosionSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1246,7 +1246,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVNoDissolve",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1256,7 +1256,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVNoDissolveShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1266,7 +1266,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVNoDissolveSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1276,7 +1276,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVNoDissolveSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1286,7 +1286,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVRipple",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1296,7 +1296,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVRippleShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1306,7 +1306,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1316,7 +1316,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1326,7 +1326,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveAnimateUVSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1336,7 +1336,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveNoZ",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1346,7 +1346,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveNoZShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1356,7 +1356,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveNoZSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1366,7 +1366,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveNoZSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1376,7 +1376,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1386,7 +1386,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1396,7 +1396,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAdditiveSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1406,7 +1406,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAnimateUVErosion",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1416,7 +1416,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAnimateUVErosionShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1426,7 +1426,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAnimateUVErosionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1436,7 +1436,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaAnimateUVErosionSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1446,7 +1446,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1456,7 +1456,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendNoZWriteSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1466,7 +1466,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendNoZWriteSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1476,7 +1476,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendPlanet",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1486,7 +1486,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendPlanetShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1496,7 +1496,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendPlanetSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1506,7 +1506,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendPlanetSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1516,7 +1516,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1526,7 +1526,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1536,7 +1536,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAlphaBlendSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1546,7 +1546,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAsteroid",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1556,7 +1556,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAsteroidShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1566,7 +1566,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAsteroidSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1576,7 +1576,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAsteroidSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1586,7 +1586,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAstralRift",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1596,7 +1596,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAstralRiftShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1606,7 +1606,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAstralRiftSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1616,7 +1616,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAstralRiftSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1626,7 +1626,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphere",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1636,7 +1636,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1646,7 +1646,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1656,7 +1656,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1666,7 +1666,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereStar",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1676,7 +1676,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereStarShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1686,7 +1686,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereStarSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1696,7 +1696,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshAtmosphereStarSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1706,7 +1706,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHole",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1716,7 +1716,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleBillboard",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1726,7 +1726,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleBillboardShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1736,7 +1736,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleBillboardSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1746,7 +1746,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleBillboardSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1756,7 +1756,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1766,7 +1766,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1776,7 +1776,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshBlackHoleSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1786,7 +1786,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCircleGradient",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1796,7 +1796,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCircleGradientShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1806,7 +1806,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshClouds",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1816,7 +1816,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1826,7 +1826,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1836,7 +1836,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1846,7 +1846,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1856,7 +1856,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1866,7 +1866,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1876,7 +1876,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshCloudsSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1886,7 +1886,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColor",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1896,7 +1896,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditive",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1906,7 +1906,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveAnimateUV",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1916,7 +1916,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveAnimateUVShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1926,7 +1926,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveAnimateUVSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1936,7 +1936,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveAnimateUVSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1946,7 +1946,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1956,7 +1956,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1966,7 +1966,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorAlphaAdditiveStandardShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1976,7 +1976,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1986,7 +1986,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -1996,7 +1996,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshColorSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2006,7 +2006,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshDimensionalPortal",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2016,7 +2016,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshDimensionalPortalShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2026,7 +2026,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshDimensionalPortalSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2036,7 +2036,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshDimensionalPortalSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2046,7 +2046,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshExtraDimensionalShip",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2056,7 +2056,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshExtraDimensionalShipShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2066,7 +2066,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshExtraDimensionalShipSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2076,7 +2076,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshExtraDimensionalShipSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2086,7 +2086,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditive",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2096,7 +2096,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditiveCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2106,7 +2106,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditiveEmpireColor",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2116,7 +2116,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditiveEmpireColorCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2126,7 +2126,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditiveEmpireColorShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2136,7 +2136,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAdditiveShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2146,7 +2146,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAlpha",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2156,7 +2156,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAlphaEmpireColor",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2166,7 +2166,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAlphaEmpireColorShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2176,7 +2176,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFlowAlphaShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2186,7 +2186,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFrontendBackground",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2196,7 +2196,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFrontendBackgroundShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2206,7 +2206,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFrontendBackgroundSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2216,7 +2216,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshFrontendBackgroundSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2226,7 +2226,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGasGiant",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2236,7 +2236,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGasGiantShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2246,7 +2246,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGasGiantSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2256,7 +2256,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGasGiantSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2266,7 +2266,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGravitySnare",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2276,7 +2276,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGravitySnareShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2286,7 +2286,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGravitySnareSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2296,7 +2296,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshGravitySnareSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2306,7 +2306,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHealthbar",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2316,7 +2316,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHealthbarShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2326,7 +2326,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHealthbarSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2336,7 +2336,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHealthbarSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2346,7 +2346,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHologramWPO",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2356,7 +2356,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshHologramWPOShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2366,7 +2366,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIcon",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2376,7 +2376,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconColor",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2386,7 +2386,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconColorShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2396,7 +2396,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconColorSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2406,7 +2406,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconColorSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2416,7 +2416,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2426,7 +2426,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2436,7 +2436,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMapIconSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2446,7 +2446,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMoltenPlanet",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2456,7 +2456,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMoltenPlanetShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2466,7 +2466,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMoltenPlanetSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2476,7 +2476,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshMoltenPlanetSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2486,7 +2486,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNavigationButton",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2496,7 +2496,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNavigationButtonShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2506,7 +2506,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNavigationButtonSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2516,7 +2516,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNavigationButtonSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2526,7 +2526,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNeutronStarShell",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2536,7 +2536,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNeutronStarShellShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2546,7 +2546,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNeutronStarShellSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2556,7 +2556,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshNeutronStarShellSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2566,7 +2566,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanet",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2576,7 +2576,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissive",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2586,7 +2586,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissiveShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2596,7 +2596,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissiveSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2606,7 +2606,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissiveSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2616,7 +2616,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissiveWithLights",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2626,7 +2626,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetEmissiveWithLightsShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2636,7 +2636,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetRings",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2646,7 +2646,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetRingsShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2656,7 +2656,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetRingsSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2666,7 +2666,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetRingsSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2676,7 +2676,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2686,7 +2686,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2696,7 +2696,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPlanetSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2706,7 +2706,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortrait",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2716,7 +2716,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitAnimateUV",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2726,7 +2726,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitAnimateUVShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2736,7 +2736,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitAnimateUVSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2746,7 +2746,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitAnimateUVSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2756,7 +2756,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitClothes",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2766,7 +2766,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitClothesShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2776,7 +2776,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitClothesSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2786,7 +2786,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitClothesSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2796,7 +2796,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitCustomDiffuseAnimateUV",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2806,7 +2806,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitCustomDiffuseAnimateUVShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2816,7 +2816,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitCustomDiffuseAnimateUVSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2826,7 +2826,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitCustomDiffuseAnimateUVSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2836,7 +2836,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHair",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2846,7 +2846,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHairShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2856,7 +2856,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHairSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2866,7 +2866,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHairSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2876,7 +2876,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShift",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2886,7 +2886,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftMasked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2896,7 +2896,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftMaskedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2906,7 +2906,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftMaskedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2916,7 +2916,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftMaskedSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2926,7 +2926,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2936,7 +2936,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2946,7 +2946,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitHueShiftSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2956,7 +2956,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2966,7 +2966,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2976,7 +2976,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshPortraitSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2986,7 +2986,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBar",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -2996,7 +2996,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarColored",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3006,7 +3006,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarColoredShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3016,7 +3016,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarColoredSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3026,7 +3026,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarColoredSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3036,7 +3036,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3046,7 +3046,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3056,7 +3056,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshProgressBarSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3066,7 +3066,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathan",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3076,7 +3076,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanAlpha",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3086,7 +3086,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanAlphaShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3096,7 +3096,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanAlphaSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3106,7 +3106,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanAlphaSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3116,7 +3116,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3126,7 +3126,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3136,7 +3136,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshReanimatedLeviathanSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3146,7 +3146,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRings",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3156,7 +3156,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingsShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3166,7 +3166,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingsSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3176,7 +3176,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingsSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3186,7 +3186,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldClouds",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3196,7 +3196,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3206,7 +3206,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3216,7 +3216,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3226,7 +3226,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3236,7 +3236,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3246,7 +3246,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3256,7 +3256,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshRingworldCloudsSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3266,7 +3266,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldFlipBook",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3276,7 +3276,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldFlipBookShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3286,7 +3286,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldFlipBookSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3296,7 +3296,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldUVStrech",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3306,7 +3306,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldUVStrechShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3316,7 +3316,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShieldUVStrechSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3326,7 +3326,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShip",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3336,7 +3336,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3346,7 +3346,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3356,7 +3356,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3366,7 +3366,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3376,7 +3376,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3386,7 +3386,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3396,7 +3396,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissive",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3406,7 +3406,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlpha",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3416,7 +3416,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlphaCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3426,7 +3426,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlphaCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3436,7 +3436,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlphaShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3446,7 +3446,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlphaSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3456,7 +3456,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveAlphaSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3466,7 +3466,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3476,7 +3476,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3486,7 +3486,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3496,7 +3496,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3506,7 +3506,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3516,7 +3516,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3526,7 +3526,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoise",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3536,7 +3536,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3546,7 +3546,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3556,7 +3556,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3566,7 +3566,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3576,7 +3576,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3586,7 +3586,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3596,7 +3596,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3606,7 +3606,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3616,7 +3616,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveNoiseSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3626,7 +3626,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3636,7 +3636,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3646,7 +3646,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipDiffuseEmissiveSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3656,7 +3656,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3666,7 +3666,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3676,7 +3676,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3686,7 +3686,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3696,7 +3696,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3706,7 +3706,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3716,7 +3716,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3726,7 +3726,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMask",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3736,7 +3736,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskCloaked",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3746,7 +3746,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskCloakedSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3756,7 +3756,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3766,7 +3766,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3776,7 +3776,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3786,7 +3786,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3796,7 +3796,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3806,7 +3806,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3816,7 +3816,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowEmissiveMaskSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3826,7 +3826,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3836,7 +3836,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3846,7 +3846,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipFlowSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3856,7 +3856,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3866,7 +3866,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3876,7 +3876,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshShipSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3886,7 +3886,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshSimple",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3896,7 +3896,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshSimpleShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3906,7 +3906,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshSimpleSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3916,7 +3916,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshSimpleSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3926,7 +3926,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandard",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3936,7 +3936,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3946,7 +3946,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3956,7 +3956,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3966,7 +3966,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3976,7 +3976,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3986,7 +3986,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -3996,7 +3996,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStandardSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4006,7 +4006,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStar",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4016,7 +4016,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStarShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4026,7 +4026,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStarSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4036,7 +4036,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshStarSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4046,7 +4046,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerra",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4056,7 +4056,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4066,7 +4066,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4076,7 +4076,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4086,7 +4086,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4096,7 +4096,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4106,7 +4106,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4116,7 +4116,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4126,7 +4126,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaBlendSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4136,7 +4136,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaTest",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4146,7 +4146,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaTestShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4156,7 +4156,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaTestSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4166,7 +4166,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraAlphaTestSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4176,7 +4176,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraConstruction",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4186,7 +4186,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraConstructionAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4196,7 +4196,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraConstructionAlphaBlendSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4206,7 +4206,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraConstructionSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4216,7 +4216,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraEmissiveMask",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4226,7 +4226,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraEmissiveMaskShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4236,7 +4236,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraEmissiveMaskSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4246,7 +4246,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraEmissiveMaskSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4256,7 +4256,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4266,7 +4266,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraSkinned",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4276,7 +4276,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshTerraSkinnedShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4286,7 +4286,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshWPO",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4296,7 +4296,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshWPOAlphaBlend",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4306,7 +4306,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshWPOAlphaBlendShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4316,7 +4316,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "PdxMeshWPOShadow",
       "shader_file": "gfx/fx/pdxmesh.shader",
@@ -4326,7 +4326,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Restore",
       "shader_file": "gfx/fx/restorescene.shader",
@@ -4336,7 +4336,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "RestoreBloom",
       "shader_file": "gfx/fx/restorescene.shader",
@@ -4346,7 +4346,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Room",
       "shader_file": "gfx/fx/portrait.shader",
@@ -4356,7 +4356,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "SectorSdf",
       "shader_file": "gfx/fx/border.shader",
@@ -4366,7 +4366,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "SensorRange",
       "shader_file": "gfx/fx/sensor_range.shader",
@@ -4376,7 +4376,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "ShipTrail",
       "shader_file": "gfx/fx/ship_trail.shader",
@@ -4386,7 +4386,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Simple",
       "shader_file": "gfx/fx/simple.shader",
@@ -4396,7 +4396,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Simple3D",
       "shader_file": "gfx/fx/simple.shader",
@@ -4406,7 +4406,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "SimpleDebug",
       "shader_file": "gfx/fx/simpledebug.shader",
@@ -4416,7 +4416,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Sky_YCoCg",
       "shader_file": "gfx/fx/sky.shader",
@@ -4426,7 +4426,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Sky",
       "shader_file": "gfx/fx/sky.shader",
@@ -4436,7 +4436,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "StarPin",
       "shader_file": "gfx/fx/border.shader",
@@ -4446,7 +4446,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "StormBorders",
       "shader_file": "gfx/fx/storm_forecast_mesh.shader",
@@ -4456,7 +4456,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "StormInfluenceVisualisation",
       "shader_file": "gfx/fx/galaxy_storm_influence.shader",
@@ -4466,7 +4466,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "StrikeCraftTrail",
       "shader_file": "gfx/fx/ship_trail.shader",
@@ -4476,7 +4476,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Text",
       "shader_file": "gfx/fx/text.shader",
@@ -4486,7 +4486,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Text3D",
       "shader_file": "gfx/fx/text.shader",
@@ -4496,7 +4496,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDisable",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -4506,7 +4506,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDisable",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -4516,7 +4516,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDisable",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -4526,7 +4526,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDown",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -4536,7 +4536,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDown",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -4546,7 +4546,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextDown",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -4556,7 +4556,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextOver",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -4566,7 +4566,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextOver",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -4576,7 +4576,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextOver",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -4586,7 +4586,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextUp",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -4596,7 +4596,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextUp",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -4606,7 +4606,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "TextUp",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -4616,7 +4616,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Texture",
       "shader_file": "gfx/fx/progress_radial.shader",
@@ -4626,7 +4626,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Texture",
       "shader_file": "gfx/fx/progress_startend.shader",
@@ -4636,7 +4636,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Texture",
       "shader_file": "gfx/fx/progress.shader",
@@ -4646,7 +4646,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/buttonstate_onlyanim.shader",
@@ -4656,7 +4656,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/buttonstate_onlydisable.shader",
@@ -4666,7 +4666,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/buttonstate_rendertarget_hologram.shader",
@@ -4676,7 +4676,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/buttonstate_rendertarget.shader",
@@ -4686,7 +4686,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/buttonstate.shader",
@@ -4696,7 +4696,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "Up",
       "shader_file": "gfx/fx/flag_sprite.shader",
@@ -4706,7 +4706,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "entry_kind": "effect",
       "name": "WaystationNetworkHyperlane",
       "shader_file": "gfx/fx/waystation_network.shader",

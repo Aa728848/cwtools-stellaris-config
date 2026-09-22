@@ -590,6 +590,10 @@ types = {
 		## replace_scope = { this = pop_group root = colony }
 		subtype[can_pop_group_auto_migrate] = {
 		}
+		## type_key_filter = can_pop_group_auto_migrate_abroad
+		## replace_scope = { this = pop_group root = colony }
+		subtype[can_pop_group_auto_migrate_abroad] = {
+		}
 		## type_key_filter = can_pops_assemble_on_colony
 		## replace_scope = { this = colony root = colony }
 		subtype[can_pops_assemble_on_colony] = {

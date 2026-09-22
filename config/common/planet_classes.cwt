@@ -49,6 +49,10 @@ types = {
 #TODO Expand to add colonizable subtype
 planet_class = {
 	## cardinality = 0..1
+	can_be_capital = bool
+	## cardinality = 0..1
+	inherit_country_district_modifiers = bool
+	## cardinality = 0..1
 	atmosphere_color = colour[hsv]
 	## cardinality = 0..1
 	atmosphere_intensity = float

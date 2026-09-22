@@ -129,6 +129,8 @@ types = {
 }
 
 ship_size = {
+	## cardinality = 0..1
+	use_ai_design_role_from = <ship_size>
 	## cardinality = 0..2
 	graphical_culture = {
 		## cardinality = 1..inf

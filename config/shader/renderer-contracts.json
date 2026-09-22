@@ -3,7 +3,7 @@
   "contracts": [
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "normal",
       "shader_file": "gfx/FX/buttonstate.shader",
       "effects": [
@@ -23,7 +23,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "cornered_tile",
       "shader_file": "gfx/FX/buttonstate.shader",
       "effects": [
@@ -43,7 +43,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "normal",
       "shader_file": "gfx/FX/buttonstate_onlyanim.shader",
       "effects": [
@@ -63,7 +63,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "normal",
       "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
       "effects": [
@@ -83,7 +83,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "cornered_tile",
       "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
       "effects": [
@@ -103,7 +103,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "text_sprite",
       "shader_file": "gfx/FX/buttonstate_onlydisable.shader",
       "effects": [
@@ -123,7 +123,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "normal",
       "shader_file": "gfx/FX/buttonstate_rendertarget.shader",
       "effects": [
@@ -137,7 +137,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "portrait",
       "shader_file": "gfx/FX/buttonstate_rendertarget.shader",
       "effects": [
@@ -151,7 +151,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "portrait",
       "shader_file": "gfx/FX/buttonstate_rendertarget_hologram.shader",
       "effects": [
@@ -165,7 +165,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "flag_sprite",
       "shader_file": "gfx/FX/flag_sprite.shader",
       "effects": [
@@ -182,7 +182,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "progress_bar",
       "shader_file": "gfx/FX/progress.shader",
       "effects": [
@@ -197,7 +197,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "progress_bar",
       "shader_file": "gfx/FX/progress_radial.shader",
       "effects": [
@@ -212,7 +212,7 @@
     },
     {
       "game": "stellaris",
-      "game_version": "4.4.6",
+      "game_version": "4.5.0",
       "renderer_subtype": "progress_bar",
       "shader_file": "gfx/FX/progress_startend.shader",
       "effects": [
