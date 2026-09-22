@@ -142,6 +142,7 @@ Properties
  GetSpeciesNamePersistent
  GetSpeciesNamePlural
  GetSpeciesAdj
+ GetPopsGuidingEthic
 
 --System--
 Promotions:

@@ -34,6 +34,7 @@ localisation_commands = {
     GetSpeciesNameInsult = country
     GetSpeciesNamePlural = { country pop pop_group species }
 	GetSpeciesNamePersistent = { country pop pop_group species }
+    GetPopsGuidingEthic = pop_group
     GetSpeciesNamePluralCompliment = country
     GetSpeciesNamePluralInsult = country
     GetSpeciesOrganName = country
