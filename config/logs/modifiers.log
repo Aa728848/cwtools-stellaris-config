@@ -140,7 +140,10 @@ Printing Modifier Definitions:
 - planet_non_artificial_max_buildings_add, Category: Colony
 - planet_max_districts_add, Category: Colony
 - planet_max_districts_mult, Category: Colony
-- planet_max_buildings_add, Category: Colony
+- branch_office_target_max_buildings_add, Category: Colony
+- branch_office_owner_max_buildings_add, Category: Countries
+- subject_holding_target_max_buildings_add, Category: Countries
+- subject_holding_owner_max_buildings_add, Category: Countries
 - planet_pop_assembly_add, Category: Colony
 - planet_pop_assembly_mult, Category: Colony
 - planet_pop_assembly_reduction, Category: Colony
