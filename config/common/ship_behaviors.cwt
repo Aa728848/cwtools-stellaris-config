@@ -81,6 +81,7 @@ enums = {
 	enum[range_components_enum] = {
 		weapon
 		strike_craft
+		weapon_and_strike_craft
 	}
 	enum[combat_movement_enum] = {
 		ignore

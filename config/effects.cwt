@@ -2996,11 +2996,11 @@ alias[effect:pop_force_add_ethic] = {
 	## cardinality = 0..1
 	ethic = <ethos>
 	## cardinality = 0..1
-	amount = int
+	amount = float
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 	## cardinality = 0..1
-	random = int
+	random = float
 }
 
 ### Removes a specific ethic from the scoped pop
@@ -3008,11 +3008,11 @@ alias[effect:pop_remove_ethic] = {
 	## cardinality = 0..1
 	ethic = <ethos>
 	## cardinality = 0..1
-	amount = int
+	amount = float
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 	## cardinality = 0..1
-	random = int
+	random = float
 }
 
 ### Disables or enables anomaly generation for the scoped planet
@@ -3052,7 +3052,7 @@ alias[effect:rename_species] = {
 	## cardinality = 0..1
 	prompt_country = scope_group[target_country]
 	## cardinality = 0..1
-	name = scalar
+	name = localisation
 	## cardinality = 0..1
 	###Name lists defined in the name_lists folder might not work (where would it get the name from?). Rather, Vanilla uses ones defined in species_names. Let Dayshine and Caligula know if ones in name_lists work. (Same with name_list = random and name_list = country).
 	name_list = <species_named_list>
@@ -5743,6 +5743,8 @@ alias[effect:carrier_event] = {
 alias[effect:spawn_random_anomaly] = {
 	## cardinality = 0..1
 	target = scope[any]
+	## cardinality = 0..1
+	surveyor = scope[any]
 }
 
 ### Creates a fleet of the requested size, distributing ships deterministically across the listed designs by each ship_size's ai_ship_data.fraction.
