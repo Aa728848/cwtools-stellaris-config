@@ -3525,7 +3525,7 @@ alias[trigger:is_ai_ship_role] = {
 }
 
 ###Checks if the country's AI prefers this weapon type for starbases (falls back to the empire-wide weapon preference when unset)
-alias[trigger:is_preferred_starbase_weapons] = enum[weapon_types]
+alias[trigger:is_preferred_starbase_weapons] = enum[weapon_type]
 
 ###Checks the amount or percentage of pops following or not following the ethic. If used rhs this return amount of pops.
 alias[trigger:pop_ethic_amount] == int_value_field

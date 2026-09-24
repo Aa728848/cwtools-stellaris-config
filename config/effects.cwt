@@ -5836,10 +5836,10 @@ alias[effect:set_ai_starbase_armor_ratio] = value_field[0.0..1.0]
 alias[effect:set_ai_starbase_shields_ratio] = value_field[0.0..1.0]
 
 ###Sets the AI weapon preference override for the scoped country's auto-designed starbases.
-alias[effect:set_ai_starbase_weapon_preference] = enum[weapon_types]
+alias[effect:set_ai_starbase_weapon_preference] = enum[weapon_type]
 
 ###Sets the AI weapon preference override for the scoped country.
-alias[effect:set_ai_weapon_preference] = enum[weapon_types]
+alias[effect:set_ai_weapon_preference] = enum[weapon_type]
 
 ###Switches the scoped megastructure to an overclock mode, replacing the current one.
 alias[effect:set_overclock] = <mega_overclock>
