@@ -8176,7 +8176,7 @@ Supported Scopes: army
 
 prevent_anomaly - Disables or enables anomaly generation for the scoped planet
 prevent_anomaly = yes
-Supported Scopes: planet
+Supported Scopes: planet ship colony
 
 add_deposit - Adds resource deposit to the scoped object (note: if you add a blocker, it will add a random deposit that can be blocked by that deposit)
 add_deposit = <key/random/random_blocker/random_nonblocker>
