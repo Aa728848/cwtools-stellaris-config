@@ -264,7 +264,7 @@ situation_type = {
 			icon = <sprite>
 			## cardinality = 0..1
 			icon_background = <sprite>
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
 			###Effect for the first time this stage fires (hidden in the UI)
