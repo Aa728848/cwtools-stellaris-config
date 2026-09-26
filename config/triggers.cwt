@@ -64,6 +64,7 @@ alias[trigger:has_modifier] = <static_modifier>
 
 ###Checks if the country has a specific opinion modifier towards target country or anyone
 alias[trigger:has_opinion_modifier] = {
+	## cardinality = 0..1
 	who = scope_group[target_country]
 	modifier = <opinion_modifier>
 	##cardinality = 0..1
@@ -3027,6 +3028,7 @@ alias[trigger:has_shield_percentage]  == value_field[0.0..1.0]
 
 ###Checks the number of pops assigned to the job (in total or from a specific pop group)
 alias[trigger:num_pops_assigned_to_job] = {
+	## cardinality = 0..1
 	pop_group = scope_group[target_pop_job] 
 	value = int_value_field
 }
