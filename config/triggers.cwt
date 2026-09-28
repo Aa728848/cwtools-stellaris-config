@@ -2106,9 +2106,9 @@ alias[trigger:last_increased_tech] = <technology>
 
 ### Prints a message to game.log for debugging purposes
 ## scope = all
-## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
-## engine_evidence = CTextBase::ProcessString (delegates to a helper that scans)
+## cost = o(1)
+## engine = Formats the message and writes it to game.log; the only loop involved iterates the characters of the string, not a game container.
+## engine_evidence = CLogTrigger::ActualEvaluate; dump L6880834 (no container scan)
 alias[trigger:log] = scalar
 
 ### Checks if the local human is logged in to a Pdx account. This WILL cause an out of sync if used for anything that can change the game state
