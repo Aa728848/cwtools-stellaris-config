@@ -67,6 +67,9 @@ alias[trigger:any_controlled_ship] = {
 
 ## push_scope = planet
 ###Checks if any planet ANYWHERE meets the specified criteria
+## cost = o(n)_galaxy
+## engine = Iterates every planet in the galaxy; the planet ID list is materialized before the short-circuit loop.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md row 90 (any_galaxy_planet, O(all planets), dump 6566149); docs/better_stellaris/02_script_engine.md S7 (O(N) list materialization before first evaluation)
 alias[trigger:any_galaxy_planet] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -91,6 +94,9 @@ alias[trigger:any_controlled_planet] = {
 
 ## push_scope = country
 ###Iterate through all countries
+## cost = o(n)_galaxy
+## engine = Iterates every country in the galaxy, evaluating the inner trigger on each.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md row 90 (any_country iterates all countries, O(N), dump 6328023)
 alias[trigger:any_country] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -163,6 +169,9 @@ alias[trigger:any_planet_army] = {
 
 ## push_scope = country
 ###Iterate through all neighbor countries
+## cost = o(n)_galaxy
+## engine = Scans every country in the galaxy and calls IsBorderingCountry on each (binary search over relations) before evaluating the inner trigger. Cheaper: iterate any_relation / any_subject with conditions instead of a full-galaxy border scan.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md T6 and row 88 (CNeighborCountryListBuilder, O(N log N), dump 6337186)
 alias[trigger:any_neighbor_country] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -211,6 +220,9 @@ alias[trigger:any_owned_starbase] = {
 
 ## push_scope = system
 ###Iterate through all systems
+## cost = o(n)_galaxy
+## engine = Iterates every system in the galaxy, evaluating the inner trigger on each.
+## engine_evidence = full-container iterator like any_country/any_galaxy_planet (docs/better_stellaris/14_trigger_cost_catalog.md rows 88-90); the system container is galaxy-wide
 alias[trigger:any_system] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -1144,6 +1156,9 @@ alias[effect:random_relation] = {
 
 ## push_scope = country
 ###Iterate through all countries
+## cost = o(n)_galaxy
+## engine = Iterates every country in the galaxy, executing the enclosed effects on each match.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md row 90 (any_country iterates all countries, O(N), dump 6328023); the every_ effect variant is the same full-galaxy iteration
 alias[effect:every_country] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1175,6 +1190,9 @@ alias[effect:ordered_country] = {
 
 ## push_scope = country
 ###Iterate through all countries
+## cost = o(n)_galaxy
+## engine = Builds the full list of all countries in the galaxy, evaluates the limit on every candidate, then picks one (weighted picks also evaluate every survivor).
+## engine_evidence = docs/better_stellaris/02_script_engine.md S2 (random_* evaluates the limit on all candidates before picking; random_country named explicitly)
 alias[effect:random_country] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1793,6 +1811,9 @@ alias[effect:random_system_planet] = {
 
 ## push_scope = planet
 ###Executes enclosed effects for every planet in the game that meet the limit criteria
+## cost = o(n)_galaxy
+## engine = Iterates every planet in the galaxy, executing the enclosed effects on each match.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md row 90 (any_galaxy_planet, O(all planets), dump 6566149); the every_ effect variant is the same full-galaxy iteration
 alias[effect:every_galaxy_planet] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1801,6 +1822,9 @@ alias[effect:every_galaxy_planet] = {
 
 ## push_scope = planet
 ###Iterate through all planets in the galaxy - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
+## cost = o(n)_galaxy
+## engine = Materializes every planet in the galaxy and evaluates order_by (and limit) on all candidates before picking one.
+## engine_evidence = docs/better_stellaris/02_script_engine.md S2/S7 (full candidate list is built and evaluated before picking; galaxy planet list, dump 6566149)
 alias[effect:ordered_galaxy_planet] = {
 	position = int[0..inf]
 	##cardinality = 0..1
@@ -1824,6 +1848,9 @@ alias[effect:ordered_galaxy_planet] = {
 
 ## push_scope = planet
 ###Executes enclosed effects on a random planet that meets the limit criteria
+## cost = o(n)_galaxy
+## engine = Builds the full list of all planets in the galaxy, evaluates the limit on every candidate, then picks one (weighted picks also evaluate every survivor).
+## engine_evidence = docs/better_stellaris/02_script_engine.md S2 (random_galaxy_planet named: ~10k trigger evaluations per call even when half the planets match); docs/better_stellaris/14_trigger_cost_catalog.md row 90
 alias[effect:random_galaxy_planet] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -2116,6 +2143,9 @@ alias[effect:ordered_system_megastructure] = {
 
 ## push_scope = system
 ###Iterate through all systems
+## cost = o(n)_galaxy
+## engine = Builds the full list of all systems in the galaxy, evaluates the limit on every candidate, then picks one (weighted picks also evaluate every survivor).
+## engine_evidence = docs/better_stellaris/02_script_engine.md S2 (random_system named: the limit is evaluated on all candidates before picking)
 alias[effect:random_system] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -2129,6 +2159,9 @@ alias[effect:random_system] = {
 
 ## push_scope = system
 ###Iterate through all systems
+## cost = o(n)_galaxy
+## engine = Iterates every system in the galaxy, executing the enclosed effects on each match.
+## engine_evidence = full-container iterator like any_country/any_galaxy_planet (docs/better_stellaris/14_trigger_cost_catalog.md rows 88-90); the system container is galaxy-wide
 alias[effect:every_system] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -3901,6 +3934,9 @@ alias[effect:random_species_pop_group] = {
 
 ## push_scope = pop_group
 ###Iterate through each pop group that belongs to this species; warning: resource-intensive! - checks whether the enclosed triggers return true for any of them
+## cost = o(n)_galaxy
+## engine = Scans every pop group in the galaxy (the engine's global pop-group table), not just the scoped empire's. Cheaper: iterate from your own colonies instead of scanning every pop group in the galaxy.
+## engine_evidence = docs/better_stellaris/14_trigger_cost_catalog.md row 89 (CSpeciesPopGroupListBuilder scans the galaxy-wide pop-group table at gamestate+0x628; triggers.log self-marks it resource-intensive, ~6589276)
 alias[trigger:any_species_pop_group] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -5723,6 +5759,7 @@ alias[effect:every_system_in_cosmic_storm_influence_field] = {
 }
 
 ###Checks used naval cap by the scoped country or fleet's controlled ships which fulfill the specified criteria.
+## engine = Sums the scoped country or fleet's controlled ships matching the criteria via a heap-allocated scratch array, so cost grows with ship count. Cheaper: used_naval_capacity_integer or fleet_size (both O(1) cached fields).
 alias[trigger:count_used_naval_cap] = {
 	value = int_value_field
 	value = value[variable]

@@ -305,7 +305,7 @@ alias[trigger:has_authority] = <authority>
 
 ###Checks if the current country has a certain civic and if its validated
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: has_civic unless you truly need validity re-verification.
 ## engine_evidence = CHasValidCivicTrigger::ActualEvaluate (loop in the command implementation)
 alias[trigger:has_valid_civic] = <civic_or_origin.civic>
 
@@ -337,7 +337,7 @@ alias[trigger:is_same_value] = scope[any]
 ## push_scope = pop_group
 ###Checks the percentage of pops in the scope that fulfill the specified criteria
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: num_owned_colonies or empire_size (both O(1) cached), or a planet-scope check.
 ## engine_evidence = CPopAmountPercentageTrigger::GetTriggerValue (loop in the command implementation)
 alias[trigger:pop_amount_percentage] = {
 	limit = {
@@ -359,7 +359,7 @@ alias[trigger:pop_amount_percentage] = {
 alias[trigger:support] == value_field[0.0..1.0]
 ###Checks the country's used naval capacity in relative terms (0.00-1.00)
 ## cost = o(1)
-## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
+## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps. Cheaper: used_naval_capacity_integer or fleet_size (both O(1) cached fields).
 ## engine_evidence = CUsedNavalCapacityPercentTrigger::GetTriggerValue (no scan in the command or its direct callees)
 alias[trigger:used_naval_capacity_percent] == value_field
 ###Checks if the country is a specific type
@@ -568,6 +568,7 @@ alias[trigger:is_country] = scope_group[target_country]
 
 #should also check < >
 ###Checks the planet's habitability (0 to 1) for target pop group/species
+## engine = Builds several scopes (with heap allocations) and evaluates triggered planet modifiers for each species trait. Cheaper: put cheap filters first (AND short-circuits): is_planet_class, has_owner, is_ai, is_country_type.
 alias[trigger:habitability] = {
 	who = scope_group[target_species]
 	value = value_field[0.0..1.0]
@@ -756,7 +757,7 @@ alias[trigger:is_war_participant] = scope[war]
 
 ###Checks the country's opinion of the target country against a specific value
 ## cost = o(1)
-## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
+## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps. Cheaper: put cheap filters first (AND short-circuits): is_planet_class, has_owner, is_ai, is_country_type.
 ## engine_evidence = COpinionTrigger::GetTriggerValue (no scan in the command or its direct callees)
 alias[trigger:opinion] = {
 	who = scope_group[target_country]
@@ -2119,7 +2120,7 @@ alias[trigger:logged_in_to_pdx_account] = bool
 
 ### Checks the country's max naval capacity in absolute numbers
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Cheaper: used_naval_capacity_integer or fleet_size (both O(1) cached fields).
 ## engine_evidence = CCountry::CalcNavalCapacity (delegates to a helper that scans)
 alias[trigger:max_naval_capacity] == int_value_field
 
@@ -2200,7 +2201,7 @@ alias[trigger:num_rare_techs] == int_value_field
 
 ### Checks the country/fleet's number of ships
 ## cost = o(n)_owned
-## engine = Sums the scoped country/fleet's ship container instead of reading a counter, so cost grows with fleet size.
+## engine = Sums the scoped country/fleet's ship container instead of reading a counter, so cost grows with fleet size. Cheaper: used_naval_capacity_integer or fleet_size (both O(1) cached fields).
 ## engine_evidence = CFleet::CalcNumShips loops the fleet's ship array; dump L3222945
 alias[trigger:num_ships] == int_value_field
 
@@ -2335,7 +2336,7 @@ alias[trigger:text] = localisation
 
 ### Checks target country's opinion value of the current country
 ## cost = o(1)
-## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
+## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps. Cheaper: put cheap filters first (AND short-circuits): is_planet_class, has_owner, is_ai, is_country_type.
 ## engine_evidence = CTheirOpinionTrigger::GetTriggerValue (no scan in the command or its direct callees)
 alias[trigger:their_opinion] = {
 	who = scope_group[target_country]
@@ -2597,7 +2598,7 @@ alias[trigger:has_built_species] = bool
 
 ###Checks the number the planet has of any, or a specific, building
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: any_owned_planet = { ... planet-scope check ... } stops at the first hit.
 ## engine_evidence = CNumBuildingsTrigger::GetTriggerValue (loop in the command implementation)
 alias[trigger:num_buildings] = {
 	type = any
@@ -2622,7 +2623,7 @@ alias[trigger:num_buildings] = {
 
 ###Checks the number the planet has of any, or a specific, district
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: any_owned_planet = { ... planet-scope check ... } stops at the first hit.
 ## engine_evidence = CNumDistrictsTrigger::GetTriggerValue (loop in the command implementation)
 alias[trigger:num_districts] = {
 	type = any
@@ -3249,7 +3250,7 @@ alias[trigger:species_has_happiness_with_owner] = scope_group[target_country]
 
 ###Checks the number of pops the planet or country has that work a specific job.
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: any_owned_planet = { ... planet-scope check ... } stops at the first hit.
 ## engine_evidence = CNumAssignedJobsTrigger::GetTriggerValue (loop in the command implementation)
 alias[trigger:num_assigned_jobs] = {
 	## cardinality = 0..inf
@@ -3437,7 +3438,7 @@ alias[trigger:can_copy_random_tech_from] = {
 
 ###Checks the amount of intel the current country has toward the target empire.
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Intel entries are scanned linearly.
 ## engine_evidence = CIntelManager::GetIntelData (delegates to a helper that scans)
 alias[trigger:intel] = {
 	who = scope_group[target_country]
@@ -3726,7 +3727,7 @@ alias[trigger:starbase_buildable_is_in_queue_before] = {
 
 ###Checks the country's number of researched technologies
 ## cost = o(n)
-## engine = Counting walks the technology-status array instead of reading a cached total, so cost grows with the number of technologies tracked.
+## engine = Counting walks the technology-status array instead of reading a cached total, so cost grows with the number of technologies tracked. Cheaper: has_technology is O(1); counting rescans the whole researched array.
 ## engine_evidence = CTechnologyStatus::CalcTotalTechLevels loops the status array; dump L1504171, called from L6853591
 alias[trigger:num_researched_techs] == int_value_field
 
@@ -3890,7 +3891,7 @@ alias[trigger:resource_income_to_expenditure_balance_ratio] = {
 
 ###Checks the country's number of researched technologies of a certain tier
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Cheaper: has_technology is O(1); counting rescans the whole researched array.
 ## engine_evidence = CTechnologyStatus::CalcNumTechsOfTier (delegates to a helper that scans)
 alias[trigger:num_researched_techs_of_tier] = {
 	value = int_value_field
@@ -4045,9 +4046,10 @@ alias[trigger:can_afford_special_offer] = {
 
 ###Checks if the design has a specific flag
 ###(note: one can use e.g. my_flag@from to track relationships between objects)
-## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
-## engine_evidence = CHasFlagTrigger::ActualEvaluate (loop in the command implementation)
+## severity = error
+## error_if_only_match = has_design_flag reads the GLOBAL flag table (engine bug: design-scope flags fall through to global flags), so results are contaminated by unrelated designs; do not use it
+## engine = Due to an engine bug in CAccessFlags, design-scope (0x2000) flag requests fall through to the global flag container, so this reads global flags and returns true for any design once the flag was set.
+## engine_evidence = docs/better_stellaris/15_silent_corruption_bugs.md C2; CWTools analysis of CAccessFlags (design scope 0x2000 falls through to the global flag container)
 alias[trigger:has_design_flag] = value_set[design_flag]
 ###Checks if L-Gates are enabled in game setup
 alias[trigger:lgate_enabled] = bool

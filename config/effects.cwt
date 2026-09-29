@@ -540,7 +540,7 @@ alias[effect:add_modifier] = {
 alias[effect:custom_tooltip] = localisation
 ###Adds a specific opinion modifier for the scoped country towards target country
 ## cost = o(1)
-## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
+## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps. Non-accumulative/unique uses append a new record every call and never deduplicate.
 ## engine_evidence = CAddOpinionModifierEffect::ExecuteActual (no scan in the command or its direct callees)
 alias[effect:add_opinion_modifier] = {
 	who = scope_group[target_country]
@@ -1231,7 +1231,7 @@ alias[effect:add_claims] = {
 alias[effect:set_owner] = scope_group[target_country]
 ###Instantly sets the planet/fleet's controller to target country. If the fleet is a starbase, starts occupation, otherwise the fleet is leased out.
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CStarbaseManager::AccessStarbaseThruLookup (delegates to a helper that scans)
 alias[effect:set_controller] = scope_group[target_country]
 ###Sets the fleet/ambient object's location, can be fine-tuned
@@ -1718,8 +1718,10 @@ alias[effect:destroy_ambient_object] = scope[ambient_object]
 ## engine_evidence = CRemovePlanetEffect::ExecuteActual (no scan in the command or its direct callees)
 alias[effect:remove_planet] = yes
 ###Removes a single instance of a building from the scoped planet, this will also cancel construction and clear the queue
+## engine = Removes one building (also cancelling construction and clearing the queue) and synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 alias[effect:remove_building] = <building>
 ###Begins construction of a specific building
+## engine = Starts construction of one building and synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 alias[effect:add_building] = <building>
 alias[effect:add_building] = {
 	building = <building>
@@ -1945,7 +1947,7 @@ alias[effect:create_species] = {
 #if the country is default or anything else that uses them, it really should specify all the details of government, species, etc
 ###Creates a new country
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Heaviest single effect: builds a full country incl. contacts with every country and a forced cache rebuild; never call inside loops.
 ## engine_evidence = CCreateCountry::ExecuteActual (loop in the command implementation)
 alias[effect:create_country] = {
 	## cardinality = 0..1
@@ -2404,7 +2406,7 @@ alias[effect:clone_leader] = {
 alias[effect:set_age] = int_value_field
 ###Creates a new, modified species based on an already-extant species
 ## cost = o(n)
-## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
+## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: mutate_species edits traits in place without the O(species x traits^2) dedup scan; call once from country scope, merge trait changes into one block.
 ## engine_evidence = CModifySpecies::ExecuteActual (loop in the command implementation)
 alias[effect:modify_species] = {
 	## cardinality = 0..1
@@ -2757,7 +2759,7 @@ alias[effect:add_ship_design] = scope[design]
 alias[effect:add_ship_design] = last_created_design
 ### Adds a sum of experience points to the scoped leader
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Fires on_leader_level_up once per level granted.
 ## engine_evidence = CLeader::LevelSkill (delegates to a helper that scans)
 alias[effect:add_skill] = int_value_field[-10..20]#check the interval
 ### Gives percentage progress (0.0-1.0) in a specific tech to the scoped country
@@ -4095,7 +4097,7 @@ alias[effect:spawn_planet] = {
 
 ### Spawns a new system at a position relative to the scoped system/planet/ship.
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Rebuilds the O(N^2) galactic distance cache per call unless wrapped in a spawn-system batch block.
 ## engine_evidence = CSystemInitializerUseCounter::HasReachedMaxUses (delegates to a helper that scans)
 alias[effect:spawn_system] = {
 	## cardinality = 0..1
@@ -4288,12 +4290,12 @@ alias[effect:remove_random_district] = yes
 alias[effect:remove_all_districts] = yes
 ###Removes a specific district from the scoped planet
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CColony::RemoveDistrict (delegates to a helper that scans)
 alias[effect:remove_district] = <district>
 ###Begins construction of a specific district on the scoped planet
 ## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
+## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CColony::CanAddDistrict (delegates to a helper that scans)
 alias[effect:add_district] = <district>
 ###Begins construction of a specific district on the scoped planet
@@ -5426,12 +5428,12 @@ alias[effect:remove_starbase_component] = {
 ## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
 ## engine_evidence = CAddLoyaltyEffect::ExecuteActual (no scan in the command or its direct callees)
 alias[effect:add_loyalty] = int_value_field
-## severity = warning
 ###Sets an arbitrarily-named flag on the scoped design
 ###(note: one can use e.g. my_flag@from to track relationships between objects)
-## cost = o(n)
-## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
-## engine_evidence = CPdxIntegerFlags::ClearFlag (delegates to a helper that scans)
+## severity = error
+## error_if_only_match = set_design_flag writes to the GLOBAL flag table (engine bug: design-scope flags fall through to global flags) and has deleted unrelated ship designs in vanilla; do not use it
+## engine = Due to an engine bug in CAccessFlags, design-scope (0x2000) flag requests fall through to the global flag container, so this sets a global flag instead of a design flag.
+## engine_evidence = docs/better_stellaris/15_silent_corruption_bugs.md C2; CWTools analysis of CAccessFlags (design scope 0x2000 falls through to the global flag container)
 alias[effect:set_design_flag] = value_set[design_flag]
 ## severity = warning
 ###Removes a flag from the scoped design
