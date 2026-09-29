@@ -25,12 +25,14 @@ alias[trigger:hidden_trigger] = { alias_name[trigger] = alias_match_left[trigger
 
 ## push_scope = country
 ###Checks if any playable country meet the specified criteria
+## cost = o(n)_galaxy
 alias[trigger:any_playable_country] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## push_scope = fleet
 ###Checks if any of the country's owned fleets meet the specified criteria
+## cost = o(n)_owned
 alias[trigger:any_owned_fleet] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -55,6 +57,7 @@ alias[trigger:any_planet_within_border] = {
 
 ## push_scope = ship
 ###Iterate through each ship in the fleet or controlled by the country - checks whether the enclosed triggers return true for any of them
+## cost = o(n)_owned
 alias[trigger:any_owned_ship] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -82,6 +85,7 @@ alias[trigger:any_system_planet] = {
 
 ## push_scope = colony
 ###Checks if any of the country's owned planets meet the specified criteria
+## cost = o(n)_owned
 alias[trigger:any_owned_planet] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -109,12 +113,14 @@ alias[trigger:any_rim_system] = {
 
 ## push_scope = leader
 ###Checks if any of the country's leaders meet the specified criteria
+## cost = o(n)_owned
 alias[trigger:any_owned_leader] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## push_scope = pop_group
 ###Iterate through all owned pop groups - checks whether the enclosed triggers return true for any of them
+## cost = o(n)_owned
 alias[trigger:any_owned_pop_group] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -214,6 +220,7 @@ alias[trigger:any_owned_pop_species] = {
 
 ## push_scope = starbase
 ###Iterate through every owned primary starbase
+## cost = o(n)_owned
 alias[trigger:any_owned_starbase] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -351,6 +358,7 @@ alias[trigger:count_owned_megastructure] =  {
 }
 
 ### Iterate through all owned pop groups - checks whether the enclosed triggers return true for X/all of them
+## cost = o(n)_owned
 alias[trigger:count_owned_pop_group] =  {
 	## cardinality = 0..1
 	count = all
@@ -364,6 +372,7 @@ alias[trigger:count_owned_pop_group] =  {
 }
 
 ### Sums all pop amounts - checks whether the enclosed triggers return true for X/all of them
+## cost = o(n)_owned
 alias[trigger:count_owned_pop_amount] =  {
 	## cardinality = 0..1
 	count = all
@@ -580,6 +589,7 @@ alias[trigger:count_armies] = {
 	}
 }
 
+## cost = o(n)_owned
 alias[trigger:count_owned_ship] = {
 	## cardinality = 0..1
 	count = all
@@ -724,6 +734,7 @@ alias[trigger:count_planet_within_border] = {
 }
 
 ###Iterate through each inhabited planet owned by the current empire
+## cost = o(n)_owned
 alias[trigger:count_owned_planet] = {
 	## cardinality = 0..1
 	count = all
@@ -765,6 +776,7 @@ alias[effect:scope_field] = { alias_name[effect] = alias_match_left[effect] }
 
 ## push_scope = leader
 ### Executes enclosed effects on a random leader owned by scoped country that meets the limit criteria
+## cost = o(n)_owned
 alias[effect:every_owned_leader] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -977,6 +989,7 @@ alias[effect:random_system_within_border] = {
 
 ## push_scope = starbase
 ###Iterate through every owned primary starbase - executes the enclosed effects on all of them for which the limit triggers return true
+## cost = o(n)_owned
 alias[effect:every_owned_starbase] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1066,6 +1079,7 @@ alias[effect:random_pop_faction] = {
 
 ## push_scope = pop_group
 ###Iterate through all owned pop groups - executes the enclosed effects on all of them for which the limit triggers return true
+## cost = o(n)_owned
 alias[effect:every_owned_pop_group] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1206,6 +1220,7 @@ alias[effect:random_country] = {
 
 ## push_scope = colony
 ###Executes enclosed effects on every planet -owned by the scoped country- that meet the limit criteria
+## cost = o(n)_owned
 alias[effect:every_owned_planet] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1251,6 +1266,7 @@ alias[effect:random_owned_planet] = {
 
 ## push_scope = country
 ###switches Scope to and goes through all playable countries
+## cost = o(n)_galaxy
 alias[effect:every_playable_country] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1414,6 +1430,7 @@ alias[effect:random_subject] = {
 
 ## push_scope = fleet
 ###Executes enclosed effects on every fleet owned by the scoped country that meets the limit criteria
+## cost = o(n)_owned
 alias[effect:every_owned_fleet] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -1864,6 +1881,7 @@ alias[effect:random_galaxy_planet] = {
 
 ## push_scope = ship
 ###Executes enclosed effects on every ship owned or controlled by the scoped fleet/country that meet the limit criteria
+## cost = o(n)_owned
 alias[effect:every_owned_ship] = {
 	##cardinality = 0..1
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
@@ -5760,6 +5778,7 @@ alias[effect:every_system_in_cosmic_storm_influence_field] = {
 
 ###Checks used naval cap by the scoped country or fleet's controlled ships which fulfill the specified criteria.
 ## engine = Sums the scoped country or fleet's controlled ships matching the criteria via a heap-allocated scratch array, so cost grows with ship count. Cheaper: used_naval_capacity_integer or fleet_size (both O(1) cached fields).
+## cost = o(n)_owned
 alias[trigger:count_used_naval_cap] = {
 	value = int_value_field
 	value = value[variable]

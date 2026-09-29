@@ -1233,6 +1233,7 @@ alias[effect:set_owner] = scope_group[target_country]
 ## cost = o(n)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CStarbaseManager::AccessStarbaseThruLookup (delegates to a helper that scans)
+## sync_effect = pop_jobs
 alias[effect:set_controller] = scope_group[target_country]
 ###Sets the fleet/ambient object's location, can be fine-tuned
 ## cost = o(n)
@@ -1719,10 +1720,13 @@ alias[effect:destroy_ambient_object] = scope[ambient_object]
 alias[effect:remove_planet] = yes
 ###Removes a single instance of a building from the scoped planet, this will also cancel construction and clear the queue
 ## engine = Removes one building (also cancelling construction and clearing the queue) and synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
+## sync_effect = pop_jobs
 alias[effect:remove_building] = <building>
 ###Begins construction of a specific building
 ## engine = Starts construction of one building and synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
+## sync_effect = pop_jobs
 alias[effect:add_building] = <building>
+## sync_effect = pop_jobs
 alias[effect:add_building] = {
 	building = <building>
 	## cardinality = 0..1
@@ -1764,7 +1768,7 @@ alias[effect:set_graphical_culture] = <graphical_culture>
 alias[effect:set_graphical_culture] = scope[any]
 ###Creates a new species. The habitability trait is determined by homeworld, traits = random, traits = { ideal_planet_class = <pc_XYZ> }, traits = <trait_pc_XYZ_preference>, or else is assigned randomly.
 ## forbid_quoted_values = { from }
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
 ## engine_evidence = CCreateSpecies::ExecuteActual (loop in the command implementation)
 alias[effect:create_species] = {
@@ -1946,9 +1950,10 @@ alias[effect:create_species] = {
 
 #if the country is default or anything else that uses them, it really should specify all the details of government, species, etc
 ###Creates a new country
-## cost = o(n)
+## cost = o(n)_galaxy
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Heaviest single effect: builds a full country incl. contacts with every country and a forced cache rebuild; never call inside loops.
 ## engine_evidence = CCreateCountry::ExecuteActual (loop in the command implementation)
+## sync_effect = heavy
 alias[effect:create_country] = {
 	## cardinality = 0..1
 	name = scope[any]
@@ -2405,7 +2410,7 @@ alias[effect:clone_leader] = {
 ###Sets the age of the scoped leader
 alias[effect:set_age] = int_value_field
 ###Creates a new, modified species based on an already-extant species
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds. Cheaper: mutate_species edits traits in place without the O(species x traits^2) dedup scan; call once from country scope, merge trait changes into one block.
 ## engine_evidence = CModifySpecies::ExecuteActual (loop in the command implementation)
 alias[effect:modify_species] = {
@@ -2702,7 +2707,7 @@ alias[effect:add_colony_progress] = value_field[0.0..1.0]
 ## engine_evidence = CShipDesignManager::GetOrCreateGlobalShipDesign (delegates to a helper that scans)
 alias[effect:add_global_ship_design] = <global_ship_design>
 ### Adds a hyperlane between two systems
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
 ## engine_evidence = CGalacticObject::HasHyperLaneTo (delegates to a helper that scans)
 alias[effect:add_hyperlane] = {
@@ -3646,7 +3651,7 @@ alias[effect:remove_army] = bool
 ## engine_evidence = CFleet::ClearAutoMoveTarget (delegates to a helper that scans)
 alias[effect:remove_auto_move_target] = bool
 ### Removes existing hyperlane between two systems
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
 ## engine_evidence = CGalacticObject::HasHyperLaneTo (delegates to a helper that scans)
 alias[effect:remove_hyperlane] = {
@@ -4096,7 +4101,7 @@ alias[effect:spawn_planet] = {
 }
 
 ### Spawns a new system at a position relative to the scoped system/planet/ship.
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Rebuilds the O(N^2) galactic distance cache per call unless wrapped in a spawn-system batch block.
 ## engine_evidence = CSystemInitializerUseCounter::HasReachedMaxUses (delegates to a helper that scans)
 alias[effect:spawn_system] = {
@@ -4292,13 +4297,16 @@ alias[effect:remove_all_districts] = yes
 ## cost = o(n)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CColony::RemoveDistrict (delegates to a helper that scans)
+## sync_effect = pop_jobs
 alias[effect:remove_district] = <district>
 ###Begins construction of a specific district on the scoped planet
 ## cost = o(n)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container. Synchronously re-runs the whole planet pop-job assignment; avoid inside every_owned_planet pulses.
 ## engine_evidence = CColony::CanAddDistrict (delegates to a helper that scans)
+## sync_effect = pop_jobs
 alias[effect:add_district] = <district>
 ###Begins construction of a specific district on the scoped planet
+## sync_effect = pop_jobs
 alias[effect:add_district] = {
 	district_type = <district>
 	## cardinality = 0..1
@@ -6507,7 +6515,7 @@ alias[effect:add_zone] = {
 }
 
 ###Triggers the sub-species integration step for a country.
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
 ## engine_evidence = CCountry::HandleSubSpeciesIntegration (delegates to a helper that scans)
 alias[effect:integrate_species] = bool
@@ -6810,6 +6818,7 @@ alias[effect:set_resource] = {
 ## cost = o(n)
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
 ## engine_evidence = CCreatePopGroupEffect::ExecuteActual (loop in the command implementation)
+## sync_effect = pop_jobs
 alias[effect:create_pop_group] = {
 	## cardinality = 0..1
 	pop_group = scope[pop_group]
@@ -6848,7 +6857,7 @@ alias[effect:create_pop_group] = {
 }
 
 ###Triggers the merge of similar sub-species for a country.
-## cost = o(n)
+## cost = o(n^2)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
 ## engine_evidence = CCountry::HandleIdenticalSpeciesMerge (delegates to a helper that scans)
 alias[effect:merge_species] = bool
