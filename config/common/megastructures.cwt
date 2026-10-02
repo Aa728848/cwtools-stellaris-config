@@ -301,7 +301,7 @@ megastructure = {
 	custom_tooltip_with_modifiers = localisation
 
 	## cardinality = 0..1
-	overclock_loc_key = localisation
+	overclock_loc_key = value_set[megastructure_overclock_loc_key]
 
 	## cardinality = 0..1
 	overclock_cooldown = int
