@@ -378,6 +378,11 @@ mega_overclock = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
+	## replace_scope = { this = system root = system from = country }
+	possible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
 	resources = {
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
@@ -388,6 +393,24 @@ mega_overclock = {
 		custom_tooltip = localisation
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = megastructure root = megastructure }
+	on_overclock_start = {
+		alias_name[effect] = alias_match_left[effect]	
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = megastructure root = megastructure }
+	on_overclock_end = {
+		alias_name[effect] = alias_match_left[effect]	
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = megastructure root = megastructure }
+	ai_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }
 
