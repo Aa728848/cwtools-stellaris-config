@@ -1185,6 +1185,15 @@ types = {
 		## type_key_filter = on_arkship_exodus_jump
 		## replace_scope = { this = system root = system from = fleet }
 		subtype[on_arkship_exodus_jump] = { }
+		## type_key_filter = on_arkship_knights_detox
+		## replace_scope = { this = planet root = planet from = fleet }
+		subtype[on_arkship_knights_detox] = { }
+		## type_key_filter = on_arkship_knights_detox_cancelled
+		## replace_scope = { this = planet root = planet from = fleet }
+		subtype[on_arkship_knights_detox_cancelled] = { }
+		## type_key_filter = on_arkship_knights_detox_start
+		## replace_scope = { this = planet root = planet from = fleet }
+		subtype[on_arkship_knights_detox_start] = { }
 		## type_key_filter = on_arkship_lithoid_consume_world
 		## replace_scope = { this = planet root = planet from = fleet }
 		subtype[on_arkship_lithoid_consume_world] = { }

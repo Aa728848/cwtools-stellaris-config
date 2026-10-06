@@ -7541,6 +7541,15 @@ alias[effect:clear_ai_armor_ratio] = bool
 ###Clears the AI shields ratio override, reverting to personality.
 alias[effect:clear_ai_shields_ratio] = bool
 
+###Clears the AI defense platform armor ratio override, reverting to the empire-wide ratio.
+alias[effect:clear_ai_platform_armor_ratio] = bool
+
+###Clears the AI defense platform shields ratio override, reverting to the empire-wide ratio.
+alias[effect:clear_ai_platform_shields_ratio] = bool
+
+###Clears the AI defense platform weapon preference override, reverting to the empire-wide preference.
+alias[effect:clear_ai_platform_weapon_preference] = bool
+
 ###Clears all AI ship role overrides for the scoped country, reverting to personality roles.
 alias[effect:clear_ai_ship_roles] = bool
 
@@ -7596,6 +7605,15 @@ alias[effect:set_ai_armor_ratio] = value_field[0.0..1.0]
 
 ###Sets the AI shields ratio override for the scoped country.
 alias[effect:set_ai_shields_ratio] = value_field[0.0..1.0]
+
+###Sets the AI armor ratio override for the scoped country's auto-designed defense platforms and ion cannons.
+alias[effect:set_ai_platform_armor_ratio] = value_field[0.0..1.0]
+
+###Sets the AI shields ratio override for the scoped country's auto-designed defense platforms and ion cannons.
+alias[effect:set_ai_platform_shields_ratio] = value_field[0.0..1.0]
+
+###Sets the AI weapon preference override for the scoped country's auto-designed defense platforms.
+alias[effect:set_ai_platform_weapon_preference] = enum[weapon_type]
 
 ###Sets the AI ship role overrides for the scoped country.
 alias[effect:set_ai_ship_roles] = {

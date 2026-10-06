@@ -1020,7 +1020,7 @@ alias[trigger:is_ship_size] = <ship_size>
 ## engine_evidence = CIsShipClassTrigger::ActualEvaluate (no scan in the command or its direct callees)
 alias[trigger:is_ship_class] = enum[shipsize_classes]
 
-###Checks the average ethics divergence on the planet. Not used in Vanilla, testing advised. Please inform Dayshine and Caligula on the results of the tests!
+###Checks the average ethics divergence on the planet (Deprecated in 4.5.2; use pop_ethics_divergence instead)
 ## cost = script_eval
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
 ## engine_evidence = CEthosTrigger::GetTriggerValue (loop in the command implementation)
@@ -2621,6 +2621,10 @@ alias[trigger:num_buildings] = {
 	in_construction = bool
 	## cardinality = 0..1
 	owner_type = enum[building_owner_type]
+	## cardinality = 0..1
+	category = any
+	## cardinality = 0..1
+	category = enum[building_categories]
 	## cardinality = 0..1
 	## replace_scope = { this = planet root = planet }
 	limit = {
@@ -5497,6 +5501,9 @@ alias[trigger:has_overclock] = <mega_overclock>
 ## engine_evidence = CHasOverclockCooldownTrigger::ActualEvaluate (no scan in the command or its direct callees)
 alias[trigger:has_overclock_cooldown] = bool
 
+###Checks the average ethics divergence on the planet, i.e. num of pops not of the country's ethics / total num of pops. False on a colony with no pops, whatever the comparison
+alias[trigger:pop_ethics_divergence] == value_field[0.0..1.0]
+
 ###Checks whether the scoped country may assign a ship role to a ship size.
 alias[trigger:is_ai_ship_role] = {
 	ship_size = <ship_size>
@@ -5505,6 +5512,9 @@ alias[trigger:is_ai_ship_role] = {
 
 ###Checks if the country's AI prefers this weapon type for starbases (falls back to the empire-wide weapon preference when unset)
 alias[trigger:is_preferred_starbase_weapons] = enum[weapon_type]
+
+###Checks if the country's AI prefers this weapon type for defense platforms (falls back to the empire-wide weapon preference when unset)
+alias[trigger:is_preferred_platform_weapons] = enum[weapon_type]
 
 ###Checks the amount or percentage of pops following or not following the ethic. If used rhs this return amount of pops.
 ## cost = o(n)

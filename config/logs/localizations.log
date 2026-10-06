@@ -44,7 +44,6 @@ Properties
  GetSpeciesName
  GetSpeciesNamePersistent
  GetSpeciesAdj
- GetPopsGuidingEthic
  GetSpeciesAdjPersistent
  GetSpeciesNamePlural
  GetSpeciesNamePluralPersistent
@@ -134,7 +133,6 @@ Properties
 --Pop Group--
 Promotions:
  Colony
- Faction
  Species
 Properties
  GetName
@@ -142,7 +140,6 @@ Properties
  GetSpeciesNamePersistent
  GetSpeciesNamePlural
  GetSpeciesAdj
- GetPopsGuidingEthic
 
 --System--
 Promotions:
@@ -293,6 +290,7 @@ Promotions:
 Properties
  GetName
  GetNamePersistent
+ GetPopsGuidingEthic
 
 --Archaeological Site--
 Promotions:

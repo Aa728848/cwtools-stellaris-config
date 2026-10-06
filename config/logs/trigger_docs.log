@@ -173,8 +173,9 @@ ideal_planet_class - Checks if the pop group, species or country's ideal planet 
 ideal_planet_class = pc_tundra/<planet scope>
 Supported Scopes: country pop pop_group species
 
-ethos - Checks the average ethics divergence on the planet, i.e. num of pops not of the country's ethics / total num of pops
-ethos < 0.4
+ethos - Deprecated; use pop_ethics_divergence instead
+Checks the average ethics divergence on the planet, i.e. num of pops not of the country's ethics / total num of pops. False on a colony with no pops, whatever the comparison
+pop_ethics_divergence < 0.4
 Supported Scopes: planet ship colony
 
 distance - Checks the scoped object's galaxy map distance to target in absolute units
@@ -1035,7 +1036,7 @@ Supported Scopes: all
 
 is_ship_class - Checks if the ship/fleet/design is a specific class
 is_ship_class = shipclass_colonizer
-Supported Scopes: ship fleet design ship_growth_stage
+Supported Scopes: ship fleet ship_growth_stage
 
 has_attitude_behavior - Checks if the country has the specified AI behavior towards another country 
 has_attitude_behavior = {
@@ -1046,7 +1047,7 @@ Supported Scopes: country
 
 is_ship_size - Checks if the ship/fleet/design is a specific ship size
 is_ship_size = mining_station
-Supported Scopes: ship fleet design starbase ship_growth_stage design
+Supported Scopes: ship fleet design starbase ship_growth_stage
 
 is_capital - Checks if the colony is its owner's capital
 is_capital = yes
@@ -1098,7 +1099,7 @@ Supported Scopes: country
 
 is_archetype - Checks if species has specified archetype:
 is_archetype = PRESAPIENT
-Supported Scopes: species pop_group
+Supported Scopes: species
 
 uplift_is_archetype - Checks if the uplifted version of the species has the specified archetype:
 uplift_is_archetype = LITHOID
@@ -3361,7 +3362,7 @@ Supported Scopes: ship ship_growth_stage
 
 is_ship_category - Checks if the ship/fleet/design is a specific ship category
 is_ship_category = <key>
-Supported Scopes: ship fleet ship_growth_stage design
+Supported Scopes: ship fleet ship_growth_stage
 
 is_specimen_rarity - Checks if the specified specimen contained by the scoped exhibit is of indicated rarity
 is_specimen_rarity = <rarity>
@@ -4820,6 +4821,10 @@ has_overclock_cooldown - Checks whether the scoped megastructure is still inside
 has_overclock_cooldown = yes/no
 Supported Scopes: megastructure
 
+pop_ethics_divergence - Checks the average ethics divergence on the planet, i.e. num of pops not of the country's ethics / total num of pops. False on a colony with no pops, whatever the comparison
+pop_ethics_divergence < 0.4
+Supported Scopes: planet ship colony
+
 is_ai_ship_role - Checks whether the scoped country may assign a ship role to a ship size.
 Returns true if the role is among the configured roles for that size, including
 every entry of a weighted role block.
@@ -4828,6 +4833,10 @@ Supported Scopes: country
 
 is_preferred_starbase_weapons - Checks if the country's AI prefers this weapon type for starbases (falls back to the empire-wide weapon preference when unset)
 is_preferred_starbase_weapons = weapon_type_energy
+Supported Scopes: country
+
+is_preferred_platform_weapons - Checks if the country's AI prefers this weapon type for defense platforms (falls back to the empire-wide weapon preference when unset)
+is_preferred_platform_weapons = weapon_type_energy
 Supported Scopes: country
 
 pop_ethic_amount - Checks the amount or percentage of pops following or not following the ethic. If used rhs this return amount of pops.
@@ -8176,7 +8185,7 @@ Supported Scopes: army
 
 prevent_anomaly - Disables or enables anomaly generation for the scoped planet
 prevent_anomaly = yes
-Supported Scopes: planet ship colony
+Supported Scopes: planet
 
 add_deposit - Adds resource deposit to the scoped object (note: if you add a blocker, it will add a random deposit that can be blocked by that deposit)
 add_deposit = <key/random/random_blocker/random_nonblocker>
@@ -11187,6 +11196,18 @@ clear_ai_shields_ratio - Clears the AI shields ratio override, reverting to pers
 clear_ai_shields_ratio = yes
 Supported Scopes: country
 
+clear_ai_platform_armor_ratio - Clears the AI defense platform armor ratio override, reverting to the empire-wide ratio.
+clear_ai_platform_armor_ratio = yes
+Supported Scopes: country
+
+clear_ai_platform_shields_ratio - Clears the AI defense platform shields ratio override, reverting to the empire-wide ratio.
+clear_ai_platform_shields_ratio = yes
+Supported Scopes: country
+
+clear_ai_platform_weapon_preference - Clears the AI defense platform weapon preference override, reverting to the empire-wide preference.
+clear_ai_platform_weapon_preference = yes
+Supported Scopes: country
+
 clear_ai_ship_roles - Clears all AI ship role overrides for the scoped country, reverting to personality roles.
 clear_ai_ship_roles = yes
 Supported Scopes: country
@@ -11234,6 +11255,18 @@ Supported Scopes: country
 
 set_ai_shields_ratio - Sets the AI shields ratio override for the scoped country.
 set_ai_shields_ratio = 0.7
+Supported Scopes: country
+
+set_ai_platform_armor_ratio - Sets the AI armor ratio override for the scoped country's auto-designed defense platforms and ion cannons.
+set_ai_platform_armor_ratio = 0.7
+Supported Scopes: country
+
+set_ai_platform_shields_ratio - Sets the AI shields ratio override for the scoped country's auto-designed defense platforms and ion cannons.
+set_ai_platform_shields_ratio = 0.7
+Supported Scopes: country
+
+set_ai_platform_weapon_preference - Sets the AI weapon preference override for the scoped country's auto-designed defense platforms.
+set_ai_platform_weapon_preference = weapon_type_energy
 Supported Scopes: country
 
 set_ai_ship_roles - Sets the AI ship role overrides for the scoped country.

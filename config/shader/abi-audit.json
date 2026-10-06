@@ -1,7 +1,7 @@
 {
   "_schema": "cwtools/shader-abi-audit/v1",
   "game": "stellaris",
-  "game_version": "4.5.0",
+  "game_version": "4.5.2",
   "review_status": "complete",
   "automatic_promotion": false,
   "candidate_universe": {
@@ -17,11 +17,11 @@
     "source_directory": "gfx/FX"
   },
   "game_identity": {
-    "launcher_raw_version": "v4.5.0",
-    "launcher_settings_sha256": "84022f3f55c2dcd246b994e90f2a0ae762ff79d5eaa52591c5ecdec8d5cf5b39",
+    "launcher_raw_version": "v4.5.2",
+    "launcher_settings_sha256": "cb6ccdee57361b207e99dc5a2ee1d843a75c0aaf6ee8e88899d02d50710ab3d2",
     "executable": "stellaris.exe",
-    "executable_size": 44939896,
-    "executable_sha256": "83b84c820bd1a74401f6e5182a5b857bf4674d509fedd26f89236b169fb44535"
+    "executable_size": 44948088,
+    "executable_sha256": "400df27c82ddc845aa9dce79bd468d81f18f060d299cd263e3afa93aef4f7a83"
   },
   "executable_string_scan": {
     "policy": "String presence is candidate evidence only and never proves a call path.",

@@ -3130,8 +3130,13 @@ Printing Modifier Definitions:
 - weapon_kinetic_from_soldiers, Category: Ships
 - weapon_energy_from_soldiers, Category: Ships
 - weapon_strike_craft_from_soldiers, Category: Ships
+- cyborg_ruler_bonus_workforce_mult, Category: Colony
+- cyborg_specialist_bonus_workforce_mult, Category: Colony
+- cyborg_worker_bonus_workforce_mult, Category: Colony
 - mining_district_housing_add, Category: Colony
 - mining_district_buildings_add, Category: Colony
+- low_habitability_bureaucrat_bonus_workforce_mult, Category: Countries
+- crime_experiment_engineer_bonus_workforce_mult, Category: Countries
 - add_attunement_the_eater_of_worlds, Category: Countries
 - the_eater_of_worlds_attunement_mult, Category: Countries
 - add_attunement_the_cradle_of_souls, Category: Countries
