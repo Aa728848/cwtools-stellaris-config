@@ -5,6 +5,7 @@ priorities = {
     "common/artifact_actions" = LIOS
     "common/ascension_perks" = LIOS
     "common/ascension_perk_categories" = LIOS
+    "common/agreement_term_values" = LIOS
     "common/attitudes" = LIOS
     "common/bombardment_stances" = LIOS
     "common/buildings" = LIOS
@@ -100,7 +101,6 @@ priorities = {
     "localisation" = LIOS
 
     # FIOS - First In, Only Served.
-    "common/agreement_term_values" = FIOS
     "common/component_sets" = FIOS
     "common/component_templates" = FIOS
     "common/event_chains" = FIOS
