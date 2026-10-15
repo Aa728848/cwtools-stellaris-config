@@ -82,6 +82,7 @@ types = {
 			"shipsize_$_naval_cap_usage_add" = Ships
 			"shipsize_$_naval_cap_usage_mult" = Ships
 			"shipsize_$_cloaking_detection_add" = Ships
+			### Targeting: per-ship-size alias of the ship_target_weight_mult modifier; it enters the target pre-weight wtgt = modifier + (1 + rho), where rho is a per-ship random roll made when combat starts and kept for the whole battle. Higher = this ship class is preferred as a target.
 			"shipsize_$_target_weight_mult" = Ships
 			"shipsize_$_starbase_stockpile_collection_rate_add" = Ships
 			"shipsize_$_starbase_stockpile_collection_rate_mult" = Ships

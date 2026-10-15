@@ -114,6 +114,9 @@ component_template = {
 	icon = <sprite>
 	## cardinality = 0..1
 	icon_frame = int
+	### When set, the weapon fires at the ship's main target (subject to range and firing arc)
+	### and skips the weapon-level target score entirely. Vanilla sets it to `no` on ENERGY_LANCE,
+	### Arc Emitter and Mass Accelerator, which makes those weapons pick targets on their own.
 	## cardinality = 0..1
 	use_ship_main_target = bool
 	## cardinality = 0..1
@@ -390,6 +393,9 @@ component_template = {
 				alias_name[effect] = alias_match_left[effect]
 			}
 		}
+		### `single` (default) or `spread`. Engine target focus: it selects the main-target recompute
+		### throttle period (10 vs 50 ticks) and whether the current-target bonus Mcur (1.1) is applied.
+		### Which enum value maps to engine targetFocus 0/1 is not confirmed.
 		## cardinality = 0..1
 		target_focus = enum[component_target_focus]
 		## cardinality = 0..1	
@@ -554,18 +560,23 @@ component_template = {
 		}
 		## cardinality = 0..1
 		can_destroy_stars = bool
+		### Firing arc half-angle in degrees; a target outside the arc cannot be engaged.
 		## cardinality = 0..1
 		firing_arc = float
+		### Minimum engagement range; targets closer than this are not valid candidates.
 		## cardinality = 0..1
 		min_range = float
 		## cardinality = 0..1
 		prio_projectile = bool
 		## cardinality = 0..1
 		planet_destruction_gfx = scalar
+		### Per-ship-size additive targeting bonus `wk` for the weapon-level target score.
+		### Added after the multiplicative chain (expected damage x hit chance x preset weight),
+		### so a large entry can override the whole chain; keys are ship_size ids from common/ship_sizes.
 		## cardinality = 0..1
 		target_weights = {
 			## cardinality = 1..inf
-			scalar = float
+			<ship_size> = float
 		}
 
 		## cardinality = 0..1
@@ -584,26 +595,38 @@ component_template = {
 		chain_count = float
 
 		#these are optional, vanilla uses an .csv file to create these
+		### Damage range; the targeting path uses the interval midpoint as the base damage that
+		### feeds the expected-damage sum (the actual shot rolls inside the range).
 		## cardinality = 0..1
 		damage = { min = float max = float }
+		### `ms` - shield layer damage multiplier in the three-layer damage split.
 		## cardinality = 0..1
 		shield_damage = float
+		### Shield penetration; subtracted from the target's shield hardening, result clamped to [0, 1].
 		## cardinality = 0..1
 		shield_penetration = float
+		### `mh` - hull layer damage multiplier in the three-layer damage split.
 		## cardinality = 0..1
 		hull_damage = float
+		### `ma` - armor layer damage multiplier in the three-layer damage split.
 		## cardinality = 0..1
 		armor_damage = float
+		### Armor penetration; subtracted from the target's armor hardening, result clamped to [0, 1].
 		## cardinality = 0..1
 		armor_penetration = float
 		## cardinality = 0..1
 		windup = { min = float max = float }
 		## cardinality = 0..1
 		total_fire_time = float
+		### Maximum weapon range; targets beyond it are not valid candidates.
 		## cardinality = 0..1
 		range = float
+		### Base hit chance `p` of the weapon layer: p = clamp(accuracy - clamp(target_evasion - tracking, 0, 1), 0, 1).
+		### The engine requires this to be between 0.0 and 1.0.
 		## cardinality = 0..1
 		accuracy = float
+		### Weapon tracking `tw`, the part that cancels target evasion in the hit-chance formula.
+		### The engine requires this to be between 0.0 and 1.0.
 		## cardinality = 0..1
 		tracking = float
 		## cardinality = 0..1
@@ -620,11 +643,16 @@ component_template = {
 		missile_shield = float
 		## cardinality = 0..1
 		missile_retarget_range = int
+		### When greater than 0, scales damage up by the target's size multiplier, clamped to [1, 100]
+		### (MAX_DAMAGE_SCALING).
 		## cardinality = 0..1
 		size_damage_factor = float
+		### Multiplier applied to this component's contribution to military power.
 		## cardinality = 0..1
 		military_power_multiplier = float
 		
+		### Candidate filter: only the listed ship sizes may be targeted by this weapon;
+		### everything else is removed from the candidate set before any score is computed.
 		## cardinality = 0..1
 		targetable_ship_sizes = {
 			## cardinality = 0..inf
