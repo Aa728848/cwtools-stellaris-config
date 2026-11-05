@@ -873,11 +873,11 @@ types = {
 		subtype[species_can_live_on_ship] = {
 		}
 		## type_key_filter = species_has_uncapped_habitability_on_planet
-		## replace_scope = { this = species root = planet }
+		## replace_scope = { this = species root = planet from = country }
 		subtype[species_has_uncapped_habitability_on_planet] = {
 		}
 		## type_key_filter = species_has_uncapped_habitability_on_ship
-		## replace_scope = { this = species root = ship }
+		## replace_scope = { this = species root = ship from = country }
 		subtype[species_has_uncapped_habitability_on_ship] = {
 		}
 		## type_key_filter = species_uses_bonus_growth
