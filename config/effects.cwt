@@ -1993,6 +1993,11 @@ alias[effect:create_country] = {
 	###Sets country adjective. Allowed values are <string in localisation>/<string written in quotes e.g. "Korean">
 	adjective = localisation
 	## cardinality = 0..1
+	###Ruler name string; "random" lets the game pick one.
+	ruler = scalar
+	## cardinality = 0..1
+	ruler = random
+	## cardinality = 0..1
 	authority = random
 	## cardinality = 0..1
 	authority = <authority>
@@ -2081,6 +2086,9 @@ alias[effect:create_country] = {
 			##cardinality = 0..4
 			"null"
 		}
+		## cardinality = 0..1
+		###Use the slot 3 swatch for ships; it must be a real swatch. Default: no.
+		use_ship_color = bool
 	}
 	## cardinality = 0..1
 	###Establishing contact on_action (on_first_contact) will not fire for any countries (ever) if this is set to no
@@ -6648,6 +6656,9 @@ alias[effect:transfer_pop_amount] = {
 	random = value_field
 	## cardinality = 0..1
 	growth_category = enum[growth_category]
+	## cardinality = 0..1
+	## keep_automodding keeps the moved pops' Auto-Modding progress when both pop groups are on the same planet.
+	keep_automodding = bool
 }
 
 ###Set planet preference trait for scoped species (removing the current one, if any).

@@ -3487,7 +3487,7 @@ total_workforce_with_job_tag = { tags = { farmer trader } value = 1000 }
 Supported Scopes: planet ship colony
 
 total_system_workforce_with_job_tag -  Checks how much workforce that has jobs with all given tags in a system. An optional limit (colony scope) filters which colonies contribute.
-total_system_workforce_with_job_tag = { tags = { farmer trader } value = 1000 }
+total_system_workforce_with_job_tag = { tags = { farmer trader } limit = { is_owned_by = root } value = 1000 }
 Supported Scopes: galactic_object
 
 total_country_workforce_with_job_tag - Checks how much workforce that has jobs with all given tags in a country
@@ -5134,27 +5134,43 @@ Supported Scopes: all
 
 create_country - Creates a new country
 create_country = {
-	name = <string/random>
-	adjective = <string>
-	contact_rule = <string>
- type = <key>
-	auto_delete = <bool>
-	name_list = <key>
+	name = <string / random / <target>>
+	adjective = <string / <target>>
+	ruler = <string / random>
+	contact_rule = <always / never / on_action_only / does_first_contact_sites / auto>
+	day_zero_contact = yes/no
+	exclude_day_zero_contact = <target>
+	type = <key>
+	auto_delete = yes/no
+	name_list = <key / <target>>
 	ship_prefix = <string>
-	authority = <key>
-	civics = random / { civic = <key> civic = random }
-	species = <target>
-	flag = <random / { icon = { category = <key> file = <filename.dds> } background = { category = <key> file = <filename.dds> } colors = { <key> <key> } }
-	ethos = <random / { ethic = <key> ethic = <key> }>
-	restrictions = { <restrictions, see "common\governments\readme_requirements.txt"> }
+	default_ships = yes/no
+	authority = <key / <target>>
+	civics = random / <target> / { civic = <key> civic = random }
+	randomize_ethos = yes/no
+	ethos = random / <target> / { ethic = <key> }
+	species = last_created / random / <string> / <target>
 	set_capital_from_species = yes/no
-	effect = { <effects executed on country> }
-	graphical_culture = <culture_key>
-	city_graphical_culture = <culture_key>
+	ignore_initial_colony_error = yes/no
+	flag = random / none / <target> / {
+		icon = { category = <key> file = <filename.dds> }
+		background = { category = <key> file = <filename.dds> }
+		# Four color swatches (keys from flags/colors.txt). Slots: 0=primary (red), 1=secondary (green), 2=tertiary (blue), 3=ship color (alpha, shader-inert). Use null for unused slots.
+		colors = { <key> <key> <key> <key> }
+		use_ship_color = yes/no # default no
+		# When yes, slot 3 swatch ship= value is used for ships Slot 3 must be a real swatch.	}
+	origin = <target>
+	graphical_culture = <key>
+	city_graphical_culture = <key>
 	ship_kinds = { <ship_category_keys> }
-	room = <room_texture_key>
-	nomadic = yes/no/<country_event_target> # default: no
-	remove_invalid_civics = yes/no # (default: no) drop copied civics that are not possible for the new empire
+	room = <key>
+	nomadic = yes/no/<target> # default: no
+	released_by_country = <target> # grants communications from this country and its contacts
+	released_from_country = <target> # copies techs, designs, traditions, survey data; creates truce
+	use_hostilities_from = <target>
+	government_restrictions = { <see common/governments/readme_requirements.txt> }
+	remove_invalid_civics = yes/no # default: no
+	effect = { <effects executed on country scope> }
 }
 Supported Scopes: all
 
@@ -5706,7 +5722,7 @@ modify_species = {
 	ideal_planet_class = <target or pc_name> # optional
 	change_scoped_species = yes/no # modify scoped pop group/planet/leader/country; default: yes
 	portrait = <target or portrait name> # optional
-	add_random_trait = { <trigger> } adds a random trait filtered by the given trigger, the Scope is the trait token, and the original scope is in Prev 
+	add_random_species_trait = { <trigger> } adds a random trait filtered by the given trigger (all species traits minus already owned and DLC-locked), the Scope is the trait token, and the original scope is in Prev 
 	on_random_trait_added = { <effect> } effect is fired for randomly selected trait, the Scope is the trait, the original scope is in Prev, and From contains Species 
 	sapient = <Y/N, determines if species is pre-sapient>
 	effect = { SCOPE_SPECIES } # optional effect to run on the resulting new species, is executed after any handling of change_scoped_species
@@ -8088,6 +8104,7 @@ Supported Scopes: all
 spawn_random_anomaly - Spawn a random anomaly on the scoped planet
 spawn_random_anomaly = {
 	target = root.owner
+	surveyor = event_target:arkship
 }
 Supported Scopes: all
 
