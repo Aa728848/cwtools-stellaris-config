@@ -3176,6 +3176,8 @@ Printing Modifier Definitions:
 - envoy_favor_chance_gain_add, Category: Countries
 - envoy_favor_chance_gain_migration_treaty_add, Category: Countries
 - foreign_ideological_push_mult, Category: Countries
+- ideological_push_mult, Category: Countries
+- ideological_resistance_mult, Category: Countries
 - guaranteed_rare_or_dangerous_tech_add, Category: Countries
 - hall_colony_effect_mult, Category: Countries
 - hall_ideological_reach_mult, Category: Countries
