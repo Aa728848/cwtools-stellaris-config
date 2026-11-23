@@ -1,4 +1,4 @@
-﻿# Built-in on_action completions generated from vanilla Stellaris common/on_actions/*.txt.
+# Built-in on_action completions generated from vanilla Stellaris common/on_actions/*.txt.
 # Custom script on_actions are still valid; type[on_action] intentionally has no type_key_filter.
 
 types = {
@@ -24,6 +24,7 @@ types = {
 			on_planet_zero_pops = "renamed to on_colony_zero_pops"
 			on_planet_zero_pops_ground_combat = "renamed to on_colony_zero_pops_ground_combat"
 			on_rebels_take_planet_owner_switched = "renamed to on_rebels_take_colony_owner_switched"
+			on_entering_war = "renamed to on_war_entered"
 		}
 
 		## type_key_filter = on_game_start
@@ -272,9 +273,6 @@ types = {
 		## type_key_filter = on_gaining_station_control
 		## replace_scope = { this = ship root = ship from = planet }
 		subtype[on_gaining_station_control] = { }
-		## type_key_filter = on_entering_war
-		## replace_scope = { this = country root = country from = country }
-		subtype[on_entering_war] = { }
 		## type_key_filter = on_fleet_detected
 		## replace_scope = { this = country root = country from = fleet }
 		subtype[on_fleet_detected] = { }
@@ -1350,6 +1348,85 @@ types = {
 		subtype[on_arkship_voidlure_tiyanki] = { }
 		## type_key_filter = on_arkship_voidlure_voidworm
 		subtype[on_arkship_voidlure_voidworm] = { }
+		## type_key_filter = on_country_ethos_changed
+		## replace_scope = { this = country root = country }
+		subtype[on_country_ethos_changed] = { }
+		## type_key_filter = on_cultural_envoy_conversion_ended
+		## replace_scope = { this = fleet root = fleet from = colony }
+		subtype[on_cultural_envoy_conversion_ended] = { }
+		## type_key_filter = on_cultural_envoy_conversion_started
+		## replace_scope = { this = fleet root = fleet from = colony }
+		subtype[on_cultural_envoy_conversion_started] = { }
+		## type_key_filter = on_faction_created
+		## replace_scope = { this = pop_faction root = pop_faction from = country }
+		subtype[on_faction_created] = { }
+		## type_key_filter = on_faction_fanaticized
+		## replace_scope = { this = pop_faction root = pop_faction }
+		subtype[on_faction_fanaticized] = { }
+		## type_key_filter = on_galactic_hall_relocate
+		## replace_scope = { this = planet root = planet from = megastructure }
+		subtype[on_galactic_hall_relocate] = { }
+		## type_key_filter = on_golden_generation_trait_event
+		## replace_scope = { this = country root = country }
+		subtype[on_golden_generation_trait_event] = { }
+		## type_key_filter = on_ideology_country_monthly
+		## replace_scope = { this = country root = country }
+		subtype[on_ideology_country_monthly] = { }
+		## type_key_filter = on_war_entered
+		## replace_scope = { this = country root = country from = country }
+		subtype[on_war_entered] = { }
+		## type_key_filter = on_war_exited
+		## replace_scope = { this = country root = country from = war }
+		subtype[on_war_exited] = { }
+		## type_key_filter = on_ideology_abandoned
+		## replace_scope = { this = country root = country from = ideology }
+		subtype[on_ideology_abandoned] = { }
+		## type_key_filter = on_ideology_adopted
+		## replace_scope = { this = country root = country from = ideology }
+		subtype[on_ideology_adopted] = { }
+		## type_key_filter = on_ideology_momentum_surging
+		## replace_scope = { this = country root = country from = ideology }
+		subtype[on_ideology_momentum_surging] = { }
+		## type_key_filter = on_ideology_reach_detected
+		## replace_scope = { this = country root = country from = ideology fromfrom = country }
+		subtype[on_ideology_reach_detected] = { }
+		## type_key_filter = on_ideology_revealed
+		## replace_scope = { this = country root = country from = ideology }
+		subtype[on_ideology_revealed] = { }
+		## type_key_filter = on_system_affected_by_ideology
+		## replace_scope = { this = system root = system from = ideology fromfrom = ideology }
+		subtype[on_system_affected_by_ideology] = { }
+		## type_key_filter = on_system_unaffected_by_ideology
+		## replace_scope = { this = system root = system from = ideology }
+		subtype[on_system_unaffected_by_ideology] = { }
+		## type_key_filter = on_fanatic_faction_consequence_event
+		## replace_scope = { from = pop_faction }
+		subtype[on_fanatic_faction_consequence_event] = { }
+		## type_key_filter = on_golden_generation_general_event
+		subtype[on_golden_generation_general_event] = { }
+		## type_key_filter = on_golden_generation_relationship_event
+		subtype[on_golden_generation_relationship_event] = { }
+		## type_key_filter = on_golden_generation_social_event
+		subtype[on_golden_generation_social_event] = { }
+		## type_key_filter = on_ideology_custodian_changed
+		## replace_scope = { this = country root = country from = country fromfrom = ideology }
+		subtype[on_ideology_custodian_changed] = { }
+		## type_key_filter = on_ideology_momentum_dangerously_low
+		subtype[on_ideology_momentum_dangerously_low] = { }
+		## type_key_filter = on_ideology_momentum_low
+		subtype[on_ideology_momentum_low] = { }
+		## type_key_filter = on_ideology_momentum_moderately_low
+		subtype[on_ideology_momentum_moderately_low] = { }
+		## type_key_filter = on_ideology_momentum_negative_gestalt
+		subtype[on_ideology_momentum_negative_gestalt] = { }
+		## type_key_filter = on_ideology_momentum_positive
+		subtype[on_ideology_momentum_positive] = { }
+		## type_key_filter = on_ideology_momentum_positive_gestalt
+		subtype[on_ideology_momentum_positive_gestalt] = { }
+		## type_key_filter = on_ideology_momentum_very_positive
+		subtype[on_ideology_momentum_very_positive] = { }
+		## type_key_filter = on_post_leader_unassigned
+		subtype[on_post_leader_unassigned] = { }
 	}
 }
 

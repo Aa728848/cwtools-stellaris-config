@@ -545,6 +545,8 @@ alias[effect:custom_tooltip] = localisation
 alias[effect:add_opinion_modifier] = {
 	who = scope_group[target_country]
 	modifier = <opinion_modifier>
+	## cardinality = 0..1
+	mult = value_field
 }
 
 ###Removes a specific opinion modifier towards target country or any country from the scoped country
@@ -580,6 +582,9 @@ alias[effect:set_timed_pop_group_flag] = {
 	years = int
 	## cardinality = 0..1
 	years = value_set[variable]
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped country
@@ -847,6 +852,9 @@ alias[effect:remove_agreement_flag] = value[agreement_flag]
 alias[effect:set_timed_country_flag] = {
 	flag = value_set[country_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped planet for a set duration. Also valid in colony/carrier/ship scope, where it writes the colony carrier's flags
@@ -857,6 +865,9 @@ alias[effect:set_timed_country_flag] = {
 alias[effect:set_timed_planet_flag] = {
 	flag = value_set[planet_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped pop faction for a set duration
@@ -867,6 +878,9 @@ alias[effect:set_timed_planet_flag] = {
 alias[effect:set_timed_pop_faction_flag] = {
 	flag = value_set[pop_faction_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped system for a set duration
@@ -876,6 +890,9 @@ alias[effect:set_timed_pop_faction_flag] = {
 alias[effect:set_timed_star_flag] = {
 	flag = value_set[star_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped species for a set duration
@@ -885,6 +902,9 @@ alias[effect:set_timed_star_flag] = {
 alias[effect:set_timed_species_flag] = {
 	flag = value_set[species_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped pop for a set duration
@@ -894,6 +914,9 @@ alias[effect:set_timed_species_flag] = {
 alias[effect:set_timed_pop_flag] = {
 	flag = value_set[pop_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped fleet for a set duration
@@ -903,6 +926,9 @@ alias[effect:set_timed_pop_flag] = {
 alias[effect:set_timed_fleet_flag] = {
 	flag = value_set[fleet_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped ship for a set duration
@@ -912,6 +938,9 @@ alias[effect:set_timed_fleet_flag] = {
 alias[effect:set_timed_ship_flag] = {
 	flag = value_set[ship_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named global flag for a set duration
@@ -921,6 +950,9 @@ alias[effect:set_timed_ship_flag] = {
 alias[effect:set_timed_global_flag] = {
 	flag = value_set[global_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped leader for a set duration
@@ -930,6 +962,9 @@ alias[effect:set_timed_global_flag] = {
 alias[effect:set_timed_leader_flag] = {
 	flag = value_set[leader_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped ambient object for a set duration
@@ -939,6 +974,9 @@ alias[effect:set_timed_leader_flag] = {
 alias[effect:set_timed_ambient_object_flag] = {
 	flag = value_set[ambient_object_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped mega structure for a set duration
@@ -948,6 +986,9 @@ alias[effect:set_timed_ambient_object_flag] = {
 alias[effect:set_timed_megastructure_flag] = {
 	flag = value_set[megastructure_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped deposit for a set duration
@@ -957,6 +998,9 @@ alias[effect:set_timed_megastructure_flag] = {
 alias[effect:set_timed_deposit_flag] = {
 	flag = value_set[deposit_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped sector for a set duration
@@ -966,6 +1010,9 @@ alias[effect:set_timed_deposit_flag] = {
 alias[effect:set_timed_sector_flag] = {
 	flag = value_set[sector_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped arc site for a set duration
@@ -975,6 +1022,9 @@ alias[effect:set_timed_sector_flag] = {
 alias[effect:set_timed_archaeology_flag] = {
 	flag = value_set[archaeology_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped starbase for a set duration
@@ -984,6 +1034,9 @@ alias[effect:set_timed_archaeology_flag] = {
 alias[effect:set_timed_starbase_flag] = {
 	flag = value_set[starbase_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped spy network for a set duration
@@ -993,6 +1046,9 @@ alias[effect:set_timed_starbase_flag] = {
 alias[effect:set_timed_spynetwork_flag] = {
 	flag = value_set[spynetwork_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped espionage asset for a set duration
@@ -1002,6 +1058,9 @@ alias[effect:set_timed_spynetwork_flag] = {
 alias[effect:set_timed_espionage_asset_flag] = {
 	flag = value_set[espionage_asset_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped war for a set duration
@@ -1011,6 +1070,9 @@ alias[effect:set_timed_espionage_asset_flag] = {
 alias[effect:set_timed_war_flag] = {
 	flag = value_set[war_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag on the scoped army for a set duration
@@ -1020,6 +1082,9 @@ alias[effect:set_timed_war_flag] = {
 alias[effect:set_timed_army_flag] = {
 	flag = value_set[army_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag for the scoped situation for a set duration
@@ -1029,6 +1094,9 @@ alias[effect:set_timed_army_flag] = {
 alias[effect:set_timed_situation_flag] = {
 	flag = value_set[situation_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Sets an arbitrarily-named flag for the scoped agreement for a set duration
@@ -1038,6 +1106,9 @@ alias[effect:set_timed_situation_flag] = {
 alias[effect:set_timed_agreement_flag] = {
 	flag = value_set[agreement_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Removes a megastructure.
@@ -1413,6 +1484,10 @@ alias[effect:add_trait] = {
 	consume_selection = bool
 	## cardinality = 0..1
 	show_message = bool
+	## cardinality = 0..1
+	message_type = <message_type>
+	## cardinality = 0..1
+	custom_description = localisation
 }
 
 ###Removes a specific trait from the scoped leader, or removes all negative traits
@@ -1421,6 +1496,16 @@ alias[effect:add_trait] = {
 ## engine_evidence = CRemoveTraitEffect::ExecuteActual (loop in the command implementation); dump L6468657
 alias[effect:remove_trait] = <trait.leader_trait>
 alias[effect:remove_trait] = all_negative
+alias[effect:remove_trait] = {
+	## cardinality = 0..1
+	trait = <trait.leader_trait>
+	## cardinality = 0..1
+	trait = all_negative
+	## cardinality = 0..1
+	message_type = <message_type>
+	## cardinality = 0..1
+	custom_description = localisation
+}
 #also, at least one of while and limit should be there
 ###Repeats enclosed effects while limit criteria are met or until set iteration count is reached. Can use a variable for the count.
 alias[effect:while] = {
@@ -1635,11 +1720,21 @@ alias[effect:delete_fleet] = {
 
 ###Deletes the target ship (no death graphics)
 alias[effect:delete_ship] = scope[ship]
+alias[effect:delete_ship] = {
+	target = scope[ship]
+	## cardinality = 0..1
+	kill_leader = bool
+}
 ###Destroys the target ship (with death graphics)
 ## cost = o(n)
 ## engine = The command delegates to a helper that scans a container, so cost grows with the size of that container.
 ## engine_evidence = CShip::SetToBeKilled (delegates to a helper that scans); dump L3798289
 alias[effect:destroy_ship] = scope[ship]
+alias[effect:destroy_ship] = {
+	target = scope[ship]
+	## cardinality = 0..1
+	kill_leader = bool
+}
 ###Adds/Removes tiles to/from the scoped planet to adjust its planet size
 ## cost = o(1)
 ## engine = No container scan was found in the command's implementation or in the helpers it calls directly; the work is a lookup or a fixed number of steps.
@@ -2758,6 +2853,9 @@ alias[effect:add_random_research_option] = {
 	ignore_insight = bool
 	## cardinality = 0..1
 	only_rare = bool
+	## cardinality = 0..1
+	###default no
+	research_instantly = bool
 }
 
 ### Adds a tech research option to the scoped country's tech view list, permanent until researched
@@ -4491,6 +4589,9 @@ alias[effect:set_federation_flag] = value_set[federation_flag]
 alias[effect:set_timed_federation_flag] = {
 	flag = value_set[federation_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ## severity = warning
@@ -4861,6 +4962,9 @@ alias[effect:set_first_contact_flag] = value_set[first_contact_flag]
 alias[effect:set_timed_first_contact_flag] = {
 	flag = value_set[first_contact_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ## severity = warning
@@ -4943,6 +5047,9 @@ alias[effect:remove_espionage_operation_flag] = value[espionage_operation_flag]
 alias[effect:set_timed_espionage_operation_flag] = {
 	flag = value_set[espionage_operation_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ###Joins the war on the specified side.
@@ -7259,6 +7366,9 @@ alias[effect:remove_mission_flag] = value[mission_flag]
 alias[effect:set_timed_carrier_flag] = {
 	flag = value_set[carrier_flag]
 	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
 }
 
 ### Removes civic from a government without checking the restrictions
@@ -7675,3 +7785,175 @@ alias[effect:transfer_resources_to_empire] = {
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 }
+
+###Makes the scoped country/federation abandon its current ideology
+alias[effect:abandon_adopted_ideology] = bool
+
+###Tries to register the scoped object as the given ideology's reach emitter
+alias[effect:add_emitter_to_ideology] = {
+	target = <ideology>
+	## cardinality = 0..1
+	owner = scope_field
+	## cardinality = 0..1
+	###default no
+	low_priority = bool
+}
+
+###Adds ideological strength to the scoped country
+alias[effect:add_ideological_strength] = value_field
+
+###Makes the scoped country/federation adopt the given ideology
+alias[effect:adopt_ideology] = <ideology>
+
+###Ends the current crisis for the scoped country
+alias[effect:cancel_crisis] = bool
+
+###Clears all variables whose name matches the given string
+alias[effect:clear_variables] = value[variable]
+
+###Converts the scoped country's fleet to the given country
+alias[effect:convert_fleet] = {
+	who = scope_group[target_country]
+}
+
+###Converts the scoped pop group to the given ideology
+alias[effect:convert_to_ideology] = {
+	ideology = <ideology>
+	amount = value_field
+}
+
+###Copies the modules of the given megastructure onto the scoped megastructure
+alias[effect:copy_modules_from] = scope[megastructure]
+
+###Creates a new ideology for the scoped country
+alias[effect:create_ideology] = {
+	## cardinality = 0..1
+	ethic = <ethos>
+	## cardinality = 0..1
+	faction = <pop_faction>
+	## cardinality = 0..1
+	name = localisation
+	## cardinality = 0..1
+	type = <ideology>
+	## cardinality = 0..1
+	tenets = scope_field
+	## cardinality = 0..1
+	tenets = {
+		## cardinality = 0..inf
+		tenet = <ideology_tenet>
+		## cardinality = 0..inf
+		tenet = random
+	}
+	## cardinality = 0..1
+	###default yes
+	auto_adopt = bool
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
+
+###Declares the given country as the scoped country's ideological rival
+alias[effect:declare_ideological_rival] = scope_field
+
+###Removes the scoped object as an ideology reach emitter
+alias[effect:delete_ideology_emitter] = bool
+
+###Destroys the scoped ideology
+alias[effect:destroy_ideology] = bool
+
+###Executes the given ideology action for the scoped country
+alias[effect:execute_ideology_action] = <ideology_action>
+
+###Exports the scoped country's resource production into the given variable
+alias[effect:export_resource_produce_to_variable] = {
+	resource = <resource>
+	variable = value[variable]
+}
+
+###Triggers the given faction action on the scoped pop faction
+alias[effect:faction_action] = value[faction_action]
+
+###Puts the scoped leader into training
+alias[effect:in_training] = bool
+
+###Moves the camera to the given target
+alias[effect:move_camera_to] = {
+	target = scope_field
+	## cardinality = 0..1
+	###default no
+	galaxy = bool
+	## cardinality = 0..1
+	###default no
+	instant = bool
+}
+
+###Opens the leader tab for the scoped country
+alias[effect:open_leader_tab] = bool
+
+###Randomizes the scoped country's new heir of the given leader class
+alias[effect:randomize_new_heir] = enum[leader_classes]
+
+###Removes the scoped object from the given ideology's reach emitters
+alias[effect:remove_emitter_from_ideology] = {
+	target = <ideology>
+}
+
+###Removes a specific, arbitrarily-named flag from the scoped ideology
+alias[effect:remove_ideology_flag] = value[ideology_flag]
+
+###Removes the scoped system from the game
+alias[effect:remove_system] = {
+}
+
+###Rerolls the tenets of the scoped ideology for the given tier
+alias[effect:reroll_tenets] = {
+	tier = int_value_field
+	tier = random
+}
+
+###Sets a custom description for the scoped leader
+alias[effect:set_custom_description] = localisation
+
+###Sets whether the scoped pop faction is fanatic
+alias[effect:set_faction_fanatic] = bool
+
+###Sets the ideology of the scoped pop faction
+alias[effect:set_faction_ideology] = <ideology>
+alias[effect:set_faction_ideology] = none
+
+###Sets a specific, arbitrarily-named flag on the scoped ideology
+alias[effect:set_ideology_flag] = value_set[ideology_flag]
+
+###Sets whether the scoped leader can be assigned to the council
+alias[effect:set_leader_can_assign_to_council] = bool
+
+###Sets whether the scoped leader can be manually assigned
+alias[effect:set_leader_can_be_manually_assigned] = bool
+
+###Turns ideology reach batch updates on (begin) or off (end)
+alias[effect:set_reach_update_batch] = begin
+alias[effect:set_reach_update_batch] = end
+
+###Sets the ideological type of the scoped subject agreement
+alias[effect:set_rule_subject_ideological_type] = ideological_ban
+alias[effect:set_rule_subject_ideological_type] = unified_ideology
+alias[effect:set_rule_subject_ideological_type] = ideological_freedom
+
+###Sets an arbitrarily-named flag on the scoped ideology for a set duration
+alias[effect:set_timed_ideology_flag] = {
+	flag = value_set[ideology_flag]
+	enum[days_months_years] = int_value_field
+	## cardinality = 0..1
+	###Adds a random number of extra days (0 to random - 1) on top of the given duration
+	random = int_value_field
+}
+
+###Switches the scoped country's council agenda
+alias[effect:switch_council_agenda] = <council_agenda>
+
+###Tries to create an ideological faction for the given country
+alias[effect:try_create_ideological_faction] = scope_group[target_country]
+
+###Validates the scoped country's species rights
+alias[effect:validate_species_rights] = bool

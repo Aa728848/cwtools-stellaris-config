@@ -262,6 +262,22 @@ pop_faction = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
+	## cardinality = 0..1
+	swappable_data = {
+		## cardinality = 0..1
+		default = {
+			## cardinality = 0..1
+			visual_ethic = localisation
+		}
+		## cardinality = 0..inf
+		swap_type = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			visual_ethic = localisation
+		}
+	}
 }
 
 # # Note every pop faction file in game is in error and Dayshine does not respond.  Had to hard code using enums to work with has_country_flag in triggers file.

@@ -1084,6 +1084,21 @@ trait = {
 		enum[weight_or_factor] = int
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..inf
+	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
+	## cardinality = 0..inf
+	### Modifiers applied to the ideology advocate this trait is attached to
+	triggered_advocate_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..1
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+	}
 }
 
 enums = {

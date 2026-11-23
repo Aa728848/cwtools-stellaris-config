@@ -219,4 +219,7 @@ ai_personality = {
 		## cardinality = 1..inf
 		scalar
 	}
+	## cardinality = 0..1
+	### Opinion-style score for how receptive this personality is to adopting an ideology
+	adopt_ideology_acceptance = int
 }

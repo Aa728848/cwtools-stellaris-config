@@ -306,6 +306,8 @@ situation_type = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	revolt_situation = bool
 }
 
 enums = {

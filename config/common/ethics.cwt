@@ -103,4 +103,7 @@ ethos = {
 		## cardinality = 1..inf
 		<job> = int
 	}
+	## cardinality = 0..1
+	### The absolute (fanatic + regular released) variant of this ethic
+	absolute_variant = <ethos>
 }

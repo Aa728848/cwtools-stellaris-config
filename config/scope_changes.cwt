@@ -6681,3 +6681,621 @@ alias[effect:ordered_starbase_in_network] = {
 	}
 	alias_name[effect] = alias_match_left[effect]
 }
+## push_scope = country
+###Iterate through every country adopting the scoped Ideology
+alias[trigger:any_adopting_country] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = country
+###Iterate through every country affected by the scoped Ideology
+alias[trigger:any_affected_country] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = ideology
+###Iterate through every ideology the scoped pop group follows
+alias[trigger:any_followed_ideology] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = ideology
+###Iterate through every ideology
+alias[trigger:any_ideology] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = country
+###Iterate through every country emitting reach for the scoped Ideology
+alias[trigger:any_ideology_emitter_country] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = leader
+###Iterate through every leader in training in the scoped country
+alias[trigger:any_leader_in_training] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = ideology
+###Iterate through every ideology revealed to the scoped country
+alias[trigger:any_revealed_ideology] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = galactic_object
+###Iterate through every system within the emitter reach of the scoped Ideology
+alias[trigger:any_system_within_emitter_reach] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = galactic_object
+###Iterate through every system within the reach of the scoped Ideology
+alias[trigger:any_system_within_reach] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = ship
+###Counts the ships in orbit of the scoped object that match the limit
+alias[trigger:count_ship_size_in_orbit] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = ship
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = country
+###Iterate through every country adopting the scoped Ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_adopting_country] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = country
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = country
+###Iterate through every country affected by the scoped Ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_affected_country] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = country
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = ideology
+###Iterate through every ideology the scoped pop group follows and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_followed_ideology] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = ideology
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = ideology
+###Iterate through every ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_ideology] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = ideology
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = country
+###Iterate through every country emitting reach for the scoped Ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_ideology_emitter_country] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = country
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = leader
+###Iterate through every leader in training in the scoped country and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_leader_in_training] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = leader
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = ideology
+###Iterate through every ideology revealed to the scoped country and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_revealed_ideology] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = ideology
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = galactic_object
+###Iterate through every system within the emitter reach of the scoped Ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_system_within_emitter_reach] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = galactic_object
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = galactic_object
+###Iterate through every system within the reach of the scoped Ideology and check whether the enclosed triggers return true for X/all of them
+alias[trigger:count_system_within_reach] = {
+	## cardinality = 0..1
+	count = all
+	## cardinality = 0..1
+	count = int_value_field
+	## cardinality = 0..1
+	count = value[variable]
+	## cardinality = 0..1
+	## push_scope = galactic_object
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## push_scope = country
+###Iterates through every country adopting the scoped Ideology
+alias[effect:every_adopting_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country affected by the scoped Ideology
+alias[effect:every_affected_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology the scoped pop group follows
+alias[effect:every_followed_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology
+alias[effect:every_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country emitting reach for the scoped Ideology
+alias[effect:every_ideology_emitter_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = leader
+###Iterates through every leader in training in the scoped country
+alias[effect:every_leader_in_training] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology revealed to the scoped country
+alias[effect:every_revealed_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the emitter reach of the scoped Ideology
+alias[effect:every_system_within_emitter_reach] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the reach of the scoped Ideology
+alias[effect:every_system_within_reach] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country adopting the scoped Ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_adopting_country] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country affected by the scoped Ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_affected_country] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology the scoped pop group follows - executes the enclosed effects on the one at the given position
+alias[effect:ordered_followed_ideology] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_ideology] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country emitting reach for the scoped Ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_ideology_emitter_country] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = leader
+###Iterates through every leader in training in the scoped country - executes the enclosed effects on the one at the given position
+alias[effect:ordered_leader_in_training] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = ideology
+###Iterates through every ideology revealed to the scoped country - executes the enclosed effects on the one at the given position
+alias[effect:ordered_revealed_ideology] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the emitter reach of the scoped Ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_system_within_emitter_reach] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the reach of the scoped Ideology - executes the enclosed effects on the one at the given position
+alias[effect:ordered_system_within_reach] = {
+	##cardinality = 0..1
+	position = int[0..inf]
+	##cardinality = 0..1
+	order_by = value_field
+	##cardinality = 0..1
+	order_by = value[variable]
+	##cardinality = 0..1
+	order_by = trigger:<trigger>
+	##cardinality = 0..1
+	order_by = enum[order_by]
+	## cardinality = 0..inf
+	order_by = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##cardinality = 0..1
+	inverse = bool
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Iterates through every country adopting the scoped Ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_adopting_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = country
+###Iterates through every country affected by the scoped Ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_affected_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = ideology
+###Iterates through every ideology the scoped pop group follows - executes the enclosed effects on one of them matching the limit
+alias[effect:random_followed_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = ideology
+###Iterates through every ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = country
+###Iterates through every country emitting reach for the scoped Ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_ideology_emitter_country] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = leader
+###Iterates through every leader in training in the scoped country - executes the enclosed effects on one of them matching the limit
+alias[effect:random_leader_in_training] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = ideology
+###Iterates through every ideology revealed to the scoped country - executes the enclosed effects on one of them matching the limit
+alias[effect:random_revealed_ideology] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the emitter reach of the scoped Ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_system_within_emitter_reach] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## push_scope = galactic_object
+###Iterates through every system within the reach of the scoped Ideology - executes the enclosed effects on one of them matching the limit
+alias[effect:random_system_within_reach] = {
+	##cardinality = 0..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
+	alias_name[effect] = alias_match_left[effect]
+
+	##cardinality = 0..1
+	weights = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}

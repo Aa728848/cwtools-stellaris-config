@@ -169,6 +169,9 @@ scopes = {
 		aliases = { planet_fleet }
 		is_subscope_of = { planet fleet }
 	}
+	Ideology = {
+		aliases = { ideology }
+	}
 }
 
 scope_groups = {

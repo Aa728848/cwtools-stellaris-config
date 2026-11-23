@@ -1757,6 +1757,11 @@ alias[trigger:count_starbase_modules] =  {
 	type = <starbase_module>
 	## cardinality = 0..1
 	include_being_constructed = bool
+	## cardinality = 0..1
+	## push_scope = starbase
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 ### Checks the number of starbase buildings that are of the specified type or not
@@ -1766,6 +1771,11 @@ alias[trigger:count_starbase_buildings] =  {
 	type = <starbase_building>
 	## cardinality = 0..1
 	include_being_constructed = bool
+	## cardinality = 0..1
+	## push_scope = starbase
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 ### Checks if the scoped country has a specified quantity of a starbase size
@@ -5559,3 +5569,239 @@ alias[trigger:trade_action_value] = {
 	with_country = scope[country]
 	value == value_field
 }
+
+###Checks the scoped country's adopted Ideology strength level. Returns -1 if no ideology is adopted
+alias[trigger:adopted_ideology_level] == int_value_field
+
+###Checks the combined reach of the scoped starbase's emitters for the given ideology, optionally limited by triggers
+alias[trigger:combined_emitter_reach] = {
+	ildeology = <ideology>
+	## cardinality = 0..1
+	## push_scope = galactic_object
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	value = int_value_field
+}
+
+###Checks the number of ideologies clashing with the scoped ideology
+alias[trigger:count_clashing_ideologies] == int_value_field
+alias[trigger:count_clashing_ideologies] = {
+	## cardinality = 0..1
+	is_ideology_rival = bool
+	## cardinality = 0..1
+	is_ideology_rival = any
+	value = int_value_field
+}
+
+###Checks the number of colonies following the scoped country's ideology
+alias[trigger:count_colonies_in_ideology] == int_value_field
+
+###Checks the number of rivalries the scoped ideology has
+alias[trigger:count_ideology_rivalries] == int_value_field
+
+###Checks the number of species represented on the scoped country's council
+alias[trigger:count_species_on_council] == int_value_field
+
+###Checks whether the scoped pop faction's approval is above the given threshold
+alias[trigger:faction_approval_above_threshold] = {
+	## cardinality = 0..1
+	## push_scope = pop_faction
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	threshold = value_field[0.0..1.0]
+	value = value_field
+}
+
+###Checks the scoped ideology's number of followers
+alias[trigger:followers_amount] == int_value_field
+
+###Checks the other empire's affinity towards the scoped country's ideology
+alias[trigger:foreign_empire_ideology_affinity] = {
+	who = scope_group[target_country]
+	value = value_field
+}
+
+###Checks the scoped country's affinity towards the given ideology
+alias[trigger:foreign_ideology_affinity] = {
+	ideology = <ideology>
+	value = value_field
+}
+
+###Checks the scoped ideology's share of the galaxy's total strength
+alias[trigger:galactic_strength] == value_field
+
+###Returns the experience the scoped leader needs to reach the target level
+alias[trigger:get_leader_exp_to_level] = {
+	target = scope[leader]
+}
+
+###Returns the tier of the given tenet
+alias[trigger:get_tenet_tier] = {
+	tenet = <ideology_tenet>
+}
+
+###Checks the scoped country's pop growth scale
+alias[trigger:growth_scale] == value_field
+
+###Checks whether the scoped country has the given tenet active
+alias[trigger:has_active_tenet] = <ideology_tenet>
+
+###Checks whether the scoped country has a faction with the given ethic
+alias[trigger:has_faction_with_ethic] = <ethos>
+
+## severity = warning
+###Checks if the scoped ideology has a specific, arbitrarily-named, flag
+alias[trigger:has_ideology_flag] = value[ideology_flag]
+
+###Checks whether the scoped megastructure has the given module
+alias[trigger:has_megastructure_module] = <megastructure_module>
+
+###Checks whether the scoped object's ethic is the opposite of the given ideology's ethic
+alias[trigger:has_opposite_ethic_as_ideology] = <ideology>
+
+###Checks whether the scoped object shares the given ideology's ethic
+alias[trigger:has_same_ethic_as_ideology] = <ideology>
+
+###Checks whether the scoped country shares the given ideology's fanatic ethic
+alias[trigger:has_same_fanatic_ethic_as_ideology] = <ideology>
+
+###Checks the scoped country's ideological momentum
+alias[trigger:ideological_momentum] == value_field
+
+###Checks the scoped country's ideological strength
+alias[trigger:ideological_strength] == value_field
+
+###Checks the scoped country's ideological strength as a share of the maximum
+alias[trigger:ideological_strength_percent] == value_field[0.0..1.0]
+
+###Checks whether ideologies are enabled in the current game
+alias[trigger:ideologies_enabled] = bool
+
+###Checks the fanatic level of the given ideology's ethic (regular = 1, fanatic = 2, absolute = 3)
+alias[trigger:ideology_ethic_fanatic_level] = {
+	ideology = <ideology>
+	level = int_value_field
+}
+
+###Checks the scoped country's number of followers of the given ideology
+alias[trigger:ideology_followers_amount] = {
+	ideology = <ideology>
+	value = int_value_field
+}
+
+###Checks the scoped country's intel on the given ideology
+alias[trigger:ideology_intel] = {
+	ideology = <ideology>
+	value = value_field
+}
+
+###Checks the reach the given ideology has left in the scoped system
+alias[trigger:ideology_reach_left] = {
+	ideology = <ideology>
+	value = value_field
+}
+
+###Checks the war penalty the scoped country suffers for the given ideology
+alias[trigger:ideology_war_penalty] = {
+	ideology = <ideology>
+	value = value_field
+}
+
+###Checks whether the scoped country is affected by the target ideology
+alias[trigger:is_affected_by_ideology] = scope_field
+
+###Checks whether the scoped pop faction is fanatic
+alias[trigger:is_faction_fanatic] = bool
+
+###Checks whether the scoped ideology is guarded by the target country
+alias[trigger:is_ideology_custodian] = scope_field
+
+###Checks whether the scoped country has revealed the given ideology
+alias[trigger:is_ideology_revealed] = <ideology>
+
+###Checks whether the scoped country is an ideological rival of the target country
+alias[trigger:is_ideology_rival] = scope_group[target_country]
+
+###Checks whether the scoped country's ideology is stagnating
+alias[trigger:is_ideology_stagnating] = bool
+
+###Checks whether the scoped leader is in training
+alias[trigger:is_in_training] = bool
+
+###Checks whether an ideology momentum change is pending for the scoped country
+alias[trigger:is_momentum_pending] = bool
+
+###Checks whether the given ethic is the one the scoped country is most attracted to
+alias[trigger:is_most_attracted_ethic] = <ethos>
+
+###Checks whether the given precursor is still available to the scoped country
+alias[trigger:is_precursor_available] = <precursors>
+
+###Checks whether the scoped system is within the given ideology's reach
+alias[trigger:is_within_ideology_reach] = <ideology>
+
+###Checks how long ago the scoped country's ideology last increased
+alias[trigger:last_ideology_increase] == value_field
+
+###Checks the scoped planet/colony's migration score
+alias[trigger:migration_score] == value_field
+
+###Checks the number of tenets the scoped country has active
+alias[trigger:num_active_tenets] == int_value_field
+
+###Checks the number of members of the scoped pop faction
+alias[trigger:num_pop_faction_members] == int_value_field
+
+###Checks the number of tenets the scoped country has
+alias[trigger:num_tenets] == int_value_field
+
+###Checks the number of unspecialized districts on the scoped planet
+alias[trigger:num_unspecialized_districts] = {
+	## cardinality = 0..1
+	type = any
+	## cardinality = 0..1
+	type = <district>
+	value = int_value_field
+}
+
+###Checks the amount or percentage of pops following or not following an ideology. If used rhs this returns the amount.
+alias[trigger:pop_ideology_amount] == value_field
+alias[trigger:pop_ideology_amount] = {
+	## cardinality = 0..1
+	amount == value_field
+	## cardinality = 0..1
+	percentage == value_field
+	ideology = <ideology>
+	## cardinality = 0..1
+	ideology = any
+}
+
+###Checks the percentage of pops following or not following an ideology.
+alias[trigger:pop_ideology_percentage] == value_field
+alias[trigger:pop_ideology_percentage] = {
+	## cardinality = 0..1
+	amount == value_field
+	## cardinality = 0..1
+	percentage == value_field
+	ideology = <ideology>
+}
+
+###Checks the difference between the scoped object's encryption and the target's decryption
+alias[trigger:relative_encryption_decryption_subtract] = {
+	target = scope_group[target_country]
+	value = value_field
+}
+
+###Checks the scoped planet/colony's total amenities
+alias[trigger:total_amenities] == value_field
+
+###Checks the total intel the scoped ideology has towards the given adopting country
+alias[trigger:total_intel_towards_adopting_countries] = {
+	who = scope_group[target_country]
+	value = value_field
+}
+
+###Checks the orbital bombardment stance the scoped fleet is using
+alias[trigger:uses_orbital_bombardment_stance] = <bombardment_stance>

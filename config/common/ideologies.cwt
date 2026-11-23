@@ -1,0 +1,258 @@
+
+types = {
+	type[ideology] = {
+		path = "game/common/ideologies"
+		path_strict = yes
+	}
+	type[ideology_tenet] = {
+		path = "game/common/ideologies/tenets"
+	}
+	type[ideology_action] = {
+		path = "game/common/ideologies/actions"
+	}
+	type[ideology_reach_type] = {
+		path = "game/common/ideologies/reach_types"
+	}
+}
+
+# Ideologies are defined in game/common/ideologies and pull most of their content
+# from inline scripts, so only the wrapper fields are modelled here.
+ideology = {
+	## cardinality = 0..1
+	###Associated ethic. Must be a fanatic ethic or a gestalt ethic.
+	ethic = <ethos>
+	## cardinality = 0..1
+	###Whether the ideology can be renamed manually. Default yes.
+	can_rename = bool
+	## cardinality = 0..1
+	###Reach calculation used by this ideology type.
+	reach = <ideology_reach_type>
+	## cardinality = 0..1
+	###Scriptable value to roll this type among the types of the same ethic.
+	weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	###Scriptable value to pick the faction representing the ideology.
+	faction_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	###Faction type created in an affected empire when no faction can represent the ideology.
+	faction = <pop_faction>
+	## cardinality = 0..1
+	###Levels composing the Ideological Strength of the ideology.
+	strength_level = {
+		end = int
+	}
+	## cardinality = 0..1
+	###Scriptable value used to increase Ideological Strength. Scope is country, From is ideology.
+	monthly_increase = {
+		## cardinality = 0..inf
+		category = {
+			desc = localisation
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier_rule] = alias_match_left[modifier_rule]
+			}
+		}
+		## cardinality = 0..inf
+		modifier = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+	## cardinality = 0..1
+	on_gain_level = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_lose_level = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_monthly = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_destroy = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..inf
+	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
+	## cardinality = 0..inf
+	alias_name[triggered_modifier_system] = alias_match_left[triggered_modifier_system]
+	## cardinality = 0..inf
+	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
+	## cardinality = 0..1
+	inline_script = {
+		script = filepath["common/inline_scripts/",".txt"]
+		## cardinality = 0..inf
+		enum[scripted_effect_params] = scope_field
+	}
+}
+
+ideology_tenet = {
+	## cardinality = 0..1
+	###List of possible ethics an ideology should have to select this tenet.
+	ethics = {
+		## cardinality = 0..inf
+		<ethos>
+	}
+	## cardinality = 0..1
+	###Conditions for the tenet to apply. Scope is country, From is ideology.
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Determines the tenet's priority during roll selection.
+	priority = high
+	## cardinality = 0..1
+	priority = low
+	## cardinality = 0..1
+	priority = default
+	## cardinality = 0..1
+	###If set, displays the icon of this civic/origin in the tenet selection window.
+	source_civic = <civic_or_origin>
+	## cardinality = 0..1
+	###The tiers of this tenet begin at this tier.
+	first_tier = int
+	## cardinality = 0..1
+	on_unlock = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_lock = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Tenet tiers, each holding the modifiers applied while that tier is active.
+	tier = {
+		## cardinality = 0..inf
+		alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
+		## cardinality = 0..inf
+		alias_name[triggered_country_modifier_planet] = alias_match_left[triggered_country_modifier_planet]
+		## cardinality = 0..inf
+		alias_name[triggered_modifier_system] = alias_match_left[triggered_modifier_system]
+		## cardinality = 0..inf
+		alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
+		## cardinality = 0..inf
+		alias_name[triggered_leader_modifier_pop] = alias_match_left[triggered_leader_modifier_pop]
+		## cardinality = 0..1
+		inline_script = {
+			script = filepath["common/inline_scripts/",".txt"]
+			## cardinality = 0..inf
+			enum[scripted_effect_params] = scope_field
+		}
+	}
+	## cardinality = 0..1
+	###Alternative visuals and localisation based on conditions.
+	swappable_data = {
+		## cardinality = 0..1
+		default = {
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = <sprite>
+			## cardinality = 0..1
+			source_civic = <civic_or_origin>
+		}
+		## cardinality = 0..inf
+		## replace_scope = { this = country root = country from = ideology }
+		swap_type = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = <sprite>
+			## cardinality = 0..1
+			source_civic = <civic_or_origin>
+			## cardinality = 0..1
+			weight = int
+		}
+	}
+	## cardinality = 0..1
+	inline_script = {
+		script = filepath["common/inline_scripts/",".txt"]
+		## cardinality = 0..inf
+		enum[scripted_effect_params] = scope_field
+	}
+}
+
+ideology_action = {
+	## cardinality = 0..1
+	###Does this action have effects after execution, like an upkeep or an on_cancel?
+	has_lasting_effect = bool
+	## cardinality = 0..1
+	requires_confirmation = bool
+	## cardinality = 0..1
+	###Can the action be displayed in the view?
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Can the action be executed?
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Can the action be cancelled?
+	allow_cancel = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	resources = {
+		category = <economic_category>
+		alias_name[economic_template] = alias_match_left[economic_template]
+	}
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	on_cancel = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	ai_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	cancel_ai_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+ideology_reach_type = {
+	## cardinality = 0..inf
+	###Trigger/modifier blocks directly affecting reach.
+	value = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..inf
+	###Modifier blocks applied on top of value, kept separate for tooltips.
+	weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	###Calculated per system when propagating reach.
+	ideological_push = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	###Calculated per system when resisting foreign reach.
+	ideological_resistance = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	inline_script = {
+		script = filepath["common/inline_scripts/",".txt"]
+		## cardinality = 0..inf
+		enum[scripted_effect_params] = scope_field
+	}
+}

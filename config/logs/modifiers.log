@@ -434,8 +434,8 @@ Printing Modifier Definitions:
 - catapult_spread_mult, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Megastructures
 - catapult_range_base, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Megastructures
 - catapult_range_mult, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Megastructures
-- ship_repair_hull_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
-- ship_repair_armor_mult, Category: Military Ships, Civilian Ships, Science Ships, Transport Ships
+- ship_repair_hull_mult, Category: Ships
+- ship_repair_armor_mult, Category: Ships
 - strike_craft_cooldown_mult, Category: Ships
 - strike_craft_regeneration_mult, Category: Ships
 - strike_craft_count_add, Category: Ships
@@ -464,7 +464,7 @@ Printing Modifier Definitions:
 - ship_friendly_territory_tracking_mult, Category: Ships
 - ship_friendly_territory_fire_rate_mult, Category: Ships
 - ship_outside_friendly_territory_fire_rate_mult, Category: Ships
-- planetary_ascension_effect_mult, Category: Countries
+- planetary_ascension_effect_mult, Category: Colony
 - planetary_ascension_cost_mult, Category: Colony
 - habitability_ceil_uncapped_add, Category: Habitability
 - habitability_floor_add, Category: Habitability
@@ -3154,3 +3154,64 @@ Printing Modifier Definitions:
 - missile_health_mult, Category: Ships
 - missile_shield_add, Category: Ships
 - missile_shield_mult, Category: Ships
+- additional_tenet_add, Category: Countries
+- advocate_ideological_strength_mult, Category: Countries
+- advocate_matching_ideological_strength_mult, Category: Countries
+- arkship_harvest_resources_depletion_time_mult, Category: Countries
+- at_war_spy_network_daily_value_mult, Category: Espionage
+- at_war_spy_network_levels_add, Category: Espionage
+- capital_buildings_assembler_add, Category: Countries
+- civic_dystopian_society_ideological_reach, Category: Countries
+- civic_megacity_architects_ideological_reach_mult, Category: Countries
+- civic_shared_burden_ideological_reach, Category: Countries
+- colony_empire_size_mult, Category: Colony
+- colony_ideological_reach_mult, Category: Colony
+- commercial_pact_diaspora_tenet_mult, Category: Countries
+- country_market_max_price_mult, Category: Countries
+- country_war_exhaustion_inflicted_mult, Category: Countries
+- cultural_envoy_conversion_rate_add, Category: Fleets
+- cultural_envoy_leader_exp_gain_mult, Category: Leaders
+- cultural_envoy_opinion_loss_mult, Category: Fleets
+- damage_vs_ideological_rival_mult, Category: Ships
+- envoy_favor_chance_gain_add, Category: Countries
+- envoy_favor_chance_gain_migration_treaty_add, Category: Countries
+- foreign_ideological_push_mult, Category: Countries
+- guaranteed_rare_or_dangerous_tech_add, Category: Countries
+- hall_colony_effect_mult, Category: Countries
+- hall_ideological_reach_mult, Category: Countries
+- hall_relocate_cost, Category: Countries
+- harmonicism_resolutions_effect_mult, Category: Countries
+- ideological_faction_attraction_mult, Category: Countries
+- ideological_resistance_from_closed_borders_mult, Category: Countries
+- ideological_resistance_vs_rival_mult, Category: Countries
+- ideological_strength_bonus_mult, Category: Countries
+- ideological_strength_from_clashes_mult, Category: Countries
+- ideological_strength_malus_mult, Category: Countries
+- leader_lifespan_min, Category: Leaders
+- leader_species_weight_mult, Category: Leaders
+- max_ideological_rivalries, Category: Countries
+- megastructure_module_capacity_add, Category: Megastructures
+- non_gestalt_memorials_species_growth_mult, Category: Countries
+- pop_happiness_min, Category: Pops
+- research_sharing_diaspora_tenet_mult, Category: Countries
+- sacrifice_ideological_strength_add, Category: Countries
+- situation_spirit_cultivation_max_progress_add, Category: Countries
+- situation_spirit_cultivation_max_progress_mult, Category: Countries
+- space_fauna_ship_size_armor_regen_add, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Ship Design Stats
+- space_fauna_ship_size_hull_regen_add, Category: Orbital Stations, Space Stations, Military Ships, Civilian Ships, Science Ships, Transport Ships, Ship Design Stats
+- stability_scaling_mult, Category: Countries
+- system_empire_size_mult, Category: Star Systems
+- tenet_autonomy_amenities_modifier, Category: Countries
+- tenet_diaspora_opinion_bonus, Category: Countries
+- tenet_dimensionalism_nomad_unity_mult, Category: Countries
+- tenet_hedonism_logistic_growth_modifier, Category: Countries
+- tenet_hedonism_roboticist_workforce_modifier, Category: Countries
+- tenet_higher_law_agenda_modifier, Category: Countries
+- tenet_higher_law_edict_modifier, Category: Countries
+- tenet_homogeneity_modifier, Category: Colony
+- tenet_militia_conscription_arkship_hull_modifier, Category: Countries
+- tenet_militia_conscription_defense_army_modifier, Category: Countries
+- tenet_sacred_union_modifier, Category: Colony
+- tenet_sacrifism_ideological_strength_add, Category: Countries
+- tenet_spectacle_of_authority_edict_modifier, Category: Countries
+- unfullfiled_faction_demand_bypass_add, Category: Countries

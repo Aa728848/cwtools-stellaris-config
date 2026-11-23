@@ -519,6 +519,8 @@ civic_or_origin = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
+	## cardinality = 0..inf
+	alias_name[triggered_planet_modifier_planet] = alias_match_left[triggered_planet_modifier_planet]
 }
 
 councilor = {
@@ -590,6 +592,10 @@ councilor = {
 	}
 	## cardinality = 0..inf
 	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
+	## cardinality = 0..1
+	is_enclave_councilor = bool
+	## cardinality = 0..inf
+	alias_name[triggered_planet_modifier_planet] = alias_match_left[triggered_planet_modifier_planet]
 }
 
 ## replace_scope = { this = country root = country }
@@ -637,6 +643,10 @@ council_agenda = {
 	## cardinality = 0..1
 	ai_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	on_cancel = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 }
 

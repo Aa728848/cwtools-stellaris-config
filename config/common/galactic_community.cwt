@@ -151,4 +151,8 @@ resolution = {
 		## cardinality = 0..1
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..1
+	harmonicism = bool
+	## cardinality = 0..1
+	is_target_ideology = bool
 }

@@ -509,6 +509,8 @@ map_mode = {
 		## cardinality = 0..1
 		filter = enum[hardcoded_map_mode_filters]
     }
+	## cardinality = 0..1
+	display_ideologies = bool
 }
 
 enums = {
@@ -902,6 +904,12 @@ leader_class = {
 	can_rule_empire = bool
 	## cardinality = 0..1
 	paragon_background_selector = scalar
+	## cardinality = 0..1
+	can_be_ideology_advocate = bool
+	## cardinality = 0..1
+	can_crew_cultural_envoy = bool
+	## cardinality = 0..1
+	valid_for_leader_pool = bool
 }
 
 artifact_actions = {

@@ -348,6 +348,25 @@ megastructure = {
 	build_menu_potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	### The megastructure can host ideology reach emitters
+	emitter = bool
+	## cardinality = 0..inf
+	## cardinality = 0..inf
+	alias_name[triggered_planet_modifier_planet] = alias_match_left[triggered_planet_modifier_planet]
+	## cardinality = 0..inf
+	### Modifiers applied to the megastructure's station
+	triggered_station_modifier = {
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..1
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+	}
 }
 
 

@@ -1,31 +1,31 @@
 {
   "_schema": "cwtools/shader-abi-audit/v1",
   "game": "stellaris",
-  "game_version": "4.5.3",
+  "game_version": "4.6.0",
   "review_status": "complete",
   "automatic_promotion": false,
   "candidate_universe": {
-    "source_files": 72,
-    "shader_files": 49,
+    "source_files": 73,
+    "shader_files": 50,
     "fxh_files": 23,
-    "effect_declarations": 473,
-    "unique_effect_names": 438,
-    "inventory_sha256": "3c01a033a07cfd77432e138765345ce27d44860dbc506b27a074180596e8a3ad",
+    "effect_declarations": 481,
+    "unique_effect_names": 446,
+    "inventory_sha256": "4727e2b6ab3f77e5816c9ccca9afac17dd221ce61f20414208fbb832a32d4484",
     "inventory_hash_algorithm": "sha256 of UTF-8 ordinal path|size|file_sha256 rows joined by LF without a trailing LF",
-    "declaration_inventory_sha256": "710c7a025a1567dcada94babbfbb6b683a56ebc59cf50e662c562dd3a6847a12",
+    "declaration_inventory_sha256": "2858bf1c73d0ebb88b6a67f559039068d1a2b77d485ba75ec8749c4d4d010070",
     "declaration_hash_algorithm": "sha256 of UTF-8 ordinal lowercase_logical_path|effect_name|selection_start_line|selection_start_column rows joined by LF without a trailing LF",
     "source_directory": "gfx/FX"
   },
   "game_identity": {
-    "launcher_raw_version": "v4.5.3",
-    "launcher_settings_sha256": "65f9b547c0d5194f885ec015ff46edba941d45e78706b5a92efb03d079fa07e9",
+    "launcher_raw_version": "v4.6.0",
+    "launcher_settings_sha256": "40c7c79307e2bc6ab11a2a1152c772cb015788b29ffc1e9bd75e577475bea2e0",
     "executable": "stellaris.exe",
-    "executable_size": 44967544,
-    "executable_sha256": "2f0fc2a91ccec9f77d390a5d198195927158c22444216a03596a23007fb3eafb"
+    "executable_size": 47266424,
+    "executable_sha256": "30a49e90345ef4248a3768d3a3d92264cd5eb687e7253f1b3a581c901b1b90d0"
   },
   "executable_string_scan": {
     "policy": "String presence is candidate evidence only and never proves a call path.",
-    "ascii_hits": 80,
+    "ascii_hits": 81,
     "ascii_effect_names": [
       "ArkshipBackground",
       "ArkshipNebula",
@@ -63,6 +63,7 @@
       "HyperlaneQuadLineAlphaPass1",
       "HyperlaneQuadLineAlphaPass2",
       "HyperlaneQuadLineFlatColorPass",
+      "IdeologyBorderSDF",
       "Laser",
       "Lines",
       "LuminanceDownsample",
@@ -195,6 +196,7 @@
     "hyperlanequadlinealphapass2|gfx/fx/hyperlane.shader",
     "hyperlanequadlineflatcolorpass|gfx/fx/hyperlane.shader",
     "hyperlanequadline|gfx/fx/hyperlane.shader",
+    "ideologybordersdf|gfx/fx/ideology_border.shader",
     "laser|gfx/fx/projectile.shader",
     "lens_flare|gfx/fx/downsample.shader",
     "lines|gfx/fx/lines.shader",
@@ -223,6 +225,9 @@
     "particleprealphablendtrailnobillboard|gfx/fx/particle.shader",
     "particleprealphablendtrail|gfx/fx/particle.shader",
     "particleprealphablend|gfx/fx/particle.shader",
+    "pdxmeshadditiveempirecolorcloaked|gfx/fx/pdxmesh.shader",
+    "pdxmeshadditiveempirecolorshadow|gfx/fx/pdxmesh.shader",
+    "pdxmeshadditiveempirecolor|gfx/fx/pdxmesh.shader",
     "pdxmeshadvancedshadow|gfx/fx/pdxmesh.shader",
     "pdxmeshadvancedskinnedshadow|gfx/fx/pdxmesh.shader",
     "pdxmeshadvancedskinned|gfx/fx/pdxmesh.shader",
@@ -324,6 +329,10 @@
     "pdxmeshextradimensionalshipshadow|gfx/fx/pdxmesh.shader",
     "pdxmeshextradimensionalshipskinnedshadow|gfx/fx/pdxmesh.shader",
     "pdxmeshextradimensionalshipskinned|gfx/fx/pdxmesh.shader",
+    "pdxmeshextradimensionalshipupdatedshadow|gfx/fx/pdxmesh.shader",
+    "pdxmeshextradimensionalshipupdatedskinnedshadow|gfx/fx/pdxmesh.shader",
+    "pdxmeshextradimensionalshipupdatedskinned|gfx/fx/pdxmesh.shader",
+    "pdxmeshextradimensionalshipupdated|gfx/fx/pdxmesh.shader",
     "pdxmeshextradimensionalship|gfx/fx/pdxmesh.shader",
     "pdxmeshflowadditivecloaked|gfx/fx/pdxmesh.shader",
     "pdxmeshflowadditiveempirecolorcloaked|gfx/fx/pdxmesh.shader",
@@ -593,7 +602,7 @@
     {
       "stage": "vanilla_shader_inventory",
       "status": "reviewed",
-      "result": "473 Effect declarations (438 case-insensitive names) were parsed by PdxShaderRuntime."
+      "result": "481 Effect declarations (446 case-insensitive names) were parsed by PdxShaderRuntime."
     },
     {
       "stage": "textual_call_sites",
@@ -608,7 +617,7 @@
     {
       "stage": "executable_or_runtime",
       "status": "no_qualifying_evidence",
-      "result": "80 ASCII and 4 UTF-16LE Effect-name matches are candidate signals only; automatic_inventory entries are not reviewed engine evidence."
+      "result": "81 ASCII and 4 UTF-16LE Effect-name matches are candidate signals only; automatic_inventory entries are not reviewed engine evidence."
     }
   ],
   "notes": "Automatically merged by stellaris-rules-sync report mode from a fresh shader-abi inventory; no manual review was performed."

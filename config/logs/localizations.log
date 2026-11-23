@@ -32,6 +32,7 @@ Promotions:
  Heir
  Species
  Federation
+ Ideology
 Properties
  GetName
  GetNamePersistent
@@ -53,6 +54,8 @@ Properties
  GetRulerNamePersistent
  GetRulerTitle
  GetRulerTitlePersistent
+ GetMaleRulerTitle
+ GetFemaleRulerTitle
  GetHeirName
  GetHeirTitle
  GetPersonalityName
@@ -89,6 +92,7 @@ Properties
  GetCapitalPlanetNameOrRandom
  GetCapitalSystemNameOrRandomPersistent
  GetCapitalPlanetNameOrRandomPersistent
+ GetLastTenetName
 
 --Planet--
 Promotions:
@@ -273,6 +277,8 @@ Properties
  GetRemnantName
  GetRemnantNamePlural
  GetRandomSpeciesSound
+ GetPrefixFromAdj
+ GetPrefixFromAdjPersistent
 
 --War--
 Promotions:
@@ -285,10 +291,13 @@ Properties
 --Pop Faction--
 Promotions:
  Owner
+ Ideology
 Properties
  GetName
  GetNamePersistent
+ GetType
  GetPopsGuidingEthic
+ GetGuidingEthic
 
 --Archaeological Site--
 Promotions:
@@ -429,6 +438,7 @@ Properties
 Promotions:
 Properties
  GetName
+ GetAdj
 
 --Dead Federation--
 Promotions:
@@ -515,5 +525,13 @@ Promotions:
 Properties
  GetOrigin
  GetOriginalOwner
+
+--Ideology--
+Promotions:
+ Owner
+Properties
+ GetName
+ GetNamePersistent
+ GetAssociatedEthicName
 
 =================

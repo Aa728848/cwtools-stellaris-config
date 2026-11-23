@@ -892,6 +892,108 @@ types = {
 		## replace_scope = { this = leader root = leader }
 		subtype[will_leader_survive] = {
 		}
+		## type_key_filter = at_war_flag_overlay_is_shown
+		## replace_scope = { this = country root = country from = country }
+		subtype[at_war_flag_overlay_is_shown] = {
+		}
+		## type_key_filter = can_cultural_envoy_convert_colony
+		## replace_scope = { this = colony root = colony from = fleet }
+		subtype[can_cultural_envoy_convert_colony] = {
+		}
+		## type_key_filter = can_open_ideologies_tab
+		## replace_scope = { this = country root = country }
+		subtype[can_open_ideologies_tab] = {
+		}
+		## type_key_filter = can_skip_galcom_harmonicism_emergency_cooldown
+		## replace_scope = { this = country root = country }
+		subtype[can_skip_galcom_harmonicism_emergency_cooldown] = {
+		}
+		## type_key_filter = has_ideologies_insights
+		## replace_scope = { this = country root = country }
+		subtype[has_ideologies_insights] = {
+		}
+		## type_key_filter = pop_group_can_follow_ideology
+		## replace_scope = { this = pop_group root = pop_group }
+		subtype[pop_group_can_follow_ideology] = {
+		}
+		## type_key_filter = should_reroll_leader
+		## replace_scope = { this = leader root = leader }
+		subtype[should_reroll_leader] = {
+		}
+		## type_key_filter = can_jeopardize_ideology_custody
+		## replace_scope = { this = country root = country from = ideology }
+		subtype[can_jeopardize_ideology_custody] = {
+		}
+		## type_key_filter = should_ideology_support_advocate
+		## replace_scope = { this = ideology root = ideology from = country }
+		subtype[should_ideology_support_advocate] = {
+		}
+		## type_key_filter = should_object_emit_reach
+		## replace_scope = { this = any root = any from = ideology }
+		subtype[should_object_emit_reach] = {
+		}
+		## type_key_filter = ai_check_economic_power_to_accept_ideology
+		subtype[ai_check_economic_power_to_accept_ideology] = {
+		}
+		## type_key_filter = ai_check_fleet_power_to_accept_ideology
+		subtype[ai_check_fleet_power_to_accept_ideology] = {
+		}
+		## type_key_filter = ai_check_tech_power_to_accept_ideology
+		subtype[ai_check_tech_power_to_accept_ideology] = {
+		}
+		## type_key_filter = allow_empire_selection
+		subtype[allow_empire_selection] = {
+		}
+		## type_key_filter = allow_fanatic_factions
+		subtype[allow_fanatic_factions] = {
+		}
+		## type_key_filter = can_leader_bypass_councilor_conditions
+		subtype[can_leader_bypass_councilor_conditions] = {
+		}
+		## type_key_filter = can_repair_fleet_without_colonies
+		subtype[can_repair_fleet_without_colonies] = {
+		}
+		## type_key_filter = is_empire_genocidal
+		subtype[is_empire_genocidal] = {
+		}
+		## type_key_filter = is_force_of_will_win
+		subtype[is_force_of_will_win] = {
+		}
+		## type_key_filter = is_heir_rolled_automatically
+		subtype[is_heir_rolled_automatically] = {
+		}
+		## type_key_filter = ruler_can_be_assigned_to_federation
+		## replace_scope = { this = leader root = leader from = federation }
+		subtype[ruler_can_be_assigned_to_federation] = {
+		}
+		## type_key_filter = ruler_can_be_assigned_to_galactic_community
+		## replace_scope = { this = leader root = leader from = country }
+		subtype[ruler_can_be_assigned_to_galactic_community] = {
+		}
+		## type_key_filter = ruler_can_be_ideology_advocate
+		## replace_scope = { this = leader root = leader from = ideology }
+		subtype[ruler_can_be_ideology_advocate] = {
+		}
+		## type_key_filter = ruler_can_crew_cultural_envoy
+		## replace_scope = { this = leader root = leader from = fleet }
+		subtype[ruler_can_crew_cultural_envoy] = {
+		}
+		## type_key_filter = ruler_can_crew_science_ship
+		## replace_scope = { this = leader root = leader from = fleet }
+		subtype[ruler_can_crew_science_ship] = {
+		}
+		## type_key_filter = ruler_can_govern_planet
+		## replace_scope = { this = leader root = leader from = colony }
+		subtype[ruler_can_govern_planet] = {
+		}
+		## type_key_filter = ruler_can_lead_army
+		## replace_scope = { this = leader root = leader from = fleet }
+		subtype[ruler_can_lead_army] = {
+		}
+		## type_key_filter = ruler_can_lead_navy
+		## replace_scope = { this = leader root = leader from = fleet }
+		subtype[ruler_can_lead_navy] = {
+		}
 	}
 }
 

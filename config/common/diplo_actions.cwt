@@ -148,4 +148,10 @@ diplomatic_action = {
 	should_ai_propose = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## cardinality = 0..1
+	action_stack = {
+		max_counter = int_value_field
+		## cardinality = 0..1
+		tooltip = localisation
+	}
 }

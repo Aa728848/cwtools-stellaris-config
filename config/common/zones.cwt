@@ -179,6 +179,26 @@ zones = {
 	ai_priority = int
 	## cardinality = 0..inf
 	ai_weight_coefficient = float
+	## cardinality = 0..1
+	included_buildings = {
+		## cardinality = 0..inf
+		all
+		## cardinality = 0..inf
+		<building>
+	}
+	## cardinality = 0..inf
+	triggered_buildings = {
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		included_buildings = {
+			## cardinality = 0..inf
+			all
+			## cardinality = 0..inf
+			<building>
+		}
+	}
 }
 
 zone_slots = {

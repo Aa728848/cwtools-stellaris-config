@@ -382,6 +382,28 @@ job = {
 		}
 	}
 
+	## cardinality = 0..1
+	leader_background_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	leader_background_class_weight = {
+		## cardinality = 0..inf
+		<leader_class> = int_value_field
+		## cardinality = 0..inf
+		<leader_class> = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+	## cardinality = 0..1
+	leader_background_ethic_weight = {
+		## cardinality = 0..inf
+		<ethos> = int_value_field
+		## cardinality = 0..inf
+		<ethos> = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
 }
 
 
@@ -503,4 +525,17 @@ social_strata = {
 
 	## cardinality = 0..inf
 	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
+	## cardinality = 0..1
+	leader_background_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	leader_background_ethic_weight = {
+		## cardinality = 0..inf
+		<ethos> = int_value_field
+		## cardinality = 0..inf
+		<ethos> = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
 }
