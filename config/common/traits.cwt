@@ -507,6 +507,18 @@ trait = {
 			<civic_or_origin.origin>
 		}
 		## cardinality = 0..1
+		### OR - This trait is allowed in ruler creation if any of the listed civics is selected.
+		allowed_civics = {
+			## cardinality = 0..inf
+			<civic_or_origin.civic>
+		}
+		## cardinality = 0..1
+		### OR - This trait is blocked in ruler creation if listed civics are selected.
+		forbidden_civics = {
+			## cardinality = 0..inf
+			<civic_or_origin.civic>
+		}
+		## cardinality = 0..1
 		forbidden_ethics = {
 			## cardinality = 0..inf
 			<ethos>
@@ -550,6 +562,12 @@ trait = {
 		## replace_scope = { this = leader root = leader }
 		### Modifier applied to leader itself.
 		self_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
+		### Modifier applied to the country if this leader is advocating its ideology.
+		advocate_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1

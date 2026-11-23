@@ -43,6 +43,15 @@ pop_faction = {
 	icon = <sprite>
 	### Allows to have multiple of this faction type within a single country
 	unique = bool
+	## cardinality = 0..1
+	### Default = no; creates the faction right away, ignoring POP_FACTION_CREATION_COOLDOWN
+	skip_creation_cooldown = bool
+	## cardinality = 0..1
+	### Default = no; hides the faction from interface lists
+	hidden = bool
+	## cardinality = 0..1
+	### Default = yes; whether factions of this type can be generated naturally
+	allow_natural_spawn = bool
 
 	## cardinality = 0..1
 	### How much extra weight will receive a candidate from this faction

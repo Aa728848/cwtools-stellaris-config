@@ -247,7 +247,26 @@ megastructure = {
 	build_megastructure_no_cost_localization_key = localisation
 
 	## cardinality = 0..1
+	### If the megastructure doesn't have a persistent name, sets its name using its owner as scope
+	scoped_name = localisation
+
+	## cardinality = 0..1
 	hide_name = bool
+
+	## cardinality = 0..1
+	### Megastructure modules available for this megastructure
+	modules = {
+		## cardinality = 0..inf
+		<megastructure_module>
+	}
+	## cardinality = 0..1
+	### Initial number of modules this megastructure starts with
+	initial_module_capacity = int
+	## cardinality = 0..1
+	### Maximum number of modules this megastructure can have
+	max_module_capacity = int
+	## cardinality = 0..1
+	locked_module_custom_tooltip = localisation
 	
 	## cardinality = 0..1
 	dismantle_cost = {

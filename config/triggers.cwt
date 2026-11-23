@@ -5805,3 +5805,6 @@ alias[trigger:total_intel_towards_adopting_countries] = {
 
 ###Checks the orbital bombardment stance the scoped fleet is using
 alias[trigger:uses_orbital_bombardment_stance] = <bombardment_stance>
+
+###Checks if the war goal of the given country's side defeats a nomad empire when enemies control all its arkships
+alias[trigger:country_defeats_nomads_in_war] = scope[country]

@@ -41,25 +41,37 @@ ideology = {
 	###Faction type created in an affected empire when no faction can represent the ideology.
 	faction = <pop_faction>
 	## cardinality = 0..1
+	resources = {
+		category = <economic_category>
+		alias_name[economic_template] = alias_match_left[economic_template]
+	}
+	## cardinality = 0..inf
 	###Levels composing the Ideological Strength of the ideology.
 	strength_level = {
 		end = int
 	}
 	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = ideology }
 	###Scriptable value used to increase Ideological Strength. Scope is country, From is ideology.
 	monthly_increase = {
 		## cardinality = 0..inf
 		category = {
 			desc = localisation
-			## cardinality = 0..inf
-			modifier = {
-				alias_name[modifier_rule] = alias_match_left[modifier_rule]
-			}
-		}
-		## cardinality = 0..inf
-		modifier = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = ideology }
+	###Scriptable value used to compute a country's intel on this ideology.
+	intel = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = ideology }
+	###Scriptable value used for AI affinity towards this ideology.
+	ideology_affinity = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
 	on_gain_level = {
@@ -80,7 +92,7 @@ ideology = {
 	## cardinality = 0..inf
 	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
 	## cardinality = 0..inf
-	alias_name[triggered_modifier_system] = alias_match_left[triggered_modifier_system]
+	alias_name[triggered_system_modifier_system] = alias_match_left[triggered_system_modifier_system]
 	## cardinality = 0..inf
 	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 	## cardinality = 0..1
@@ -124,7 +136,7 @@ ideology_tenet = {
 	on_lock = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	###Tenet tiers, each holding the modifiers applied while that tier is active.
 	tier = {
 		## cardinality = 0..inf
@@ -132,12 +144,14 @@ ideology_tenet = {
 		## cardinality = 0..inf
 		alias_name[triggered_country_modifier_planet] = alias_match_left[triggered_country_modifier_planet]
 		## cardinality = 0..inf
-		alias_name[triggered_modifier_system] = alias_match_left[triggered_modifier_system]
+		alias_name[triggered_colony_modifier] = alias_match_left[triggered_colony_modifier]
+		## cardinality = 0..inf
+		alias_name[triggered_system_modifier_system] = alias_match_left[triggered_system_modifier_system]
 		## cardinality = 0..inf
 		alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
 		## cardinality = 0..inf
 		alias_name[triggered_leader_modifier_pop] = alias_match_left[triggered_leader_modifier_pop]
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		inline_script = {
 			script = filepath["common/inline_scripts/",".txt"]
 			## cardinality = 0..inf
@@ -232,11 +246,19 @@ ideology_reach_type = {
 	## cardinality = 0..inf
 	###Trigger/modifier blocks directly affecting reach.
 	value = {
+		## cardinality = 0..1
+		possible = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..inf
 	###Modifier blocks applied on top of value, kept separate for tooltips.
 	weight = {
+		## cardinality = 0..1
+		possible = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1

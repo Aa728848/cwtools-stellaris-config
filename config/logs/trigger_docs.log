@@ -4874,10 +4874,6 @@ with_country is required.
 trade_action_value = { action = <action_key> with_country = <other_country_scope> value >=< 0.5 }
 Supported Scopes: country
 
-
-=================
-
-[22:35:55][game_application.cpp:1400]: 
 adopted_ideology_level - Checks the scoped country's adopted Ideology strength level. Returns -1 if no ideology is adopted
 adopted_ideology_level <= 2
 Supported Scopes: country
@@ -5206,6 +5202,14 @@ uses_orbital_bombardment_stance - Checks which orbital bombardment stance the fl
 uses_orbital_bombardment_stance = selective
 Supported Scopes: fleet
 
+country_defeats_nomads_in_war - Checks if the war goal of the given country's side defeats a nomad empire when enemies control all its arkships
+country_defeats_nomads_in_war = <eventtarget, country>
+Supported Scopes: war
+
+
+=================
+
+[22:35:55][game_application.cpp:1400]: 
 == EFFECT DOCUMENTATION ==
 tooltip - Just a tooltip
 Supported Scopes: all
@@ -5301,14 +5305,24 @@ give_technology - Instantly gives a specific tech to the scoped country
 give_technology = { tech = tech_desert_colonization message = yes }
 Supported Scopes: country
 
-add_building - Adds a specific building on the scoped colony
+add_building - Adds a specific building to the scoped colony.
 	add_building = <key>
+	Places the building in the zone with a free building slot and the highest ai_priority. If no zone has a free slot, adds a zone or a district for it.
+	Skips slots that queued constructions hold, and zones that queued swaps replace.
 or
 	add_building = {
-		district = <district_type_key>
-		zone = <zone_type_key>
+		district = <district_type_key> (optional)
+		zone = <zone_type_key> (optional)
 		building = <building_type_key>
 	}
+	Places the building in the specified district, zone or both, and adds the district if it does not exist. Without a zone, uses the zone of the district with a free building slot and the highest ai_priority. With a zone, adds a zone of that type if no zone of that type has room.
+	If the colony cannot have the district, the district parameter is ignored.
+	If the building still cannot be placed, tries add_building = <key> and logs this to game.log, unless no district or zone parameter remains. If no place is found, logs an error.
+	If the district or zone type cannot hold the building type, logs an error and uses add_building = <key>.
+Note: Capital buildings have the following restrictions:
+	add_building = <key> places a capital building in the government zone.
+	If the government zone is full, destroys the last building in it that has can_demolish = yes.
+	If the government zone cannot hold the capital building, places it like any other building.
 Supported Scopes: planet ship colony
 
 ruin_building - Ruins a single instance of a specific building on the scoped colony
@@ -11517,34 +11531,6 @@ every_war_participant - Iterate through all war participants - executes the encl
 every_war_participant = { limit = { <triggers> } <effects> }
 Supported Scopes: war
 
-random_attacker - Iterate through all attackers in the current war - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
-random_attacker = {
-	limit = { <triggers> }
-	weights = { (optional - adds weights to affect the chance a specific object is selected)
-		base = float
-		modifier = { <add/factor = float> <triggers> }
-	}
-	<effects>
-}
-Supported Scopes: war
-
-ordered_attacker - Iterate through all attackers in the current war - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object according to the order specified (position 0, order_by = trigger:num_pops would run the effects on the X with the most pops)
-ordered_attacker = {
-	limit = { <triggers> }
-	position = <integer, starting with 0>
-	order_by = <variable>/trigger:<trigger>
-	inverse = yes/no (default: no - if yes, then 0 is lowest rather than highest)
-	<effects>
-}
-Supported Scopes: war
-
-every_attacker - Iterate through all attackers in the current war - executes the enclosed effects on all of them for which the limit triggers return true
-every_attacker = { limit = { <triggers> } <effects> }
-Supported Scopes: war
-
-random_defender - Iterate through all defenders in the current war - executes the enclosed effects on one of them for which the limit triggers return true. Picks the specific object randomly.
-random_defender = {
-	limit = { <triggers> }
 	weights = { (optional - adds weights to affect the chance a specific object is selected)
 		base = float
 		modifier = { <add/factor = float> <triggers> }
@@ -11706,8 +11692,6 @@ transfer_resources_to_empire = {
 }
 Supported Scopes: country
 
-
-=================
 abandon_adopted_ideology - Abandon current Ideology.
 abandon_adopted_ideology = <yes/no>
 Supported Scopes: country federation
@@ -12102,4 +12086,7 @@ Supported Scopes: ideology
 validate_species_rights - Validates the scoped country species rights
 validate_species_rights = yes
 Supported Scopes: country
+
+
+=================
 

@@ -18,10 +18,10 @@
   },
   "game_identity": {
     "launcher_raw_version": "v4.6.0",
-    "launcher_settings_sha256": "40c7c79307e2bc6ab11a2a1152c772cb015788b29ffc1e9bd75e577475bea2e0",
+    "launcher_settings_sha256": "766be327abe9e13dd2251700095baa82977f519512ca110307467c6cbd394cbc",
     "executable": "stellaris.exe",
-    "executable_size": 47266424,
-    "executable_sha256": "30a49e90345ef4248a3768d3a3d92264cd5eb687e7253f1b3a581c901b1b90d0"
+    "executable_size": 47317112,
+    "executable_sha256": "6b23d65a93d2a96b1544fed649d1f383a23e84dbe31082ee25897ab4cef0971c"
   },
   "executable_string_scan": {
     "policy": "String presence is candidate evidence only and never proves a call path.",
@@ -109,12 +109,11 @@
       "heatmap",
       "lens_flare"
     ],
-    "utf16le_hits": 4,
+    "utf16le_hits": 3,
     "utf16le_effect_names": [
       "Down",
       "Text",
-      "Texture",
-      "Up"
+      "Texture"
     ]
   },
   "confirmed_engine_entries": [
@@ -617,7 +616,7 @@
     {
       "stage": "executable_or_runtime",
       "status": "no_qualifying_evidence",
-      "result": "81 ASCII and 4 UTF-16LE Effect-name matches are candidate signals only; automatic_inventory entries are not reviewed engine evidence."
+      "result": "81 ASCII and 3 UTF-16LE Effect-name matches are candidate signals only; automatic_inventory entries are not reviewed engine evidence."
     }
   ],
   "notes": "Automatically merged by stellaris-rules-sync report mode from a fresh shader-abi inventory; no manual review was performed."

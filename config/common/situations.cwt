@@ -38,6 +38,18 @@ situation_type = {
 		alias_name[modifier_rule_with_loc] = alias_match_left[modifier_rule_with_loc]
 	}
 	## cardinality = 0..1
+	### Replaces the Situation's own modifier description with the loc key.
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	### Prepends the loc key to the Situation's own modifier description.
+	custom_tooltip_with_modifiers = localisation
+	## cardinality = 0..1
+	### Replaces the "Active Effects" panel title in the Situation Log.
+	override_active_title = localisation
+	## cardinality = 0..1
+	### Replaces the whole "Active Effects" panel body in the Situation Log.
+	override_active_desc = localisation
+	## cardinality = 0..1
 	override_finisher_title = localisation
 	## cardinality = 0..1
 	override_finisher_desc = localisation

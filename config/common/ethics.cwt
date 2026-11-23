@@ -63,6 +63,17 @@ ethos = {
 	}
 
 	## cardinality = 0..inf
+	## replace_scope = { this = pop_group root = pop_group }
+	### Pop group modifier applied to each pop group with this ethic. No effect when use_for_pops = no.
+	pop_group_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
+	}
+
+	## cardinality = 0..inf
 	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
 
 	## cardinality = 0..1

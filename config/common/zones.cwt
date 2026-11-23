@@ -19,6 +19,9 @@ zones = {
 	## cardinality = 0..1
 	max_buildings_planet_class = bool
 	## cardinality = 0..1
+	### Allow a modifier to dynamically cap the building limit (default no).
+	is_capped_by_modifier = bool
+	## cardinality = 0..1
 	planet_limit = int
 	## cardinality = 0..1
 	swap_type = <district>
@@ -32,12 +35,30 @@ zones = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
-	planet_limit = {
+	## replace_scope = { root = country this = country }
+	### Max number of this zone per empire (optional: default is no limit).
+	empire_limit = {
+		## cardinality = 0..1
 		base = int
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	planet_limit = {
+		## cardinality = 0..1
+		base = int
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = planet this = planet }
 	unlock = { 
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	### Zone is destroyed when this evaluates true.
+	destroy_trigger = {
 		## cardinality = 0..inf
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -86,6 +107,19 @@ zones = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
+	## cardinality = 0..inf
+	## replace_scope = { root = planet this = planet }
+	desc = localisation
+	## cardinality = 0..inf
+	## replace_scope = { root = planet this = planet }
+	desc = {
+		## cardinality = 0..1
+		trigger = {
+			## cardinality = 0..inf
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		text = localisation
+	}
 	## cardinality = 0..inf
 	triggered_desc = {
 		## cardinality = 0..1
@@ -180,7 +214,42 @@ zones = {
 	## cardinality = 0..inf
 	ai_weight_coefficient = float
 	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	### Additional additive AI weight with triggered conditions.
+	additional_ai_weight = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	### Whether AI estimates production assuming no unemployment (default yes).
+	ai_estimate_without_unemployment = bool
+	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	### Effects fired when zone is built.
+	on_built = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	### Effects fired when zone is queued. Has access to local_spent_<resource>.
+	on_queued = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = planet this = planet }
+	### Effects fired when zone is removed from queue. Has access to local_spent_<resource>.
+	on_unqueued = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
 	included_buildings = {
+		## cardinality = 0..inf
+		all
+		## cardinality = 0..inf
+		<building>
+	}
+	## cardinality = 0..1
+	### Explicit buildings excluded from this zone.
+	excluded_buildings = {
 		## cardinality = 0..inf
 		all
 		## cardinality = 0..inf
@@ -197,6 +266,23 @@ zones = {
 			all
 			## cardinality = 0..inf
 			<building>
+		}
+		## cardinality = 0..1
+		excluded_buildings = {
+			## cardinality = 0..inf
+			all
+			## cardinality = 0..inf
+			<building>
+		}
+		## cardinality = 0..inf
+		included_building_sets = {
+			## cardinality = 0..inf
+			enum[building_sets]
+		}
+		## cardinality = 0..inf
+		excluded_building_sets = {
+			## cardinality = 0..inf
+			enum[building_sets]
 		}
 	}
 }
