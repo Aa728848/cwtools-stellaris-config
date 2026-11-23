@@ -825,6 +825,8 @@ leader_class = {
 	###default = no
 	can_lead_army = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: use can_research_tech = bool instead"
 	###default = no
 	can_research = bool
 	## cardinality = 0..1

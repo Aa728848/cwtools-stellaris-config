@@ -616,6 +616,8 @@ council_agenda = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: initial_effect_custom_loc is no longer read on council agendas"
 	### Custom localization for the initial effect, if you're using weird on_actions to have one
 	initial_effect_custom_loc = localisation
 	## cardinality = 0..1

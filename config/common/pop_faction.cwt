@@ -90,6 +90,8 @@ pop_faction = {
 	can_rename = bool
 
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: election_header is no longer read on pop faction types"
 	### UI color for candidate header
 	election_header =  <sprite>
 

@@ -372,11 +372,15 @@ ship_size = {
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = starbase this = starbase }
+	## severity = warning
+	## error_if_only_match = "Removed from engine: use possible_construction = { ... } instead"
 	possible_starbase = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = starbase this = starbase }
+	## severity = warning
+	## error_if_only_match = "Removed from engine: use potential_construction = { ... } instead"
 	potential_starbase = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -415,11 +419,15 @@ ship_size = {
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = planet this = planet }
+	## severity = warning
+	## error_if_only_match = "Removed from engine: use potential_construction = { ... } instead"
 	potential_planet = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = planet this = planet }
+	## severity = warning
+	## error_if_only_match = "Removed from engine: use possible_construction = { ... } instead"
 	possible_planet = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

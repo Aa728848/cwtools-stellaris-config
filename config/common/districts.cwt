@@ -7,13 +7,6 @@ types = {
 			"$_max_add" = Planets
 			"$_max_mult" = Planets
 		}
-		subtype[capped] = {
-			## cardinality = 0..1
-			is_capped_by_modifier = yes
-		}
-		subtype[uncapped] = {
-			is_capped_by_modifier = no
-		}
 		localisation = {
 			## required
 			Name = "$"
@@ -34,10 +27,14 @@ district = {
 	## cardinality = 0..1
 	custom_gui = scalar #same as previous, needs to be gui_type
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Deprecated on districts in 4.0+: district caps are controlled via is_uncapped and shared_capacity_modifier"
 	base_cap_amount = int
 	## cardinality = 0..1
 	default_starting_district = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Deprecated in 4.0+: use shared_capacity_modifier = <district> instead"
 	inherits_capped_modifiers_from = <district>
 	## cardinality = 0..1
 	district_background = <district>
@@ -94,6 +91,8 @@ district = {
 	## cardinality = 0..1
 	gridbox = enum[gridbox]
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Deprecated in 4.0+: use is_uncapped = { ... } instead (omit or empty for uncapped; use a non-empty trigger such as { always = no } for modifier-capped districts)"
 	is_capped_by_modifier = bool
 	## cardinality = 0..1
 	###whether this district should be shown in the expansion planner; 

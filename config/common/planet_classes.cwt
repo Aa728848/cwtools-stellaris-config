@@ -165,6 +165,8 @@ planet_class = {
 	###this is only required if using a picture defined for another planet
 	picture = scalar
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Deprecated since 2.2: planetary tile sets are no longer used"
 	###this is only required if using a tile-set defined for another planet
 	tile_set = <planet_class>
 	## cardinality = 0..1

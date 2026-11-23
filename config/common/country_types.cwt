@@ -110,6 +110,8 @@ country_type = {
 	## cardinality = 0..1
 	ignore_ftl_inhibitors = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: blocks_pirate is no longer read on country types"
 	blocks_pirate = bool
 	## cardinality = 0..1
 	### This is a star flag
@@ -262,8 +264,7 @@ country_type = {
 	}
 
 	## cardinality = 0..1
-	replace_scope = { this = country root = country }
-	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
 	trade_routes_available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

@@ -110,6 +110,8 @@ job = {
 	building_icon = icon[gfx/interface/icons/buildings/old_production]
 	#building_icon = <sprite>
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: clothes_texture_index is no longer used on pop jobs or pop categories"
 	clothes_texture_index = int
 	## cardinality = 0..1
 	icon = filepath[gfx/interface/icons/jobs/job_,.dds]
@@ -357,6 +359,8 @@ job = {
 	
 	# inline script maybe also uses so set to card 0 to inf
 	## cardinality = 0..inf
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: pop job demotion blocks are no longer read by the engine"
 	demotion = {
 		time = int
 		effect = {
@@ -422,6 +426,8 @@ social_strata = {
 	## cardinality = 0..1
 	can_change_category = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed from engine: clothes_texture_index is no longer used on pop jobs or pop categories"
 	clothes_texture_index = int
 
 	## cardinality = 0..1
@@ -431,6 +437,8 @@ social_strata = {
 
 	###This is called whenever a Pop is created, moved to a different planet, or gets a new owner
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: assign_to_pop is no longer read on pop categories"
 	assign_to_pop = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -489,6 +497,8 @@ social_strata = {
 	}
 	
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: define a separate pop category with is_unemployment_job = yes and resources = { ... } instead"
 	unemployment_resources = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
@@ -503,22 +513,36 @@ social_strata = {
 	}
 
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: keep_from_former_job is no longer read on pop categories"
 	keep_from_former_job = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: demotion_time is no longer read on pop categories"
 	demotion_time = int
 	## cardinality = 0..1
 	change_job_threshold = float
 	## cardinality = 0..1
 	display_category = <social_strata>
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: display_unemployment is no longer read on pop categories"
 	display_unemployment = bool
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: custom_demotion_loc is no longer read on pop categories"
 	custom_demotion_loc = scalar
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: custom_demotion_icon is no longer read on pop categories"
 	custom_demotion_icon = scalar
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: custom_promotion_loc is no longer read on pop categories"
 	custom_promotion_loc = scalar
 	## cardinality = 0..1
+	## severity = warning
+	## error_if_only_match = "Removed in 4.0+: custom_promotion_icon is no longer read on pop categories"
 	custom_promotion_icon = scalar
 	## cardinality = 0..inf
 	alias_name[triggered_planet_modifier_pop] = alias_match_left[triggered_planet_modifier_pop]
