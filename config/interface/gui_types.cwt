@@ -106,6 +106,7 @@ gui_type = {
 ### Used to set a position of entire containers or elements
 alias[gui:positionType] = {
 	name = scalar
+	## cardinality = 0..1
 	position = {
 		x = int
 		y = int
@@ -529,6 +530,8 @@ alias[gui:iconType] = {
 # Default game button. In some cases could be replaced by effectButtonType without CTD
 alias[gui_button:buttonType] = {
 	name = scalar
+	## cardinality = 0..1
+	alpha = float
 	## cardinality = 0..1
 	text_offset = { x = int y = int }
 	## cardinality = 0..1
@@ -1013,8 +1016,14 @@ alias[gui_standard_element:size] = {
 }
 
 alias[gui_standard_element:position] = {
+	## cardinality = 0..1
 	x = float
+	## cardinality = 0..1
+	x = percentage_field
+	## cardinality = 0..1
 	y = float
+	## cardinality = 0..1
+	y = percentage_field
 }
 alias[gui_standard_element:borderSize] = {
 	x = float
@@ -1035,6 +1044,7 @@ alias[gui_standard_element:alwaysTransparent] = bool
 
 alias[gui_sprite:spriteType] = <sprite>
 alias[gui_sprite:spriteType] = <progressbartype>
+alias[gui_sprite:spriteType] = <piechart>
 alias[gui_sprite:spriteType] = GFX_species_piechart_default
 alias[gui_sprite:quadTextureSprite] = <sprite>
 alias[gui_sprite:quadTextureSprite] = <progressbartype>

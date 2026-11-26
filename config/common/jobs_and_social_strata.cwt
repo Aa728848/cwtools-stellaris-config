@@ -335,6 +335,9 @@ job = {
 			## cardinality = 0..1
 			name = localisation
 			## cardinality = 0..1
+			### Job swap name key (localised as job_<name>)
+			name = value_set[job_swap_name]
+			## cardinality = 0..1
 			desc = localisation
 			## cardinality = 0..1
 			icon = filepath[gfx/interface/icons/jobs/job_,.dds]
@@ -391,6 +394,7 @@ job = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
+	## replace_scope = { this = colony root = colony }
 	leader_background_class_weight = {
 		## cardinality = 0..inf
 		<leader_class> = int_value_field
@@ -400,6 +404,7 @@ job = {
 		}
 	}
 	## cardinality = 0..1
+	## replace_scope = { this = colony root = colony }
 	leader_background_ethic_weight = {
 		## cardinality = 0..inf
 		<ethos> = int_value_field
@@ -548,7 +553,53 @@ social_strata = {
 	alias_name[triggered_planet_modifier_pop] = alias_match_left[triggered_planet_modifier_pop]
 
 	## cardinality = 0..inf
+	alias_name[triggered_country_modifier_pop] = alias_match_left[triggered_country_modifier_pop]
+
+	## cardinality = 0..inf
 	alias_name[triggered_pop_group_modifier] = alias_match_left[triggered_pop_group_modifier]
+	## cardinality = 0..1
+	swappable_data = {
+		## cardinality = 0..1
+		default = {
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = filepath[gfx/interface/icons/jobs/job_,.dds]
+			## cardinality = 0..1
+			building_icon = icon[gfx/interface/icons/buildings]
+			## cardinality = 0..1
+			building_icon = <building>
+			## cardinality = 0..1
+			condition_string = localisation
+		}
+		## cardinality = 0..inf
+		## replace_scope = { this = planet root = planet }
+		swap_type = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			name = value_set[job_swap_name]
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = filepath[gfx/interface/icons/jobs/job_,.dds]
+			## cardinality = 0..1
+			building_icon = icon[gfx/interface/icons/buildings]
+			## cardinality = 0..1
+			building_icon = <building>
+			## cardinality = 0..1
+			condition_string = localisation
+			## cardinality = 0..1
+			weight = int
+		}
+	}
+	## cardinality = 0..1
+	leader_background_weight = float
 	## cardinality = 0..1
 	leader_background_weight = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]

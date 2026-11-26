@@ -153,5 +153,16 @@ diplomatic_action = {
 		max_counter = int_value_field
 		## cardinality = 0..1
 		tooltip = localisation
+		## cardinality = 0..1
+		## replace_scope = { root = country this = country from = country }
+		possible = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		resources = {
+			## cardinality = 0..1
+			category = <economic_category>
+			alias_name[economic_template] = alias_match_left[economic_template]
+		}
 	}
 }

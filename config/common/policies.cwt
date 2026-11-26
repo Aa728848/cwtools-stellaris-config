@@ -117,6 +117,8 @@ policy = {
 			## cardinality = 0..1
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		## cardinality = 0..inf
+		alias_name[triggered_modifier_country] = alias_match_left[triggered_modifier_country]
 
 		## cardinality = 0..1
 		prerequisites = single_alias_right[technology_prerequisite]

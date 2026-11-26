@@ -426,6 +426,7 @@ citizenship_type = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -486,6 +487,7 @@ colonization_control = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -554,6 +556,7 @@ living_standard = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -614,6 +617,7 @@ migration_control = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -671,6 +675,7 @@ military_service_type = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -731,6 +736,7 @@ population_control = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -799,6 +805,7 @@ purge_type = {
 	}
 
 	## cardinality = 0..1
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float
@@ -860,6 +867,7 @@ slavery_type = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = species root = species from = country }
 	ai_will_do = {
 		factor = float

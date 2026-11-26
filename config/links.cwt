@@ -28,7 +28,7 @@ links = {
 		output_scope = Country
 	}
 	owner = {
-		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission }
+		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission ideology }
 		output_scope = Country
 	}
 	controller = {
@@ -124,11 +124,11 @@ links = {
 		output_scope = Army
 	}
 	owner_species = {
-		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army species bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission }
+		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army species bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission ideology }
 		output_scope = Species
 	}
 	owner_main_species = {
-		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army species bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission }
+		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army species bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission ideology }
 		output_scope = Species
 	}
 	last_created_species = {
@@ -164,11 +164,11 @@ links = {
 		output_scope = Sector
 	}
 	ruler = {
-		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission }
+		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission ideology }
 		output_scope = Leader
 	}
 	heir = {
-		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission }
+		input_scopes = { megastructure planet country ship pop_group fleet galactic_object leader army bypass pop_faction starbase deposit sector archaeological_site first_contact spy_network espionage_operation agreement situation debris astral_rift colony mission ideology }
 		output_scope = Leader
 	}
 	star = {
@@ -382,5 +382,17 @@ links = {
 	carrier = {
 		input_scopes = { planet ship colony }
 		output_scope = Carrier
+	}
+	ideology = {
+		input_scopes = { planet country galactic_object pop_faction federation colony }
+		output_scope = Ideology
+	}
+	advocate = {
+		input_scopes = { country }
+		output_scope = Leader
+	}
+	cultural_envoy_target = {
+		input_scopes = { fleet }
+		output_scope = Colony
 	}
 }

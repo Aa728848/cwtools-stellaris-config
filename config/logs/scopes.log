@@ -399,7 +399,6 @@ carrier - Scopes from a colony to its carrier.
 Supported Scopes: planet ship colony
 Output Scope: planet
 
-=================
 advocate - Scopes to the Ideology Advocate of the scoped target.
 Supported Scopes: country
 Output Scope: leader
@@ -408,9 +407,9 @@ cultural_envoy_target - Scopes from a cultural envoy fleet to the colony it is c
 Supported Scopes: fleet
 Output Scope: planet
 
-=================
-
 ideology - Scopes to the Ideology adopted by a country, affecting a system, a planet or a colony or associated with a federation or a faction.
 Supported Scopes: planet country galactic_object pop_faction federation colony
 Output Scope: ideology
+
+=================
 

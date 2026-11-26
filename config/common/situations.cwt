@@ -35,7 +35,7 @@ situation_type = {
 	total_progress = {
 		## cardinality = 0..1
 		base = int
-		alias_name[modifier_rule_with_loc] = alias_match_left[modifier_rule_with_loc]
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
 	### Replaces the Situation's own modifier description with the loc key.

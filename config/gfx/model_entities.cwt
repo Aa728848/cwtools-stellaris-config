@@ -56,23 +56,11 @@ model_entity = {
 		}
 		## cardinality = 0..1
 		propagate_state = {
-			effect = death_idle
+			effect = enum[model_states]
 		}
 		## cardinality = 0..1
 		propagate_state = {
-			effect = death_open
-		}
-		## cardinality = 0..1
-		propagate_state = {
-			effect = idle
-		}
-		## cardinality = 0..1
-		propagate_state = {
-			effect = idle_closing
-		}
-		## cardinality = 0..1
-		propagate_state = {
-			effect = moving_closing
+			effects = enum[model_states]
 		}
 		## cardinality = 0..1
 		propagate_state = {
@@ -97,9 +85,7 @@ model_entity = {
 		chance = {
 			if_current_state = {
 				## cardinality = 0..inf
-				enum[model_states] = 0
-				## cardinality = 0..inf
-				enum[model_states] = 100
+				enum[model_states] = int[0..100]
 			}
 			## cardinality = 0..1
 			default = int

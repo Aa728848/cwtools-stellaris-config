@@ -293,7 +293,7 @@ alias[ai_resource_production:ai_resource_production] = {
 alias[resources_template_optional:resources] = {
 	## cardinality = 0..1
 	category = <economic_category>
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	alias_name[economic_template] = alias_match_left[economic_template]
 }
 
@@ -371,6 +371,10 @@ alias[triggered_planet_modifier_planet:triggered_planet_modifier] = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	possible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[modifier] = alias_match_left[modifier]
 	## cardinality = 0..1
 	modifier = {
@@ -381,7 +385,21 @@ alias[triggered_planet_modifier_planet:triggered_planet_modifier] = {
 	## cardinality = 0..1
 	key = localisation
 	## cardinality = 0..1
+	fix_key = localisation
+	## cardinality = 0..1
 	show_only_custom_tooltip = bool
+	## cardinality = 0..1
+	should_mult_desc = bool
+	## cardinality = 0..1
+	show_if_trigger_false = bool
+	## cardinality = 0..1
+	show_trigger_if_false = bool
+	## cardinality = 0..1
+	show_trigger_if_true = bool
+	## cardinality = 0..1
+	trigger_true_key_override = localisation
+	## cardinality = 0..1
+	trigger_false_key_override = localisation
 	## cardinality = 0..inf
 	mult = value[variable]
 	## cardinality = 0..inf
@@ -398,8 +416,6 @@ alias[triggered_planet_modifier_planet:triggered_planet_modifier] = {
 	multiplier = trigger:<trigger>
 	## cardinality = 0..inf
 	multiplier = enum[exe_set_variable]
-	## cardinality = 0..1
-	key = localisation
 }
 
 ## replace_scope = { this = planet root = planet from = species fromfrom = country }
@@ -952,40 +968,8 @@ alias[triggered_leader_modifier_leader:triggered_self_modifier] = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	alias_name[modifier] = alias_match_left[modifier]
 	## cardinality = 0..1
-	modifier = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-	## cardinality = 0..inf
-	mult = value[variable]
-	## cardinality = 0..inf
-	mult = value_field
-	## cardinality = 0..inf
-	mult = trigger:<trigger>
-	## cardinality = 0..inf
-	mult = enum[exe_set_variable]
-	## cardinality = 0..inf
-	multiplier = value[variable]
-	## cardinality = 0..inf
-	multiplier = value_field
-	## cardinality = 0..inf
-	multiplier = trigger:<trigger>
-	## cardinality = 0..inf
-	multiplier = enum[exe_set_variable]
-	## cardinality = 0..1
-	custom_tooltip = localisation
-	## cardinality = 0..1
-	key = localisation
-	## cardinality = 0..1
-	show_only_custom_tooltip = bool
-}
-
-## replace_scope = { this = country root = country }
-alias[triggered_modifier_country:triggered_modifier] = {
-	## cardinality = 0..1
-	## replace_scope = { this = country root = country }
-	potential = {
+	possible = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[modifier] = alias_match_left[modifier]
@@ -999,6 +983,65 @@ alias[triggered_modifier_country:triggered_modifier] = {
 	mult = value_field
 	## cardinality = 0..inf
 	mult = trigger:<trigger>
+	## cardinality = 0..inf
+	mult = enum[exe_set_variable]
+	## cardinality = 0..inf
+	multiplier = value[variable]
+	## cardinality = 0..inf
+	multiplier = value_field
+	## cardinality = 0..inf
+	multiplier = trigger:<trigger>
+	## cardinality = 0..inf
+	multiplier = enum[exe_set_variable]
+	## cardinality = 0..1
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	key = localisation
+	## cardinality = 0..1
+	fix_key = localisation
+	## cardinality = 0..1
+	show_only_custom_tooltip = bool
+	## cardinality = 0..1
+	should_mult_desc = bool
+	## cardinality = 0..1
+	show_if_trigger_false = bool
+	## cardinality = 0..1
+	show_trigger_if_false = bool
+	## cardinality = 0..1
+	show_trigger_if_true = bool
+	## cardinality = 0..1
+	trigger_true_key_override = localisation
+	## cardinality = 0..1
+	trigger_false_key_override = localisation
+}
+
+## replace_scope = { this = country root = country }
+alias[triggered_modifier_country:triggered_modifier] = {
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	possible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[modifier] = alias_match_left[modifier]
+	## cardinality = 0..1
+	modifier = {
+		## cardinality = 0..1
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..inf
+	mult = value[variable]
+	## cardinality = 0..inf
+	mult = value_field
+	## cardinality = 0..inf
+	mult = trigger:<trigger>
     ## cardinality = 0..inf
 	mult = enum[exe_set_variable]
 	## cardinality = 0..inf
@@ -1014,7 +1057,21 @@ alias[triggered_modifier_country:triggered_modifier] = {
 	## cardinality = 0..1
 	key = localisation
 	## cardinality = 0..1
+	fix_key = localisation
+	## cardinality = 0..1
 	show_only_custom_tooltip = bool
+	## cardinality = 0..1
+	should_mult_desc = bool
+	## cardinality = 0..1
+	show_if_trigger_false = bool
+	## cardinality = 0..1
+	show_trigger_if_false = bool
+	## cardinality = 0..1
+	show_trigger_if_true = bool
+	## cardinality = 0..1
+	trigger_true_key_override = localisation
+	## cardinality = 0..1
+	trigger_false_key_override = localisation
 }
 
 ## replace_scope = { this = system root = system }

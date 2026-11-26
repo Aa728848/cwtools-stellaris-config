@@ -64,6 +64,7 @@ crisis_objective = {
 }
 
 menace_perk = {
+	## cardinality = 0..1
 	portrait = <sprite>
 
 	## cardinality = 0..1
@@ -108,6 +109,13 @@ menace_perk = {
 			}
 			## cardinality = 0..1
 			portrait = <sprite>
+			## cardinality = 0..1
+			modifier = {
+				## cardinality = 0..1
+				custom_tooltip = localisation
+				## cardinality = 0..1
+				alias_name[modifier] = alias_match_left[modifier]
+			}
 		}
 	}
 }

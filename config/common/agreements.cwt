@@ -102,6 +102,10 @@ agreement_term = {
 	## cardinality = 0..1
 	### Whether the term should show up on the agreement negotiation screen (default: no)
 	hidden = bool
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 # Defines the different values available for given Agreement terms. The terms are defined in agreement_terms scripts.

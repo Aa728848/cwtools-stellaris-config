@@ -4,6 +4,7 @@ types = {
 		path = "game/common/ethics"
 		modifiers = {
 			"pop_$_attraction_mult" = Pops
+			"pop_$_attraction_add" = Pops
 		}
 		localisation = {
 			## required

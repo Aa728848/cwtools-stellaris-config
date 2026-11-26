@@ -94,6 +94,7 @@ enums = {
 		galcom
 		galactic_community
 		galactic_object
+		ideology
 		leader
 		lock_country
 		megastructure
@@ -233,6 +234,7 @@ enums = {
 		random
 		tech
 		fleet
+		ideology
 	}
 	enum[federation_succession_terms] = {
 		status_change
@@ -244,6 +246,21 @@ enums = {
 	enum[federation_settings] = {
 		research_sharing
 		failed_vote_half_price
+		commercial_pact
+		waystation_pact
+		research_agreement
+	}
+	enum[message_onclick] = {
+		claims
+		discoveries
+		edicts_and_policies
+		factions
+		government
+		ideologies
+		market
+		situation
+		technology
+		traditions
 	}
 	enum[vote_types] = {
 		unanimous_vote

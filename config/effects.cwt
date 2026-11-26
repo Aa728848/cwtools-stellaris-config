@@ -2,9 +2,9 @@
 alias[effect:<scripted_effect>] = yes
 ###The scripted effect will draw the value of the right clause via $left_clause$.
 alias[effect:<scripted_effect>] = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	enum[scripted_effect_params] = scalar
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	enum[scripted_effect_params] = scope_field
 }
 
@@ -1496,11 +1496,14 @@ alias[effect:add_trait] = {
 ## engine_evidence = CRemoveTraitEffect::ExecuteActual (loop in the command implementation); dump L6468657
 alias[effect:remove_trait] = <trait.leader_trait>
 alias[effect:remove_trait] = all_negative
+alias[effect:remove_trait] = random_negative
 alias[effect:remove_trait] = {
 	## cardinality = 0..1
 	trait = <trait.leader_trait>
 	## cardinality = 0..1
 	trait = all_negative
+	## cardinality = 0..1
+	trait = random_negative
 	## cardinality = 0..1
 	message_type = <message_type>
 	## cardinality = 0..1
@@ -1678,6 +1681,7 @@ alias[effect:add_casus_belli] = {
 alias[effect:set_war_goal] = {
 	type = <war_goal>
 	target = scope_group[target_country]
+	## cardinality = 0..1
 	enemy = scope_group[target_country]
 }
 
@@ -1949,6 +1953,8 @@ alias[effect:create_species] = {
 	}
 	## cardinality = 0..1
 	sapient = bool
+	## cardinality = 0..1
+	sapient = scope[species]
 	## cardinality = 0..1
 	###determines if species is a modification of another
 	is_mod = bool
@@ -2540,6 +2546,8 @@ alias[effect:modify_species] = {
 	## cardinality = 0..1
 	sapient = bool
 	## cardinality = 0..1
+	sapient = scope[species]
+	## cardinality = 0..1
 	add_traits_at_start_of_list = bool
 	## cardinality = 0..inf
 	remove_trait = <trait>
@@ -2652,7 +2660,7 @@ alias[effect:pop_change_ethic] = {
 	## cardinality = 0..1
 	ethic = <ethos>
 	## cardinality = 0..1
-	amount = int
+	amount = int_value_field
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 	## cardinality = 0..1
@@ -2773,6 +2781,8 @@ alias[effect:activate_saved_leader] = {
 	key = value[saved_leader]
 	## cardinality = 0..1
 	add_to_owned = bool
+	## cardinality = 0..1
+	in_training = bool
 	## cardinality = 0..1
 	## push_scope = leader
 	effect = {
@@ -3291,6 +3301,8 @@ alias[effect:create_message] = {
 	custom_toast_icon = <sprite>
 	## cardinality = 0..1
 	custom_toast_content_icon = <sprite>
+	## cardinality = 0..1
+	onclick = enum[message_onclick]
 	# note: the variable sections were combined as cwtools could not handle them separated in biogenesis_origin_events.txt
 	## cardinality = 0..inf
 	variable = {
@@ -3300,6 +3312,13 @@ alias[effect:create_message] = {
 		type = variable
 		## cardinality = 0..1
 		type = key
+		## cardinality = 0..1
+		type = resources
+		## cardinality = 0..1
+		resources = {
+			## cardinality = 1..inf
+			<resource>
+		}
 		## cardinality = 0..1
 		localization = scalar
 		## cardinality = 0..1
@@ -4686,6 +4705,7 @@ alias[effect:set_free_migration] = bool
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
 ## engine_evidence = CSetFederationSettingsEffect::ExecuteActual (loop in the command implementation); dump L6616795
 alias[effect:set_federation_settings] = {
+	## cardinality = 1..inf
 	enum[federation_settings] = bool
 }
 
@@ -7190,7 +7210,7 @@ alias[effect:refresh_accords] = yes
 alias[effect:sacrifice_pop_group] = {
 	pop_group = scope[pop_group]
 	## cardinality = 0..1
-	amount = int
+	amount = int_value_field
 	## cardinality = 0..1
 	percentage = value_field[0.0..1.0]
 }
@@ -7791,7 +7811,7 @@ alias[effect:abandon_adopted_ideology] = bool
 
 ###Tries to register the scoped object as the given ideology's reach emitter
 alias[effect:add_emitter_to_ideology] = {
-	target = <ideology>
+	target = scope[ideology]
 	## cardinality = 0..1
 	owner = scope_field
 	## cardinality = 0..1
@@ -7803,7 +7823,7 @@ alias[effect:add_emitter_to_ideology] = {
 alias[effect:add_ideological_strength] = value_field
 
 ###Makes the scoped country/federation adopt the given ideology
-alias[effect:adopt_ideology] = <ideology>
+alias[effect:adopt_ideology] = scope[ideology]
 
 ###Ends the current crisis for the scoped country
 alias[effect:cancel_crisis] = bool
@@ -7818,7 +7838,7 @@ alias[effect:convert_fleet] = {
 
 ###Converts the scoped pop group to the given ideology
 alias[effect:convert_to_ideology] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	amount = value_field
 }
 
@@ -7872,7 +7892,7 @@ alias[effect:export_resource_produce_to_variable] = {
 }
 
 ###Triggers the given faction action on the scoped pop faction
-alias[effect:faction_action] = value[faction_action]
+alias[effect:faction_action] = enum[pop_faction_actions]
 
 ###Puts the scoped leader into training
 alias[effect:in_training] = bool
@@ -7896,7 +7916,7 @@ alias[effect:randomize_new_heir] = enum[leader_classes]
 
 ###Removes the scoped object from the given ideology's reach emitters
 alias[effect:remove_emitter_from_ideology] = {
-	target = <ideology>
+	target = scope[ideology]
 }
 
 ###Removes a specific, arbitrarily-named flag from the scoped ideology
@@ -7919,7 +7939,7 @@ alias[effect:set_custom_description] = localisation
 alias[effect:set_faction_fanatic] = bool
 
 ###Sets the ideology of the scoped pop faction
-alias[effect:set_faction_ideology] = <ideology>
+alias[effect:set_faction_ideology] = scope[ideology]
 alias[effect:set_faction_ideology] = none
 
 ###Sets a specific, arbitrarily-named flag on the scoped ideology

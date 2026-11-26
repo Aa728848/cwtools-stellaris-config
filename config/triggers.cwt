@@ -1188,6 +1188,7 @@ alias[trigger:is_species_class] = <species_class>
 ## engine = The command's own implementation scans a container on the scoped object, so cost grows with how much that object holds.
 ## engine_evidence = CHasTrait::ActualEvaluate (loop in the command implementation); dump L7301607
 alias[trigger:has_trait] = <trait>
+alias[trigger:has_trait] = any_negative
 
 ### Checks if a leader has a certain ruler trait, even if they are not currently ruler
 alias[trigger:has_ruler_trait] = <trait>
@@ -4869,6 +4870,8 @@ alias[trigger:total_workforce_with_job_tag] = {
 		## cardinality = 0..inf
 		<job_tags>
 	} 
+	## cardinality = 0..1
+	bonus_workforce = bool
 	value = int_value_field
 }
 
@@ -5575,7 +5578,7 @@ alias[trigger:adopted_ideology_level] == int_value_field
 
 ###Checks the combined reach of the scoped starbase's emitters for the given ideology, optionally limited by triggers
 alias[trigger:combined_emitter_reach] = {
-	ildeology = <ideology>
+	ideology = scope[ideology]
 	## cardinality = 0..1
 	## push_scope = galactic_object
 	limit = {
@@ -5625,7 +5628,7 @@ alias[trigger:foreign_empire_ideology_affinity] = {
 
 ###Checks the scoped country's affinity towards the given ideology
 alias[trigger:foreign_ideology_affinity] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	value = value_field
 }
 
@@ -5640,6 +5643,8 @@ alias[trigger:get_leader_exp_to_level] = {
 ###Returns the tier of the given tenet
 alias[trigger:get_tenet_tier] = {
 	tenet = <ideology_tenet>
+	## cardinality = 0..1
+	value == int_value_field
 }
 
 ###Checks the scoped country's pop growth scale
@@ -5659,13 +5664,13 @@ alias[trigger:has_ideology_flag] = value[ideology_flag]
 alias[trigger:has_megastructure_module] = <megastructure_module>
 
 ###Checks whether the scoped object's ethic is the opposite of the given ideology's ethic
-alias[trigger:has_opposite_ethic_as_ideology] = <ideology>
+alias[trigger:has_opposite_ethic_as_ideology] = scope[ideology]
 
 ###Checks whether the scoped object shares the given ideology's ethic
-alias[trigger:has_same_ethic_as_ideology] = <ideology>
+alias[trigger:has_same_ethic_as_ideology] = scope[ideology]
 
 ###Checks whether the scoped country shares the given ideology's fanatic ethic
-alias[trigger:has_same_fanatic_ethic_as_ideology] = <ideology>
+alias[trigger:has_same_fanatic_ethic_as_ideology] = scope[ideology]
 
 ###Checks the scoped country's ideological momentum
 alias[trigger:ideological_momentum] == value_field
@@ -5681,31 +5686,32 @@ alias[trigger:ideologies_enabled] = bool
 
 ###Checks the fanatic level of the given ideology's ethic (regular = 1, fanatic = 2, absolute = 3)
 alias[trigger:ideology_ethic_fanatic_level] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
+	## cardinality = 0..1
 	level = int_value_field
 }
 
 ###Checks the scoped country's number of followers of the given ideology
 alias[trigger:ideology_followers_amount] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	value = int_value_field
 }
 
 ###Checks the scoped country's intel on the given ideology
 alias[trigger:ideology_intel] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	value = value_field
 }
 
 ###Checks the reach the given ideology has left in the scoped system
 alias[trigger:ideology_reach_left] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	value = value_field
 }
 
 ###Checks the war penalty the scoped country suffers for the given ideology
 alias[trigger:ideology_war_penalty] = {
-	ideology = <ideology>
+	ideology = scope[ideology]
 	value = value_field
 }
 
@@ -5719,7 +5725,7 @@ alias[trigger:is_faction_fanatic] = bool
 alias[trigger:is_ideology_custodian] = scope_field
 
 ###Checks whether the scoped country has revealed the given ideology
-alias[trigger:is_ideology_revealed] = <ideology>
+alias[trigger:is_ideology_revealed] = scope[ideology]
 
 ###Checks whether the scoped country is an ideological rival of the target country
 alias[trigger:is_ideology_rival] = scope_group[target_country]
@@ -5740,7 +5746,7 @@ alias[trigger:is_most_attracted_ethic] = <ethos>
 alias[trigger:is_precursor_available] = <precursors>
 
 ###Checks whether the scoped system is within the given ideology's reach
-alias[trigger:is_within_ideology_reach] = <ideology>
+alias[trigger:is_within_ideology_reach] = scope[ideology]
 
 ###Checks how long ago the scoped country's ideology last increased
 alias[trigger:last_ideology_increase] == value_field
@@ -5773,7 +5779,8 @@ alias[trigger:pop_ideology_amount] = {
 	amount == value_field
 	## cardinality = 0..1
 	percentage == value_field
-	ideology = <ideology>
+	## cardinality = 0..1
+	ideology = scope[ideology]
 	## cardinality = 0..1
 	ideology = any
 }
@@ -5785,7 +5792,10 @@ alias[trigger:pop_ideology_percentage] = {
 	amount == value_field
 	## cardinality = 0..1
 	percentage == value_field
-	ideology = <ideology>
+	## cardinality = 0..1
+	ideology = scope[ideology]
+	## cardinality = 0..1
+	ideology = any
 }
 
 ###Checks the difference between the scoped object's encryption and the target's decryption

@@ -48,6 +48,11 @@ enums = {
 			}
 		}
 	}
+	enum[building_sets_additional] = {
+		urban_automation
+		urban_automation_arcology
+		ark_pilgrims
+	}
 	
 	enum[fe_building_upgrade_variables] = {
 		affluence_emporium_build_count

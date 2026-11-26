@@ -87,7 +87,7 @@ prescripted_country = {
 	authority = <authority>
 	## cardinality = 0..1
 	civics = {
-   		## cardinality = 2..2
+   		## cardinality = 0..3
     	<civic_or_origin.civic>
    	}
 	## cardinality = 0..1

@@ -233,6 +233,7 @@ espionage_operation = {
     on_roll_failed = {
 		alias_name[effect] = alias_match_left[effect]
     }
+    ## cardinality = 0..1
     on_create = {
 		alias_name[effect] = alias_match_left[effect]
     }

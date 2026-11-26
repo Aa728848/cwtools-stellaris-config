@@ -22,6 +22,9 @@ types = {
 	## replace_scope = { this = country root = country }
 	type[resolution] = {
 		path = "game/common/resolutions"
+		subtype[target_ideology] = {
+			is_target_ideology = yes
+		}
 		localisation = {
 			## required
 			Name = "$"
@@ -96,10 +99,44 @@ resolution = {
 	## cardinality = 0..inf
 	###Modifier to be applied to all community members if passed and the potential trigger is true
 	alias_name[triggered_modifier_country] = alias_match_left[triggered_modifier_country]
-	## cardinality = 0..1
-	###Effect to be applied if passed, scope is country
-	effect = {
-		alias_name[effect] = alias_match_left[effect]
+	subtype[!target_ideology] = {
+		## cardinality = 0..1
+		###Effect to be applied if passed, scope is country
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		valid_target = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		ai_weight = {
+			## cardinality = 0..1
+			enum[weight_or_base] = float
+			## cardinality = 0..1
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+	subtype[target_ideology] = {
+		## cardinality = 0..1
+		## replace_scope = { this = ideology root = ideology from = country }
+		###Effect to be applied if passed, scope is target ideology
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = ideology root = ideology from = country }
+		valid_target = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country from = ideology }
+		ai_weight = {
+			## cardinality = 0..1
+			enum[weight_or_base] = float
+			## cardinality = 0..1
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
 	}
 	## cardinality = 0..1
 	###Effect to be applied if failed, scope is country
@@ -122,34 +159,6 @@ resolution = {
 	## cardinality = 0..1
 	breach = {
 		alias_name[trigger] = alias_match_left[trigger]
-	}
-	## cardinality = 0..1
-	valid_target = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-	## cardinality = 0..inf
-	triggered_modifier = {
-		## cardinality = 0..1
-		potential = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## cardinality = 0..1
-		alias_name[modifier] = alias_match_left[modifier]
-		## cardinality = 0..1
-		custom_tooltip = localisation
-		## cardinality = 0..1
-		modifier = {
-			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..1
-			custom_tooltip = localisation
-		}
-	}
-	## cardinality = 0..1
-	ai_weight = {
-		## cardinality = 0..1
-		enum[weight_or_base] = float
-		## cardinality = 0..1
-		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	## cardinality = 0..1
 	harmonicism = bool

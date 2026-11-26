@@ -76,7 +76,7 @@ pop_faction = {
 		## cardinality = 0..inf
 		<ethos>
 	}
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	pop_attraction_tag = {
 		desc = localisation
 		trigger = {
@@ -219,7 +219,7 @@ pop_faction = {
 
 	}
 
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	### This = Pop faction. Actions for this pop faction type (buttons)
 	actions = {
 
@@ -232,6 +232,7 @@ pop_faction = {
 
 			## cardinality = 0..1
 			cost = {
+				## cardinality = 1..inf
 				<resource> = int
 			}
 
@@ -273,10 +274,16 @@ pop_faction = {
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	swappable_data = {
 		## cardinality = 0..1
 		default = {
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = <sprite>
 			## cardinality = 0..1
 			visual_ethic = localisation
 		}
@@ -285,6 +292,12 @@ pop_faction = {
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..1
+			name = localisation
+			## cardinality = 0..1
+			desc = localisation
+			## cardinality = 0..1
+			icon = <sprite>
 			## cardinality = 0..1
 			visual_ethic = localisation
 		}

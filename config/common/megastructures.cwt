@@ -317,6 +317,8 @@ megastructure = {
 	is_shroud_seal = bool
 	## cardinality = 0..1
 	nomad_reactivatable = bool
+	## cardinality = 0..1
+	custom_tooltip = localisation
 
 	## cardinality = 0..1
 	custom_tooltip_with_modifiers = localisation
@@ -426,11 +428,21 @@ mega_overclock = {
 	}
 	## cardinality = 0..1
 	resources = {
+		## cardinality = 0..1
+		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	modifier = {
+		## cardinality = 0..inf
+		custom_tooltip = localisation
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	country_modifier = {
 		## cardinality = 0..inf
 		custom_tooltip = localisation
 		## cardinality = 0..inf
@@ -449,6 +461,8 @@ mega_overclock = {
 		alias_name[effect] = alias_match_left[effect]	
 	}
 
+	## cardinality = 0..1
+	ai_weight = float
 	## cardinality = 0..1
 	## replace_scope = { this = megastructure root = megastructure }
 	ai_weight = {

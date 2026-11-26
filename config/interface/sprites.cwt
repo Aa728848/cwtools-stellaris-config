@@ -54,11 +54,11 @@ progressbartype = {
 	effectFile = filepath[gfx/FX/,.shader]
 
 	color = {
-		## cardinality = 3..3
+		## cardinality = 3..4
 		float
 	}
 	colortwo = {
-		## cardinality = 3..3
+		## cardinality = 3..4
 		float
 	}
 	## cardinality = 0..1
@@ -167,6 +167,8 @@ sprite = {
 	sprite_sheet_sprite_type = <sprite>
 	## cardinality = 0..1
 	default_frame = int
+	## cardinality = 0..1
+	ideology = bool
 
 	#cornered_tile_sprite
 	## cardinality = 0..1
@@ -185,8 +187,13 @@ piechart = {
 	colors = {
 		## cardinality = 0..inf
 		rgb = { 
-			## cardinality = 3..3
+			## cardinality = 3..4
 			int 
+		}
+		## cardinality = 0..inf
+		{
+			## cardinality = 3..4
+			int
 		}
 	}
 }

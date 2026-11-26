@@ -74,6 +74,9 @@ types = {
 	}
 	type[council_agenda] = {
 		path = "game/common/council_agendas"
+		modifiers = {
+			"$_finishing_effect_strength_mult" = Countries
+		}
 		localisation = {
 			## required
 			Name = "council_agenda_$_name"
@@ -345,6 +348,8 @@ civic_or_origin = {
 		## cardinality = 0..1
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	## cardinality = 0..inf
+	alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
 	## cardinality = 0..1
 	hide_modifiers = bool
 	## cardinality = 0..1

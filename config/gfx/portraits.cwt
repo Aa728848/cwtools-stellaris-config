@@ -48,6 +48,7 @@ portrait = {
 		## cardinality = 0..inf
 		tied_texture = {
 			texture = filepath
+			## cardinality = 0..1
 			evolution_variants = { int }
 		}
 	}
@@ -56,11 +57,16 @@ portrait = {
 		variants = {
 			## cardinality = 0..inf
 			{
+				## cardinality = 1..inf
 				value = {
 					## cardinality = 0..inf
 					{
+						## cardinality = 0..1
 						decal = filepath
+						## cardinality = 0..1
 						mask = filepath
+						## cardinality = 0..1
+						portrait_override = <model_entity>
 					}
 				}
 				#leader, pop or species scope (when called with species scope, from subscope can contain a country species related to)

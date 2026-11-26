@@ -42,6 +42,7 @@ ideology = {
 	faction = <pop_faction>
 	## cardinality = 0..1
 	resources = {
+		## cardinality = 0..1
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}
@@ -142,8 +143,6 @@ ideology_tenet = {
 		## cardinality = 0..inf
 		alias_name[triggered_country_modifier_country] = alias_match_left[triggered_country_modifier_country]
 		## cardinality = 0..inf
-		alias_name[triggered_country_modifier_planet] = alias_match_left[triggered_country_modifier_planet]
-		## cardinality = 0..inf
 		alias_name[triggered_colony_modifier] = alias_match_left[triggered_colony_modifier]
 		## cardinality = 0..inf
 		alias_name[triggered_system_modifier_system] = alias_match_left[triggered_system_modifier_system]
@@ -221,6 +220,7 @@ ideology_action = {
 	}
 	## cardinality = 0..1
 	resources = {
+		## cardinality = 0..1
 		category = <economic_category>
 		alias_name[economic_template] = alias_match_left[economic_template]
 	}

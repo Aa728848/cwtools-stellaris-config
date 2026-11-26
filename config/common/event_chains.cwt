@@ -35,6 +35,8 @@ event_chain = {
 		localisation = {
 			## cardinality = 0..1
 			max = int
+			## cardinality = 0..1
+			show_when_zero = bool
 		}
 	}
 

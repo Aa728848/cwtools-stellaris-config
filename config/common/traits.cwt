@@ -621,6 +621,10 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			## cardinality = 0..inf
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
@@ -647,7 +651,78 @@ trait = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
 			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
+		}
+		## cardinality = 0..inf
+		## replace_scope = { this = leader root = leader from = country }
+		triggered_country_modifier = {
+			## cardinality = 0..1
+			potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
+			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
+			## cardinality = 0..inf
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
@@ -661,6 +736,10 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			## cardinality = 0..inf
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
@@ -687,7 +766,23 @@ trait = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
 			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
@@ -701,6 +796,10 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			## cardinality = 0..inf
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
@@ -727,7 +826,23 @@ trait = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
 			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
@@ -741,6 +856,10 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			## cardinality = 0..inf
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
@@ -767,7 +886,23 @@ trait = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
 			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = country }
@@ -781,44 +916,8 @@ trait = {
 			potential = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-			## cardinality = 0..inf
-			modifier = {
-				alias_name[modifier] = alias_match_left[modifier]
-				## cardinality = 0..1
-				custom_tooltip = localisation
-			}
-			alias_name[modifier] = alias_match_left[modifier]
-			## cardinality = 0..inf
-			mult = value[variable]
-			## cardinality = 0..inf
-			mult = value_field
-			## cardinality = 0..inf
-			mult = trigger:<trigger>
-			## cardinality = 0..inf
-			mult = enum[exe_set_variable]
-			## cardinality = 0..inf
-			multiplier = value[variable]
-			## cardinality = 0..inf
-			multiplier = value_field
-			## cardinality = 0..inf
-			multiplier = trigger:<trigger>
-			## cardinality = 0..inf
-			multiplier = enum[exe_set_variable]
-			## cardinality = 0..inf
-			custom_tooltip = localisation
 			## cardinality = 0..1
-			show_only_custom_tooltip = bool
-		}
-		## cardinality = 0..1
-		## replace_scope = { this = leader root = leader from = colony }
-		planet_modifier = {
-			alias_name[modifier] = alias_match_left[modifier]
-		}
-		## cardinality = 0..inf
-		## replace_scope = { this = leader root = leader from = colony }
-		triggered_planet_modifier = {
-			## cardinality = 0..1
-			potential = {
+			possible = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			## cardinality = 0..inf
@@ -847,7 +946,83 @@ trait = {
 			## cardinality = 0..inf
 			custom_tooltip = localisation
 			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
 			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = leader root = leader from = colony }
+		planet_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..inf
+		## replace_scope = { this = leader root = leader from = colony }
+		triggered_planet_modifier = {
+			## cardinality = 0..1
+			potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..1
+			possible = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## cardinality = 0..inf
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				custom_tooltip = localisation
+			}
+			alias_name[modifier] = alias_match_left[modifier]
+			## cardinality = 0..inf
+			mult = value[variable]
+			## cardinality = 0..inf
+			mult = value_field
+			## cardinality = 0..inf
+			mult = trigger:<trigger>
+			## cardinality = 0..inf
+			mult = enum[exe_set_variable]
+			## cardinality = 0..inf
+			multiplier = value[variable]
+			## cardinality = 0..inf
+			multiplier = value_field
+			## cardinality = 0..inf
+			multiplier = trigger:<trigger>
+			## cardinality = 0..inf
+			multiplier = enum[exe_set_variable]
+			## cardinality = 0..inf
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			key = localisation
+			## cardinality = 0..1
+			fix_key = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
+			## cardinality = 0..1
+			should_mult_desc = bool
+			## cardinality = 0..1
+			show_if_trigger_false = bool
+			## cardinality = 0..1
+			show_trigger_if_false = bool
+			## cardinality = 0..1
+			show_trigger_if_true = bool
+			## cardinality = 0..1
+			trigger_true_key_override = localisation
+			## cardinality = 0..1
+			trigger_false_key_override = localisation
 		}
 		## cardinality = 0..1
 		## replace_scope = { this = leader root = leader from = colony }
@@ -1111,11 +1286,51 @@ trait = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..1
+		possible = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 		alias_name[modifier] = alias_match_left[modifier]
 		## cardinality = 0..1
 		modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		## cardinality = 0..inf
+		mult = value[variable]
+		## cardinality = 0..inf
+		mult = value_field
+		## cardinality = 0..inf
+		mult = trigger:<trigger>
+		## cardinality = 0..inf
+		mult = enum[exe_set_variable]
+		## cardinality = 0..inf
+		multiplier = value[variable]
+		## cardinality = 0..inf
+		multiplier = value_field
+		## cardinality = 0..inf
+		multiplier = trigger:<trigger>
+		## cardinality = 0..inf
+		multiplier = enum[exe_set_variable]
+		## cardinality = 0..inf
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		key = localisation
+		## cardinality = 0..1
+		fix_key = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
+		## cardinality = 0..1
+		should_mult_desc = bool
+		## cardinality = 0..1
+		show_if_trigger_false = bool
+		## cardinality = 0..1
+		show_trigger_if_false = bool
+		## cardinality = 0..1
+		show_trigger_if_true = bool
+		## cardinality = 0..1
+		trigger_true_key_override = localisation
+		## cardinality = 0..1
+		trigger_false_key_override = localisation
 	}
 }
 

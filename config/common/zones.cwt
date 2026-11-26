@@ -169,6 +169,8 @@ zones = {
 	included_building_sets = {
 		## cardinality = 0..inf
 		enum[building_sets]
+		## cardinality = 0..inf
+		enum[building_sets_additional]
 	}
 	
 	## cardinality = 0..inf
@@ -176,6 +178,8 @@ zones = {
 	excluded_building_sets = {
 		## cardinality = 0..inf
 		enum[building_sets]
+		## cardinality = 0..inf
+		enum[building_sets_additional]
 	}
 	
 	## cardinality = 0..inf
@@ -282,11 +286,15 @@ zones = {
 		included_building_sets = {
 			## cardinality = 0..inf
 			enum[building_sets]
+			## cardinality = 0..inf
+			enum[building_sets_additional]
 		}
 		## cardinality = 0..inf
 		excluded_building_sets = {
 			## cardinality = 0..inf
 			enum[building_sets]
+			## cardinality = 0..inf
+			enum[building_sets_additional]
 		}
 	}
 }

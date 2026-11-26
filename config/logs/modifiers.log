@@ -693,6 +693,15 @@ Printing Modifier Definitions:
 - shipclass_entropy_conduit_damage_mult, Category: Ships
 - shipclass_entropy_conduit_evasion_add, Category: Ships
 - shipclass_entropy_conduit_disengage_mult, Category: Ships
+- shipclass_cultural_envoy_build_cost_mult, Category: Megastructures, Starbases, Colony
+- shipclass_cultural_envoy_build_speed_mult, Category: Megastructures, Starbases, Colony
+- shipclass_cultural_envoy_hull_mult, Category: Ships
+- shipclass_cultural_envoy_armor_mult, Category: Ships
+- shipclass_cultural_envoy_armor_hardening_add, Category: Ships
+- shipclass_cultural_envoy_shield_hardening_add, Category: Ships
+- shipclass_cultural_envoy_damage_mult, Category: Ships
+- shipclass_cultural_envoy_evasion_add, Category: Ships
+- shipclass_cultural_envoy_disengage_mult, Category: Ships
 - weapon_type_energy_weapon_damage_mult, Category: Ships
 - weapon_type_energy_weapon_fire_rate_mult, Category: Ships
 - weapon_type_energy_speed_mult, Category: Ships
@@ -3217,3 +3226,12 @@ Printing Modifier Definitions:
 - tenet_sacrifism_ideological_strength_add, Category: Countries
 - tenet_spectacle_of_authority_edict_modifier, Category: Countries
 - unfullfiled_faction_demand_bypass_add, Category: Countries
+- country_diaspora_tenet_trust_cap_add, Category: Countries
+- country_non_genocidal_trust_cap_add, Category: Countries
+- country_ideology_claim_influence_cost_mult, Category: Countries
+- country_ideology_hostile_claim_influence_cost_mult, Category: Countries
+- country_ideology_starbase_influence_cost_mult, Category: Countries
+- military_ship_unity_per_size_upkeep_add, Category: Countries
+- pop_ethic_attraction_add, Category: Pops
+- ship_damage_against_different_ideology_ethic_mult, Category: Ships
+- ship_orbital_bombardment_planet_damage_mult, Category: Ships
