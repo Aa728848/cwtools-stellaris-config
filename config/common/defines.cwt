@@ -3908,6 +3908,7 @@ NEngine = {
 
 NCombat = {
 	## cardinality = 0..1
+	### Combat disengage: days a ship in combat can hold no target in weapon range and not be targeted by any enemy before CFleetCombatManager::ForceDisengageInactiveShips force-disengages it (vanilla 150; 0 or lower disables).
 	SHIP_DISENGAGE_INACTIVITY_DAYS = int
 	## cardinality = 0..1
 	COMBAT_BACK_OFF_RATE = float
@@ -3922,13 +3923,13 @@ NCombat = {
 	## cardinality = 0..1
 	FORCE_DISPARITY_MAX_EFFECT = float
 	## cardinality = 0..1
-	### Targeting: multiplier applied to the score of a candidate that is already the ship's current main target, i.e. the target-lock stickiness bonus (vanilla 1.1, should be higher than 1). It is applied in the final argmax only when the engine targetFocus flag is 0. Higher = stickier lock.
+	### Targeting: multiplier applied to the score of a candidate that is already the current target, i.e. the target-lock stickiness bonus (vanilla 1.1, should be higher than 1). Applied in the final argmax of both ship and weapon targeting only when target_focus = single (engine targetFocus = 0, not confused). Higher = stickier lock.
 	SHIP_CURRENT_TARGET_MULTIPLIER	= float
 	## cardinality = 0..1
-	### Targeting: multiplier applied to remembered recent targets so that spreading components rotate onto new enemies instead of re-firing the same one (vanilla 0.3, should be between 0 and 1). Lower = wider spread.
+	### Targeting: multiplier applied to remembered recent targets so that spreading ships and components rotate onto new enemies instead of re-firing the same one (vanilla 0.3, should be between 0 and 1). Applied only when target_focus = spread (engine targetFocus = 1) or IsConfused. Lower = wider spread.
 	SHIP_RECENT_TARGET_PENALIZER	= float
 	## cardinality = 0..1
-	### Targeting: length of the recent-target memory ring; every remembered target except the newest one is multiplied by SHIP_RECENT_TARGET_PENALIZER (vanilla 10). Higher = a longer rotation before a ship is retargeted.
+	### Targeting: capacity of the recent-target memory array (vanilla 10); populated on target selection in UpdateTarget when target_focus = spread (engine targetFocus = 1) or IsConfused, and every remembered target in the array is multiplied by SHIP_RECENT_TARGET_PENALIZER. Higher = longer rotation before retargeting.
 	NUMBER_OF_TARGETS_TO_REMEMBER	= float
 	## cardinality = 0..1
 	### Targeting: amplitude of the final random perturbation of the ship-level score chain, W = W5 * (1 + r * k) with r in [0,1), giving a multiplier in [1, 4) (vanilla 3.0). Only affects the ship's main target; higher = more erratic targeting, lower it to make targeting reproducible when debugging.
@@ -3963,7 +3964,7 @@ NCombat = {
 	### Targeting: score multiplier for targets with no damage capability, judged by the panel DPD rather than by real damage output (vanilla 0.005). Lower = unarmed ships are almost never picked.
 	COMBAT_SHIP_UNARMED_TARGETING_WEIGHT = float
 	## cardinality = 0..1
-	### Targeting: score multiplier for starbases and megastructures when they are not the current main target (vanilla 0.75). Lower = static installations are deprioritised.
+	### Targeting: score multiplier for armed starbases and megastructures when they are not the current main target (vanilla 0.75; mutually exclusive else-if branch after COMBAT_SHIP_UNARMED_TARGETING_WEIGHT). Lower = static installations are deprioritised.
 	COMBAT_SHIP_STARBASE_TARGETING_WEIGHT = float
 	## cardinality = 0..1
 	### Targeting: minimum attacker size_multiplier for the hard veto; a ship of at least this size can drop an unreachable target outright instead of merely scoring it low (vanilla 8). Lower = more ship sizes gain the veto.

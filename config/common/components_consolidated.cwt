@@ -393,9 +393,9 @@ component_template = {
 				alias_name[effect] = alias_match_left[effect]
 			}
 		}
-		### `single` (default) or `spread`. Engine target focus: it selects the main-target recompute
-		### throttle period (10 vs 50 ticks) and whether the current-target bonus Mcur (1.1) is applied.
-		### Which enum value maps to engine targetFocus 0/1 is not confirmed.
+		### `single` (default, engine ETargetFocus = 0) or `spread` (engine ETargetFocus = 1; forced by IsConfused).
+		### `single`: 10-tick main-target throttle and applies SHIP_CURRENT_TARGET_MULTIPLIER (1.1) without recent-target penalty.
+		### `spread`: 50-tick throttle, disables SHIP_CURRENT_TARGET_MULTIPLIER, records picked targets in UpdateTarget and applies SHIP_RECENT_TARGET_PENALIZER (0.3) to remembered targets.
 		## cardinality = 0..1
 		target_focus = enum[component_target_focus]
 		## cardinality = 0..1	

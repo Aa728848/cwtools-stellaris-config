@@ -1,5 +1,5 @@
 {
-  "_schema": "cwtools/sprite-renderer-contracts v1. Version-matched mappings curated from the official Stellaris 4.4.6 interface and gfx/FX corpus. A contract confirms only the listed Effect entry points for the exact renderer subtype and shader file.",
+  "_schema": "cwtools/sprite-renderer-contracts v1. Version-matched mappings curated from the official Stellaris 4.6.0 interface and gfx/FX corpus. A contract confirms only the listed Effect entry points for the exact renderer subtype and shader file.",
   "contracts": [
     {
       "game": "stellaris",
