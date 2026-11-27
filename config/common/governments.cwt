@@ -345,6 +345,10 @@ civic_or_origin = {
 	## replace_scope = { this = country root = country }
 	### modifier added to the country if the civic is selected and valid
 	modifier = {
+		## cardinality = 0..inf
+		custom_tooltip = localisation
+		## cardinality = 0..1
+		show_only_custom_tooltip = bool
 		## cardinality = 0..1
 		alias_name[modifier] = alias_match_left[modifier]
 	}
@@ -376,8 +380,13 @@ civic_or_origin = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
 		### modifier that is applied to the country when triggers are evaluated as true
 		modifier = {
+			## cardinality = 0..inf
+			custom_tooltip = localisation
+			## cardinality = 0..1
+			show_only_custom_tooltip = bool
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 	}
