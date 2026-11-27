@@ -35,6 +35,12 @@ modifier_categories = {
     "Space Stations" = {
         supported_scopes = { starbase country }
     }
+    Stations = {
+        supported_scopes = { starbase galactic_object country }
+    }
+    "Ship Components" = {
+        supported_scopes = { ship starbase fleet country }
+    }
 	"Military Ships" = {
         supported_scopes = { ship starbase fleet leader country }
     }
@@ -91,6 +97,12 @@ modifier_categories = {
 	}
 	"Astral Rift" = {
 		supported_scopes = { astral_rift }
+	}
+	"Cosmic Storm Influence Field" = {
+		supported_scopes = { cosmic_storm_influence_field galacticobject country }
+	}
+	"Galactic Community" = {
+		supported_scopes = { country }
 	}
 	None = {
 		supported_scopes = { any  }
